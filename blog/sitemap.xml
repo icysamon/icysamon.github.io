@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://icysamon.github.io/blog/</loc>
     <lastmod>2023-05-20T21:16:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/</loc>
+    <loc>https://icysamon.github.io/blog/posts/</loc>
     <lastmod>2023-05-20T21:16:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</loc>
+    <loc>https://icysamon.github.io/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</loc>
     <lastmod>2023-05-20T21:16:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</loc>
+    <loc>https://icysamon.github.io/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</loc>
     <lastmod>2023-05-16T20:47:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://icysamon.github.io/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2023-05-16T10:23:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>https://icysamon.github.io/blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>https://icysamon.github.io/blog/tags/</loc>
   </url>
 </urlset>

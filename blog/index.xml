@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>icysamon&#39;s blog</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://icysamon.github.io/blog/</link>
     <description>Recent content on icysamon&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 20 May 2023 21:16:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://icysamon.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SyntaxHighlighter の font-family を変更する</title>
-      <link>http://localhost:1313/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
+      <link>https://icysamon.github.io/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
       <pubDate>Sat, 20 May 2023 21:16:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
+      <guid>https://icysamon.github.io/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
       <description>&lt;p&gt;FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;version3 を使っている場合、/syntaxhighlighter3/styles を開けてください。&lt;/li&gt;&#xA;&lt;li&gt;version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/Highlighter%20Version.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;shCore.css で font-family を自由に設定することができる。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/SyntaxHighlighter%20font-family.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>htaccess で http から https にリダイレクトする</title>
-      <link>http://localhost:1313/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</link>
+      <link>https://icysamon.github.io/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</link>
       <pubDate>Tue, 16 May 2023 20:47:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</guid>
+      <guid>https://icysamon.github.io/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</guid>
       <description>&lt;p&gt;FTP工具で .htaccess に以下のコードを追加してください。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteEngine &lt;span style=&#34;color:#66d9ef&#34;&gt;On&lt;/span&gt;   &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteCond %{HTTPS} !=on   &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;そしてエラーを防ぐため、これらのコードも追加してください。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteOptions inherit   &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteEngine &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;   &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Header set content-Security-Policy: upgrade-insecure-requests&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>WordPress - Theme Editor が表示されていない時の解決方法</title>
-      <link>http://localhost:1313/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</link>
+      <link>https://icysamon.github.io/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</link>
       <pubDate>Tue, 16 May 2023 10:23:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://icysamon.github.io/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</guid>
       <description>&lt;p&gt;FTP 工具で public_html 中の wp-config.php を開けて&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;define&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DISALLOW_FILE_EDIT&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;があれば、true を false に変更してください。&lt;/p&gt;&#xA;&lt;p&gt;なければ&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;define&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DISALLOW_FILE_EDIT&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を添加してください。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/disallow_file_edit.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
