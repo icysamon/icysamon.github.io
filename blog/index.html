@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -11,12 +11,12 @@
     
     
     
-      <meta name="robots" content="index, follow">
+      <meta name="robots" content="noindex, nofollow">
     
     
 
     
-<link rel="stylesheet" href="/blog/ananke/css/main.min.8d048772ae72ab11245a0e296d1f2a36d3e3dd376c6c867394d6cc659c68fc37.css" >
+<link rel="stylesheet" href="/blog/ananke/css/main.min.css" >
 
 
 
@@ -37,25 +37,23 @@
     
 
     
-      <link rel="canonical" href="https://icysamon.github.io/blog/">
+      <link rel="canonical" href="http://localhost:1313/blog/">
     
 
-    <meta property="og:url" content="https://icysamon.github.io/blog/">
+    <meta property="og:url" content="http://localhost:1313/blog/">
   <meta property="og:site_name" content="icysamon&#39;s blog">
   <meta property="og:title" content="icysamon&#39;s blog">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="icysamon&#39;s blog">
-  <meta itemprop="datePublished" content="2023-06-19T11:33:00+09:00">
-  <meta itemprop="dateModified" content="2023-06-19T11:33:00+09:00">
+  <meta itemprop="datePublished" content="2023-07-06T21:48:00+09:00">
+  <meta itemprop="dateModified" content="2023-07-06T21:48:00+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="icysamon&#39;s blog">
 
-      
-    
 	
-  </head><body class="ma0 avenir bg-near-white production">
+  </head><body class="ma0 avenir bg-near-white development">
 
     
 
@@ -106,6 +104,36 @@
 
       <section class="w-100 mw8">
         
+        
+          <div class="w-100 mb4 relative">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
+    <div class="flex-column flex-row-ns flex">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/blog/posts/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="color-inherit dim link">
+            Unity - The system cannot find the path specified を解決する
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <h2 id="前言">前言</h2>
+<p>MinGW をインストール直後にこの問題が発生したので、MinGW のせいかもしれないと思った。最初には、PC の再起動、エディタの再インストール、システムパスなど様々の変更を試したが残念ながら全部失敗した。</p>
+<h2 id="解決方法">解決方法</h2>
+<ol>
+<li>レジストリエディターに入ってください（ win+R で実行メニューに入るし、regedit を入力して Enter を押してください）</li>
+<li>目録 HKEY_CURRENT_USER\Software\Microsoft\Command Processor 中の AutoRun の値をクリアしてください。</li>
+<li>目録 HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor をチェックして、もしAutoRun があるなら同じ操作をしてください。</li>
+</ol>
+        </div>
+        <a href="/blog/posts/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
         
           <div class="w-100 mb4 relative">
             
@@ -173,43 +201,18 @@
 
           </div>
         
-          <div class="w-100 mb4 relative">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
-    <div class="flex-column flex-row-ns flex">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/" class="color-inherit dim link">
-            htaccess で http から https にリダイレクトする
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>FTP工具で .htaccess に以下のコードを追加してください。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>RewriteEngine <span style="color:#66d9ef">On</span>   
-</span></span><span style="display:flex;"><span>RewriteCond %{HTTPS} !=on   
-</span></span><span style="display:flex;"><span>RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</span></span></code></pre></div><p>そしてエラーを防ぐため、これらのコードも追加してください。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>RewriteOptions inherit   
-</span></span><span style="display:flex;"><span>RewriteEngine <span style="color:#66d9ef">on</span>   
-</span></span><span style="display:flex;"><span>Header set content-Security-Policy: upgrade-insecure-requests
-</span></span></code></pre></div>
-        </div>
-        <a href="/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
         <section class="w-100">
           <h1 class="f3">More</h1>
           
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/" class="link black dim">
+                htaccess で http から https にリダイレクトする
+              </a>
+            </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
               <a href="/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/" class="link black dim">
@@ -226,7 +229,7 @@
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="https://icysamon.github.io/blog/" >
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/blog/" >
     &copy;  icysamon's blog 2025 
   </a>
     <div><div class="ananke-socials"></div>
