@@ -6,8 +6,15 @@
     <description>Recent content on icysamon&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 20 May 2023 21:16:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 19 Jun 2023 11:33:00 +0900</lastBuildDate>
     <atom:link href="https://icysamon.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WordPress – メディアの403エラーを解決する</title>
+      <link>https://icysamon.github.io/blog/posts/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+      <pubDate>Mon, 19 Jun 2023 11:33:00 +0900</pubDate>
+      <guid>https://icysamon.github.io/blog/posts/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+      <description>&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;&#xA;&lt;p&gt;ファイルの権限設定が不正だと思う。&lt;/p&gt;&#xA;&lt;h2 id=&#34;解決方法&#34;&gt;解決方法&lt;/h2&gt;&#xA;&lt;p&gt;FTP ツールでサーバーを訪問し、WordPress がインストールされた位置に以下のフォルダの訪問権限を &lt;strong&gt;755&lt;/strong&gt; に設定してください。&lt;strong&gt;(フォルダのみ)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;wp-admin&lt;/li&gt;&#xA;&lt;li&gt;wp-content&lt;/li&gt;&#xA;&lt;li&gt;wp-includes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;その後、すべてファイルの権限を &lt;strong&gt;644&lt;/strong&gt; に設定してください。&lt;strong&gt;(ファイルのみ)&lt;/strong&gt;&#xA;を添加してください。&lt;/p&gt;&#xA;&lt;p&gt;もし .htaccess の中に&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;があれば、ファイルを正常にアクセスためにこれを注釈する必要がある。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>SyntaxHighlighter の font-family を変更する</title>
       <link>https://icysamon.github.io/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>

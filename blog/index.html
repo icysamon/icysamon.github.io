@@ -47,8 +47,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="icysamon&#39;s blog">
-  <meta itemprop="datePublished" content="2023-05-20T21:16:00+09:00">
-  <meta itemprop="dateModified" content="2023-05-20T21:16:00+09:00">
+  <meta itemprop="datePublished" content="2023-06-19T11:33:00+09:00">
+  <meta itemprop="dateModified" content="2023-06-19T11:33:00+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="icysamon&#39;s blog">
 
@@ -115,6 +115,42 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/blog/posts/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="color-inherit dim link">
+            WordPress – メディアの403エラーを解決する
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <h2 id="原因">原因</h2>
+<p>ファイルの権限設定が不正だと思う。</p>
+<h2 id="解決方法">解決方法</h2>
+<p>FTP ツールでサーバーを訪問し、WordPress がインストールされた位置に以下のフォルダの訪問権限を <strong>755</strong> に設定してください。<strong>(フォルダのみ)</strong></p>
+<ul>
+<li>wp-admin</li>
+<li>wp-content</li>
+<li>wp-includes</li>
+</ul>
+<p>その後、すべてファイルの権限を <strong>644</strong> に設定してください。<strong>(ファイルのみ)</strong>
+を添加してください。</p>
+<p>もし .htaccess の中に</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+</span></span></code></pre></div><p>があれば、ファイルを正常にアクセスためにこれを注釈する必要がある。</p>
+        </div>
+        <a href="/blog/posts/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="w-100 mb4 relative">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
+    <div class="flex-column flex-row-ns flex">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/blog/posts/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/" class="color-inherit dim link">
             SyntaxHighlighter の font-family を変更する
             </a>
@@ -168,37 +204,20 @@
 
           </div>
         
-          <div class="w-100 mb4 relative">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
-    <div class="flex-column flex-row-ns flex">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/" class="color-inherit dim link">
-            WordPress - Theme Editor が表示されていない時の解決方法
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <p>FTP 工具で public_html 中の wp-config.php を開けて</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;DISALLOW_FILE_EDIT&#39;</span>, <span style="color:#66d9ef">true</span>);
-</span></span></code></pre></div><p>があれば、true を false に変更してください。</p>
-<p>なければ</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;DISALLOW_FILE_EDIT&#39;</span>, <span style="color:#66d9ef">false</span>);
-</span></span></code></pre></div><p>を添加してください。</p>
-<p><img src="https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/disallow_file_edit.webp" alt=""></p>
-        </div>
-        <a href="/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
+      
+        <section class="w-100">
+          <h1 class="f3">More</h1>
+          
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/" class="link black dim">
+                WordPress - Theme Editor が表示されていない時の解決方法
+              </a>
+            </h2>
+          
+        </section>
       
 
     </div>
