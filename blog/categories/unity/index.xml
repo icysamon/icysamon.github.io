@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Unity on icysamon&#39;s blog</title>
+        <link>http://localhost:1313/blog/categories/unity/</link>
+        <description>Recent content in Unity on icysamon&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Thu, 06 Jul 2023 21:48:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Unity - The system cannot find the path specified を解決する</title>
+        <link>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <pubDate>Thu, 06 Jul 2023 21:48:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;MinGW をインストール直後にこの問題が発生したので、MinGW のせいかもしれないと思った。最初には、PC の再起動、エディタの再インストール、システムパスなど様々の変更を試したが残念ながら全部失敗した。&lt;/p&gt;
+&lt;h2 id=&#34;解決方法&#34;&gt;解決方法
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;レジストリエディターに入ってください（ win+R で実行メニューに入るし、regedit を入力して Enter を押してください）&lt;/li&gt;
+&lt;li&gt;目録 HKEY_CURRENT_USER\Software\Microsoft\Command Processor 中の AutoRun の値をクリアしてください。&lt;/li&gt;
+&lt;li&gt;目録 HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor をチェックして、もしAutoRun があるなら同じ操作をしてください。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
