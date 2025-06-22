@@ -6,7 +6,28 @@
         <description>Recent content in Posts on icysamon&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
-        <lastBuildDate>Tue, 08 Aug 2023 12:02:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 09 Aug 2023 23:59:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Godot - シーンの切り替え</title>
+        <link>http://localhost:1313/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</link>
+        <pubDate>Wed, 09 Aug 2023 23:59:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript&#34; data-lang=&#34;gdscript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Godot 4.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; simultaneous_scene &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; preload(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;res://Scene/Test.tscn&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;instantiate&lt;/span&gt;() &lt;span style=&#34;color:#75715e&#34;&gt;# シーンローダー&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 初期化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_ready&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    start &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get_node&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ButtonPosition/Home/Start/Button&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# ボタンを取得する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    start&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pressed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;connect&lt;/span&gt;(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;button_pressed) &lt;span style=&#34;color:#75715e&#34;&gt;# 信号接続&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;button_pressed&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;get_tree&lt;/span&gt;()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;root&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add_child&lt;/span&gt;(simultaneous_scene) &lt;span style=&#34;color:#75715e&#34;&gt;# シーンの切り替え&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Godot - ゲーム退出ボタン</title>
         <link>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/</link>
         <pubDate>Tue, 08 Aug 2023 12:02:00 +0900</pubDate>
