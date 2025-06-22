@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // Godot 4.1 #define diagonal(X, Y) pow(X, 2) + pow(Y, 2) shader_type canvas_item; uniform vec2 center = vec2(0.5, 0.5); uniform float r = 0.5; uniform vec4 color : source_color = vec4(1.0, 1.0, 1.0, 1.0); void fragment(){ COLOR = texture(TEXTURE, UV); if(diagonal(abs(center.x - UV.x), abs(center.y - UV.y)) &lt; pow(r, 2)) COLOR = color; else COLOR.a = 0.0; } ">
-<title>Godot - Shader で丸を作る</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="MouseDrawArea2D と CollisionShape2D に通じて RTS ゲームような選択ボックスを実現する。">
+<title>Godot - RTS ゲームの選択ボックスの作り方</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - Shader で丸を作る">
-<meta property='og:description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // Godot 4.1 #define diagonal(X, Y) pow(X, 2) + pow(Y, 2) shader_type canvas_item; uniform vec2 center = vec2(0.5, 0.5); uniform float r = 0.5; uniform vec4 color : source_color = vec4(1.0, 1.0, 1.0, 1.0); void fragment(){ COLOR = texture(TEXTURE, UV); if(diagonal(abs(center.x - UV.x), abs(center.y - UV.y)) &lt; pow(r, 2)) COLOR = color; else COLOR.a = 0.0; } ">
-<meta property='og:url' content='http://localhost:1313/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/'>
+<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - RTS ゲームの選択ボックスの作り方">
+<meta property='og:description' content="MouseDrawArea2D と CollisionShape2D に通じて RTS ゲームような選択ボックスを実現する。">
+<meta property='og:url' content='http://localhost:1313/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-10-11T17:24:00&#43;09:00'/><meta property='article:modified_time' content='2023-10-11T17:24:00&#43;09:00'/>
-<meta name="twitter:title" content="Godot - Shader で丸を作る">
-<meta name="twitter:description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // Godot 4.1 #define diagonal(X, Y) pow(X, 2) + pow(Y, 2) shader_type canvas_item; uniform vec2 center = vec2(0.5, 0.5); uniform float r = 0.5; uniform vec4 color : source_color = vec4(1.0, 1.0, 1.0, 1.0); void fragment(){ COLOR = texture(TEXTURE, UV); if(diagonal(abs(center.x - UV.x), abs(center.y - UV.y)) &lt; pow(r, 2)) COLOR = color; else COLOR.a = 0.0; } ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-11-02T19:28:00&#43;09:00'/><meta property='article:modified_time' content='2023-11-02T19:28:00&#43;09:00'/>
+<meta name="twitter:title" content="Godot - RTS ゲームの選択ボックスの作り方">
+<meta name="twitter:description" content="MouseDrawArea2D と CollisionShape2D に通じて RTS ゲームような選択ボックスを実現する。">
     </head>
     <body class="
     article-page
@@ -205,7 +205,40 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#効果">効果</a></li>
+    <li><a href="#作り方">作り方</a></li>
+    <li><a href="#注意点">注意点</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -224,9 +257,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/">Godot - Shader で丸を作る</a>
+            <a href="/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/">Godot - RTS ゲームの選択ボックスの作り方</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            MouseDrawArea2D と CollisionShape2D に通じて RTS ゲームような選択ボックスを実現する。
+        </h3>
         
     </div>
 
@@ -246,7 +283,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">10月 11, 2023</time>
+                <time class="article-time--published">11月 02, 2023</time>
             </div>
         
 
@@ -276,7 +313,92 @@
     <section class="article-content">
     
     
-    <div class="highlight"><div class="chroma">
+    <h2 id="効果">効果
+</h2><img src="https://image.icysamon.jp/godot-select-box-green-line.gif">
+<img src="https://image.icysamon.jp/godot-select-box-white-backgroundcolor.gif">
+<h2 id="作り方">作り方
+</h2><p>Godot バージョンは 4.1である。</p>
+<p>Scene 中の Node はこのように設定してください。</p>
+<p><img src="https://image.icysamon.jp/godot-select-box-MouseDraw-config.webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Debug 用の Sprite2D はこのように設定してください。</p>
+<p><img src="https://image.icysamon.jp/godot-select-box-Sprite2D-Texture-config.webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>シングルトンノードのスクリプトに Child をロードし、変量を設定してください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="nd">@onready</span> <span class="kd">var</span> <span class="n">area</span> <span class="o">=</span> <span class="nx">$MouseDrawArea2D</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@onready</span> <span class="kd">var</span> <span class="n">collision</span> <span class="o">=</span> <span class="nx">$MouseDrawArea2D/CollisionShape2D</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@onready</span> <span class="kd">var</span> <span class="n">debug</span> <span class="o">=</span> <span class="nx">$MouseDrawArea2D/Debug</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">draw_start_point</span> <span class="p">:</span> <span class="nc">Vector2</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">draw_rect_point</span> <span class="p">:</span> <span class="nc">Vector2</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">drawing</span> <span class="p">:</span> <span class="kt">bool</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>インプット事件を設定してください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_input</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">event</span> <span class="ow">is</span> <span class="nc">InputEventMouseButton</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">match</span> <span class="n">event</span><span class="o">.</span><span class="n">pressed</span> <span class="o">&amp;&amp;</span> <span class="n">event</span><span class="o">.</span><span class="n">button_index</span> <span class="o">==</span> <span class="n">MOUSE_BUTTON_LEFT</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="kc">true</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">draw_start_point</span> <span class="o">=</span> <span class="nf">get_global_mouse_position</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="n">draw_rect_point</span> <span class="o">=</span> <span class="n">draw_start_point</span>
+</span></span><span class="line"><span class="cl">                <span class="n">drawing</span> <span class="o">=</span> <span class="kc">true</span>  
+</span></span><span class="line"><span class="cl">            <span class="kc">false</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">drawing</span> <span class="o">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">event</span> <span class="ow">is</span> <span class="nc">InputEventMouseMotion</span> <span class="o">&amp;&amp;</span> <span class="n">drawing</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">draw_rect_point</span> <span class="o">=</span> <span class="nf">get_global_mouse_position</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>draw 関数を設定してください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_draw</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">drawing</span><span class="p">:</span> <span class="nf">draw_rect</span><span class="p">(</span><span class="nc">Rect2</span><span class="p">(</span><span class="n">draw_start_point</span><span class="p">,</span> <span class="n">draw_rect_point</span> <span class="o">-</span> <span class="n">draw_start_point</span><span class="p">),</span> <span class="nc">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>process 関数を設定してください。</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -293,26 +415,50 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="o">//</span> <span class="n">Godot</span> <span class="mf">4.1</span>
+<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">queue_redraw</span><span class="p">()</span> <span class="c1"># update _draw()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#define diagonal(X, Y) pow(X, 2) + pow(Y, 2)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">drawing</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># collision</span>
+</span></span><span class="line"><span class="cl">        <span class="n">collision</span><span class="o">.</span><span class="n">global_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">draw_rect_point</span> <span class="o">+</span> <span class="n">draw_start_point</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">collision</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">draw_rect_point</span> <span class="o">-</span> <span class="n">draw_start_point</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">shader_type</span> <span class="n">canvas_item</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Debug</span>
+</span></span><span class="line"><span class="cl">        <span class="n">debug</span><span class="o">.</span><span class="n">global_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">draw_rect_point</span> <span class="o">+</span> <span class="n">draw_start_point</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="n">debug</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">draw_rect_point</span> <span class="o">-</span> <span class="n">draw_start_point</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">uniform</span> <span class="n">vec2</span> <span class="n">center</span> <span class="o">=</span> <span class="nf">vec2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">uniform</span> <span class="kt">float</span> <span class="n">r</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">uniform</span> <span class="n">vec4</span> <span class="n">color</span> <span class="p">:</span> <span class="n">source_color</span> <span class="o">=</span> <span class="nf">vec4</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># collision</span>
+</span></span><span class="line"><span class="cl">        <span class="n">collision</span><span class="o">.</span><span class="n">global_position</span> <span class="o">=</span> <span class="nc">Vector2</span><span class="o">.</span><span class="n">ZERO</span>
+</span></span><span class="line"><span class="cl">        <span class="n">collision</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="nc">Vector2</span><span class="o">.</span><span class="n">ZERO</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">fragment</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">    <span class="n">COLOR</span> <span class="o">=</span> <span class="nf">texture</span><span class="p">(</span><span class="n">TEXTURE</span><span class="p">,</span> <span class="n">UV</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nf">diagonal</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">UV</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">UV</span><span class="o">.</span><span class="n">y</span><span class="p">))</span> <span class="o">&lt;</span> <span class="nb">pow</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="n">COLOR</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="n">COLOR</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Debug</span>
+</span></span><span class="line"><span class="cl">        <span class="n">debug</span><span class="o">.</span><span class="n">global_position</span> <span class="o">=</span> <span class="nc">Vector2</span><span class="o">.</span><span class="n">ZERO</span>
+</span></span><span class="line"><span class="cl">        <span class="n">debug</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="nc">Vector2</span><span class="o">.</span><span class="n">ZERO</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">delta</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><h2 id="注意点">注意点
+</h2><p>二つのサイズをこのように設定してください。</p>
+<p><img src="https://image.icysamon.jp/godot-select-box-Size-config.webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+
 </section>
 
 
@@ -348,12 +494,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/">
+    <a href="/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - RTS ゲームの選択ボックスの作り方</h2>
+            <h2 class="article-title">Godot - Shader でふろーまーくを作る</h2>
         </div>
     </a>
 </article>
@@ -361,12 +507,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/">
+    <a href="/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - Shader でふろーまーくを作る</h2>
+            <h2 class="article-title">Godot - Shader で丸を作る</h2>
         </div>
     </a>
 </article>
