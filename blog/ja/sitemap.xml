@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/blog/categories/</loc>
-    <lastmod>2023-09-28T17:59:00+09:00</lastmod>
+    <lastmod>2023-10-04T19:34:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2023-09-28T17:59:00+09:00</lastmod>
+    <lastmod>2023-10-04T19:34:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,10 +29,13 @@
                 />
   </url><url>
     <loc>http://localhost:1313/blog/post/</loc>
-    <lastmod>2023-09-28T17:59:00+09:00</lastmod>
+    <lastmod>2023-10-04T19:34:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/categories/unity/</loc>
-    <lastmod>2023-09-28T17:59:00+09:00</lastmod>
+    <lastmod>2023-10-04T19:34:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/</loc>
+    <lastmod>2023-10-04T19:34:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</loc>
     <lastmod>2023-09-28T17:59:00+09:00</lastmod>

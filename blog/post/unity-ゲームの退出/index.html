@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Time.time 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 private float timeStart; // 計時スタート時の表記 private void Start() { timeStart = Time.time; // ゲーム開始からの時間を計時表記に設定する } private void Update() { if (Time.time - timeStart &gt; 1f) // １秒計時終わった時 { timeStart = Time.time; // 計時表記のリセット // ここから自分の関数を書いてください // ここまでです } } コルーチン 1 2 3 4 5 6 7 8 9 10 11 12 13 private void Start() { StartCoroutine(Timer()); // コルーチンのスタート } private IEnumerator Timer() // コルーチン関数の設定 { yield return new WaitForSeconds(1f); // １秒ディレイ // ここから自分の関数を書いてください // ここまでです yield break; // コルーチンの終わり } ">
-<title>Unity - タイマー</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #if UNITY_EDITOR // エディター中 // ゲーム退出 public void ExitGame() { UnityEditor.EditorApplication.isPlaying = false; } #else // プログラム中 // ゲーム退出 public void ExitGame() { Application.Quit(); } #endif ">
+<title>Unity - ゲームの退出</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Unity - タイマー">
-<meta property='og:description' content="Time.time 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 private float timeStart; // 計時スタート時の表記 private void Start() { timeStart = Time.time; // ゲーム開始からの時間を計時表記に設定する } private void Update() { if (Time.time - timeStart &gt; 1f) // １秒計時終わった時 { timeStart = Time.time; // 計時表記のリセット // ここから自分の関数を書いてください // ここまでです } } コルーチン 1 2 3 4 5 6 7 8 9 10 11 12 13 private void Start() { StartCoroutine(Timer()); // コルーチンのスタート } private IEnumerator Timer() // コルーチン関数の設定 { yield return new WaitForSeconds(1f); // １秒ディレイ // ここから自分の関数を書いてください // ここまでです yield break; // コルーチンの終わり } ">
-<meta property='og:url' content='http://localhost:1313/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/'>
+<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Unity - ゲームの退出">
+<meta property='og:description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #if UNITY_EDITOR // エディター中 // ゲーム退出 public void ExitGame() { UnityEditor.EditorApplication.isPlaying = false; } #else // プログラム中 // ゲーム退出 public void ExitGame() { Application.Quit(); } #endif ">
+<meta property='og:url' content='http://localhost:1313/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-08-30T19:10:00&#43;09:00'/><meta property='article:modified_time' content='2023-08-30T19:10:00&#43;09:00'/>
-<meta name="twitter:title" content="Unity - タイマー">
-<meta name="twitter:description" content="Time.time 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 private float timeStart; // 計時スタート時の表記 private void Start() { timeStart = Time.time; // ゲーム開始からの時間を計時表記に設定する } private void Update() { if (Time.time - timeStart &gt; 1f) // １秒計時終わった時 { timeStart = Time.time; // 計時表記のリセット // ここから自分の関数を書いてください // ここまでです } } コルーチン 1 2 3 4 5 6 7 8 9 10 11 12 13 private void Start() { StartCoroutine(Timer()); // コルーチンのスタート } private IEnumerator Timer() // コルーチン関数の設定 { yield return new WaitForSeconds(1f); // １秒ディレイ // ここから自分の関数を書いてください // ここまでです yield break; // コルーチンの終わり } ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-10-04T19:34:00&#43;09:00'/><meta property='article:modified_time' content='2023-10-04T19:34:00&#43;09:00'/>
+<meta name="twitter:title" content="Unity - ゲームの退出">
+<meta name="twitter:description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 #if UNITY_EDITOR // エディター中 // ゲーム退出 public void ExitGame() { UnityEditor.EditorApplication.isPlaying = false; } #else // プログラム中 // ゲーム退出 public void ExitGame() { Application.Quit(); } #endif ">
     </head>
     <body class="
     article-page
@@ -206,39 +206,7 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目次</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#timetime">Time.time</a></li>
-    <li><a href="#コルーチン">コルーチン</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="main-article">
@@ -257,7 +225,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/">Unity - タイマー</a>
+            <a href="/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/">Unity - ゲームの退出</a>
         </h2>
     
         
@@ -279,7 +247,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">8月 30, 2023</time>
+                <time class="article-time--published">10月 04, 2023</time>
             </div>
         
 
@@ -309,8 +277,7 @@
     <section class="article-content">
     
     
-    <h2 id="timetime">Time.time
-</h2><div class="highlight"><div class="chroma">
+    <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -331,56 +298,23 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kt">float</span> <span class="n">timeStart</span><span class="p">;</span> <span class="c1">// 計時スタート時の表記</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="cp">#if</span> <span class="n">UNITY_EDITOR</span> <span class="c1">// エディター中</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">void</span> <span class="n">Start</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">timeStart</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">time</span><span class="p">;</span> <span class="c1">// ゲーム開始からの時間を計時表記に設定する</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">void</span> <span class="n">Update</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">Time</span><span class="p">.</span><span class="n">time</span> <span class="p">-</span> <span class="n">timeStart</span> <span class="p">&gt;</span> <span class="m">1f</span><span class="p">)</span> <span class="c1">// １秒計時終わった時</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ゲーム退出</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">ExitGame</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">timeStart</span> <span class="p">=</span> <span class="n">Time</span><span class="p">.</span><span class="n">time</span><span class="p">;</span> <span class="c1">// 計時表記のリセット</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// ここから自分の関数を書いてください</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="c1">// ここまでです</span>
+</span></span><span class="line"><span class="cl">        <span class="n">UnityEditor</span><span class="p">.</span><span class="n">EditorApplication</span><span class="p">.</span><span class="n">isPlaying</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="コルーチン">コルーチン
-</h2><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">void</span> <span class="n">Start</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">StartCoroutine</span><span class="p">(</span><span class="n">Timer</span><span class="p">());</span> <span class="c1">// コルーチンのスタート</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="n">IEnumerator</span> <span class="n">Timer</span><span class="p">()</span> <span class="c1">// コルーチン関数の設定</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">yield</span> <span class="k">return</span> <span class="k">new</span> <span class="n">WaitForSeconds</span><span class="p">(</span><span class="m">1f</span><span class="p">);</span> <span class="c1">// １秒ディレイ</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// ここから自分の関数を書いてください</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else</span> <span class="c1">// プログラム中</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// ここまでです</span>
-</span></span><span class="line"><span class="cl">    <span class="k">yield</span> <span class="k">break</span><span class="p">;</span> <span class="c1">// コルーチンの終わり</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ゲーム退出</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">ExitGame</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Application</span><span class="p">.</span><span class="n">Quit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#endif</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -419,12 +353,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/">
+    <a href="/blog/post/unity-%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%80%E3%83%BC%E3%81%A7%E9%9F%B3%E9%87%8F%E3%82%92%E8%AA%BF%E6%95%B4%E3%81%99%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Unity - ゲームの退出</h2>
+            <h2 class="article-title">Unity - スライダーで音量を調整する</h2>
         </div>
     </a>
 </article>
@@ -438,6 +372,19 @@
 
         <div class="article-details">
             <h2 class="article-title">Unity - シーン非同期ロード</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Unity - タイマー</h2>
         </div>
     </a>
 </article>
