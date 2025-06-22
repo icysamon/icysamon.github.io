@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# Godot 4.1 extends RigidBody2D # ノード var node0 # データ var target # 初期化 func _ready(): node0 = get_node(&#34;.&#34;) # 自分のノードを取る # フレーム実行 func _process(delta): follow_mouse() # インプット事件 func _input(event): if InputEventMouseMotion: # マウス移動 target = get_global_mouse_position() # マウスのグローバル座標を取る # マウスにつき従う func follow_mouse(): node0.position = target # ノード座標とマウス座標を同期する ">
-<title>Godot - 剛体をマウスの動きにつき従う</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="# Godot 4.1 # ゲーム解像度を取得する var width = ProjectSettings.get_setting( &#34;display/window/size/viewport_width&#34;) var height = ProjectSettings.get_setting( &#34;display/window/size/viewport_height&#34;) print(&#34;width:&#34; + str(width) + &#34; height:&#34; + str(height)) ">
+<title>Godot - ゲーム解像度を取得する</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/posts/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/'>
+<link rel='canonical' href='http://localhost:1313/blog/posts/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - 剛体をマウスの動きにつき従う">
-<meta property='og:description' content="# Godot 4.1 extends RigidBody2D # ノード var node0 # データ var target # 初期化 func _ready(): node0 = get_node(&#34;.&#34;) # 自分のノードを取る # フレーム実行 func _process(delta): follow_mouse() # インプット事件 func _input(event): if InputEventMouseMotion: # マウス移動 target = get_global_mouse_position() # マウスのグローバル座標を取る # マウスにつき従う func follow_mouse(): node0.position = target # ノード座標とマウス座標を同期する ">
-<meta property='og:url' content='http://localhost:1313/blog/posts/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/'>
+<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - ゲーム解像度を取得する">
+<meta property='og:description' content="# Godot 4.1 # ゲーム解像度を取得する var width = ProjectSettings.get_setting( &#34;display/window/size/viewport_width&#34;) var height = ProjectSettings.get_setting( &#34;display/window/size/viewport_height&#34;) print(&#34;width:&#34; + str(width) + &#34; height:&#34; + str(height)) ">
+<meta property='og:url' content='http://localhost:1313/blog/posts/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-08-03T13:59:00&#43;09:00'/><meta property='article:modified_time' content='2023-08-03T13:59:00&#43;09:00'/>
-<meta name="twitter:title" content="Godot - 剛体をマウスの動きにつき従う">
-<meta name="twitter:description" content="# Godot 4.1 extends RigidBody2D # ノード var node0 # データ var target # 初期化 func _ready(): node0 = get_node(&#34;.&#34;) # 自分のノードを取る # フレーム実行 func _process(delta): follow_mouse() # インプット事件 func _input(event): if InputEventMouseMotion: # マウス移動 target = get_global_mouse_position() # マウスのグローバル座標を取る # マウスにつき従う func follow_mouse(): node0.position = target # ノード座標とマウス座標を同期する ">
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-08-03T21:43:00&#43;09:00'/><meta property='article:modified_time' content='2023-08-03T21:43:00&#43;09:00'/>
+<meta name="twitter:title" content="Godot - ゲーム解像度を取得する">
+<meta name="twitter:description" content="# Godot 4.1 # ゲーム解像度を取得する var width = ProjectSettings.get_setting( &#34;display/window/size/viewport_width&#34;) var height = ProjectSettings.get_setting( &#34;display/window/size/viewport_height&#34;) print(&#34;width:&#34; + str(width) + &#34; height:&#34; + str(height)) ">
     </head>
     <body class="
     article-page
@@ -113,7 +113,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/posts/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/">Godot - 剛体をマウスの動きにつき従う</a>
+            <a href="/blog/posts/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/">Godot - ゲーム解像度を取得する</a>
         </h2>
     
         
@@ -166,30 +166,13 @@
     
     
     <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#75715e"># Godot 4.1</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">RigidBody2D</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># ノード</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> node0
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># データ</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> target
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 初期化</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
-</span></span><span style="display:flex;"><span>    node0 <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_node</span>(<span style="color:#e6db74">&#34;.&#34;</span>) <span style="color:#75715e"># 自分のノードを取る</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># フレーム実行</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_process</span>(delta):
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">follow_mouse</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># インプット事件</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_input</span>(event):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">InputEventMouseMotion</span>: <span style="color:#75715e"># マウス移動</span>
-</span></span><span style="display:flex;"><span>        target <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_global_mouse_position</span>() <span style="color:#75715e"># マウスのグローバル座標を取る</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># マウスにつき従う</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">follow_mouse</span>():
-</span></span><span style="display:flex;"><span>    node0<span style="color:#f92672">.</span>position <span style="color:#f92672">=</span> target <span style="color:#75715e"># ノード座標とマウス座標を同期する</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ゲーム解像度を取得する</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> width <span style="color:#f92672">=</span> <span style="color:#a6e22e">ProjectSettings</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get_setting</span>(
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;display/window/size/viewport_width&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> height <span style="color:#f92672">=</span> <span style="color:#a6e22e">ProjectSettings</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get_setting</span>(
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;display/window/size/viewport_height&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;width:&#34;</span> <span style="color:#f92672">+</span> str(width) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; height:&#34;</span> <span style="color:#f92672">+</span> str(height))
 </span></span></code></pre></div>
 </section>
 
