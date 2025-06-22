@@ -88,6 +88,14 @@
     <loc>http://localhost:1313/blog/p/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2023-05-16T10:23:00+09:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/page/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/search/</loc>
+  </url><url>
     <loc>http://localhost:1313/blog/tags/</loc>
     <xhtml:link
                 rel="alternate"
