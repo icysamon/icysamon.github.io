@@ -47,8 +47,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="icysamon&#39;s blog">
-  <meta itemprop="datePublished" content="2023-07-12T19:41:00+09:00">
-  <meta itemprop="dateModified" content="2023-07-12T19:41:00+09:00">
+  <meta itemprop="datePublished" content="2023-08-03T13:59:00+09:00">
+  <meta itemprop="dateModified" content="2023-08-03T13:59:00+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="icysamon&#39;s blog">
 
@@ -113,6 +113,54 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/blog/posts/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/" class="color-inherit dim link">
+            Godot - 剛体をマウスの動きにつき従う
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span><span style="color:#75715e"># Godot 4.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">RigidBody2D</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ノード</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> node0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># データ</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 初期化</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_ready</span>():
+</span></span><span style="display:flex;"><span>    node0 <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_node</span>(<span style="color:#e6db74">&#34;.&#34;</span>) <span style="color:#75715e"># 自分のノードを取る</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># フレーム実行</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_process</span>(delta):
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">follow_mouse</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># インプット事件</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">_input</span>(event):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">InputEventMouseMotion</span>: <span style="color:#75715e"># マウス移動</span>
+</span></span><span style="display:flex;"><span>        target <span style="color:#f92672">=</span> <span style="color:#a6e22e">get_global_mouse_position</span>() <span style="color:#75715e"># マウスのグローバル座標を取る</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># マウスにつき従う</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">follow_mouse</span>():
+</span></span><span style="display:flex;"><span>    node0<span style="color:#f92672">.</span>position <span style="color:#f92672">=</span> target <span style="color:#75715e"># ノード座標とマウス座標を同期する</span>
+</span></span></code></pre></div>
+        </div>
+        <a href="/blog/posts/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="w-100 mb4 relative">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
+    <div class="flex-column flex-row-ns flex">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/blog/posts/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="color-inherit dim link">
             ubuntu と win10 システムの時刻が一致しないを解決する
             </a>
@@ -164,42 +212,18 @@
 
           </div>
         
-          <div class="w-100 mb4 relative">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
-    <div class="flex-column flex-row-ns flex">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/blog/posts/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="color-inherit dim link">
-            Unity - The system cannot find the path specified を解決する
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          <h2 id="前言">前言</h2>
-<p>MinGW をインストール直後にこの問題が発生したので、MinGW のせいかもしれないと思った。最初には、PC の再起動、エディタの再インストール、システムパスなど様々の変更を試したが残念ながら全部失敗した。</p>
-<h2 id="解決方法">解決方法</h2>
-<ol>
-<li>レジストリエディターに入ってください（ win+R で実行メニューに入るし、regedit を入力して Enter を押してください）</li>
-<li>目録 HKEY_CURRENT_USER\Software\Microsoft\Command Processor 中の AutoRun の値をクリアしてください。</li>
-<li>目録 HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor をチェックして、もしAutoRun があるなら同じ操作をしてください。</li>
-</ol>
-        </div>
-        <a href="/blog/posts/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
         <section class="w-100">
           <h1 class="f3">More</h1>
           
+          
+            <h2 class="f5 fw4 mb4 dib mr3">
+              <a href="/blog/posts/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="link black dim">
+                Unity - The system cannot find the path specified を解決する
+              </a>
+            </h2>
           
             <h2 class="f5 fw4 mb4 dib mr3">
               <a href="/blog/posts/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/" class="link black dim">
@@ -216,12 +240,6 @@
             <h2 class="f5 fw4 mb4 dib mr3">
               <a href="/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/" class="link black dim">
                 htaccess で http から https にリダイレクトする
-              </a>
-            </h2>
-          
-            <h2 class="f5 fw4 mb4 dib mr3">
-              <a href="/blog/posts/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/" class="link black dim">
-                WordPress - Theme Editor が表示されていない時の解決方法
               </a>
             </h2>
           
