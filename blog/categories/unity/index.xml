@@ -189,7 +189,7 @@
         
         <guid>http://localhost:1313/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</guid>
         <description>&lt;p&gt;UI にこれらが必要である。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://assets.blog.icysamon.jp/Unity-Scene-Load-Object.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Scene-Load-Object.webp&#34;
 	
 	
 	
@@ -198,7 +198,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして UI をこのようになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://assets.blog.icysamon.jp/Unity-Scene-Load.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Scene-Load.webp&#34;
 	
 	
 	
@@ -373,7 +373,7 @@
         
         <guid>http://localhost:1313/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;エラーが発生した Animation を開けて、対応の AnimationEvent を選択してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://assets.blog.icysamon.jp/Unity-Animation-AnimationEvent.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Animation-AnimationEvent.webp&#34;
 	
 	
 	
@@ -382,7 +382,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして右側に以下のような Inspector が出ている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://assets.blog.icysamon.jp/Unity-AnimationEvent-Inspector.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-AnimationEvent-Inspector.webp&#34;
 	
 	
 	
@@ -391,7 +391,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;原因は同じ名前の関数が見つからないため、コードに同じ関数を書いたら解決可能である。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://assets.blog.icysamon.jp/Unity-AttackOverEvent.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-AttackOverEvent.webp&#34;
 	
 	
 	
