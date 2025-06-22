@@ -8,6 +8,22 @@
         <language>ja</language>
         <lastBuildDate>Thu, 03 Aug 2023 21:43:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Godot - ゲーム解像度を取得する</title>
+        <link>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</link>
+        <pubDate>Thu, 03 Aug 2023 21:43:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript&#34; data-lang=&#34;gdscript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Godot 4.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ゲーム解像度を取得する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; width &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProjectSettings&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get_setting&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;display/window/size/viewport_width&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; height &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProjectSettings&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get_setting&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;display/window/size/viewport_height&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(width) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; height:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(height))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Godot - ゲーム解像度を取得する</title>
         <link>http://localhost:1313/blog/posts/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 03 Aug 2023 21:43:00 +0900</pubDate>
         
@@ -20,6 +36,39 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; height &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProjectSettings&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get_setting&lt;/span&gt;(
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;display/window/size/viewport_height&amp;#34;&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(width) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; height:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(height))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Godot - 剛体をマウスの動きにつき従う</title>
+        <link>http://localhost:1313/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/</link>
+        <pubDate>Thu, 03 Aug 2023 13:59:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-gdscript&#34; data-lang=&#34;gdscript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Godot 4.1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;RigidBody2D&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ノード&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; node0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# データ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; target
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 初期化&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_ready&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    node0 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get_node&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# 自分のノードを取る&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# フレーム実行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_process&lt;/span&gt;(delta):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;follow_mouse&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# インプット事件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_input&lt;/span&gt;(event):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;InputEventMouseMotion&lt;/span&gt;: &lt;span style=&#34;color:#75715e&#34;&gt;# マウス移動&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get_global_mouse_position&lt;/span&gt;() &lt;span style=&#34;color:#75715e&#34;&gt;# マウスのグローバル座標を取る&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# マウスにつき従う&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;follow_mouse&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    node0&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;position &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; target &lt;span style=&#34;color:#75715e&#34;&gt;# ノード座標とマウス座標を同期する&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         <item>
@@ -57,6 +106,20 @@
         </item>
         <item>
         <title>ubuntu と win10 システムの時刻が一致しないを解決する</title>
+        <link>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <pubDate>Wed, 12 Jul 2023 19:41:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;p&gt;ウィンドウズシステムズのノートで以下のコードを書いてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;HKEY_LOCAL_MACHINE&lt;span style=&#34;color:#ae81ff&#34;&gt;\S&lt;/span&gt;YSTEM&lt;span style=&#34;color:#ae81ff&#34;&gt;\C&lt;/span&gt;urrentControlSet&lt;span style=&#34;color:#ae81ff&#34;&gt;\C&lt;/span&gt;ontrol&lt;span style=&#34;color:#ae81ff&#34;&gt;\T&lt;/span&gt;imeZoneInformation&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;RealTimeIsUniversal&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;そしてファイルに保存して、.txt 形式を .reg 形式に変更してください。&lt;/p&gt;
+&lt;p&gt;最後にはファイルを実行し、設定を完了してください。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ubuntu と win10 システムの時刻が一致しないを解決する</title>
         <link>http://localhost:1313/blog/posts/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Wed, 12 Jul 2023 19:41:00 +0900</pubDate>
         
@@ -67,6 +130,23 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;RealTimeIsUniversal&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dword:00000001
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;そしてファイルに保存して、.txt 形式を .reg 形式に変更してください。&lt;/p&gt;
 &lt;p&gt;最後にはファイルを実行し、設定を完了してください。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>STLink エラー localhost:61234: Connection timed out を解決する</title>
+        <link>http://localhost:1313/blog/post/stlink-%E3%82%A8%E3%83%A9%E3%83%BC-localhost61234-connection-timed-out-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <pubDate>Sat, 08 Jul 2023 16:22:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/stlink-%E3%82%A8%E3%83%A9%E3%83%BC-localhost61234-connection-timed-out-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;h2 id=&#34;環境&#34;&gt;環境
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;STM32CubeIDE 1.12.0&lt;/li&gt;
+&lt;li&gt;STM32CubeProgrammer&lt;/li&gt;
+&lt;li&gt;接続方法は SWD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解決方法&#34;&gt;解決方法
+&lt;/h2&gt;&lt;p&gt;開発ボードの輸入電源ピンは STLink の VCC ではなく TVCC である。&lt;/p&gt;
+&lt;p&gt;STLink の VCC は出力ピンではなく入力ピンであるため、開発ボードに単独給電が必要である。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -88,6 +168,22 @@
         </item>
         <item>
         <title>Unity - The system cannot find the path specified を解決する</title>
+        <link>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <pubDate>Thu, 06 Jul 2023 21:48:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;MinGW をインストール直後にこの問題が発生したので、MinGW のせいかもしれないと思った。最初には、PC の再起動、エディタの再インストール、システムパスなど様々の変更を試したが残念ながら全部失敗した。&lt;/p&gt;
+&lt;h2 id=&#34;解決方法&#34;&gt;解決方法
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;レジストリエディターに入ってください（ win+R で実行メニューに入るし、regedit を入力して Enter を押してください）&lt;/li&gt;
+&lt;li&gt;目録 HKEY_CURRENT_USER\Software\Microsoft\Command Processor 中の AutoRun の値をクリアしてください。&lt;/li&gt;
+&lt;li&gt;目録 HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor をチェックして、もしAutoRun があるなら同じ操作をしてください。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Unity - The system cannot find the path specified を解決する</title>
         <link>http://localhost:1313/blog/posts/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 06 Jul 2023 21:48:00 +0900</pubDate>
         
@@ -100,6 +196,28 @@
 &lt;li&gt;目録 HKEY_CURRENT_USER\Software\Microsoft\Command Processor 中の AutoRun の値をクリアしてください。&lt;/li&gt;
 &lt;li&gt;目録 HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor をチェックして、もしAutoRun があるなら同じ操作をしてください。&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>WordPress - メディアの403エラーを解決する</title>
+        <link>http://localhost:1313/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <pubDate>Mon, 19 Jun 2023 11:33:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;h2 id=&#34;原因&#34;&gt;原因
+&lt;/h2&gt;&lt;p&gt;ファイルの権限設定が不正だと思う。&lt;/p&gt;
+&lt;h2 id=&#34;解決方法&#34;&gt;解決方法
+&lt;/h2&gt;&lt;p&gt;FTP ツールでサーバーを訪問し、WordPress がインストールされた位置に以下のフォルダの訪問権限を &lt;strong&gt;755&lt;/strong&gt; に設定してください。&lt;strong&gt;(フォルダのみ)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;wp-admin&lt;/li&gt;
+&lt;li&gt;wp-content&lt;/li&gt;
+&lt;li&gt;wp-includes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;その後、すべてファイルの権限を &lt;strong&gt;644&lt;/strong&gt; に設定してください。&lt;strong&gt;(ファイルのみ)&lt;/strong&gt;
+を添加してください。&lt;/p&gt;
+&lt;p&gt;もし .htaccess の中に&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;があれば、ファイルを正常にアクセスためにこれを注釈する必要がある。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -122,6 +240,36 @@
 &lt;p&gt;もし .htaccess の中に&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;があれば、ファイルを正常にアクセスためにこれを注釈する必要がある。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>SyntaxHighlighter の font-family を変更する</title>
+        <link>http://localhost:1313/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
+        <pubDate>Sat, 20 May 2023 21:16:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;p&gt;FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;version3 を使っている場合、/syntaxhighlighter3/styles を開けてください。&lt;/li&gt;
+&lt;li&gt;version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/Highlighter%20Version.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;shCore.css で font-family を自由に設定することができる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/SyntaxHighlighter%20font-family.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -156,6 +304,22 @@
         </item>
         <item>
         <title>htaccess で http から https にリダイレクトする</title>
+        <link>http://localhost:1313/blog/post/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</link>
+        <pubDate>Tue, 16 May 2023 20:47:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;p&gt;FTP工具で .htaccess に以下のコードを追加してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteEngine &lt;span style=&#34;color:#66d9ef&#34;&gt;On&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteCond %{HTTPS} !=on   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;そしてエラーを防ぐため、これらのコードも追加してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-apacheconf&#34; data-lang=&#34;apacheconf&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteOptions inherit   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteEngine &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Header set content-Security-Policy: upgrade-insecure-requests
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>htaccess で http から https にリダイレクトする</title>
         <link>http://localhost:1313/blog/posts/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</link>
         <pubDate>Tue, 16 May 2023 20:47:00 +0900</pubDate>
         
@@ -169,6 +333,28 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;RewriteEngine &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;   
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Header set content-Security-Policy: upgrade-insecure-requests
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>WordPress - Theme Editor が表示されていない時の解決方法</title>
+        <link>http://localhost:1313/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Tue, 16 May 2023 10:23:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;p&gt;FTP 工具で public_html 中の wp-config.php を開けて&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;define&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DISALLOW_FILE_EDIT&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;があれば、true を false に変更してください。&lt;/p&gt;
+&lt;p&gt;なければ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;define&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DISALLOW_FILE_EDIT&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を添加してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/disallow_file_edit.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>WordPress - Theme Editor が表示されていない時の解決方法</title>
