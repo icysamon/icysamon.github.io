@@ -9,10 +9,10 @@
         <copyright>icysamon</copyright>
         <lastBuildDate>Wed, 30 Aug 2023 19:10:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Unity - タイマー</title>
-        <link>http://localhost:1313/blog/p/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</link>
+        <link>http://localhost:1313/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</link>
         <pubDate>Wed, 30 Aug 2023 19:10:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/p/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</guid>
+        <guid>http://localhost:1313/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</guid>
         <description>&lt;h2 id=&#34;timetime&#34;&gt;Time.time
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -91,10 +91,10 @@
         </item>
         <item>
         <title>Unity - AnimationEvent &#34;xxx&#34; on animation &#34;xxx&#34; has no receiver を解決する</title>
-        <link>http://localhost:1313/blog/p/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Sun, 27 Aug 2023 21:57:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/p/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;エラーが発生した Animation を開けて、対応の AnimationEvent を選択してください。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://pub-76ea9f385ab149eab03aa91cd0a24f34.r2.dev/Unity-Animation-AnimationEvent.webp&#34;
 	
@@ -126,10 +126,10 @@
         </item>
         <item>
         <title>Unity - The system cannot find the path specified を解決する</title>
-        <link>http://localhost:1313/blog/p/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 06 Jul 2023 21:48:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/p/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;MinGW をインストール直後にこの問題が発生したので、MinGW のせいかもしれないと思った。最初には、PC の再起動、エディタの再インストール、システムパスなど様々の変更を試したが残念ながら全部失敗した。&lt;/p&gt;
 &lt;h2 id=&#34;解決方法&#34;&gt;解決方法

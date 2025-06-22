@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 # Godot 4.1 var simultaneous_scene = preload(&#34;res://Scene/Test.tscn&#34;).instantiate() # シーンローダー # 初期化 func _ready(): start = get_node(&#34;ButtonPosition/Home/Start/Button&#34;) # ボタンを取得する start.pressed.connect(self.button_pressed) # 信号接続 func button_pressed(): get_tree().root.add_child(simultaneous_scene) # シーンの切り替え ">
-<title>Godot - シーンの切り替え</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # Godot 4.1 extends Node @onready var exit_but = Button func _ready(): exit_but = get_node(&#34;Button&#34;) # ノードをゲット exit_but.pressed.connect(self._button_pressed) # ボタン押下チェック func _process(delta): pass # 退出申請を発送 func _button_pressed(): get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST) # 退出申請を受け時ゲームを終わる func _notification(what): if what == NOTIFICATION_WM_CLOSE_REQUEST: get_tree().quit() # default behavior ">
+<title>Godot - ゲーム退出ボタン</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/p/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - シーンの切り替え">
-<meta property='og:description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 # Godot 4.1 var simultaneous_scene = preload(&#34;res://Scene/Test.tscn&#34;).instantiate() # シーンローダー # 初期化 func _ready(): start = get_node(&#34;ButtonPosition/Home/Start/Button&#34;) # ボタンを取得する start.pressed.connect(self.button_pressed) # 信号接続 func button_pressed(): get_tree().root.add_child(simultaneous_scene) # シーンの切り替え ">
-<meta property='og:url' content='http://localhost:1313/blog/p/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/'>
+<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - ゲーム退出ボタン">
+<meta property='og:description' content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # Godot 4.1 extends Node @onready var exit_but = Button func _ready(): exit_but = get_node(&#34;Button&#34;) # ノードをゲット exit_but.pressed.connect(self._button_pressed) # ボタン押下チェック func _process(delta): pass # 退出申請を発送 func _button_pressed(): get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST) # 退出申請を受け時ゲームを終わる func _notification(what): if what == NOTIFICATION_WM_CLOSE_REQUEST: get_tree().quit() # default behavior ">
+<meta property='og:url' content='http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-08-09T23:59:00&#43;09:00'/><meta property='article:modified_time' content='2023-08-09T23:59:00&#43;09:00'/>
-<meta name="twitter:title" content="Godot - シーンの切り替え">
-<meta name="twitter:description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 # Godot 4.1 var simultaneous_scene = preload(&#34;res://Scene/Test.tscn&#34;).instantiate() # シーンローダー # 初期化 func _ready(): start = get_node(&#34;ButtonPosition/Home/Start/Button&#34;) # ボタンを取得する start.pressed.connect(self.button_pressed) # 信号接続 func button_pressed(): get_tree().root.add_child(simultaneous_scene) # シーンの切り替え ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-08-08T12:02:00&#43;09:00'/><meta property='article:modified_time' content='2023-08-08T12:02:00&#43;09:00'/>
+<meta name="twitter:title" content="Godot - ゲーム退出ボタン">
+<meta name="twitter:description" content=" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # Godot 4.1 extends Node @onready var exit_but = Button func _ready(): exit_but = get_node(&#34;Button&#34;) # ノードをゲット exit_but.pressed.connect(self._button_pressed) # ボタン押下チェック func _process(delta): pass # 退出申請を発送 func _button_pressed(): get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST) # 退出申請を受け時ゲームを終わる func _notification(what): if what == NOTIFICATION_WM_CLOSE_REQUEST: get_tree().quit() # default behavior ">
     </head>
     <body class="
     article-page
@@ -225,7 +225,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/p/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/">Godot - シーンの切り替え</a>
+            <a href="/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/">Godot - ゲーム退出ボタン</a>
         </h2>
     
         
@@ -247,7 +247,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">8月 09, 2023</time>
+                <time class="article-time--published">8月 08, 2023</time>
             </div>
         
 
@@ -292,21 +292,37 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="c1"># Godot 4.1</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">simultaneous_scene</span> <span class="o">=</span> <span class="nb">preload</span><span class="p">(</span><span class="s2">&#34;res://Scene/Test.tscn&#34;</span><span class="p">)</span><span class="o">.</span><span class="nf">instantiate</span><span class="p">()</span> <span class="c1"># シーンローダー</span>
+</span></span><span class="line"><span class="cl"><span class="kd">extends</span> <span class="nc">Node</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 初期化</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@onready</span> <span class="kd">var</span> <span class="n">exit_but</span> <span class="o">=</span> <span class="nc">Button</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit_but</span> <span class="o">=</span> <span class="nf">get_node</span><span class="p">(</span><span class="s2">&#34;Button&#34;</span><span class="p">)</span> <span class="c1"># ノードをゲット</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit_but</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_button_pressed</span><span class="p">)</span> <span class="c1"># ボタン押下チェック</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">start</span> <span class="o">=</span> <span class="nf">get_node</span><span class="p">(</span><span class="s2">&#34;ButtonPosition/Home/Start/Button&#34;</span><span class="p">)</span> <span class="c1"># ボタンを取得する</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">start</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_pressed</span><span class="p">)</span> <span class="c1"># 信号接続</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 退出申請を発送</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_button_pressed</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="nf">propagate_notification</span><span class="p">(</span><span class="n">NOTIFICATION_WM_CLOSE_REQUEST</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">button_pressed</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="nf">add_child</span><span class="p">(</span><span class="n">simultaneous_scene</span><span class="p">)</span> <span class="c1"># シーンの切り替え</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 退出申請を受け時ゲームを終わる</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_notification</span><span class="p">(</span><span class="n">what</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">what</span> <span class="o">==</span> <span class="n">NOTIFICATION_WM_CLOSE_REQUEST</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">get_tree</span><span class="p">()</span><span class="o">.</span><span class="nf">quit</span><span class="p">()</span> <span class="c1"># default behavior</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -345,12 +361,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/">
+    <a href="/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - ゲーム退出ボタン</h2>
+            <h2 class="article-title">Godot - シーンの切り替え</h2>
         </div>
     </a>
 </article>
@@ -358,7 +374,7 @@
             
                 
 <article class="">
-    <a href="/blog/p/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/">
+    <a href="/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/">
         
         
 
@@ -371,7 +387,7 @@
             
                 
 <article class="">
-    <a href="/blog/p/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/">
+    <a href="/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/">
         
         
 
