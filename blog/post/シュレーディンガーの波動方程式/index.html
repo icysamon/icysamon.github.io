@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="波束、位相速度、群速度それぞれの説明と関係。">
-<title>波束、位相速度、群速度</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="シュレーディンガーの波動方程式とは、物理学の量子力学における基礎方程式である。">
+<title>シュレーディンガーの波動方程式</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="波束、位相速度、群速度">
-<meta property='og:description' content="波束、位相速度、群速度それぞれの説明と関係。">
-<meta property='og:url' content='http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/'>
+<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="シュレーディンガーの波動方程式">
+<meta property='og:description' content="シュレーディンガーの波動方程式とは、物理学の量子力学における基礎方程式である。">
+<meta property='og:url' content='http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-11-12T15:47:00&#43;09:00'/><meta property='article:modified_time' content='2023-11-12T15:47:00&#43;09:00'/>
-<meta name="twitter:title" content="波束、位相速度、群速度">
-<meta name="twitter:description" content="波束、位相速度、群速度それぞれの説明と関係。">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-11-14T13:22:00&#43;09:00'/><meta property='article:modified_time' content='2023-11-14T13:22:00&#43;09:00'/>
+<meta name="twitter:title" content="シュレーディンガーの波動方程式">
+<meta name="twitter:description" content="シュレーディンガーの波動方程式とは、物理学の量子力学における基礎方程式である。">
     </head>
     <body class="
     article-page
@@ -247,10 +247,24 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#波束波群">波束（波群）</a></li>
-    <li><a href="#群速度">群速度</a></li>
-    <li><a href="#位相速度">位相速度</a></li>
-    <li><a href="#関係式">関係式</a></li>
+    <li><a href="#時間に依存するシュレーディンガー方程式">時間に依存するシュレーディンガー方程式</a>
+      <ol>
+        <li><a href="#ハミルトニアン-h">ハミルトニアン H</a>
+          <ol>
+            <li><a href="#解析力学古典力学">解析力学（古典力学）</a></li>
+            <li><a href="#量子力学">量子力学</a></li>
+          </ol>
+        </li>
+        <li><a href="#ディラック定数">ディラック定数</a>
+          <ol>
+            <li><a href="#物理的意義">物理的意義</a></li>
+          </ol>
+        </li>
+        <li><a href="#ラプラシアン">ラプラシアン</a></li>
+      </ol>
+    </li>
+    <li><a href="#時刻を含まないシュレーディンガーの波動方程式">時刻を含まないシュレーディンガーの波動方程式</a></li>
+    <li><a href="#確率密度">確率密度</a></li>
   </ol>
 </nav>
         </div>
@@ -329,12 +343,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/">波束、位相速度、群速度</a>
+            <a href="/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/">シュレーディンガーの波動方程式</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            波束、位相速度、群速度それぞれの説明と関係。
+            シュレーディンガーの波動方程式とは、物理学の量子力学における基礎方程式である。
         </h3>
         
     </div>
@@ -355,7 +369,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">11月 12, 2023</time>
+                <time class="article-time--published">11月 14, 2023</time>
             </div>
         
 
@@ -370,7 +384,7 @@
 
 
                 <time class="article-time--reading">
-                    読了時間: 1分
+                    読了時間: 2分
                 </time>
             </div>
         
@@ -385,21 +399,47 @@
     <section class="article-content">
     
     
-    <h2 id="波束波群">波束（波群）
-</h2><p>局所的に存在する波うち/波動であり、移動する1個の波動の塊のようにふるまう。</p>
-<p>振幅が最大になる点は1箇所だけになる。</p>
-<p><strong>この波束だけに注目したとき、これがあたかも粒子的に振る舞うように見える。すなわち、直観的には波束が粒子であると考えることができる。</strong></p>
-<p>この説明は、物理的にはやや厳密性を失う。</p>
-<h2 id="群速度">群速度
-</h2><p>複数の波を重ね合わせた時にその全体（波束）が移動する速度のことである。
-</p>
-$$v_g = \frac{dω}{dk}$$<h2 id="位相速度">位相速度
-</h2><p>各波の速度。
-</p>
-$$v = \frac ω k$$<h2 id="関係式">関係式
-</h2>$$k≡\frac{2π}{λ}$$<p>
-</p>
-$$ω≡2πν$$
+    <h2 id="時間に依存するシュレーディンガー方程式">時間に依存するシュレーディンガー方程式
+</h2>$$i\hslash\frac{d}{dt}|\Psi(t)\rangle=\hat{H}|\Psi(t)\rangle$$<p>なぜならば</p>
+$$E=\frac{P^2}{2m}+V=H$$<p>ポテンシャルエネルギー \(V\)</p>
+<p>すなわち</p>
+<p><strong>1次元</strong>の場合は</p>
+$$j\hslash\frac{\partial\Psi}{\partial t}=-\frac{\hslash^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\Psi$$<p><strong>3次元</strong>の場合は</p>
+$$i\hslash\frac{\partial}{\partial t}\Psi(x,t)=\Biggl[\frac{-\hslash^2}{2m}\nabla^2+V(x,t)\Biggr]\Psi(x,t)$$<h3 id="ハミルトニアン-h">ハミルトニアン H
+</h3><h4 id="解析力学古典力学">解析力学（古典力学）
+</h4>$$H=H(q,p;t)=T+V$$<ul>
+<li>運動エネルギー \(T\)</li>
+<li>ポテンシャルエネルギー \(V\)</li>
+<li>一般化座標 \(q\)</li>
+<li>一般化運動量 \(p\)</li>
+</ul>
+<p>時間 \(t\)</p>
+<h4 id="量子力学">量子力学
+</h4><p>これは古典力学におけるハミルトニアンの技術的な定義ではありませんが、これが最も一般的に取られる形式です。これらを組み合わせると、シュレーディンガー方程式で使用される形式が得られます。</p>
+$$
+\begin{equation}
+\begin{aligned}
+\hat{H} =\hat{T}+\hat{V} =\frac{\hat{P}\cdotp\hat{P}}{2m}+V(r,t) =-\frac{\hslash^2}{2m}\nabla^2+V(r,t)
+\end{aligned}
+\end{equation}
+$$<h3 id="ディラック定数">ディラック定数
+</h3>$$
+\begin{equation}
+\begin{aligned}
+\hslash\equiv\frac{h}{2\pi} =1.054 571 817…\times 10^{-34}J\cdotp s =6.582119569…\times 10^{-16}eV\cdotp s
+\end{aligned}
+\end{equation}
+$$<h4 id="物理的意義">物理的意義
+</h4>$$E=h\nu=\frac{h}{2\pi}\cdotp 2\pi\nu =\hslash\omega$$$$P=\frac{h}{\lambda}=\frac{h}{2\pi}\frac{2\pi}{\lambda} =\hslash k$$<h3 id="ラプラシアン">ラプラシアン
+</h3>$$\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}$$<h2 id="時刻を含まないシュレーディンガーの波動方程式">時刻を含まないシュレーディンガーの波動方程式
+</h2>$$-\frac{\hslash^2}{2m}\frac{d^2\varphi (x)}{dx^2}+\lbrace V(x)-E\rbrace\varphi (x)=0$$<ul>
+<li>エネルギー固有値 \(E\)</li>
+<li>固有関数 \(φ(x)\)</li>
+</ul>
+$$\Psi(x,t)=\varphi (x)Cexp\Biggl(-j\frac{E}{\hslash}t\Biggr )$$<p>\(\varphi(x)\)は\(\Psi(x,t)\)の<strong>振幅</strong>を決める</p>
+<h2 id="確率密度">確率密度
+</h2>$$P_r=\Psi^*\cdotp\Psi=|\Psi|^2$$<p>\(\intop_V\Psi^*\cdotp\Psi dxdydz=1\) を満足する波動関数を、<strong>1に規格化された波動関数</strong>という。</p>
+
 </section>
 
 
@@ -461,12 +501,12 @@ $$ω≡2πν$$
             
                 
 <article class="">
-    <a href="/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/">
+    <a href="/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">シュレーディンガーの波動方程式</h2>
+            <h2 class="article-title">ド・ブロイの関係式</h2>
         </div>
     </a>
 </article>
@@ -474,12 +514,12 @@ $$ω≡2πν$$
             
                 
 <article class="">
-    <a href="/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/">
+    <a href="/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">ド・ブロイの関係式</h2>
+            <h2 class="article-title">波束、位相速度、群速度</h2>
         </div>
     </a>
 </article>

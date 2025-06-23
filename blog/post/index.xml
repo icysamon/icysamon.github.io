@@ -7,7 +7,66 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Sun, 12 Nov 2023 15:47:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 14 Nov 2023 13:22:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>シュレーディンガーの波動方程式</title>
+        <link>http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</link>
+        <pubDate>Tue, 14 Nov 2023 13:22:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</guid>
+        <description>&lt;h2 id=&#34;時間に依存するシュレーディンガー方程式&#34;&gt;時間に依存するシュレーディンガー方程式
+&lt;/h2&gt;$$i\hslash\frac{d}{dt}|\Psi(t)\rangle=\hat{H}|\Psi(t)\rangle$$&lt;p&gt;なぜならば&lt;/p&gt;
+$$E=\frac{P^2}{2m}+V=H$$&lt;p&gt;ポテンシャルエネルギー \(V\)&lt;/p&gt;
+&lt;p&gt;すなわち&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1次元&lt;/strong&gt;の場合は&lt;/p&gt;
+$$j\hslash\frac{\partial\Psi}{\partial t}=-\frac{\hslash^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+V\Psi$$&lt;p&gt;&lt;strong&gt;3次元&lt;/strong&gt;の場合は&lt;/p&gt;
+$$i\hslash\frac{\partial}{\partial t}\Psi(x,t)=\Biggl[\frac{-\hslash^2}{2m}\nabla^2+V(x,t)\Biggr]\Psi(x,t)$$&lt;h3 id=&#34;ハミルトニアン-h&#34;&gt;ハミルトニアン H
+&lt;/h3&gt;&lt;h4 id=&#34;解析力学古典力学&#34;&gt;解析力学（古典力学）
+&lt;/h4&gt;$$H=H(q,p;t)=T+V$$&lt;ul&gt;
+&lt;li&gt;運動エネルギー \(T\)&lt;/li&gt;
+&lt;li&gt;ポテンシャルエネルギー \(V\)&lt;/li&gt;
+&lt;li&gt;一般化座標 \(q\)&lt;/li&gt;
+&lt;li&gt;一般化運動量 \(p\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;時間 \(t\)&lt;/p&gt;
+&lt;h4 id=&#34;量子力学&#34;&gt;量子力学
+&lt;/h4&gt;&lt;p&gt;これは古典力学におけるハミルトニアンの技術的な定義ではありませんが、これが最も一般的に取られる形式です。これらを組み合わせると、シュレーディンガー方程式で使用される形式が得られます。&lt;/p&gt;
+$$
+\begin{equation}
+\begin{aligned}
+\hat{H} =\hat{T}+\hat{V} =\frac{\hat{P}\cdotp\hat{P}}{2m}+V(r,t) =-\frac{\hslash^2}{2m}\nabla^2+V(r,t)
+\end{aligned}
+\end{equation}
+$$&lt;h3 id=&#34;ディラック定数&#34;&gt;ディラック定数
+&lt;/h3&gt;$$
+\begin{equation}
+\begin{aligned}
+\hslash\equiv\frac{h}{2\pi} =1.054 571 817…\times 10^{-34}J\cdotp s =6.582119569…\times 10^{-16}eV\cdotp s
+\end{aligned}
+\end{equation}
+$$&lt;h4 id=&#34;物理的意義&#34;&gt;物理的意義
+&lt;/h4&gt;$$E=h\nu=\frac{h}{2\pi}\cdotp 2\pi\nu =\hslash\omega$$$$P=\frac{h}{\lambda}=\frac{h}{2\pi}\frac{2\pi}{\lambda} =\hslash k$$&lt;h3 id=&#34;ラプラシアン&#34;&gt;ラプラシアン
+&lt;/h3&gt;$$\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}$$&lt;h2 id=&#34;時刻を含まないシュレーディンガーの波動方程式&#34;&gt;時刻を含まないシュレーディンガーの波動方程式
+&lt;/h2&gt;$$-\frac{\hslash^2}{2m}\frac{d^2\varphi (x)}{dx^2}+\lbrace V(x)-E\rbrace\varphi (x)=0$$&lt;ul&gt;
+&lt;li&gt;エネルギー固有値 \(E\)&lt;/li&gt;
+&lt;li&gt;固有関数 \(φ(x)\)&lt;/li&gt;
+&lt;/ul&gt;
+$$\Psi(x,t)=\varphi (x)Cexp\Biggl(-j\frac{E}{\hslash}t\Biggr )$$&lt;p&gt;\(\varphi(x)\)は\(\Psi(x,t)\)の&lt;strong&gt;振幅&lt;/strong&gt;を決める&lt;/p&gt;
+&lt;h2 id=&#34;確率密度&#34;&gt;確率密度
+&lt;/h2&gt;$$P_r=\Psi^*\cdotp\Psi=|\Psi|^2$$&lt;p&gt;\(\intop_V\Psi^*\cdotp\Psi dxdydz=1\) を満足する波動関数を、&lt;strong&gt;1に規格化された波動関数&lt;/strong&gt;という。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ド・ブロイの関係式</title>
+        <link>http://localhost:1313/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/</link>
+        <pubDate>Mon, 13 Nov 2023 10:36:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/</guid>
+        <description>&lt;p&gt;ド・ブロイの関係式は&lt;/p&gt;
+$$λ=\frac h Ρ$$&lt;p&gt;そしてPは粒子の運動量。&lt;/p&gt;
+$$Ρ≡mv_g$$$$Ρ=\sqrt{2mE}\quad (変形)$$&lt;p&gt;粒子の速度は&lt;strong&gt;群速度&lt;/strong&gt;であると考えられると、ド・ブロイの仮説の式が求められる。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>波束、位相速度、群速度</title>
         <link>http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</link>
         <pubDate>Sun, 12 Nov 2023 15:47:00 +0900</pubDate>
