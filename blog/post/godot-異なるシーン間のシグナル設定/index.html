@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて\nversion3 を使っている場合、/syntaxhighlighter3/styles を開けてください。 version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。 ">
-<title>SyntaxHighlighter の font-family を変更する</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="godot の signal 機能で各シーンを連携させる。">
+<title>Godot - 異なるシーン間のシグナル設定</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="SyntaxHighlighter の font-family を変更する">
-<meta property='og:description' content="FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて\nversion3 を使っている場合、/syntaxhighlighter3/styles を開けてください。 version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。 ">
-<meta property='og:url' content='http://localhost:1313/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/'>
+<link rel="stylesheet" href="/blog/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="Godot - 異なるシーン間のシグナル設定">
+<meta property='og:description' content="godot の signal 機能で各シーンを連携させる。">
+<meta property='og:url' content='http://localhost:1313/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-05-20T21:16:00&#43;09:00'/><meta property='article:modified_time' content='2023-05-20T21:16:00&#43;09:00'/>
-<meta name="twitter:title" content="SyntaxHighlighter の font-family を変更する">
-<meta name="twitter:description" content="FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて\nversion3 を使っている場合、/syntaxhighlighter3/styles を開けてください。 version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。 ">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-11-24T16:16:00&#43;09:00'/><meta property='article:modified_time' content='2023-11-24T16:16:00&#43;09:00'/>
+<meta name="twitter:title" content="Godot - 異なるシーン間のシグナル設定">
+<meta name="twitter:description" content="godot の signal 機能で各シーンを連携させる。">
     </head>
     <body class="
     article-page
@@ -229,6 +229,31 @@
         
             
                 
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#シグナル源">シグナル源</a></li>
+    <li><a href="#シグナルターゲット">シグナルターゲット</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
             
         
             
@@ -293,8 +318,8 @@
     
     <header class="article-category">
         
-            <a href="/blog/categories/wordpress/" >
-                WordPress
+            <a href="/blog/categories/godot/" >
+                Godot
             </a>
         
     </header>
@@ -302,9 +327,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/">SyntaxHighlighter の font-family を変更する</a>
+            <a href="/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/">Godot - 異なるシーン間のシグナル設定</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            godot の signal 機能で各シーンを連携させる。
+        </h3>
         
     </div>
 
@@ -324,7 +353,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">5月 20, 2023</time>
+                <time class="article-time--published">11月 24, 2023</time>
             </div>
         
 
@@ -354,29 +383,45 @@
     <section class="article-content">
     
     
-    <p>FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて</p>
-<ul>
-<li>version3 を使っている場合、/syntaxhighlighter3/styles を開けてください。</li>
-<li>version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。</li>
-</ul>
-<p><img src="https://image.icysamon.jp/Highlighter%20Version.webp"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p>shCore.css で font-family を自由に設定することができる。</p>
-<p><img src="https://image.icysamon.jp/SyntaxHighlighter%20font-family.webp"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-
+    <h2 id="シグナル源">シグナル源
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">signal</span> <span class="n">signal_test</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_process</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="kc">true</span><span class="p">):</span> <span class="c1"># ifの中でシグナルの発生条件を設定する</span>
+</span></span><span class="line"><span class="cl">        <span class="n">signal_test</span><span class="o">.</span><span class="nf">emit</span><span class="p">()</span> <span class="c1"># シグナル発生</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">delta</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="シグナルターゲット">シグナルターゲット
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl"><span class="n">scene_source</span><span class="o">.</span><span class="n">signal_test</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">on_signal_test</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">on_signal_test</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ここで自分のコードを書く</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -438,12 +483,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/">
+    <a href="/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">WordPress - メディアの403エラーを解決する</h2>
+            <h2 class="article-title">Godot - RTS ゲームの選択ボックスの作り方</h2>
         </div>
     </a>
 </article>
@@ -451,12 +496,51 @@
             
                 
 <article class="">
-    <a href="/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/">
+    <a href="/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">WordPress - Theme Editor が表示されていない時の解決方法</h2>
+            <h2 class="article-title">Godot - Shader でふろーまーくを作る</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Godot - Shader で丸を作る</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Godot - シーンの切り替え</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Godot - ゲーム退出ボタン</h2>
         </div>
     </a>
 </article>

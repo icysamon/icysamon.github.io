@@ -7,7 +7,41 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Sat, 18 Nov 2023 16:36:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/%E5%8D%8A%E5%B0%8E%E4%BD%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 20 Nov 2023 13:23:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/%E5%8D%8A%E5%B0%8E%E4%BD%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>トンネル効果</title>
+        <link>http://localhost:1313/blog/post/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C/</link>
+        <pubDate>Mon, 20 Nov 2023 13:23:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C/</guid>
+        <description>&lt;h2 id=&#34;トンネル効果&#34;&gt;トンネル効果
+&lt;/h2&gt;&lt;p&gt;この効果は電子が波動であることの立証になる。&lt;/p&gt;
+&lt;p&gt;エネルギー障壁の高さ\(V_1\)は十分に高くて、電子のエネルギーよりも大きいとする。電子を粒子とすると、電子のはこの障壁を越えることができず、境界ですべて反射されてしまう。とこらが電子を波動と考えると、この障壁中に浸み込んでいくことが可能になる。この効果を&lt;strong&gt;トンネル効果&lt;/strong&gt;という。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;トンネル抜け前後で粒子のエネルギー（波長）は変わらないが確率振幅は減少する。&lt;/p&gt;
+&lt;h2 id=&#34;トンネル確率-p&#34;&gt;トンネル確率 P
+&lt;/h2&gt;&lt;p&gt;単位時間に単位面積を通過する入射波と透過波の電子数の比と定義する。&lt;/p&gt;
+&lt;p&gt;任意の形をとる時には&lt;/p&gt;
+$$P\fallingdotseq A\cdot exp\Big(-\frac{2}{\hslash}\sqrt{2m}\int_{0}^{x_1}\sqrt{|V(x)-E|}\cdot dx\Big) $$&lt;p&gt;\(E=V_1∕2\) をとる時には&lt;/p&gt;
+$$P=4\cdot exp \Big(-\frac{2m\sqrt{gh}}{\hslash}\cdot W\Big)$$</description>
+        </item>
+        <item>
+        <title>状態密度関数</title>
+        <link>http://localhost:1313/blog/post/%E7%8A%B6%E6%85%8B%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0/</link>
+        <pubDate>Sun, 19 Nov 2023 12:04:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E7%8A%B6%E6%85%8B%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0/</guid>
+        <description>&lt;h2 id=&#34;状態密度関数&#34;&gt;状態密度関数
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;単位体積&lt;/strong&gt;当たりの&lt;strong&gt;単位エネルギー&lt;/strong&gt;領域に対する電子の&lt;strong&gt;量子状態数&lt;/strong&gt;を状態密度といい。一般には\(g(E)\)で表す。&lt;/p&gt;
+$$g(E)=\frac{1}{2π^2} \Bigg(\frac{2m}{\hslash ^2}\Bigg)^{3/2}E^{1∕2}$$</description>
+        </item>
+        <item>
         <title>フェルミエネルギー</title>
         <link>http://localhost:1313/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</link>
         <pubDate>Sat, 18 Nov 2023 16:36:00 +0900</pubDate>
