@@ -7,7 +7,30 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Tue, 14 Nov 2023 13:22:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Nov 2023 12:58:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>束縛粒子</title>
+        <link>http://localhost:1313/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</link>
+        <pubDate>Wed, 15 Nov 2023 12:58:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</guid>
+        <description>&lt;h2 id=&#34;量子井戸quantum-well&#34;&gt;量子井戸(quantum well)
+&lt;/h2&gt;&lt;p&gt;電子の移動方向が束縛された状態のこと。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E9%87%8F%E5%AD%90%E4%BA%95%E6%88%B8.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;境界条件&#34;&gt;境界条件
+&lt;/h2&gt;&lt;p&gt;\(x=0\) の点で　\(φ(0)=0\)
+\(x=L\) の点で　\(φ(L)=0\)&lt;/p&gt;
+$$\varphi (x)=\Big(\frac{2}{L}\Big)^{\frac{1}{2}}\sin\Big(\frac{n\pi}{L}x\Big)$$$$P_r=|\varphi (x)|^2=\Big(\frac{2}{L}\Big)\sin^2\Big(\frac{n\pi}{L}x\Big)$$$$E_n=\frac{\pi^2\hslash^2}{2mL^2}\cdotp n^2$$&lt;h2 id=&#34;3次元の場合&#34;&gt;3次元の場合
+&lt;/h2&gt;$$\varphi (x,y,z)=\Big(\frac{2}{L}\Big)^\frac{3}{2}\cdotp\sin \Big(\frac{n_x\pi}{L}x\Big)\cdotp\sin \Big(\frac{n_y\pi}{L}y\Big)\cdotp\sin \Big(\frac{n_z\pi}{L}z\Big)$$$$E_{n_x,n_y,n_z}=\frac{\hslash ^2}{2m}\Big(\frac{\pi}{L}\Big)^2(n_x^2+n_y^2+n_z^2)$$&lt;p&gt;最大のエネルギー値Eを&lt;strong&gt;フェルミエネルギー&lt;/strong&gt;という。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>シュレーディンガーの波動方程式</title>
         <link>http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</link>
         <pubDate>Tue, 14 Nov 2023 13:22:00 +0900</pubDate>
