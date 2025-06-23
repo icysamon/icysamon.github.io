@@ -7,7 +7,25 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Wed, 15 Nov 2023 12:58:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/%E5%8D%8A%E5%B0%8E%E4%BD%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 18 Nov 2023 16:36:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/%E5%8D%8A%E5%B0%8E%E4%BD%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>フェルミエネルギー</title>
+        <link>http://localhost:1313/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</link>
+        <pubDate>Sat, 18 Nov 2023 16:36:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</guid>
+        <description>&lt;h2 id=&#34;縮退&#34;&gt;縮退
+&lt;/h2&gt;&lt;p&gt;エネルギー固有値が同じて、固有関数が異なる場合を&lt;strong&gt;縮退&lt;/strong&gt;している。&lt;/p&gt;
+&lt;h2 id=&#34;フェルミエネルギー&#34;&gt;フェルミエネルギー
+&lt;/h2&gt;&lt;p&gt;フェルミエネルギーは、絶対零度における電子の取りうる最大のエネルギーである。&lt;/p&gt;
+$$E_F(0)=\frac{\hslash ^2}{2m}(3\pi ^2n)^{2/3}$$&lt;p&gt;ここで、\(n≡N∕L^3\) は&lt;strong&gt;単位体積当たりの電子数&lt;/strong&gt;、すなわち&lt;strong&gt;電子密度&lt;/strong&gt;である。&lt;/p&gt;
+&lt;p&gt;絶対零度ではこのエネルギー値&lt;strong&gt;以下&lt;/strong&gt;のエネルギー準位はすべて電子で&lt;strong&gt;満た&lt;/strong&gt;されていて、それ&lt;strong&gt;以上&lt;/strong&gt;のエネルギー準位は&lt;strong&gt;空席&lt;/strong&gt;である。&lt;/p&gt;
+&lt;h2 id=&#34;フェルミ温度&#34;&gt;フェルミ温度
+&lt;/h2&gt;$$T_F≡\frac{E_F(0)}{k}$$&lt;p&gt;これを&lt;strong&gt;フェルミ温度&lt;/strong&gt;という。ここで、ｋは&lt;strong&gt;ボルツマン定数&lt;/strong&gt;である。&lt;/p&gt;
+&lt;h2 id=&#34;フェルミ速度&#34;&gt;フェルミ速度
+&lt;/h2&gt;$$v_F=\Bigg(\frac{2E_F(0)}{m}\Bigg)^{1/2}$$&lt;p&gt;これをフェルミ速度という。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>束縛粒子</title>
         <link>http://localhost:1313/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</link>
         <pubDate>Wed, 15 Nov 2023 12:58:00 +0900</pubDate>
@@ -27,7 +45,7 @@
 &lt;/h2&gt;&lt;p&gt;\(x=0\) の点で　\(φ(0)=0\)
 \(x=L\) の点で　\(φ(L)=0\)&lt;/p&gt;
 $$\varphi (x)=\Big(\frac{2}{L}\Big)^{\frac{1}{2}}\sin\Big(\frac{n\pi}{L}x\Big)$$$$P_r=|\varphi (x)|^2=\Big(\frac{2}{L}\Big)\sin^2\Big(\frac{n\pi}{L}x\Big)$$$$E_n=\frac{\pi^2\hslash^2}{2mL^2}\cdotp n^2$$&lt;h2 id=&#34;3次元の場合&#34;&gt;3次元の場合
-&lt;/h2&gt;$$\varphi (x,y,z)=\Big(\frac{2}{L}\Big)^\frac{3}{2}\cdotp\sin \Big(\frac{n_x\pi}{L}x\Big)\cdotp\sin \Big(\frac{n_y\pi}{L}y\Big)\cdotp\sin \Big(\frac{n_z\pi}{L}z\Big)$$$$E_{n_x,n_y,n_z}=\frac{\hslash ^2}{2m}\Big(\frac{\pi}{L}\Big)^2(n_x^2+n_y^2+n_z^2)$$&lt;p&gt;最大のエネルギー値Eを&lt;strong&gt;フェルミエネルギー&lt;/strong&gt;という。&lt;/p&gt;
+&lt;/h2&gt;$$\varphi (x,y,z)=\Big(\frac{2}{L}\Big)^\frac{3}{2}\cdotp\sin \Big(\frac{n_x\pi}{L}x\Big)\cdotp\sin \Big(\frac{n_y\pi}{L}y\Big)\cdotp\sin \Big(\frac{n_z\pi}{L}z\Big)$$$$E_{n_x,n_y,n_z}=\frac{\hslash ^2}{2m}\Big(\frac{\pi}{L}\Big)^2(n_x^2+n_y^2+n_z^2)$$&lt;p&gt;最大のエネルギー値 E を&lt;strong&gt;フェルミエネルギー&lt;/strong&gt;という。&lt;/p&gt;
 </description>
         </item>
         <item>
