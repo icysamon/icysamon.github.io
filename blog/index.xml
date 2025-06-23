@@ -7,7 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Wed, 08 Nov 2023 17:01:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Nov 2023 15:47:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>波束、位相速度、群速度</title>
+        <link>http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</link>
+        <pubDate>Sun, 12 Nov 2023 15:47:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</guid>
+        <description>&lt;h2 id=&#34;波束波群&#34;&gt;波束（波群）
+&lt;/h2&gt;&lt;p&gt;局所的に存在する波うち/波動であり、移動する1個の波動の塊のようにふるまう。&lt;/p&gt;
+&lt;p&gt;振幅が最大になる点は1箇所だけになる。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;この波束だけに注目したとき、これがあたかも粒子的に振る舞うように見える。すなわち、直観的には波束が粒子であると考えることができる。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;この説明は、物理的にはやや厳密性を失う。&lt;/p&gt;
+&lt;h2 id=&#34;群速度&#34;&gt;群速度
+&lt;/h2&gt;&lt;p&gt;複数の波を重ね合わせた時にその全体（波束）が移動する速度のことである。
+&lt;/p&gt;
+$$v_g = \frac{dω}{dk}$$&lt;h2 id=&#34;位相速度&#34;&gt;位相速度
+&lt;/h2&gt;&lt;p&gt;各波の速度。
+&lt;/p&gt;
+$$v = \frac ω k$$&lt;h2 id=&#34;関係式&#34;&gt;関係式
+&lt;/h2&gt;$$k≡\frac{2π}{λ}$$&lt;p&gt;
+&lt;/p&gt;
+$$ω≡2πν$$</description>
+        </item>
+        <item>
         <title>光の粒子性と波動性</title>
         <link>http://localhost:1313/blog/post/%E5%85%89%E3%81%AE%E7%B2%92%E5%AD%90%E6%80%A7%E3%81%A8%E6%B3%A2%E5%8B%95%E6%80%A7/</link>
         <pubDate>Wed, 08 Nov 2023 17:01:00 +0900</pubDate>
