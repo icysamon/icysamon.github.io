@@ -7,7 +7,66 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Thu, 08 Feb 2024 22:13:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Jun 2024 10:38:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Debian で AnyConnect VPN を使う</title>
+        <link>http://localhost:1313/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</link>
+        <pubDate>Sat, 15 Jun 2024 10:38:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</guid>
+        <description>&lt;h2 id=&#34;環境設定&#34;&gt;環境設定
+&lt;/h2&gt;&lt;p&gt;最初には OpenConnect 環境のインストールしてください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install openconnect
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install network-manager-openconnect-gnome 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;ネットサービスの再起動&#34;&gt;ネットサービスの再起動
+&lt;/h2&gt;&lt;p&gt;その後ネットサービスの再起動は必要である。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart NetworkManager
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;接続&#34;&gt;接続
+&lt;/h2&gt;&lt;p&gt;ネットワークの設定画面で VPN を追加してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/debian-add-vpn.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;そして Multi-protocol VPN client(openconnect) を選択してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/debian-multi-protocol-vpn-client.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Gateway を編集して IPv6 を無効化してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/debian-ipv6.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最後に追加ボタンを押して、AnyConnect VPN の登録画面が出来る。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Home Assistant - mosquitto_pub のメッセージ設定は正しいけどデータが届かない</title>
         <link>http://localhost:1313/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</link>
         <pubDate>Thu, 08 Feb 2024 22:13:00 +0900</pubDate>
