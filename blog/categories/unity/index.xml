@@ -7,7 +7,24 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Sat, 07 Oct 2023 21:04:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Jan 2024 21:43:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/unity/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Unity - System.IO.Ports が使えない</title>
+        <link>http://localhost:1313/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</link>
+        <pubDate>Mon, 01 Jan 2024 21:43:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Net-Framework.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Project Settings → Player → Other Settings → Api Compatibility Level を &lt;strong&gt;.Net Framework&lt;/strong&gt; に変更すれば解決できる。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Unity - マウスがサスペンド時にオブジェクトを拡大する</title>
         <link>http://localhost:1313/blog/post/unity-%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%8C%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%83%89%E6%99%82%E3%81%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E6%8B%A1%E5%A4%A7%E3%81%99%E3%82%8B/</link>
         <pubDate>Sat, 07 Oct 2023 21:04:00 +0900</pubDate>
