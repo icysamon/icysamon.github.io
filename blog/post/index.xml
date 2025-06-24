@@ -2,17 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on icysamon&#39;s blog</title>
-        <link>https://icysamon.github.io/blog/post/</link>
+        <link>http://localhost:1313/blog/post/</link>
         <description>Recent content in Posts on icysamon&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Sat, 15 Jun 2024 10:38:00 +0900</lastBuildDate><atom:link href="https://icysamon.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Jun 2024 12:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>初めての日記</title>
+        <link>http://localhost:1313/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/</link>
+        <pubDate>Wed, 19 Jun 2024 12:00:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/</guid>
+        <description>&lt;p&gt;毎日普通に過ごし日本語も下手で何を書くのか全然分からんのにやはり日記を書きたいなと思って日記を始めた。&lt;/p&gt;
+&lt;p&gt;一応、聖上の恩情はすべて返したので、中国から解放された。新しい生活はここから始まる。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/first-diary.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Git SSH Key の設定</title>
+        <link>http://localhost:1313/blog/post/git-ssh-key-%E3%81%AE%E8%A8%AD%E5%AE%9A/</link>
+        <pubDate>Mon, 17 Jun 2024 19:35:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/git-ssh-key-%E3%81%AE%E8%A8%AD%E5%AE%9A/</guid>
+        <description>&lt;p&gt;最初にはパソコンに SSH key があるかないかを確認してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;そしてid_rsa と id_rsa.pub の存在を確認してください。ない場合以下のコマンドで新しい SSH key を作成してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxx@xxx.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&amp;ldquo;&lt;a class=&#34;link&#34; href=&#34;mailto:xxx@xxx.com&#34; &gt;xxx@xxx.com&lt;/a&gt;&amp;rdquo; の中に自分の GitHub アカントと連携したメールを書いて、その後三回の確認があるので Enter キーを押し続ければ良い。そして同じファイルで以下のコマンドを入力して SSH key の内容を取得できる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat id_rsa.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最後にこれをコーピーして GitHub 設定画面の SSH and GPG keys で新しい鍵を作ってコーピーした内容をその中に入力してください。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Debian で AnyConnect VPN を使う</title>
-        <link>https://icysamon.github.io/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</link>
+        <link>http://localhost:1313/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</link>
         <pubDate>Sat, 15 Jun 2024 10:38:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</guid>
+        <guid>http://localhost:1313/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</guid>
         <description>&lt;h2 id=&#34;環境設定&#34;&gt;環境設定
 &lt;/h2&gt;&lt;p&gt;最初には OpenConnect 環境のインストールしてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -68,10 +124,10 @@
         </item>
         <item>
         <title>Android Studio - ボタンでテキストを変更する</title>
-        <link>https://icysamon.github.io/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 11 Apr 2024 10:15:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;activity_mainxml&#34;&gt;activity_main.xml
 &lt;/h2&gt;&lt;p&gt;activity_main.xml にボタンとテキストを追加し、ID と位置を設定してください。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-04/android-studio-change-text-with-button.webp&#34;
@@ -120,10 +176,10 @@
         </item>
         <item>
         <title>Raspberry Pi Pico - 点灯</title>
-        <link>https://icysamon.github.io/blog/post/raspberry-pi-pico-%E7%82%B9%E7%81%AF/</link>
+        <link>http://localhost:1313/blog/post/raspberry-pi-pico-%E7%82%B9%E7%81%AF/</link>
         <pubDate>Wed, 14 Feb 2024 14:01:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/raspberry-pi-pico-%E7%82%B9%E7%81%AF/</guid>
+        <guid>http://localhost:1313/blog/post/raspberry-pi-pico-%E7%82%B9%E7%81%AF/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -175,10 +231,10 @@
         </item>
         <item>
         <title>Home Assistant - mosquitto_pub のメッセージ設定は正しいけどデータが届かない</title>
-        <link>https://icysamon.github.io/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</link>
+        <link>http://localhost:1313/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</link>
         <pubDate>Thu, 08 Feb 2024 22:13:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</guid>
+        <guid>http://localhost:1313/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</guid>
         <description>&lt;p&gt;多分 &amp;quot; の前は \ が必要だと思う。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -192,10 +248,10 @@
         </item>
         <item>
         <title>Godot - ウェブプログラムが実行出来ないを解決する</title>
-        <link>https://icysamon.github.io/blog/post/godot-%E3%82%A6%E3%82%A7%E3%83%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%AE%9F%E8%A1%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/godot-%E3%82%A6%E3%82%A7%E3%83%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%AE%9F%E8%A1%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Wed, 07 Feb 2024 23:59:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-%E3%82%A6%E3%82%A7%E3%83%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%AE%9F%E8%A1%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/godot-%E3%82%A6%E3%82%A7%E3%83%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%AE%9F%E8%A1%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;エラーコード&#34;&gt;エラーコード
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -225,10 +281,10 @@
         </item>
         <item>
         <title>Unity - System.IO.Ports が使えない</title>
-        <link>https://icysamon.github.io/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</link>
+        <link>http://localhost:1313/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</link>
         <pubDate>Mon, 01 Jan 2024 21:43:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</guid>
+        <guid>http://localhost:1313/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-01/unity-net-framework.webp&#34;
 	
 	
@@ -242,10 +298,10 @@
         </item>
         <item>
         <title>Verilog - モジュールのインスタンス化とシグナル接続</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%8C%96%E3%81%A8%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E6%8E%A5%E7%B6%9A/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%8C%96%E3%81%A8%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E6%8E%A5%E7%B6%9A/</link>
         <pubDate>Tue, 12 Dec 2023 15:53:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%8C%96%E3%81%A8%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E6%8E%A5%E7%B6%9A/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%8C%96%E3%81%A8%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E6%8E%A5%E7%B6%9A/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-Instance.webp&#34;
 	
@@ -341,10 +397,10 @@
         </item>
         <item>
         <title>Verilog - ベクトルのエックスノア (XNOR)</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E3%82%A8%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8E%E3%82%A2-xnor/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E3%82%A8%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8E%E3%82%A2-xnor/</link>
         <pubDate>Sun, 10 Dec 2023 14:27:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E3%82%A8%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8E%E3%82%A2-xnor/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E3%82%A8%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8E%E3%82%A2-xnor/</guid>
         <description>&lt;h2 id=&#34;エックスノア-xnor-の表示方法&#34;&gt;エックスノア (XNOR) の表示方法
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -433,10 +489,10 @@
         </item>
         <item>
         <title>Verilog - for ループ</title>
-        <link>https://icysamon.github.io/blog/post/verilog-for-%E3%83%AB%E3%83%BC%E3%83%97/</link>
+        <link>http://localhost:1313/blog/post/verilog-for-%E3%83%AB%E3%83%BC%E3%83%97/</link>
         <pubDate>Sat, 09 Dec 2023 14:21:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-for-%E3%83%AB%E3%83%BC%E3%83%97/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-for-%E3%83%AB%E3%83%BC%E3%83%97/</guid>
         <description>&lt;p&gt;ここには8ビットの順序を逆するを例に挙げる。&lt;/p&gt;
 &lt;h2 id=&#34;for&#34;&gt;for
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -504,10 +560,10 @@
         </item>
         <item>
         <title>Verilog - ビット演算子と論理演算子</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%A8%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97%E5%AD%90/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%A8%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97%E5%AD%90/</link>
         <pubDate>Thu, 07 Dec 2023 14:44:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%A8%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97%E5%AD%90/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%A8%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97%E5%AD%90/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-bitwise-logical-out.webp&#34;
 	
@@ -539,10 +595,10 @@
         </item>
         <item>
         <title>Verilog - ベクトルの分割</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E5%88%86%E5%89%B2/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E5%88%86%E5%89%B2/</link>
         <pubDate>Wed, 06 Dec 2023 18:32:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E5%88%86%E5%89%B2/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E5%88%86%E5%89%B2/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -573,10 +629,10 @@
         </item>
         <item>
         <title>Verilog - ベクトル</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB/</link>
         <pubDate>Wed, 06 Dec 2023 14:15:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-vec.webp&#34;
 	
@@ -619,10 +675,10 @@
         </item>
         <item>
         <title>Verilog - 7458チップ</title>
-        <link>https://icysamon.github.io/blog/post/verilog-7458%E3%83%81%E3%83%83%E3%83%97/</link>
+        <link>http://localhost:1313/blog/post/verilog-7458%E3%83%81%E3%83%83%E3%83%97/</link>
         <pubDate>Wed, 06 Dec 2023 13:21:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-7458%E3%83%81%E3%83%83%E3%83%97/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-7458%E3%83%81%E3%83%83%E3%83%97/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
 &lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-7458.webp&#34;
 	
@@ -682,10 +738,10 @@
         </item>
         <item>
         <title>Verilog - 点灯</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E7%82%B9%E7%81%AF/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E7%82%B9%E7%81%AF/</link>
         <pubDate>Tue, 05 Dec 2023 14:05:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E7%82%B9%E7%81%AF/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E7%82%B9%E7%81%AF/</guid>
         <description>&lt;h2 id=&#34;topv&#34;&gt;top.v
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -840,10 +896,10 @@
         </item>
         <item>
         <title>Verilog - クロック信号</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E4%BF%A1%E5%8F%B7/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E4%BF%A1%E5%8F%B7/</link>
         <pubDate>Mon, 04 Dec 2023 14:06:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E4%BF%A1%E5%8F%B7/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E4%BF%A1%E5%8F%B7/</guid>
         <description>&lt;h2 id=&#34;コード&#34;&gt;コード
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -892,10 +948,10 @@
         </item>
         <item>
         <title>Verilog - 初めてのシグナル</title>
-        <link>https://icysamon.github.io/blog/post/verilog-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB/</link>
+        <link>http://localhost:1313/blog/post/verilog-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB/</link>
         <pubDate>Mon, 04 Dec 2023 14:01:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/verilog-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB/</guid>
+        <guid>http://localhost:1313/blog/post/verilog-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB/</guid>
         <description>&lt;h2 id=&#34;コード&#34;&gt;コード
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -934,10 +990,10 @@
         </item>
         <item>
         <title>Godot - 異なるシーン間のシグナル設定</title>
-        <link>https://icysamon.github.io/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/</link>
+        <link>http://localhost:1313/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/</link>
         <pubDate>Fri, 24 Nov 2023 16:16:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/</guid>
+        <guid>http://localhost:1313/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/</guid>
         <description>&lt;h2 id=&#34;シグナル源&#34;&gt;シグナル源
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -980,10 +1036,10 @@
         </item>
         <item>
         <title>トンネル効果</title>
-        <link>https://icysamon.github.io/blog/post/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C/</link>
+        <link>http://localhost:1313/blog/post/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C/</link>
         <pubDate>Mon, 20 Nov 2023 13:23:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C/</guid>
+        <guid>http://localhost:1313/blog/post/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C/</guid>
         <description>&lt;h2 id=&#34;トンネル効果&#34;&gt;トンネル効果
 &lt;/h2&gt;&lt;p&gt;この効果は電子が波動であることの立証になる。&lt;/p&gt;
 &lt;p&gt;エネルギー障壁の高さ\(V_1\)は十分に高くて、電子のエネルギーよりも大きいとする。電子を粒子とすると、電子のはこの障壁を越えることができず、境界ですべて反射されてしまう。とこらが電子を波動と考えると、この障壁中に浸み込んでいくことが可能になる。この効果を&lt;strong&gt;トンネル効果&lt;/strong&gt;という。&lt;/p&gt;
@@ -1004,20 +1060,20 @@ $$P=4\cdot exp \Big(-\frac{2m\sqrt{gh}}{\hslash}\cdot W\Big)$$</description>
         </item>
         <item>
         <title>状態密度関数</title>
-        <link>https://icysamon.github.io/blog/post/%E7%8A%B6%E6%85%8B%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0/</link>
+        <link>http://localhost:1313/blog/post/%E7%8A%B6%E6%85%8B%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0/</link>
         <pubDate>Sun, 19 Nov 2023 12:04:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E7%8A%B6%E6%85%8B%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0/</guid>
+        <guid>http://localhost:1313/blog/post/%E7%8A%B6%E6%85%8B%E5%AF%86%E5%BA%A6%E9%96%A2%E6%95%B0/</guid>
         <description>&lt;h2 id=&#34;状態密度関数&#34;&gt;状態密度関数
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;単位体積&lt;/strong&gt;当たりの&lt;strong&gt;単位エネルギー&lt;/strong&gt;領域に対する電子の&lt;strong&gt;量子状態数&lt;/strong&gt;を状態密度といい。一般には\(g(E)\)で表す。&lt;/p&gt;
 $$g(E)=\frac{1}{2π^2} \Bigg(\frac{2m}{\hslash ^2}\Bigg)^{3/2}E^{1∕2}$$</description>
         </item>
         <item>
         <title>フェルミエネルギー</title>
-        <link>https://icysamon.github.io/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</link>
+        <link>http://localhost:1313/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</link>
         <pubDate>Sat, 18 Nov 2023 16:36:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</guid>
+        <guid>http://localhost:1313/blog/post/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/</guid>
         <description>&lt;h2 id=&#34;縮退&#34;&gt;縮退
 &lt;/h2&gt;&lt;p&gt;エネルギー固有値が同じて、固有関数が異なる場合を&lt;strong&gt;縮退&lt;/strong&gt;している。&lt;/p&gt;
 &lt;h2 id=&#34;フェルミエネルギー&#34;&gt;フェルミエネルギー
@@ -1032,10 +1088,10 @@ $$E_F(0)=\frac{\hslash ^2}{2m}(3\pi ^2n)^{2/3}$$&lt;p&gt;ここで、\(n≡N∕L
         </item>
         <item>
         <title>束縛粒子</title>
-        <link>https://icysamon.github.io/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</link>
+        <link>http://localhost:1313/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</link>
         <pubDate>Wed, 15 Nov 2023 12:58:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</guid>
+        <guid>http://localhost:1313/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</guid>
         <description>&lt;h2 id=&#34;量子井戸quantum-well&#34;&gt;量子井戸(quantum well)
 &lt;/h2&gt;&lt;p&gt;電子の移動方向が束縛された状態のこと。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E9%87%8F%E5%AD%90%E4%BA%95%E6%88%B8.webp&#34;
@@ -1055,10 +1111,10 @@ $$\varphi (x)=\Big(\frac{2}{L}\Big)^{\frac{1}{2}}\sin\Big(\frac{n\pi}{L}x\Big)$$
         </item>
         <item>
         <title>シュレーディンガーの波動方程式</title>
-        <link>https://icysamon.github.io/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</link>
+        <link>http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</link>
         <pubDate>Tue, 14 Nov 2023 13:22:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</guid>
+        <guid>http://localhost:1313/blog/post/%E3%82%B7%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%AC%E3%83%BC%E3%81%AE%E6%B3%A2%E5%8B%95%E6%96%B9%E7%A8%8B%E5%BC%8F/</guid>
         <description>&lt;h2 id=&#34;時間に依存するシュレーディンガー方程式&#34;&gt;時間に依存するシュレーディンガー方程式
 &lt;/h2&gt;$$i\hslash\frac{d}{dt}|\Psi(t)\rangle=\hat{H}|\Psi(t)\rangle$$&lt;p&gt;なぜならば&lt;/p&gt;
 $$E=\frac{P^2}{2m}+V=H$$&lt;p&gt;ポテンシャルエネルギー \(V\)&lt;/p&gt;
@@ -1103,10 +1159,10 @@ $$\Psi(x,t)=\varphi (x)Cexp\Biggl(-j\frac{E}{\hslash}t\Biggr )$$&lt;p&gt;\(\varp
         </item>
         <item>
         <title>ド・ブロイの関係式</title>
-        <link>https://icysamon.github.io/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/</link>
+        <link>http://localhost:1313/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/</link>
         <pubDate>Mon, 13 Nov 2023 10:36:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/</guid>
+        <guid>http://localhost:1313/blog/post/%E3%83%89%E3%83%96%E3%83%AD%E3%82%A4%E3%81%AE%E9%96%A2%E4%BF%82%E5%BC%8F/</guid>
         <description>&lt;p&gt;ド・ブロイの関係式は&lt;/p&gt;
 $$λ=\frac h Ρ$$&lt;p&gt;そしてPは粒子の運動量。&lt;/p&gt;
 $$Ρ≡mv_g$$$$Ρ=\sqrt{2mE}\quad (変形)$$&lt;p&gt;粒子の速度は&lt;strong&gt;群速度&lt;/strong&gt;であると考えられると、ド・ブロイの仮説の式が求められる。&lt;/p&gt;
@@ -1114,10 +1170,10 @@ $$Ρ≡mv_g$$$$Ρ=\sqrt{2mE}\quad (変形)$$&lt;p&gt;粒子の速度は&lt;stron
         </item>
         <item>
         <title>波束、位相速度、群速度</title>
-        <link>https://icysamon.github.io/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</link>
+        <link>http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</link>
         <pubDate>Sun, 12 Nov 2023 15:47:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</guid>
+        <guid>http://localhost:1313/blog/post/%E6%B3%A2%E6%9D%9F%E4%BD%8D%E7%9B%B8%E9%80%9F%E5%BA%A6%E7%BE%A4%E9%80%9F%E5%BA%A6/</guid>
         <description>&lt;h2 id=&#34;波束波群&#34;&gt;波束（波群）
 &lt;/h2&gt;&lt;p&gt;局所的に存在する波うち/波動であり、移動する1個の波動の塊のようにふるまう。&lt;/p&gt;
 &lt;p&gt;振幅が最大になる点は1箇所だけになる。&lt;/p&gt;
@@ -1136,10 +1192,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>光の粒子性と波動性</title>
-        <link>https://icysamon.github.io/blog/post/%E5%85%89%E3%81%AE%E7%B2%92%E5%AD%90%E6%80%A7%E3%81%A8%E6%B3%A2%E5%8B%95%E6%80%A7/</link>
+        <link>http://localhost:1313/blog/post/%E5%85%89%E3%81%AE%E7%B2%92%E5%AD%90%E6%80%A7%E3%81%A8%E6%B3%A2%E5%8B%95%E6%80%A7/</link>
         <pubDate>Wed, 08 Nov 2023 17:01:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/%E5%85%89%E3%81%AE%E7%B2%92%E5%AD%90%E6%80%A7%E3%81%A8%E6%B3%A2%E5%8B%95%E6%80%A7/</guid>
+        <guid>http://localhost:1313/blog/post/%E5%85%89%E3%81%AE%E7%B2%92%E5%AD%90%E6%80%A7%E3%81%A8%E6%B3%A2%E5%8B%95%E6%80%A7/</guid>
         <description>&lt;h2 id=&#34;光の粒子性と波動性&#34;&gt;光の粒子性と波動性
 &lt;/h2&gt;&lt;p&gt;光はある場合には波動として振る舞い、ある場には粒子として振る舞う、つまり、いわゆる波動性と粒子性の二重性を持っている。&lt;/p&gt;
 &lt;p&gt;電子と光同じように、粒子性と波動性の二重性をもつ。&lt;/p&gt;
@@ -1164,10 +1220,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - RTS ゲームの選択ボックスの作り方</title>
-        <link>https://icysamon.github.io/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/</link>
+        <link>http://localhost:1313/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/</link>
         <pubDate>Thu, 02 Nov 2023 19:28:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/</guid>
+        <guid>http://localhost:1313/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/</guid>
         <description>&lt;h2 id=&#34;効果&#34;&gt;効果
 &lt;/h2&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-green-line.gif&#34;&gt;
 &lt;img src=&#34;https://image.icysamon.jp/godot-select-box-white-backgroundcolor.gif&#34;&gt;
@@ -1317,10 +1373,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - Shader でふろーまーくを作る</title>
-        <link>https://icysamon.github.io/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/</link>
         <pubDate>Wed, 11 Oct 2023 23:57:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1375,10 +1431,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - Shader で丸を作る</title>
-        <link>https://icysamon.github.io/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/</link>
         <pubDate>Wed, 11 Oct 2023 17:24:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/godot-shader-%E3%81%A7%E4%B8%B8%E3%82%92%E4%BD%9C%E3%82%8B/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1419,10 +1475,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - マウスがサスペンド時にオブジェクトを拡大する</title>
-        <link>https://icysamon.github.io/blog/post/unity-%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%8C%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%83%89%E6%99%82%E3%81%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E6%8B%A1%E5%A4%A7%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/unity-%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%8C%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%83%89%E6%99%82%E3%81%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E6%8B%A1%E5%A4%A7%E3%81%99%E3%82%8B/</link>
         <pubDate>Sat, 07 Oct 2023 21:04:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%8C%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%83%89%E6%99%82%E3%81%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E6%8B%A1%E5%A4%A7%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/unity-%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%8C%E3%82%B5%E3%82%B9%E3%83%9A%E3%83%B3%E3%83%89%E6%99%82%E3%81%AB%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E6%8B%A1%E5%A4%A7%E3%81%99%E3%82%8B/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1481,10 +1537,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - スライダーで音量を調整する</title>
-        <link>https://icysamon.github.io/blog/post/unity-%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%80%E3%83%BC%E3%81%A7%E9%9F%B3%E9%87%8F%E3%82%92%E8%AA%BF%E6%95%B4%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/unity-%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%80%E3%83%BC%E3%81%A7%E9%9F%B3%E9%87%8F%E3%82%92%E8%AA%BF%E6%95%B4%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 05 Oct 2023 21:15:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%80%E3%83%BC%E3%81%A7%E9%9F%B3%E9%87%8F%E3%82%92%E8%AA%BF%E6%95%B4%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/unity-%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%80%E3%83%BC%E3%81%A7%E9%9F%B3%E9%87%8F%E3%82%92%E8%AA%BF%E6%95%B4%E3%81%99%E3%82%8B/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1546,10 +1602,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - ゲームの退出</title>
-        <link>https://icysamon.github.io/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/</link>
+        <link>http://localhost:1313/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/</link>
         <pubDate>Wed, 04 Oct 2023 19:34:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/</guid>
+        <guid>http://localhost:1313/blog/post/unity-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%80%80%E5%87%BA/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1594,10 +1650,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - シーン非同期ロード</title>
-        <link>https://icysamon.github.io/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</link>
+        <link>http://localhost:1313/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</link>
         <pubDate>Thu, 28 Sep 2023 17:59:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</guid>
+        <guid>http://localhost:1313/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</guid>
         <description>&lt;p&gt;UI にこれらが必要である。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Scene-Load-Object.webp&#34;
 	
@@ -1696,10 +1752,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - タイマー</title>
-        <link>https://icysamon.github.io/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</link>
+        <link>http://localhost:1313/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</link>
         <pubDate>Wed, 30 Aug 2023 19:10:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</guid>
+        <guid>http://localhost:1313/blog/post/unity-%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC/</guid>
         <description>&lt;h2 id=&#34;timetime&#34;&gt;Time.time
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1778,10 +1834,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - AnimationEvent &#34;xxx&#34; on animation &#34;xxx&#34; has no receiver を解決する</title>
-        <link>https://icysamon.github.io/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Sun, 27 Aug 2023 21:57:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;エラーが発生した Animation を開けて、対応の AnimationEvent を選択してください。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Animation-AnimationEvent.webp&#34;
 	
@@ -1813,10 +1869,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - シーンの切り替え</title>
-        <link>https://icysamon.github.io/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</link>
+        <link>http://localhost:1313/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</link>
         <pubDate>Wed, 09 Aug 2023 23:59:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</guid>
+        <guid>http://localhost:1313/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1853,10 +1909,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - ゲーム退出ボタン</title>
-        <link>https://icysamon.github.io/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/</link>
+        <link>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/</link>
         <pubDate>Tue, 08 Aug 2023 12:02:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/</guid>
+        <guid>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E9%80%80%E5%87%BA%E3%83%9C%E3%82%BF%E3%83%B3/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1909,10 +1965,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - ゲーム解像度を取得する</title>
-        <link>https://icysamon.github.io/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 03 Aug 2023 21:43:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/godot-%E3%82%B2%E3%83%BC%E3%83%A0%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1939,10 +1995,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Godot - 剛体をマウスの動きにつき従う</title>
-        <link>https://icysamon.github.io/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/</link>
+        <link>http://localhost:1313/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/</link>
         <pubDate>Thu, 03 Aug 2023 13:59:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/</guid>
+        <guid>http://localhost:1313/blog/post/godot-%E5%89%9B%E4%BD%93%E3%82%92%E3%83%9E%E3%82%A6%E3%82%B9%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AB%E3%81%A4%E3%81%8D%E5%BE%93%E3%81%86/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -2003,10 +2059,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>ubuntu と win10 システムの時刻が一致しないを解決する</title>
-        <link>https://icysamon.github.io/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Wed, 12 Jul 2023 19:41:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;ウィンドウズシステムズのノートで以下のコードを書いてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2026,10 +2082,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>STLink エラー localhost:61234: Connection timed out を解決する</title>
-        <link>https://icysamon.github.io/blog/post/stlink-%E3%82%A8%E3%83%A9%E3%83%BC-localhost61234-connection-timed-out-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/stlink-%E3%82%A8%E3%83%A9%E3%83%BC-localhost61234-connection-timed-out-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Sat, 08 Jul 2023 16:22:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/stlink-%E3%82%A8%E3%83%A9%E3%83%BC-localhost61234-connection-timed-out-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/stlink-%E3%82%A8%E3%83%A9%E3%83%BC-localhost61234-connection-timed-out-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;環境&#34;&gt;環境
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;STM32CubeIDE 1.12.0&lt;/li&gt;
@@ -2043,10 +2099,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>Unity - The system cannot find the path specified を解決する</title>
-        <link>https://icysamon.github.io/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Thu, 06 Jul 2023 21:48:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;MinGW をインストール直後にこの問題が発生したので、MinGW のせいかもしれないと思った。最初には、PC の再起動、エディタの再インストール、システムパスなど様々の変更を試したが残念ながら全部失敗した。&lt;/p&gt;
 &lt;h2 id=&#34;解決方法&#34;&gt;解決方法
@@ -2059,10 +2115,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>WordPress - メディアの403エラーを解決する</title>
-        <link>https://icysamon.github.io/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Mon, 19 Jun 2023 11:33:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;原因&#34;&gt;原因
 &lt;/h2&gt;&lt;p&gt;ファイルの権限設定が不正だと思う。&lt;/p&gt;
 &lt;h2 id=&#34;解決方法&#34;&gt;解決方法
@@ -2088,10 +2144,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>SyntaxHighlighter の font-family を変更する</title>
-        <link>https://icysamon.github.io/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
         <pubDate>Sat, 20 May 2023 21:16:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/syntaxhighlighter-%E3%81%AE-font-family-%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;FTP工具で /「WordPressインストール位置」/wp-content/plugins/syntaxhighlighter を開けて&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;version3 を使っている場合、/syntaxhighlighter3/styles を開けてください。&lt;/li&gt;
@@ -2118,10 +2174,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>htaccess で http から https にリダイレクトする</title>
-        <link>https://icysamon.github.io/blog/post/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</link>
+        <link>http://localhost:1313/blog/post/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</link>
         <pubDate>Tue, 16 May 2023 20:47:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/htaccess-%E3%81%A7-http-%E3%81%8B%E3%82%89-https-%E3%81%AB%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;FTP工具で .htaccess に以下のコードを追加してください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2152,10 +2208,10 @@ $$ω≡2πν$$</description>
         </item>
         <item>
         <title>WordPress - Theme Editor が表示されていない時の解決方法</title>
-        <link>https://icysamon.github.io/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</link>
+        <link>http://localhost:1313/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</link>
         <pubDate>Tue, 16 May 2023 10:23:00 +0900</pubDate>
         
-        <guid>https://icysamon.github.io/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</guid>
+        <guid>http://localhost:1313/blog/post/wordpress-theme-editor-%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;p&gt;FTP 工具で public_html 中の wp-config.php を開けて&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
