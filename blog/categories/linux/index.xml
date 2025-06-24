@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linux on icysamon&#39;s blog</title>
-        <link>http://localhost:1313/blog/categories/linux/</link>
+        <link>https://icysamon.github.io/blog/categories/linux/</link>
         <description>Recent content in Linux on icysamon&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Sat, 15 Jun 2024 10:38:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Jun 2024 10:38:00 +0900</lastBuildDate><atom:link href="https://icysamon.github.io/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Debian で AnyConnect VPN を使う</title>
-        <link>http://localhost:1313/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</link>
+        <link>https://icysamon.github.io/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</link>
         <pubDate>Sat, 15 Jun 2024 10:38:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</guid>
+        <guid>https://icysamon.github.io/blog/post/debian-%E3%81%A7-anyconnect-vpn-%E3%82%92%E4%BD%BF%E3%81%86/</guid>
         <description>&lt;h2 id=&#34;環境設定&#34;&gt;環境設定
 &lt;/h2&gt;&lt;p&gt;最初には OpenConnect 環境のインストールしてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -37,7 +37,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;接続&#34;&gt;接続
 &lt;/h2&gt;&lt;p&gt;ネットワークの設定画面で VPN を追加してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/debian-add-vpn.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/debian-add-vpn.webp&#34;
 	
 	
 	
@@ -46,7 +46,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして Multi-protocol VPN client(openconnect) を選択してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/debian-multi-protocol-vpn-client.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/debian-multi-protocol-vpn-client.webp&#34;
 	
 	
 	
@@ -55,7 +55,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Gateway を編集して IPv6 を無効化してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/debian-ipv6.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/debian-ipv6.webp&#34;
 	
 	
 	
@@ -68,10 +68,10 @@
         </item>
         <item>
         <title>Home Assistant - mosquitto_pub のメッセージ設定は正しいけどデータが届かない</title>
-        <link>http://localhost:1313/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</link>
+        <link>https://icysamon.github.io/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</link>
         <pubDate>Thu, 08 Feb 2024 22:13:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</guid>
+        <guid>https://icysamon.github.io/blog/post/home-assistant-mosquitto_pub-%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E8%A8%AD%E5%AE%9A%E3%81%AF%E6%AD%A3%E3%81%97%E3%81%84%E3%81%91%E3%81%A9%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E5%B1%8A%E3%81%8B%E3%81%AA%E3%81%84/</guid>
         <description>&lt;p&gt;多分 &amp;quot; の前は \ が必要だと思う。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -85,10 +85,10 @@
         </item>
         <item>
         <title>ubuntu と win10 システムの時刻が一致しないを解決する</title>
-        <link>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <link>https://icysamon.github.io/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Wed, 12 Jul 2023 19:41:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>https://icysamon.github.io/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;ウィンドウズシステムズのノートで以下のコードを書いてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
