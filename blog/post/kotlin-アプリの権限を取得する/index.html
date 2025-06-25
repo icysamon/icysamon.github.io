@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Godot でシーンを切り替えする。">
-<title>Godot - シーンの切り替え</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="ここでは BLUETOOTH_CONNECT 権限を例にする。">
+<title>Kotlin - アプリの権限を取得する</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/kotlin-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E6%A8%A9%E9%99%90%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Godot - シーンの切り替え">
-<meta property='og:description' content="Godot でシーンを切り替えする。">
-<meta property='og:url' content='http://localhost:1313/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/'>
+<link rel="stylesheet" href="/blog/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Kotlin - アプリの権限を取得する">
+<meta property='og:description' content="ここでは BLUETOOTH_CONNECT 権限を例にする。">
+<meta property='og:url' content='http://localhost:1313/blog/post/kotlin-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E6%A8%A9%E9%99%90%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-08-09T23:59:00&#43;09:00'/><meta property='article:modified_time' content='2023-08-09T23:59:00&#43;09:00'/>
-<meta name="twitter:title" content="Godot - シーンの切り替え">
-<meta name="twitter:description" content="Godot でシーンを切り替えする。">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-07-30T18:10:00&#43;09:00'/><meta property='article:modified_time' content='2024-07-30T18:10:00&#43;09:00'/>
+<meta name="twitter:title" content="Kotlin - アプリの権限を取得する">
+<meta name="twitter:description" content="ここでは BLUETOOTH_CONNECT 権限を例にする。">
     </head>
     <body class="
     article-page
@@ -229,6 +229,31 @@
         
             
                 
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#権限ランチャーを作る">権限ランチャーを作る</a></li>
+    <li><a href="#権限をリクエスト">権限をリクエスト</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
             
         
             
@@ -317,8 +342,8 @@
     
     <header class="article-category">
         
-            <a href="/blog/categories/godot/" >
-                Godot
+            <a href="/blog/categories/android/" >
+                Android
             </a>
         
     </header>
@@ -326,12 +351,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/">Godot - シーンの切り替え</a>
+            <a href="/blog/post/kotlin-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E6%A8%A9%E9%99%90%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/">Kotlin - アプリの権限を取得する</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Godot でシーンを切り替えする。
+            ここでは BLUETOOTH_CONNECT 権限を例にする。
         </h3>
         
     </div>
@@ -352,7 +377,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">8月 09, 2023</time>
+                <time class="article-time--published">7月 30, 2024</time>
             </div>
         
 
@@ -382,7 +407,9 @@
     <section class="article-content">
     
     
-    <div class="highlight"><div class="chroma">
+    <p>ここでは BLUETOOTH_CONNECT 権限を例にする。</p>
+<h2 id="権限ランチャーを作る">権限ランチャーを作る
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -399,19 +426,80 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript" data-lang="gdscript"><span class="line"><span class="cl"><span class="c1"># Godot 4.1</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// 権限ランチャー
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">private</span> <span class="k">val</span> <span class="py">requestPermissionLauncher</span> <span class="p">=</span>
+</span></span><span class="line"><span class="cl">    <span class="n">registerForActivityResult</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">ActivityResultContracts</span><span class="p">.</span><span class="n">RequestPermission</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">{</span> <span class="n">isGranted</span><span class="p">:</span> <span class="n">Boolean</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">isGranted</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 権限を取得できた
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nc">Log</span><span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="s2">&#34;Permission: &#34;</span><span class="p">,</span> <span class="s2">&#34;Granted&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// 権限を取得できなかった
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nc">Log</span><span class="p">.</span><span class="n">i</span><span class="p">(</span><span class="s2">&#34;Permission: &#34;</span><span class="p">,</span> <span class="s2">&#34;Denied&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="権限をリクエスト">権限をリクエスト
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">fun</span> <span class="nf">requestBluetoothPermission</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">when</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">ContextCompat</span><span class="p">.</span><span class="n">checkSelfPermission</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="k">this</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="n">BLUETOOTH_CONNECT</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span> <span class="o">==</span> <span class="nc">PackageManager</span><span class="p">.</span><span class="n">PERMISSION_GRANTED</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">bluetoothInit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="n">simultaneous_scene</span> <span class="o">=</span> <span class="nb">preload</span><span class="p">(</span><span class="s2">&#34;res://Scene/Test.tscn&#34;</span><span class="p">)</span><span class="o">.</span><span class="nf">instantiate</span><span class="p">()</span> <span class="c1"># シーンローダー</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">ActivityCompat</span><span class="p">.</span><span class="n">shouldShowRequestPermissionRationale</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="k">this</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="n">BLUETOOTH_CONNECT</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nc">Toast</span><span class="p">.</span><span class="n">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s2">&#34;Bluetooth 権限は必要にゃ。&#34;</span><span class="p">,</span> <span class="nc">Toast</span><span class="p">.</span><span class="n">LENGTH_LONG</span><span class="p">).</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">requestPermissionLauncher</span><span class="p">.</span><span class="n">launch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="n">BLUETOOTH_CONNECT</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 初期化</span>
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">_ready</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">start</span> <span class="o">=</span> <span class="nf">get_node</span><span class="p">(</span><span class="s2">&#34;ButtonPosition/Home/Start/Button&#34;</span><span class="p">)</span> <span class="c1"># ボタンを取得する</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">start</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">button_pressed</span><span class="p">)</span> <span class="c1"># 信号接続</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">button_pressed</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="nf">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="nf">add_child</span><span class="p">(</span><span class="n">simultaneous_scene</span><span class="p">)</span> <span class="c1"># シーンの切り替え</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nc">Toast</span><span class="p">.</span><span class="n">makeText</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s2">&#34;Bluetooth 権限は必要にゃ。&#34;</span><span class="p">,</span> <span class="nc">Toast</span><span class="p">.</span><span class="n">LENGTH_LONG</span><span class="p">).</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">requestPermissionLauncher</span><span class="p">.</span><span class="n">launch</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="nc">Manifest</span><span class="p">.</span><span class="n">permission</span><span class="p">.</span><span class="n">BLUETOOTH_CONNECT</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -476,12 +564,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-windows-%E7%89%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/">
+    <a href="/blog/post/pixel-%E3%81%AE%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%82%92%E6%9C%89%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - Windows 版アプリケーションアイコンを変更する</h2>
+            <h2 class="article-title">Pixel の開発者モードを有効化する</h2>
         </div>
     </a>
 </article>
@@ -489,12 +577,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-%E7%B0%A1%E5%8D%98%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%B3%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/">
+    <a href="/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7-view-%E3%81%AE%E4%BD%8D%E7%BD%AE%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - 簡単にシーンを切り替え</h2>
+            <h2 class="article-title">Android Studio - ボタンで View の位置を変更する</h2>
         </div>
     </a>
 </article>
@@ -502,12 +590,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-%E3%82%A6%E3%82%A7%E3%83%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%AE%9F%E8%A1%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/">
+    <a href="/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - ウェブプログラムが実行出来ないを解決する</h2>
+            <h2 class="article-title">Android Studio - ボタンクリックイベント</h2>
         </div>
     </a>
 </article>
@@ -515,12 +603,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/">
+    <a href="/blog/post/android-studio-%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - 異なるシーン間のシグナル設定</h2>
+            <h2 class="article-title">Android Studio - シミュレーションデバイスを追加する</h2>
         </div>
     </a>
 </article>
@@ -528,12 +616,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/">
+    <a href="/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Godot - RTS ゲームの選択ボックスの作り方</h2>
+            <h2 class="article-title">Android Studio - ボタンでテキストを変更する</h2>
         </div>
     </a>
 </article>
