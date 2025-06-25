@@ -7,7 +7,103 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Mon, 01 Jul 2024 22:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Jul 2024 09:07:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows 11 のウェブ検索機能を無効化する</title>
+        <link>http://localhost:1313/blog/post/windows-11-%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E6%A4%9C%E7%B4%A2%E6%A9%9F%E8%83%BD%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/</link>
+        <pubDate>Mon, 08 Jul 2024 09:07:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/windows-11-%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E6%A4%9C%E7%B4%A2%E6%A9%9F%E8%83%BD%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;この設定方法は Windows11 Pro ユーザー限りである。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Windows と R を押して gpedit.msc を 入力し、Enter を押してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/gpedit.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;そして「コンピューターの構成」＞「管理用テンプレート」＞「Windows コンポーネント」＞「検索」に入ってください。&lt;/p&gt;
+&lt;p&gt;「Web 検索を許可しない」と「Web を検索したり [検索] に Web の検索結果を表示したりしない」をダブルクリックして有効化してください。その後パソコンを再起動してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/local-group-policy-editor.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;次はまた Windows と R を押して regedit.exe を 入力し、Enter を押してください。&lt;/p&gt;
+&lt;p&gt;そして Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows Windows\CurrentVersion\Search に入ってください。&lt;/p&gt;
+&lt;p&gt;Search を右クリックして新規の DWORD ( 32 ビット ) 値を作し、BingSearchEnabled と命名してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/registry-editors.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最後に Dword をダブルクリックして値のデータを 0 に設定してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/dword-setting.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;設定後ウェブ検索結果はもう消えた。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/windows-search-not-ad.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>宇宙に目がないやん</title>
+        <link>http://localhost:1313/blog/post/%E5%AE%87%E5%AE%99%E3%81%AB%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84%E3%82%84%E3%82%93/</link>
+        <pubDate>Fri, 05 Jul 2024 12:15:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E5%AE%87%E5%AE%99%E3%81%AB%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84%E3%82%84%E3%82%93/</guid>
+        <description>&lt;p&gt;今日は３Dプリンターでモバイルスタンドを作った！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/3dprint-phone-stand.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;長い時間使っていないせいかも「フィラメントが破損もしくは詰まっています。確認してください」と言っちゃった&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;でも少し時間がかかってやっと直した。&lt;/p&gt;
+&lt;p&gt;そして最近 X4: Foundations にはまっているので、小学生時代 Freelancer を遊んだ時の感じが戻った、ちょっと懐かしいな。&lt;/p&gt;
+&lt;p&gt;ほぼ二十年経ったのに、やはり宇宙に目がないやん。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/x4-screenshot.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;ところで、最近ゲームばかりしてるけど新曲も作っている（大学院受験準備も！）、今回はアニメソン風（・ｗ・）&lt;/p&gt;
+&lt;p&gt;でもまだたくさん道があるそうな &amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/cubase-screenshot.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>金色の液体なのに油じゃない</title>
         <link>http://localhost:1313/blog/post/%E9%87%91%E8%89%B2%E3%81%AE%E6%B6%B2%E4%BD%93%E3%81%AA%E3%81%AE%E3%81%AB%E6%B2%B9%E3%81%98%E3%82%83%E3%81%AA%E3%81%84/</link>
         <pubDate>Mon, 01 Jul 2024 22:00:00 +0900</pubDate>
@@ -27,7 +123,7 @@
         <pubDate>Sat, 29 Jun 2024 17:57:00 +0900</pubDate>
         
         <guid>http://localhost:1313/blog/post/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF%E6%95%91%E5%87%BA%E5%A4%A7%E4%BD%9C%E6%88%A6/</guid>
-        <description>&lt;img src="https://image.icysamon.jp/blog/2024-06/bean-curd-mixed-with-chopped-green-onion.webp" alt="Featured image of post サーバーデータ救出大作戦" /&gt;&lt;h2 id=&#34;死んだ魚目ようなサーバー&#34;&gt;死んだ魚目ようなサーバー
+        <description>&lt;h2 id=&#34;死んだ魚目ようなサーバー&#34;&gt;死んだ魚目ようなサーバー
 &lt;/h2&gt;&lt;p&gt;実は先日、このサイトは死んだ。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/server-died-list.webp&#34;
 	
@@ -90,14 +186,6 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして今日、中華料理の作り方でもも肉料理に挑戦した。味はまあまあかな。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/cooking-breast-meat.webp&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
