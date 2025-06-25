@@ -7,7 +7,78 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Tue, 26 Nov 2024 10:14:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Mar 2025 10:32:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows ターミナルで SSH を使う</title>
+        <link>http://localhost:1313/blog/post/windows-%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%A7-ssh-%E3%82%92%E4%BD%BF%E3%81%86/</link>
+        <pubDate>Sat, 01 Mar 2025 10:32:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/windows-%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%A7-ssh-%E3%82%92%E4%BD%BF%E3%81%86/</guid>
+        <description>&lt;p&gt;ターミナルで以下の内容を入力してください。&lt;/p&gt;
+&lt;p&gt;ssh &amp;lt;ユーザー名&amp;gt;@&amp;lt;サーバーのアドレス&amp;gt;&lt;/p&gt;
+&lt;p&gt;例えば、私の場合は&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh mail@icysamon.jp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;快速接続&#34;&gt;快速接続
+&lt;/h2&gt;&lt;p&gt;最初はターミナルの設定を開けて、新しいプロファイルを追加してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2025/03/windows-terminal-01.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;そして名前とコマンドラインを設定してください。&lt;/p&gt;
+&lt;p&gt;コマンドラインは以下のようになる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh icysamon@icysamon.sakura.ne.jp -i C:\Users\icysa\OneDrive\Documents\Key\id_ecdsa.pem
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;ユーザー名：&lt;code&gt;icysamon&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;サーバー名：&lt;code&gt;icysamon.sakura.ne.jp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SSH公開鍵ファイルのパス：&lt;code&gt;C:\Users\icysa\OneDrive\Documents\Key\id_ecdsa.pem&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上のパラメータを自分の情報に置換してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2025/03/windows-terminal-02.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;そしてプラスボタンでさっき作ったプロファイルを開けましょう。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2025/03/windows-terminal-03.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;正常に起動した。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2025/03/windows-terminal-04.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>ブルースクリーン - DRIVER_IRQL_NOT_LESS_OR_EQUAL（rtf64x64.sys failed）</title>
         <link>http://localhost:1313/blog/post/%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3-driver_irql_not_less_or_equalrtf64x64.sys-failed/</link>
         <pubDate>Tue, 26 Nov 2024 10:14:00 +0900</pubDate>

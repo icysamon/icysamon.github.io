@@ -24,7 +24,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;本題&#34;&gt;本題
-&lt;/h2&gt;&lt;p&gt;公式のガイド：https://docs.x.ai/docs/tutorial#step-4-make-a-request-from-python-or-javascript&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.x.ai/docs/tutorial#step-4-make-a-request-from-python-or-javascript&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;公式のガイド&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;最初は &lt;a class=&#34;link&#34; href=&#34;https://console.x.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://console.x.ai/&lt;/a&gt; でアカウントを作って API key を発行してください。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2025/02/x-ai-02.webp&#34;
@@ -35,7 +36,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;API KEY は一度しか表示されないので、しっかり保存してください。&lt;/p&gt;
+&lt;p&gt;API key は一度しか表示されないので、しっかり保存してください。&lt;/p&gt;
 &lt;p&gt;次は pip で openai をインストールしてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -100,7 +101,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;completion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;choices&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;api_key=XAI_API_KEY&lt;/code&gt; の &lt;code&gt;XAI_API_KEY&lt;/code&gt; を自分の KEY に変更してください。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;api_key=XAI_API_KEY&lt;/code&gt; の &lt;code&gt;XAI_API_KEY&lt;/code&gt; を自分の key に変更してください。&lt;/p&gt;
 &lt;p&gt;最後はターミナルでこのファイルを実行してください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
