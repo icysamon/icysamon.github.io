@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>日本語 on icysamon&#39;s blog</title>
+        <link>http://localhost:1313/blog/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</link>
+        <description>Recent content in 日本語 on icysamon&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>icysamon</copyright>
+        <lastBuildDate>Sat, 26 Oct 2024 19:55:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ギリシャ文字の読み方</title>
+        <link>http://localhost:1313/blog/post/%E3%82%AE%E3%83%AA%E3%82%B7%E3%83%A3%E6%96%87%E5%AD%97%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9/</link>
+        <pubDate>Sat, 26 Oct 2024 19:55:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%82%AE%E3%83%AA%E3%82%B7%E3%83%A3%E6%96%87%E5%AD%97%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9/</guid>
+        <description>&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;大文字&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;小文字&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;英語&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;日本語&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Α&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;α&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;alpha&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;アルファ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Β&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;β&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;beta&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ベータ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Γ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;γ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;gamma&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ガンマ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Δ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;δ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;delta&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;デルタ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ε&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ε&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;epsilon&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;エプシロン&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ζ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ζ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;zeta&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ゼータ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Η&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;η&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;eta&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;エータ；イタ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Θ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;θ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;theta&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;シータ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ι&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ι&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;iota&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;イオータ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Κ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;κ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;kappa&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;カッパ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Λ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;λ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;lambda&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ラムダ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Μ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;μ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;mu&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ミュー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ξ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ξ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;xi&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;クシー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ο&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ο&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;omicron&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;オミクロン&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Π&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;π&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;pi&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;パイ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ρ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ρ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;rho&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ロー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Σ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;σ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;sigma&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;シグマ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Τ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;τ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;tau&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;タウ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Υ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;υ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;upsilon&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;イプシロン&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Φ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;φ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;phi&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;フィー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Χ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;χ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;chi&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;キー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ψ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ψ&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;psi&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;プシー&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Ω&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;ω&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;omega&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;オメガ&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>集合範囲記号の読み方</title>
+        <link>http://localhost:1313/blog/post/%E9%9B%86%E5%90%88%E7%AF%84%E5%9B%B2%E8%A8%98%E5%8F%B7%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9/</link>
+        <pubDate>Fri, 25 Oct 2024 19:06:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E9%9B%86%E5%90%88%E7%AF%84%E5%9B%B2%E8%A8%98%E5%8F%B7%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9/</guid>
+        <description>&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;記号&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;読み方&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;$\subset$&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;真部分集合、含む、含まれる&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;$\supset$&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;真部分集合を元として含む&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;$\cup$&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;又は、合併集合、和集合&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;$\cap$&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;且つ、共通集合、積集合&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;$\in$&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;属する&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;$\ni$&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;元として含む&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
