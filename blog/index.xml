@@ -7,7 +7,106 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Mon, 08 Jul 2024 09:07:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 24 Jul 2024 18:51:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Android Studio - シミュレーションデバイスを追加する</title>
+        <link>http://localhost:1313/blog/post/android-studio-%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B/</link>
+        <pubDate>Wed, 24 Jul 2024 18:51:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/android-studio-%E3%82%B7%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;p&gt;Tools &amp;gt; Device Manager を移動して、プラスで Create Virtual Device を選択してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/android-studio-device-manager.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;そしてデバイスの選択画面が出る。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/android-studio-select-hardware.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Godot - Windows 版アプリケーションアイコンを変更する</title>
+        <link>http://localhost:1313/blog/post/godot-windows-%E7%89%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</link>
+        <pubDate>Wed, 24 Jul 2024 12:18:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/godot-windows-%E7%89%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;h2 id=&#34;ico-ファイルの作成&#34;&gt;ICO ファイルの作成
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://imagemagick.org/index.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ImageMagick&lt;/a&gt; をダウンロードして、以降のコマンドでPNGファイルを hiDPI 対応の ICO ファイルに変換してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;magick icon.png -define icon:auto-resize&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;256,128,64,48,32,16 icon.ico
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;ImageMagick は異なるバージョンに従ってコマンドが異なる場合がある。&lt;/p&gt;
+&lt;h2 id=&#34;タスクバーアイコンの変更&#34;&gt;タスクバーアイコンの変更
+&lt;/h2&gt;&lt;p&gt;タスクバーアイコンを変更するには、Project &amp;gt; Project Settings &amp;gt; Application &amp;gt; Config &amp;gt; Windows Native Icon に移動して、自分のアイコンに変更してください。（右上の Advanced Settings を有効する必要がある）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/godot-windows-native-icon.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ファイルアイコンの変更&#34;&gt;ファイルアイコンの変更
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/electron/rcedit/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rcedit&lt;/a&gt; をインストールし、Editor &amp;gt; Editor Settings &amp;gt; Export &amp;gt; Windows に移動してください。そして rcedit エントリのフォルダアイコンをクリックし、 rcedit実行可能ファイルまで移動して選択してください。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rcedit を Linux および macOS ユーザーが使用するためには &lt;a class=&#34;link&#34; href=&#34;https://www.winehq.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WINE&lt;/a&gt; をインストールする必要がある。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/godot-rcedit.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;これで、ファイル・アイコンを変更するためのすべてが準備できた。そのためには、エクスポート時にアイコンを指定する必要がある。Project &amp;gt; Export に移動してください。既に Windows デスクトッププリセットを作成している場合、Application &amp;gt; Icon フィールドで ICO 形式のアイコンを選択してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/godot-application-icon.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Godot - 簡単にシーンを切り替え</title>
+        <link>http://localhost:1313/blog/post/godot-%E7%B0%A1%E5%8D%98%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%B3%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</link>
+        <pubDate>Mon, 22 Jul 2024 14:06:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/godot-%E7%B0%A1%E5%8D%98%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%B3%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/</guid>
+        <description>&lt;p&gt;以前書いた方法は少し使うにくいため、新しい方法を見つけた。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://icysamon.github.io/blog/post/godot-%E3%82%B7%E3%83%BC%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Godot - シーンの切り替え&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;コード&#34;&gt;コード
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript&#34; data-lang=&#34;gdscript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;get_tree&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;change_scene_to_file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;scene&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Windows 11 のウェブ検索機能を無効化する</title>
         <link>http://localhost:1313/blog/post/windows-11-%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E6%A4%9C%E7%B4%A2%E6%A9%9F%E8%83%BD%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/</link>
         <pubDate>Mon, 08 Jul 2024 09:07:00 +0900</pubDate>

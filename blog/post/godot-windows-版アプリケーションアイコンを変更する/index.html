@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
     <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="さよなら、将軍様。">
-<title>初めての日記</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="ICO ファイルを作成し、タスクバーアイコンとファイルアイコンに変更する。">
+<title>Godot - Windows 版アプリケーションアイコンを変更する</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/'>
+<link rel='canonical' href='http://localhost:1313/blog/post/godot-windows-%E7%89%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="初めての日記">
-<meta property='og:description' content="さよなら、将軍様。">
-<meta property='og:url' content='http://localhost:1313/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/'>
+<link rel="stylesheet" href="/blog/scss/style.min.cfa5b1b0e78d61c00a14173992a1f3fa3b5c1b9fa34d023de959af564e7b19dd.css"><meta property='og:title' content="Godot - Windows 版アプリケーションアイコンを変更する">
+<meta property='og:description' content="ICO ファイルを作成し、タスクバーアイコンとファイルアイコンに変更する。">
+<meta property='og:url' content='http://localhost:1313/blog/post/godot-windows-%E7%89%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/'>
 <meta property='og:site_name' content='icysamon&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-06-19T12:00:00&#43;09:00'/><meta property='article:modified_time' content='2024-06-19T12:00:00&#43;09:00'/><meta property='og:image' content='https://image.icysamon.jp/blog/2024/06/first-diary.webp' />
-<meta name="twitter:title" content="初めての日記">
-<meta name="twitter:description" content="さよなら、将軍様。"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://image.icysamon.jp/blog/2024/06/first-diary.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-07-24T12:18:00&#43;09:00'/><meta property='article:modified_time' content='2024-07-24T12:18:00&#43;09:00'/>
+<meta name="twitter:title" content="Godot - Windows 版アプリケーションアイコンを変更する">
+<meta name="twitter:description" content="ICO ファイルを作成し、タスクバーアイコンとファイルアイコンに変更する。">
     </head>
     <body class="
     article-page
@@ -230,6 +229,32 @@
         
             
                 
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#ico-ファイルの作成">ICO ファイルの作成</a></li>
+    <li><a href="#タスクバーアイコンの変更">タスクバーアイコンの変更</a></li>
+    <li><a href="#ファイルアイコンの変更">ファイルアイコンの変更</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
             
         
             
@@ -311,23 +336,15 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/">
-                
-                    <img src="https://image.icysamon.jp/blog/2024/06/first-diary.webp" loading="lazy" alt="Featured image of post 初めての日記" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
     <header class="article-category">
         
-            <a href="/blog/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/" >
-                雑記帳
+            <a href="/blog/categories/godot/" >
+                Godot
             </a>
         
     </header>
@@ -335,12 +352,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/">初めての日記</a>
+            <a href="/blog/post/godot-windows-%E7%89%88%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/">Godot - Windows 版アプリケーションアイコンを変更する</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            さよなら、将軍様。
+            ICO ファイルを作成し、タスクバーアイコンとファイルアイコンに変更する。
         </h3>
         
     </div>
@@ -361,7 +378,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">6月 19, 2024</time>
+                <time class="article-time--published">7月 24, 2024</time>
             </div>
         
 
@@ -391,8 +408,51 @@
     <section class="article-content">
     
     
-    <p>毎日普通に過ごし日本語も下手で何を書くのか全然分からんのにやはり日記を書きたいなと思って日記を始めた。</p>
-<p>一応、聖上の恩情はすべて返したので、中国から解放された。新しい生活はここから始まる。</p>
+    <h2 id="ico-ファイルの作成">ICO ファイルの作成
+</h2><p><a class="link" href="https://imagemagick.org/index.php"  target="_blank" rel="noopener"
+    >ImageMagick</a> をダウンロードして、以降のコマンドでPNGファイルを hiDPI 対応の ICO ファイルに変換してください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">magick icon.png -define icon:auto-resize<span class="o">=</span>256,128,64,48,32,16 icon.ico
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>ImageMagick は異なるバージョンに従ってコマンドが異なる場合がある。</p>
+<h2 id="タスクバーアイコンの変更">タスクバーアイコンの変更
+</h2><p>タスクバーアイコンを変更するには、Project &gt; Project Settings &gt; Application &gt; Config &gt; Windows Native Icon に移動して、自分のアイコンに変更してください。（右上の Advanced Settings を有効する必要がある）</p>
+<p><img src="https://image.icysamon.jp/blog/2024/07/godot-windows-native-icon.webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="ファイルアイコンの変更">ファイルアイコンの変更
+</h2><p><a class="link" href="https://github.com/electron/rcedit/releases"  target="_blank" rel="noopener"
+    >rcedit</a> をインストールし、Editor &gt; Editor Settings &gt; Export &gt; Windows に移動してください。そして rcedit エントリのフォルダアイコンをクリックし、 rcedit実行可能ファイルまで移動して選択してください。</p>
+<blockquote>
+<p>rcedit を Linux および macOS ユーザーが使用するためには <a class="link" href="https://www.winehq.org/"  target="_blank" rel="noopener"
+    >WINE</a> をインストールする必要がある。</p></blockquote>
+<p><img src="https://image.icysamon.jp/blog/2024/07/godot-rcedit.webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>これで、ファイル・アイコンを変更するためのすべてが準備できた。そのためには、エクスポート時にアイコンを指定する必要がある。Project &gt; Export に移動してください。既に Windows デスクトッププリセットを作成している場合、Application &gt; Icon フィールドで ICO 形式のアイコンを選択してください。</p>
+<p><img src="https://image.icysamon.jp/blog/2024/07/godot-application-icon.webp"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 
 </section>
 
@@ -455,31 +515,12 @@
             
                 
 <article class="">
-    <a href="/blog/post/%E5%AE%87%E5%AE%99%E3%81%AB%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84%E3%82%84%E3%82%93/">
+    <a href="/blog/post/godot-%E7%B0%A1%E5%8D%98%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%B3%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">宇宙に目がないやん</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/blog/post/%E9%87%91%E8%89%B2%E3%81%AE%E6%B6%B2%E4%BD%93%E3%81%AA%E3%81%AE%E3%81%AB%E6%B2%B9%E3%81%98%E3%82%83%E3%81%AA%E3%81%84/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="https://image.icysamon.jp/blog/2024/07/fried-rice.webp" loading="lazy" data-key="" data-hash="https://image.icysamon.jp/blog/2024/07/fried-rice.webp"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">金色の液体なのに油じゃない</h2>
+            <h2 class="article-title">Godot - 簡単にシーンを切り替え</h2>
         </div>
     </a>
 </article>
@@ -487,31 +528,51 @@
             
                 
 <article class="">
-    <a href="/blog/post/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF%E6%95%91%E5%87%BA%E5%A4%A7%E4%BD%9C%E6%88%A6/">
+    <a href="/blog/post/godot-%E3%82%A6%E3%82%A7%E3%83%96%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%AE%9F%E8%A1%8C%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">サーバーデータ救出大作戦</h2>
+            <h2 class="article-title">Godot - ウェブプログラムが実行出来ないを解決する</h2>
         </div>
     </a>
 </article>
 
             
                 
-<article class="has-image">
-    <a href="/blog/post/%E9%A3%9F%E3%81%B9%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84%E7%B7%9A%E5%BD%A2%E4%BB%A3%E6%95%B0%E3%81%A8%E9%A3%9F%E3%81%B9%E3%82%89%E3%82%8C%E3%82%8B%E9%B6%8F%E3%82%82%E3%82%82%E8%82%89/">
+<article class="">
+    <a href="/blog/post/godot-%E7%95%B0%E3%81%AA%E3%82%8B%E3%82%B7%E3%83%BC%E3%83%B3%E9%96%93%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E8%A8%AD%E5%AE%9A/">
         
-        
-            <div class="article-image">
-                
-                    <img src="https://image.icysamon.jp/blog/2024/06/cooking-breast-meat.webp" loading="lazy" data-key="" data-hash="https://image.icysamon.jp/blog/2024/06/cooking-breast-meat.webp"/>
-                
-            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">食べられない線形代数と食べられる鶏もも肉</h2>
+            <h2 class="article-title">Godot - 異なるシーン間のシグナル設定</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Godot - RTS ゲームの選択ボックスの作り方</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/post/godot-shader-%E3%81%A7%E3%81%B5%E3%82%8D%E3%83%BC%E3%81%BE%E3%83%BC%E3%81%8F%E3%82%92%E4%BD%9C%E3%82%8B/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Godot - Shader でふろーまーくを作る</h2>
         </div>
     </a>
 </article>
