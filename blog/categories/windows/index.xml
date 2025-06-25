@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>ja</language>
         <copyright>icysamon</copyright>
-        <lastBuildDate>Mon, 08 Jul 2024 09:07:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 26 Nov 2024 10:14:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ブルースクリーン - DRIVER_IRQL_NOT_LESS_OR_EQUAL（rtf64x64.sys failed）</title>
+        <link>http://localhost:1313/blog/post/%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3-driver_irql_not_less_or_equalrtf64x64.sys-failed/</link>
+        <pubDate>Tue, 26 Nov 2024 10:14:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3-driver_irql_not_less_or_equalrtf64x64.sys-failed/</guid>
+        <description>&lt;h2 id=&#34;解決方法&#34;&gt;解決方法
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;コントロールパネル&lt;/strong&gt;へ移動してください。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ネットワークと共用センター&lt;/strong&gt;をクリックしてください。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;アダプターの設定の変更&lt;/strong&gt;をクリックしてください。&lt;/li&gt;
+&lt;li&gt;現在使っているネットワークアダプターを右クリックして&lt;strong&gt;プロパティ&lt;/strong&gt;を選択してください。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Realtek LightWeigh Filter (NDIS6.40)&lt;/strong&gt; を&lt;strong&gt;無効化&lt;/strong&gt;してください。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>Windows 11 のウェブ検索機能を無効化する</title>
         <link>http://localhost:1313/blog/post/windows-11-%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E6%A4%9C%E7%B4%A2%E6%A9%9F%E8%83%BD%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/</link>
         <pubDate>Mon, 08 Jul 2024 09:07:00 +0900</pubDate>

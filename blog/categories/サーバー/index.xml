@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>サーバー on icysamon&#39;s blog</title>
+        <link>http://localhost:1313/blog/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/</link>
+        <description>Recent content in サーバー on icysamon&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <copyright>icysamon</copyright>
+        <lastBuildDate>Tue, 17 Dec 2024 20:46:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/blog/categories/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>レンタルサーバーをクラウドドライブにする</title>
+        <link>http://localhost:1313/blog/post/%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%81%AB%E3%81%99%E3%82%8B/</link>
+        <pubDate>Tue, 17 Dec 2024 20:46:00 +0900</pubDate>
+        
+        <guid>http://localhost:1313/blog/post/%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%81%AB%E3%81%99%E3%82%8B/</guid>
+        <description>&lt;h2 id=&#34;事前準備&#34;&gt;事前準備
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;SFTP 対応のレンタルサーバー&lt;/li&gt;
+&lt;li&gt;Windows 11 PC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;winftp-をダウンロード&#34;&gt;Winftp をダウンロード
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://winfsp.dev/rel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://winfsp.dev/rel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/12/server-01.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rcloneをダウンロード&#34;&gt;Rcloneをダウンロード
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rclone.org/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rclone.org/downloads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;インストール後&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;で状態を確認してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/12/server-02.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rclone-config-ファイルの設定&#34;&gt;Rclone Config ファイルの設定
+&lt;/h2&gt;&lt;h3 id=&#34;設定モードに入る&#34;&gt;設定モードに入る
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;を入力してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/12/server-03.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;n で New remote を選択してください。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/12/server-04.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;SSH/SFTPを選択してください。そしてサーバーのホストやパスワード／キーやなど基本情報を設定してください。&lt;/p&gt;
+&lt;h3 id=&#34;設定ファイルの場所を探す&#34;&gt;設定ファイルの場所を探す
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone config paths
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;参考のため、私の設定ファイルを用意します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Drive]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type = sftp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;host = example.sakura.ne.jp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user = nekosama
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pass = password
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;use_insecure_cipher = true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shell_type = unix
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;md5sum_command = md5 -r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sha1sum_command = sha1 -r
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;ドライブをマウントする&#34;&gt;ドライブをマウントする
+&lt;/h2&gt;&lt;p&gt;.bat ファイルを作成して、以下の内容を入力してください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rclone mount Drive:/home/user/your_file Z: ^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--cache-dir %LocalAppData%&lt;span class=&#34;se&#34;&gt;\r&lt;/span&gt;cloneLocalAppData ^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--vfs-cache-mode writes ^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--volname &lt;span class=&#34;s2&#34;&gt;&amp;#34;Drive Name&amp;#34;&lt;/span&gt; ^
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--buffer-size 512M
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;drivehomeuseryour_file-について&#34;&gt;Drive:/home/user/your_file について
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Drive : さっき作成した remote の名前&lt;/li&gt;
+&lt;li&gt;:/home/user/your_file : 指定したいファイル位置（省略可）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cache-dir&#34;&gt;cache-dir
+&lt;/h3&gt;&lt;p&gt;rclone がキャッシュに使用するディレクトリを指定します。（省略可）&lt;/p&gt;
+&lt;h3 id=&#34;vfs-cache-mode&#34;&gt;vfs-cache-mode
+&lt;/h3&gt;&lt;p&gt;キャッシュモード（write がおすすめ）&lt;/p&gt;
+&lt;p&gt;詳しい内容は&lt;a class=&#34;link&#34; href=&#34;https://rclone.org/commands/rclone_mount/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;こちら&lt;/a&gt;で確認してください。&lt;/p&gt;
+&lt;h3 id=&#34;volname&#34;&gt;volname
+&lt;/h3&gt;&lt;p&gt;ドライブの名前（省略可）&lt;/p&gt;
+&lt;h3 id=&#34;buffer-size&#34;&gt;buffer-size
+&lt;/h3&gt;&lt;p&gt;ファイル転送を高速化するためのバッファ。（省略可）&lt;/p&gt;
+&lt;h3 id=&#34;マウント&#34;&gt;マウント
+&lt;/h3&gt;&lt;p&gt;最後に.batファイルを実行してドライブが出てきます。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/12/server-05.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
