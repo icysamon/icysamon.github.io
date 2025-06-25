@@ -2,26 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/categories/android/</loc>
-    <lastmod>2024-07-30T18:10:00+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/categories/</loc>
-    <lastmod>2024-07-30T18:10:00+09:00</lastmod>
+    <lastmod>2024-09-07T21:02:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2024-07-30T18:10:00+09:00</lastmod>
+    <lastmod>2024-09-07T21:02:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/nt%E6%9D%B1%E4%BA%AC%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/</loc>
+    <lastmod>2024-09-07T21:02:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/</loc>
+    <lastmod>2024-09-07T21:02:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/</loc>
+    <lastmod>2024-09-07T21:02:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/php-hello-world/</loc>
+    <lastmod>2024-08-01T23:34:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/categories/wordpress/</loc>
+    <lastmod>2024-08-01T23:34:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/categories/android/</loc>
+    <lastmod>2024-07-31T13:27:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/kotlin-%E4%BB%96%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7-mainactivity-%E3%81%AE-api-%E3%82%92%E4%BD%BF%E3%81%86/</loc>
+    <lastmod>2024-07-31T13:27:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/vs-code-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%81%AE%E6%8E%A8%E5%A5%A8%E3%82%92%E3%82%AA%E3%83%95%E3%81%99%E3%82%8B/</loc>
+    <lastmod>2024-07-30T21:32:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/post/kotlin-bluetooth-%E3%82%92%E3%82%AA%E3%83%B3%E3%81%AB%E3%81%99%E3%82%8B/</loc>
+    <lastmod>2024-07-30T18:31:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/post/kotlin-%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E6%A8%A9%E9%99%90%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B/</loc>
     <lastmod>2024-07-30T18:10:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/post/</loc>
-    <lastmod>2024-07-30T18:10:00+09:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/post/pixel-%E3%81%AE%E9%96%8B%E7%99%BA%E8%80%85%E3%83%A2%E3%83%BC%E3%83%89%E3%82%92%E6%9C%89%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/</loc>
     <lastmod>2024-07-28T23:26:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/</loc>
-    <lastmod>2024-07-27T23:00:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E9%9A%85%E7%94%B0%E5%B7%9D%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A%E3%82%92%E8%A6%8B%E3%81%9F/</loc>
     <lastmod>2024-07-27T23:00:00+09:00</lastmod>
@@ -214,9 +232,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/post/unity-the-system-cannot-find-the-path-specified-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</loc>
     <lastmod>2023-07-06T21:48:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/categories/wordpress/</loc>
-    <lastmod>2023-06-19T11:33:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/post/wordpress-%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AE403%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</loc>
     <lastmod>2023-06-19T11:33:00+09:00</lastmod>
