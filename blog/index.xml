@@ -15,7 +15,7 @@
         <guid>http://localhost:1313/blog/post/windows-11-%E3%81%AE%E3%82%A6%E3%82%A7%E3%83%96%E6%A4%9C%E7%B4%A2%E6%A9%9F%E8%83%BD%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;&lt;strong&gt;この設定方法は Windows11 Pro ユーザー限りである。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Windows と R を押して gpedit.msc を 入力し、Enter を押してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/gpedit.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/gpedit.webp&#34;
 	
 	
 	
@@ -25,7 +25,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;そして「コンピューターの構成」＞「管理用テンプレート」＞「Windows コンポーネント」＞「検索」に入ってください。&lt;/p&gt;
 &lt;p&gt;「Web 検索を許可しない」と「Web を検索したり [検索] に Web の検索結果を表示したりしない」をダブルクリックして有効化してください。その後パソコンを再起動してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/local-group-policy-editor.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/local-group-policy-editor.webp&#34;
 	
 	
 	
@@ -36,7 +36,7 @@
 &lt;p&gt;次はまた Windows と R を押して regedit.exe を 入力し、Enter を押してください。&lt;/p&gt;
 &lt;p&gt;そして Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows Windows\CurrentVersion\Search に入ってください。&lt;/p&gt;
 &lt;p&gt;Search を右クリックして新規の DWORD ( 32 ビット ) 値を作し、BingSearchEnabled と命名してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/registry-editors.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/registry-editors.webp&#34;
 	
 	
 	
@@ -45,7 +45,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;最後に Dword をダブルクリックして値のデータを 0 に設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/dword-setting.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/dword-setting.webp&#34;
 	
 	
 	
@@ -54,7 +54,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;設定後ウェブ検索結果はもう消えた。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/windows-search-not-ad.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/windows-search-not-ad.webp&#34;
 	
 	
 	
@@ -71,7 +71,7 @@
         
         <guid>http://localhost:1313/blog/post/%E5%AE%87%E5%AE%99%E3%81%AB%E7%9B%AE%E3%81%8C%E3%81%AA%E3%81%84%E3%82%84%E3%82%93/</guid>
         <description>&lt;p&gt;今日は３Dプリンターでモバイルスタンドを作った！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/3dprint-phone-stand.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/3dprint-phone-stand.webp&#34;
 	
 	
 	
@@ -83,7 +83,7 @@
 &lt;p&gt;でも少し時間がかかってやっと直した。&lt;/p&gt;
 &lt;p&gt;そして最近 X4: Foundations にはまっているので、小学生時代 Freelancer を遊んだ時の感じが戻った、ちょっと懐かしいな。&lt;/p&gt;
 &lt;p&gt;ほぼ二十年経ったのに、やはり宇宙に目がないやん。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/x4-screenshot.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/x4-screenshot.webp&#34;
 	
 	
 	
@@ -93,7 +93,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;ところで、最近ゲームばかりしてるけど新曲も作っている（大学院受験準備も！）、今回はアニメソン風（・ｗ・）&lt;/p&gt;
 &lt;p&gt;でもまだたくさん道があるそうな &amp;hellip;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-07/cubase-screenshot.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/07/cubase-screenshot.webp&#34;
 	
 	
 	
@@ -109,7 +109,7 @@
         <pubDate>Mon, 01 Jul 2024 22:00:00 +0900</pubDate>
         
         <guid>http://localhost:1313/blog/post/%E9%87%91%E8%89%B2%E3%81%AE%E6%B6%B2%E4%BD%93%E3%81%AA%E3%81%AE%E3%81%AB%E6%B2%B9%E3%81%98%E3%82%83%E3%81%AA%E3%81%84/</guid>
-        <description>&lt;img src="https://image.icysamon.jp/blog/2024-07/fried-rice.webp" alt="Featured image of post 金色の液体なのに油じゃない" /&gt;&lt;p&gt;本日料理は中華チャーハン。&lt;/p&gt;
+        <description>&lt;img src="https://image.icysamon.jp/blog/2024/07/fried-rice.webp" alt="Featured image of post 金色の液体なのに油じゃない" /&gt;&lt;p&gt;本日料理は中華チャーハン。&lt;/p&gt;
 &lt;p&gt;でも最初に料理酒を食用油として入れちゃった&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;p&gt;そしてニンニクや生姜とたまごの投入順序が間違った。&lt;/p&gt;
 &lt;p&gt;また未熟者だ！何十回チャーハン作ったのにこんな凡ミスをしちゃった。&lt;/p&gt;
@@ -125,7 +125,7 @@
         <guid>http://localhost:1313/blog/post/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%87%E3%83%BC%E3%82%BF%E6%95%91%E5%87%BA%E5%A4%A7%E4%BD%9C%E6%88%A6/</guid>
         <description>&lt;h2 id=&#34;死んだ魚目ようなサーバー&#34;&gt;死んだ魚目ようなサーバー
 &lt;/h2&gt;&lt;p&gt;実は先日、このサイトは死んだ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/server-died-list.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/server-died-list.webp&#34;
 	
 	
 	
@@ -135,7 +135,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/server-not-work.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/server-not-work.webp&#34;
 	
 	
 	
@@ -148,7 +148,7 @@
 &lt;p&gt;もう終わったよ！（悲鳴）、使うられないサービスばかりし、広告も多い、問題があったら全部「チャートに連絡して」という。でも俺にとって英語は無理だよ！&lt;/p&gt;
 &lt;p&gt;不幸中の幸い、データはどうやら救われた。&lt;/p&gt;
 &lt;p&gt;最終 Hostgator を辞めるが決めて、さくらサーバーに変更した。やはりさくらサーバーは使いやすいな。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/server-sakura-panel.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/server-sakura-panel.webp&#34;
 	
 	
 	
@@ -158,7 +158,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;本日料理&#34;&gt;本日料理
 &lt;/h2&gt;&lt;p&gt;今日ネギ豆腐を作った、赤い点はたらこ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/bean-curd-mixed-with-chopped-green-onion.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/bean-curd-mixed-with-chopped-green-onion.webp&#34;
 	
 	
 	
@@ -174,10 +174,10 @@
         <pubDate>Fri, 28 Jun 2024 12:00:00 +0900</pubDate>
         
         <guid>http://localhost:1313/blog/post/%E9%A3%9F%E3%81%B9%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84%E7%B7%9A%E5%BD%A2%E4%BB%A3%E6%95%B0%E3%81%A8%E9%A3%9F%E3%81%B9%E3%82%89%E3%82%8C%E3%82%8B%E9%B6%8F%E3%82%82%E3%82%82%E8%82%89/</guid>
-        <description>&lt;img src="https://image.icysamon.jp/blog/2024-06/cooking-breast-meat.webp" alt="Featured image of post 食べられない線形代数と食べられる鶏もも肉" /&gt;&lt;p&gt;昨晩アマゾンさんが線形代数の教科書を届いた。&lt;/p&gt;
+        <description>&lt;img src="https://image.icysamon.jp/blog/2024/06/cooking-breast-meat.webp" alt="Featured image of post 食べられない線形代数と食べられる鶏もも肉" /&gt;&lt;p&gt;昨晩アマゾンさんが線形代数の教科書を届いた。&lt;/p&gt;
 &lt;p&gt;今日から線形代数の勉強をしなければならないな&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;p&gt;でも数学やはり難しいよな、全然食べれない。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/amazon-math-book.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/amazon-math-book.webp&#34;
 	
 	
 	
@@ -194,7 +194,7 @@
         <pubDate>Wed, 19 Jun 2024 12:00:00 +0900</pubDate>
         
         <guid>http://localhost:1313/blog/post/%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E6%97%A5%E8%A8%98/</guid>
-        <description>&lt;img src="https://image.icysamon.jp/blog/2024-06/first-diary.webp" alt="Featured image of post 初めての日記" /&gt;&lt;p&gt;毎日普通に過ごし日本語も下手で何を書くのか全然分からんのにやはり日記を書きたいなと思って日記を始めた。&lt;/p&gt;
+        <description>&lt;img src="https://image.icysamon.jp/blog/2024/06/first-diary.webp" alt="Featured image of post 初めての日記" /&gt;&lt;p&gt;毎日普通に過ごし日本語も下手で何を書くのか全然分からんのにやはり日記を書きたいなと思って日記を始めた。&lt;/p&gt;
 &lt;p&gt;一応、聖上の恩情はすべて返したので、中国から解放された。新しい生活はここから始まる。&lt;/p&gt;
 </description>
         </item>
@@ -266,7 +266,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;接続&#34;&gt;接続
 &lt;/h2&gt;&lt;p&gt;ネットワークの設定画面で VPN を追加してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/debian-add-vpn.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/debian-add-vpn.webp&#34;
 	
 	
 	
@@ -275,7 +275,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして Multi-protocol VPN client(openconnect) を選択してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/debian-multi-protocol-vpn-client.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/debian-multi-protocol-vpn-client.webp&#34;
 	
 	
 	
@@ -284,7 +284,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Gateway を編集して IPv6 を無効化してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-06/debian-ipv6.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/06/debian-ipv6.webp&#34;
 	
 	
 	
@@ -303,7 +303,7 @@
         <guid>http://localhost:1313/blog/post/android-studio-%E3%83%9C%E3%82%BF%E3%83%B3%E3%81%A7%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B/</guid>
         <description>&lt;h2 id=&#34;activity_mainxml&#34;&gt;activity_main.xml
 &lt;/h2&gt;&lt;p&gt;activity_main.xml にボタンとテキストを追加し、ID と位置を設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-04/android-studio-change-text-with-button.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/04/android-studio-change-text-with-button.webp&#34;
 	
 	
 	
@@ -458,7 +458,7 @@
         <pubDate>Mon, 01 Jan 2024 21:43:00 +0900</pubDate>
         
         <guid>http://localhost:1313/blog/post/unity-system.io.ports-%E3%81%8C%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024-01/unity-net-framework.webp&#34;
+        <description>&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2024/01/unity-net-framework.webp&#34;
 	
 	
 	
@@ -476,7 +476,7 @@
         
         <guid>http://localhost:1313/blog/post/verilog-%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%8C%96%E3%81%A8%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB%E6%8E%A5%E7%B6%9A/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-Instance.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-instance.webp&#34;
 	
 	
 	
@@ -616,7 +616,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;例&#34;&gt;例
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-XNOR.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-xnor.webp&#34;
 	
 	
 	
@@ -738,7 +738,7 @@
         
         <guid>http://localhost:1313/blog/post/verilog-%E3%83%93%E3%83%83%E3%83%88%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%A8%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97%E5%AD%90/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-bitwise-logical-out.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-bitwise-logical-out.webp&#34;
 	
 	
 	
@@ -807,7 +807,7 @@
         
         <guid>http://localhost:1313/blog/post/verilog-%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-vec.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-vec.webp&#34;
 	
 	
 	
@@ -853,7 +853,7 @@
         
         <guid>http://localhost:1313/blog/post/verilog-7458%E3%83%81%E3%83%83%E3%83%97/</guid>
         <description>&lt;h2 id=&#34;原理図&#34;&gt;原理図
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-7458.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-7458.webp&#34;
 	
 	
 	
@@ -899,7 +899,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;シミュレーション結果&#34;&gt;シミュレーション結果
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-7458-Simulation.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-7458-simulation.webp&#34;
 	
 	
 	
@@ -1048,7 +1048,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;sources設定&#34;&gt;Sources設定
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-Sources%E8%A8%AD%E5%AE%9A.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-led-sources-setting.webp&#34;
 	
 	
 	
@@ -1057,7 +1057,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;シミュレーション結果&#34;&gt;シミュレーション結果
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-%E7%82%B9%E7%81%AF%E7%B5%90%E6%9E%9C.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-led-result.webp&#34;
 	
 	
 	
@@ -1109,7 +1109,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;結果&#34;&gt;結果
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-Clock.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-clock.webp&#34;
 	
 	
 	
@@ -1151,7 +1151,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;結果&#34;&gt;結果
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Verilog-%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/12/verilog-first-signal.webp&#34;
 	
 	
 	
@@ -1216,7 +1216,7 @@
         <description>&lt;h2 id=&#34;トンネル効果&#34;&gt;トンネル効果
 &lt;/h2&gt;&lt;p&gt;この効果は電子が波動であることの立証になる。&lt;/p&gt;
 &lt;p&gt;エネルギー障壁の高さ\(V_1\)は十分に高くて、電子のエネルギーよりも大きいとする。電子を粒子とすると、電子のはこの障壁を越えることができず、境界ですべて反射されてしまう。とこらが電子を波動と考えると、この障壁中に浸み込んでいくことが可能になる。この効果を&lt;strong&gt;トンネル効果&lt;/strong&gt;という。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E5%8A%B9%E6%9E%9C.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/tunnelling-effect.webp&#34;
 	
 	
 	
@@ -1267,7 +1267,7 @@ $$E_F(0)=\frac{\hslash ^2}{2m}(3\pi ^2n)^{2/3}$$&lt;p&gt;ここで、\(n≡N∕L
         <guid>http://localhost:1313/blog/post/%E6%9D%9F%E7%B8%9B%E7%B2%92%E5%AD%90/</guid>
         <description>&lt;h2 id=&#34;量子井戸quantum-well&#34;&gt;量子井戸(quantum well)
 &lt;/h2&gt;&lt;p&gt;電子の移動方向が束縛された状態のこと。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E9%87%8F%E5%AD%90%E4%BA%95%E6%88%B8.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/quantum-well.webp&#34;
 	
 	
 	
@@ -1372,7 +1372,7 @@ $$ω≡2πν$$</description>
         <description>&lt;h2 id=&#34;光の粒子性と波動性&#34;&gt;光の粒子性と波動性
 &lt;/h2&gt;&lt;p&gt;光はある場合には波動として振る舞い、ある場には粒子として振る舞う、つまり、いわゆる波動性と粒子性の二重性を持っている。&lt;/p&gt;
 &lt;p&gt;電子と光同じように、粒子性と波動性の二重性をもつ。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E5%85%89%E3%81%AE%E4%BA%8C%E9%87%8D%E6%80%A7.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/dual-nature-of-light.webp&#34;
 	
 	
 	
@@ -1381,7 +1381,7 @@ $$ω≡2πν$$</description>
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;波粒戦争歴史&#34;&gt;波粒戦争歴史
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/%E6%B3%A2%E7%B2%92%E6%88%A6%E4%BA%89%E3%81%AE%E6%AD%B4%E5%8F%B2.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/wave-particle-duality.webp&#34;
 	
 	
 	
@@ -1398,12 +1398,25 @@ $$ω≡2πν$$</description>
         
         <guid>http://localhost:1313/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/</guid>
         <description>&lt;h2 id=&#34;効果&#34;&gt;効果
-&lt;/h2&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-green-line.gif&#34;&gt;
-&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-white-backgroundcolor.gif&#34;&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-greenline.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-white-backgroundcolor.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;作り方&#34;&gt;作り方
 &lt;/h2&gt;&lt;p&gt;Godot バージョンは 4.1である。&lt;/p&gt;
 &lt;p&gt;Scene 中の Node はこのように設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-MouseDraw-config.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-mousedraw-config.webp&#34;
 	
 	
 	
@@ -1412,7 +1425,7 @@ $$ω≡2πν$$</description>
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Debug 用の Sprite2D はこのように設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-Sprite2D-Texture-config.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-sprite2d-texture-config.webp&#34;
 	
 	
 	
@@ -1534,7 +1547,7 @@ $$ω≡2πν$$</description>
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;注意点&#34;&gt;注意点
 &lt;/h2&gt;&lt;p&gt;二つのサイズをこのように設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-Size-config.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-size-config.webp&#34;
 	
 	
 	
@@ -1828,7 +1841,7 @@ $$ω≡2πν$$</description>
         
         <guid>http://localhost:1313/blog/post/unity-%E3%82%B7%E3%83%BC%E3%83%B3%E9%9D%9E%E5%90%8C%E6%9C%9F%E3%83%AD%E3%83%BC%E3%83%89/</guid>
         <description>&lt;p&gt;UI にこれらが必要である。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Scene-Load-Object.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/09/unity-scene-load-object.webp&#34;
 	
 	
 	
@@ -1837,7 +1850,7 @@ $$ω≡2πν$$</description>
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして UI をこのようになる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Scene-Load.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/09/unity-scene-load.webp&#34;
 	
 	
 	
@@ -2012,7 +2025,7 @@ $$ω≡2πν$$</description>
         
         <guid>http://localhost:1313/blog/post/unity-animationevent-xxx-on-animation-xxx-has-no-receiver-%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;エラーが発生した Animation を開けて、対応の AnimationEvent を選択してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-Animation-AnimationEvent.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/08/unity-animation-animationevent.webp&#34;
 	
 	
 	
@@ -2021,7 +2034,7 @@ $$ω≡2πν$$</description>
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;そして右側に以下のような Inspector が出ている。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-AnimationEvent-Inspector.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/08/unity-animationevent-inspector.webp&#34;
 	
 	
 	
@@ -2030,7 +2043,7 @@ $$ω≡2πν$$</description>
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;原因は同じ名前の関数が見つからないため、コードに同じ関数を書いたら解決可能である。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Unity-AttackOverEvent.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/08/unity-attackoverevent.webp&#34;
 	
 	
 	
@@ -2231,11 +2244,11 @@ $$ω≡2πν$$</description>
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>ubuntu と win10 システムの時刻が一致しないを解決する</title>
-        <link>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
+        <title>Ubuntu と Win 10 システムの時刻が一致しないを解決する</title>
+        <link>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win-10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</link>
         <pubDate>Wed, 12 Jul 2023 19:41:00 +0900</pubDate>
         
-        <guid>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
+        <guid>http://localhost:1313/blog/post/ubuntu-%E3%81%A8-win-10-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%99%82%E5%88%BB%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%AA%E3%81%84%E3%82%92%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B/</guid>
         <description>&lt;p&gt;ウィンドウズシステムズのノートで以下のコードを書いてください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2326,7 +2339,7 @@ $$ω≡2πν$$</description>
 &lt;li&gt;version3 を使っている場合、/syntaxhighlighter3/styles を開けてください。&lt;/li&gt;
 &lt;li&gt;version2 を使っている場合、/syntaxhighlighter２/styles を開けてください。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/Highlighter%20Version.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/05/highlighter-version.webp&#34;
 	
 	
 	
@@ -2335,7 +2348,7 @@ $$ω≡2πν$$</description>
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;shCore.css で font-family を自由に設定することができる。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/SyntaxHighlighter%20font-family.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/05/syntaxhighlighter-font-family.webp&#34;
 	
 	
 	
@@ -2405,7 +2418,7 @@ $$ω≡2πν$$</description>
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;を添加してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/disallow_file_edit.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/05/disallow-file-edit.webp&#34;
 	
 	
 	

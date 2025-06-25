@@ -93,12 +93,25 @@
         
         <guid>http://localhost:1313/blog/post/godot-rts-%E3%82%B2%E3%83%BC%E3%83%A0%E3%81%AE%E9%81%B8%E6%8A%9E%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9/</guid>
         <description>&lt;h2 id=&#34;効果&#34;&gt;効果
-&lt;/h2&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-green-line.gif&#34;&gt;
-&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-white-backgroundcolor.gif&#34;&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-greenline.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt; &lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-white-backgroundcolor.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
 &lt;h2 id=&#34;作り方&#34;&gt;作り方
 &lt;/h2&gt;&lt;p&gt;Godot バージョンは 4.1である。&lt;/p&gt;
 &lt;p&gt;Scene 中の Node はこのように設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-MouseDraw-config.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-mousedraw-config.webp&#34;
 	
 	
 	
@@ -107,7 +120,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Debug 用の Sprite2D はこのように設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-Sprite2D-Texture-config.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-sprite2d-texture-config.webp&#34;
 	
 	
 	
@@ -229,7 +242,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;注意点&#34;&gt;注意点
 &lt;/h2&gt;&lt;p&gt;二つのサイズをこのように設定してください。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/godot-select-box-Size-config.webp&#34;
+&lt;p&gt;&lt;img src=&#34;https://image.icysamon.jp/blog/2023/11/godot-selectbox-size-config.webp&#34;
 	
 	
 	
