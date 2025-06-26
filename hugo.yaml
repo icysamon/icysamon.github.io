@@ -31,3 +31,10 @@ params:
       url: "https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx"
     - name: "email"
       url: "mailto:mail@icysamon.jp"
+
+menu:
+  main:
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
