@@ -1,7 +1,8 @@
-baseURL: https://icysamon.github.io/
-languageCode: ja
+baseURL: "https://icysamon.github.io/"
 title: icysamon
-theme: PaperMod
+copyright: "© [icysamon](https://icysamon.github.io)"
+theme: [PaperMod]
+languageCode: ja
 publishDir : docs
 
 params:
