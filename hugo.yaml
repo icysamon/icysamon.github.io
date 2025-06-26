@@ -1,0 +1,31 @@
+baseURL: https://icysamon.jp/
+languageCode: ja
+title: icysamon
+theme: PaperMod
+
+params:
+  profileMode:
+    enabled: true
+    title: # optional default will be site title
+    subtitle: "電子工作｜ゲーム開発｜作曲"
+    imageUrl: "https://image.icysamon.jp/avatar/000.png" # optional
+    imageTitle: # optional
+    imageWidth: 150 # custom size
+    imageHeight: 150 # custom size
+    buttons:
+      - name: Blog
+        url: "https://blog.icysamon.jp/"
+
+  socialIcons: # optional
+    - name: "bluesky"
+      url: "https://bsky.app/profile/icysamon.jp"
+    - name: "twitter"
+      url: "https://x.com/icysamon"
+    - name: "github"
+      url: "https://github.com/icysamon"
+    - name: "applemusic"
+      url: "https://music.apple.com/jp/artist/icysamon/1808762015"
+    - name: "spotify"
+      url: "https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx"
+    - name: "email"
+      url: "mailto:mail@icysamon.jp"
