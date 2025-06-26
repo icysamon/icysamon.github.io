@@ -1,6 +1,8 @@
 baseURL: "https://icysamon.github.io/"
 title: icysamon
 theme: PaperMod
+publishDir: docs
+languageCode: ja
 
 enableRobotsTXT: true
 buildDrafts: false
