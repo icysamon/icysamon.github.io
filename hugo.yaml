@@ -1,7 +1,8 @@
-baseURL: "https://icysamon.jp/"
+baseURL: https://icysamon.jp/
 languageCode: ja
 title: icysamon
 theme: PaperMod
+publishDir : docs
 
 params:
   profileMode:
