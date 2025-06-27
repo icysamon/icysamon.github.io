@@ -12,6 +12,10 @@ cover:
 ## 対応言語
 - 中国語（簡体字）
 
+## ダウンロード
+- [Windows](https://download.icysamon.jp/game/happy-happy-happy/win-x86-64.zip)
+- [Linux](https://download.icysamon.jp/game/happy-happy-happy/linux-x86-64.zip)
+
 ## クリエイター
 | 役割 | 担当者 |
 | :--- | :--- |
