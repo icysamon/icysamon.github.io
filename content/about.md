@@ -10,7 +10,7 @@ summary: about
 ## サイトの大事記
 | 日付 | 内容 |
 |:---|:---|
-| **2023-05-13** | HostGator で WordPress を始め |
+| **2023-05-13** | HostGator で WordPress を開始 |
 | **2023-05-13** | icysamon.space を取得 | 
 | **2023-05-15** | icysamon.com に変更 |
 | **2024-06-29** | さくらレンタルサーバーに移行 |
