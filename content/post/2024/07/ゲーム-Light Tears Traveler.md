@@ -7,7 +7,7 @@ cover:
     image: 'https://image.icysamon.jp/index/2024/07/light-years-traveler.webp'
 ---
 
-[Godot Wild Jam](https://www.icysamon.itch.io/light-years-traveler) 参加作品。
+[Godot Wild Jam](https://icysamon.itch.io/light-years-traveler) 参加作品。
 
 ## 対応言語
 - English
@@ -21,7 +21,7 @@ cover:
 | 役割 | 担当者 |
 | :--- | :--- |
 | 企画 | `icysamon` |
-| プログラマー| `icysamon` |
+| プログラミング | `icysamon` |
 | アーティスト| `icysamon` |
 | ミュージック | `icysamon` |
 | サウンド | `icysamon` |
