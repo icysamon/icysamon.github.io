@@ -21,8 +21,6 @@ params:
   socialIcons: # optional
     - name: "bluesky"
       url: "https://bsky.app/profile/icysamon.jp"
-    - name: "twitter"
-      url: "https://x.com/icysamon"
     - name: "github"
       url: "https://github.com/icysamon"
     - name: "applemusic"
