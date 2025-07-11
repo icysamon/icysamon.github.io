@@ -5,6 +5,10 @@ theme: [PaperMod]
 languageCode: ja
 publishDir : docs
 
+permalinks:
+    post: /posts/:slug/
+    page: /:slug/
+
 params:
   profileMode:
     enabled: true
@@ -15,6 +19,12 @@ params:
     imageWidth: 150 # custom size
     imageHeight: 150 # custom size
     buttons:
+      - name: ✨作品集✨
+        url: "/posts/"
+      - name: ゲーム開発
+        url: "/tags/game/"
+      - name: 作曲
+        url: "/tags/music/"
       - name: Blog
         url: "https://blog.icysamon.jp/"
 
