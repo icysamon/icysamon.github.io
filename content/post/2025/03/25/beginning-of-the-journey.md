@@ -5,7 +5,7 @@ slug: "beginning-of-the-journey"
 date: 2025-03-25T00:00:00+09:00
 summary: "新曲配信スタート。"
 description: ""
-tags: ["Music"]
+tags:
 categories: ["Music"]
 series:
 math: false

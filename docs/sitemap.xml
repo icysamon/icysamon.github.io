@@ -11,13 +11,7 @@
     <loc>https://icysamon.jp/categories/music/</loc>
     <lastmod>2025-04-02T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://icysamon.jp/tags/music/</loc>
-    <lastmod>2025-04-02T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://icysamon.jp/post/</loc>
-    <lastmod>2025-04-02T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://icysamon.jp/tags/</loc>
     <lastmod>2025-04-02T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://icysamon.jp/post/light-year/</loc>
@@ -27,9 +21,6 @@
     <lastmod>2025-03-25T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://icysamon.jp/categories/game/</loc>
-    <lastmod>2024-12-27T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://icysamon.jp/tags/game/</loc>
     <lastmod>2024-12-27T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://icysamon.jp/post/the-endless-journey/</loc>
@@ -52,5 +43,7 @@
     <loc>https://icysamon.jp/archives/</loc>
   </url><url>
     <loc>https://icysamon.jp/search/</loc>
+  </url><url>
+    <loc>https://icysamon.jp/tags/</loc>
   </url>
 </urlset>

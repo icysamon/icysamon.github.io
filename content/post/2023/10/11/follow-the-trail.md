@@ -5,7 +5,7 @@ slug: "follow-the-trail"
 date: 2023-10-11T00:00:00+09:00
 summary: "BOOOMJAM 参加作品。"
 description: ""
-tags: ["Game"]
+tags:
 categories: ["Game"]
 series:
 math: false

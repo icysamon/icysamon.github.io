@@ -5,7 +5,7 @@ slug: "light-years-traveler"
 date: 2024-07-21T00:00:00+09:00
 summary: "Godot Wild Jam 参加作品。"
 description: ""
-tags: ["Game"]
+tags:
 categories: ["Game"]
 series:
 math: false

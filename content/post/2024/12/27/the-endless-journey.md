@@ -5,7 +5,7 @@ slug: "the-endless-journey"
 date: 2024-12-27T00:00:00+09:00
 summary: "Unity 開発者コミュニティゲームジャム（中国開催）参加作品。"
 description: ""
-tags: ["Game"]
+tags:
 categories: ["Game"]
 series:
 math: false
