@@ -6,7 +6,7 @@ languageCode: ja
 publishDir : docs
 
 permalinks:
-    post: /posts/:slug/
+    post: /post/:slug/
     page: /:slug/
 
 params:
@@ -20,7 +20,7 @@ params:
     imageHeight: 150 # custom size
     buttons:
       - name: ✨作品集✨
-        url: "/posts/"
+        url: "/post/"
       - name: ゲーム開発
         url: "/tags/game/"
       - name: 作曲
