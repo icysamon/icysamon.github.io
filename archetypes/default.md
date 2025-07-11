@@ -4,8 +4,8 @@ title: ""
 slug: {{ replace .Name " " "-" }}
 date: {{ .Date }}
 summary: ""
-description: ""
-tags: [""]
+description:
+tags:
 categories: [""]
 series:
 math: false
