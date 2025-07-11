@@ -10,6 +10,7 @@ permalinks:
     page: /:slug/
 
 params:
+  ShowPostNavLinks: false
   profileMode:
     enabled: true
     title: # optional default will be site title
@@ -19,12 +20,8 @@ params:
     imageWidth: 150 # custom size
     imageHeight: 150 # custom size
     buttons:
-      - name: ✨作品集✨
+      - name: 作品集
         url: "/post/"
-      - name: ゲーム開発
-        url: "/tags/game/"
-      - name: 作曲
-        url: "/tags/music/"
       - name: Blog
         url: "https://blog.icysamon.jp/"
 
@@ -42,11 +39,19 @@ params:
 
 menu:
   main:
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
     - identifier: archives
       name: Archive
-      url: archives/
-      weight: 10
+      url: /archives/
+      weight: 30
     - identifier: about
       name: About
-      url: about/
-      weight: 20
+      url: /about/
+      weight: 40
