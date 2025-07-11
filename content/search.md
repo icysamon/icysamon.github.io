@@ -1,5 +1,6 @@
 ---
 title: "Search"
-placeholder: Search Post
 layout: "search"
+summary: "search"
+placeholder: "Search Post"
 ---

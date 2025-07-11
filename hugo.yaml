@@ -9,6 +9,12 @@ permalinks:
     post: /post/:slug/
     page: /:slug/
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
 params:
   ShowPostNavLinks: false
   profileMode:
