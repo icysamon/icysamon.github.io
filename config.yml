@@ -1,6 +1,6 @@
 baseURL: "https://icysamon.jp/"
 title: icysamon
-copyright: "© [icysamon](https://icysamon.github.io)"
+copyright: "© [icysamon](https://icysamon.jp/)"
 theme: [PaperMod]
 languageCode: ja
 publishDir : docs
