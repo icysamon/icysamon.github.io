@@ -17,6 +17,8 @@ outputs:
 
 params:
   ShowPostNavLinks: false
+  assets:
+    disableFingerprinting: true
   profileMode:
     enabled: true
     title: # optional default will be site title
