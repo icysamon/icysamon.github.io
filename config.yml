@@ -23,7 +23,7 @@ params:
     enabled: true
     title: # optional default will be site title
     subtitle: "電子工作｜ゲーム開発｜作曲"
-    imageUrl: "https://image.icysamon.jp/avatar/000.png" # optional
+    imageUrl: "https://image.icysamon.com/avatar/000.png" # optional
     imageTitle: # optional
     imageWidth: 150 # custom size
     imageHeight: 150 # custom size
@@ -31,11 +31,11 @@ params:
       - name: 作品集
         url: "/post/"
       - name: Blog
-        url: "https://blog.icysamon.jp/"
+        url: "https://blog.icysamon.com/"
 
   socialIcons: # optional
     - name: "bluesky"
-      url: "https://bsky.app/profile/icysamon.jp"
+      url: "https://bsky.app/profile/icysamon.com"
     - name: "github"
       url: "https://github.com/icysamon"
     - name: "applemusic"
@@ -43,7 +43,7 @@ params:
     - name: "spotify"
       url: "https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx"
     - name: "email"
-      url: "mailto:mail@icysamon.jp"
+      url: "mailto:mail@icysamon.com"
 
 menu:
   main:
