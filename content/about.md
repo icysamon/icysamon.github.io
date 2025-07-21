@@ -5,7 +5,7 @@ url: "/about/"
 summary: about
 ---
 
-このサイトは構築中です。
+本業は電子工作。趣味でゲーム開発と作曲をしています。
 
 ## サイトの歴史
 | 日付 | 内容 |
@@ -18,3 +18,5 @@ summary: about
 | 2025-02-27 | icysamon.jp に変更 |
 | 2025-06-21 | WordPress から Hugo に移行 |
 | 2025-06-21 | GitHub Pages に移行 |
+| 2025-07-15 | animebgm.com を取得 |
+| 2025-07-16 | Cloudflare Pages に移行 |
