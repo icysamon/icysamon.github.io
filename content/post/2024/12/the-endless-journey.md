@@ -13,7 +13,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: https://image.icysamon.jp/index/2024/12/the-endless-journey.webp
+    image: https://image.icysamon.com/index/2024/12/the-endless-journey.webp
     alt:
     caption:
     relative:

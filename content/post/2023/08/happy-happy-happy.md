@@ -13,7 +13,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: https://image.icysamon.jp/index/2023/08/happy-happy-happy.webp
+    image: https://image.icysamon.com/index/2023/08/happy-happy-happy.webp
     alt:
     caption:
     relative:
@@ -25,8 +25,8 @@ cover:
 - 中国語（簡体字）
 
 ## ダウンロード
-- [Windows](https://download.icysamon.jp/game/happy-happy-happy/win-x86-64.zip)
-- [Linux](https://download.icysamon.jp/game/happy-happy-happy/linux-x86-64.zip)
+- [Windows](https://download.icysamon.com/game/happy-happy-happy/win-x86-64.zip)
+- [Linux](https://download.icysamon.com/game/happy-happy-happy/linux-x86-64.zip)
 
 ## クリエイター
 | 役割 | 担当者 |

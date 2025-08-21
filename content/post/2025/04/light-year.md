@@ -13,7 +13,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: https://image.icysamon.jp/index/2025/04/light-year.webp
+    image: https://image.icysamon.com/index/2025/04/light-year.webp
     alt:
     caption:
     relative:

@@ -13,7 +13,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: https://image.icysamon.jp/index/2024/07/light-years-traveler.webp
+    image: https://image.icysamon.com/index/2024/07/light-years-traveler.webp
     alt:
     caption:
     relative:
@@ -25,9 +25,9 @@ cover:
 - English
 
 ## ダウンロード
-- [Windows](https://download.icysamon.jp/game/light-years-traveler/win-x86-64.zip)
-- [Linux - x86](https://download.icysamon.jp/game/light-years-traveler/linux-x86-64.zip)
-- [Linux - ARM](https://download.icysamon.jp/game/light-years-traveler/linux-arm64.zip)
+- [Windows](https://download.icysamon.com/game/light-years-traveler/win-x86-64.zip)
+- [Linux - x86](https://download.icysamon.com/game/light-years-traveler/linux-x86-64.zip)
+- [Linux - ARM](https://download.icysamon.com/game/light-years-traveler/linux-arm64.zip)
 
 ## クリエイター
 | 役割 | 担当者 |

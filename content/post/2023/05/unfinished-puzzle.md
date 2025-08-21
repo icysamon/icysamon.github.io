@@ -13,7 +13,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover: 
-    image: https://image.icysamon.jp/index/2023/05/unfinished-puzzle.webp
+    image: https://image.icysamon.com/index/2023/05/unfinished-puzzle.webp
     alt:
     caption:
     relative:

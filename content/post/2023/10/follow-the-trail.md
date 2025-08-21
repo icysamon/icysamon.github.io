@@ -13,7 +13,7 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: https://image.icysamon.jp/index/2023/10/find.webp
+    image: https://image.icysamon.com/index/2023/10/find.webp
     alt:
     caption:
     relative:
@@ -25,7 +25,7 @@ cover:
 - 中国語（簡体字）
 
 ## ダウンロード
-- [Windows](https://download.icysamon.jp/game/follow-the-trail/win-x86-64.zip)
+- [Windows](https://download.icysamon.com/game/follow-the-trail/win-x86-64.zip)
 
 ## クリエイター
 | 役割 | 担当者 |
