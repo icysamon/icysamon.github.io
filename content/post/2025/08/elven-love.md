@@ -25,5 +25,5 @@ https://linkco.re/dY181bxP
 ## クレジット
 | 役割 | 担当者 |
 | :--- | :--- |
-| プログラミング | `icysamon` |
 | 作曲 | `icysamon` |
+| プロデューサー | `icysamon` |

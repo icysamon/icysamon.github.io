@@ -1,8 +1,8 @@
 ---
 author: ["icysamon"]
-title: "光年"
-slug: "light-year"
-date: 2025-04-02T00:00:00+09:00
+title: "迷宮都市"
+slug: "labyrinth-city"
+date: 2025-09-03T00:00:00+09:00
 summary: "新曲配信スタート。"
 description: ""
 tags:
@@ -13,14 +13,14 @@ draft: false
 ShowToc: false
 TocOpen: false
 cover:
-    image: https://image.icysamon.com/index/2025/04/light-year.webp
+    image: https://image.icysamon.com/index/2025/09/labyrinth-city.webp
     alt:
     caption:
     relative:
 ---
 
 ## リリース
-https://linkco.re/tGbPetG4
+https://linkco.re/yRD4sx2Y
 
 ## クレジット
 | 役割 | 担当者 |

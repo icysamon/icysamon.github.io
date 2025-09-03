@@ -25,6 +25,6 @@ https://linkco.re/xyG6xA4X
 ## クレジット
 | 役割 | 担当者 |
 | :--- | :--- |
-| プログラミング | `icysamon` |
 | 作曲 | `icysamon` |
+| プロデューサー | `icysamon` |
 | モデル | `あまとうさぎ` |
