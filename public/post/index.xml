@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on icysamon</title>
+    <link>https://icysamon.com/post/</link>
+    <description>Recent content in Posts on icysamon</description>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>ja</language>
+    <copyright>icysamon</copyright>
+    <lastBuildDate>Wed, 03 Sep 2025 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://icysamon.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>迷宮都市</title>
+      <link>https://icysamon.com/post/labyrinth-city/</link>
+      <pubDate>Wed, 03 Sep 2025 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/labyrinth-city/</guid>
+      <description>新曲配信スタート。</description>
+    </item>
+    <item>
+      <title>エルフの恋</title>
+      <link>https://icysamon.com/post/elven-love/</link>
+      <pubDate>Thu, 21 Aug 2025 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/elven-love/</guid>
+      <description>新曲配信スタート。</description>
+    </item>
+    <item>
+      <title>光年</title>
+      <link>https://icysamon.com/post/light-year/</link>
+      <pubDate>Wed, 02 Apr 2025 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/light-year/</guid>
+      <description>新曲配信スタート。</description>
+    </item>
+    <item>
+      <title>旅の始まり</title>
+      <link>https://icysamon.com/post/beginning-of-the-journey/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/beginning-of-the-journey/</guid>
+      <description>新曲配信スタート。</description>
+    </item>
+    <item>
+      <title>終わりなき旅</title>
+      <link>https://icysamon.com/post/the-endless-journey/</link>
+      <pubDate>Fri, 27 Dec 2024 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/the-endless-journey/</guid>
+      <description>Unity 開発者コミュニティゲームジャム（中国開催）参加作品。</description>
+    </item>
+    <item>
+      <title>Light Years Traveler</title>
+      <link>https://icysamon.com/post/light-years-traveler/</link>
+      <pubDate>Sun, 21 Jul 2024 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/light-years-traveler/</guid>
+      <description>Godot Wild Jam 参加作品。</description>
+    </item>
+    <item>
+      <title>痕跡</title>
+      <link>https://icysamon.com/post/follow-the-trail/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/follow-the-trail/</guid>
+      <description>BOOOMJAM 参加作品。</description>
+    </item>
+    <item>
+      <title>Happy Happy Happy</title>
+      <link>https://icysamon.com/post/happy-happy-happy/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/happy-happy-happy/</guid>
+      <description>BOOOMJAM 参加作品。</description>
+    </item>
+    <item>
+      <title>未完成のパズル</title>
+      <link>https://icysamon.com/post/unfinished-puzzle/</link>
+      <pubDate>Mon, 29 May 2023 00:00:00 +0900</pubDate>
+      <guid>https://icysamon.com/post/unfinished-puzzle/</guid>
+      <description>BOOOMJAM 参加作品。</description>
+    </item>
+  </channel>
+</rss>
