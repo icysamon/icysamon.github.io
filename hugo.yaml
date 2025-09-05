@@ -3,7 +3,6 @@ title: icysamon
 copyright: "© [icysamon](https://icysamon.com/)"
 theme: [PaperMod]
 languageCode: ja
-publishDir : docs
 
 permalinks:
     post: /post/:slug/
