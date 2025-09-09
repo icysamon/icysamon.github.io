@@ -27,7 +27,7 @@ params:
   profileMode:
     enabled: true
     title: # optional default will be site title
-    subtitle: "電子工作｜ゲーム開発｜作曲"
+    subtitle: "電子工作｜ゲーム制作｜作曲"
     imageUrl: "https://image.icysamon.com/avatar/000.png" # optional
     imageTitle: # optional
     imageWidth: 150 # custom size
