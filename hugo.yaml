@@ -1,12 +1,21 @@
 baseURL: "https://icysamon.com/"
 title: icysamon
-copyright: "© [icysamon](https://icysamon.com/)"
+copyright: "© icysamon"
 theme: [PaperMod]
 languageCode: ja
 
 permalinks:
     post: /post/:slug/
     page: /:slug/
+
+languages:
+  ja:
+    languageName: "Japanese"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
 
 outputs:
   home:
@@ -33,8 +42,6 @@ params:
     imageWidth: 150 # custom size
     imageHeight: 150 # custom size
     buttons:
-      - name: 作品集
-        url: "/post/"
       - name: Blog
         url: "https://blog.icysamon.com/"
 
@@ -48,23 +55,11 @@ params:
     - name: "spotify"
       url: "https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx"
     - name: "email"
-      url: "mailto:artist@icysamon.com"
+      url: "mailto:me@icysamon.com"
 
 menu:
   main:
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 10
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 20
-    - identifier: archives
-      name: Archive
-      url: /archives/
-      weight: 30
     - identifier: about
       name: About
       url: /about/
-      weight: 40
+      weight: 10
