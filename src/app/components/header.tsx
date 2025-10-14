@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <header>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-5 my-2">
         <h1 className="text-4xl font-semibold">icysamon</h1>
         <p>工学科大学院生｜趣味としてゲームと曲を作っております。</p>
         <div className="flex flex-wrap gap-4">
@@ -66,7 +66,7 @@ function Icon({ href, src }: { href: string, src: string }) {
   return (
     <>
     <Link
-      className="mx-2"
+      className="mr-4"
       href={href}
       target="_blank"
       rel="noopener noreferrer"

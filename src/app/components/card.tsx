@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Game({ image, href, title, date, description }: { image?: string, href?: string, title?: string, date?: string, description?: string }) {
   return (
     <>
-    <div className="bg-gray-50 dark:bg-zinc-900 sm:m-4 my-4 w-full sm:w-[400px] rounded-xl shadow-xl">
+    <div className="bg-gray-50 dark:bg-zinc-900 sm:mx-4 mx-2 my-4 w-full sm:w-[400px] rounded-xl shadow-xl">
       <div className="relative h-[300px]">
         <Link href={href || "/"} target="_blank">
           <Image
