@@ -5,9 +5,10 @@ export default function Home() {
   return (
     <>
     <header>
-      <div className="flex flex-col gap-5 my-2">
+      <div className="flex flex-col gap-4 my-2 justify-center">
         <h1 className="text-4xl font-semibold">icysamon</h1>
-        <p>工学科大学院生｜趣味としてゲームと曲を作っております。</p>
+        <p>大学院生（情報ネットワーク分野）</p>
+        <p>趣味としてゲームと曲を作っております。</p>
         <div className="flex flex-wrap gap-4">
           <Link href="https://blog.icysamon.com" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
             <Image
@@ -66,7 +67,7 @@ function Icon({ href, src }: { href: string, src: string }) {
   return (
     <>
     <Link
-      className="mr-4"
+      className="mr-4 hover:brightness-75 transition"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
