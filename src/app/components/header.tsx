@@ -4,11 +4,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-    <header>
-      <div className="flex flex-col gap-4 my-2 justify-center">
+    <header className="flex justify-center">
+      <div className="flex flex-col gap-4 my-2">
         <h1 className="text-4xl font-semibold">icysamon</h1>
-        <p>大学院生（情報ネットワーク分野）</p>
-        <p>趣味としてゲームと曲を作っております。</p>
+        <div className="flex flex-col gap-2">
+          <p>大学院生（情報ネットワーク分野）</p>
+          <p>趣味としてゲームと曲を作っております。</p>
+        </div>
         <div className="flex flex-wrap gap-4">
           <Link href="https://blog.icysamon.com" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
             <Image
