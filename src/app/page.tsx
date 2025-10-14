@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="flex flex-col gap-2 items-center justify-center">
-        <p className="font-medium">Copyright © 2023 <Link href="/" className="font-bold hover:underline hover:underline-offset-4">icysamon</Link>. All Rights Reserved.</p>
+        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Copyright © 2023 <Link href="/" className="font-bold hover:underline hover:underline-offset-4">icysamon</Link>. All Rights Reserved.</p>
       </footer>
     </div>
   );
