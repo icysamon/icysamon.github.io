@@ -15,6 +15,11 @@ export default function Home() {
           <h2 className={h2Style}>GitHub</h2>
           <div className={divStyle}>
             <Repo
+            title="chord"
+            href="https://github.com/icysamon/chord"
+            description="音楽配信機能に特化したシンプルな Hugo テーマです。"
+            />
+            <Repo
             title="rp2040-dht20"
             href="https://github.com/icysamon/rp2040-dht20"
             description="Raspberry Pi Pico が使える温湿度センサー DHT20 の C/Python ドライバーです。"

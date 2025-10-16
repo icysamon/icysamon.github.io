@@ -30,7 +30,17 @@ export default function Home() {
               width={16}
               height={16}
             />
-            Artist Page
+            音楽配信
+          </Link>
+          <Link href="https://bgm.icysamon.com/" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
+            <Image
+              aria-hidden
+              src="./globe.svg"
+              alt=""
+              width={16}
+              height={16}
+            />
+            無料BGM素材
           </Link>
         </div>
         <div className="flex">
