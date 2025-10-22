@@ -22,17 +22,17 @@ export default function Home() {
             <Repo
             title="rp2040-dht20"
             href="https://github.com/icysamon/rp2040-dht20"
-            description="Raspberry Pi Pico が使える温湿度センサー DHT20 の C/Python ドライバーです。"
+            description="Raspberry Pi Pico が使える温湿度センサー DHT20 の C/Python ライブラリです。"
             />
             <Repo
             title="rp2040-sg-90"
             href="https://github.com/icysamon/rp2040-sg-90"
-            description="Raspberry Pi Pico が使えるサーボモーター SG-90 の C/Python ドライバーです。"
+            description="Raspberry Pi Pico が使えるサーボモーター SG-90 の C/Python ライブラリです。"
             />
             <Repo
             title="stm32-dht20"
             href="https://github.com/icysamon/stm32-dht20"
-            description="STM32F103 シリーズが使える温湿度センサー DHT20 の C ドライバーです。"
+            description="STM32F103 シリーズが使える温湿度センサー DHT20 の C ライブラリです。"
             />
           </div>
           <h2 className={h2Style}>作曲・編曲</h2>
