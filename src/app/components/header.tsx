@@ -40,7 +40,7 @@ export default function Home() {
               width={16}
               height={16}
             />
-            自作無料BGM素材
+            無料BGM素材
           </Link>
         </div>
         <div className="flex">
