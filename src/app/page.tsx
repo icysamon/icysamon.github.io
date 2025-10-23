@@ -54,9 +54,10 @@ export default function Home() {
           <div className={divStyle}>
             <Card
               image="https://image.icysamon.com/index/2024/12/the-endless-journey.webp"
+              href="https://unity.cn/gamejam2024"
               title="終わりなき旅"
               date="2024年12月27日"
-              description="Unity 開発者コミュニティゲームジャム（中国開催）参加作品。"
+              description="Unity（中国）開発者コミュニティゲームジャム参加作品。"
             />
             <Card
               image="https://image.icysamon.com/index/2024/07/light-years-traveler.webp"
