@@ -22,7 +22,7 @@ export default function Home() {
             />
             Blog
           </Link>
-          <Link href="https://www.tunecore.co.jp/artists?id=969269" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
+          <Link href="https://www.tunecore.co.jp/artists/icysamon" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
             <Image
               aria-hidden
               src="./globe.svg"

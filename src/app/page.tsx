@@ -38,6 +38,12 @@ export default function Home() {
           <h2 className={h2Style}>作曲・編曲</h2>
           <div className={divStyle}>
             <Card
+              image="https://image.icysamon.com/index/2025/11/to-you-in-2020.webp"
+              href="https://linkco.re/ad8AsbYr"
+              title="2020年のあなたへ"
+              date="	2025年11月15日"
+            />
+            <Card
               image="https://image.icysamon.com/index/2025/04/light-year.webp"
               href="https://linkco.re/tGbPetG4"
               title="光年"
