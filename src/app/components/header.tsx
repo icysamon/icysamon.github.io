@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className="text-4xl font-semibold">icysamon</h1>
         <div className="flex flex-col gap-2">
           <p>大学院生（情報ネットワーク分野）</p>
-          <p>趣味でゲームと曲を作っております。</p>
+          <p>趣味でゲームと曲を作ってます。</p>
         </div>
         <div className="flex flex-wrap gap-4">
           <Link href="https://blog.icysamon.com" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
