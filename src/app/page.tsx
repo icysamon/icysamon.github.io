@@ -6,9 +6,11 @@ import Card from "@/app/components/card";
 const h2Style = "text-2xl font-bold";
 const divStyle = "flex flex-wrap inline-flex justify-center w-full sm'w-auto";
 
+
 export default function Home() {
+  const date = new Date();
   return (
-    <div className="font-sans justify-items-center min-h-screen p-4 sm:p-8">
+    <div className="font-sans justify-items-center min-h-screen">
       <Header />
       <main className="max-w-[1280px]">
         <div className="flex flex-col my-8 gap-4 items-center">
@@ -102,8 +104,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="flex flex-col gap-2 items-center justify-center">
-        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Copyright © 2023 <Link href="/" className="font-bold hover:underline hover:underline-offset-4">icysamon</Link>. All Rights Reserved.</p>
+      <footer className="flex flex-col gap-2 items-center justify-center my-8 text-sm font-medium text-gray-500 dark:text-gray-400">
+        <p>Copyright © 2023 - {date.getFullYear()} <Link href="/" className="font-bold hover:underline hover:underline-offset-4">icysamon</Link>.</p>
+        <p> All Rights Reserved.</p>
       </footer>
     </div>
   );
