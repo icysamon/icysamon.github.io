@@ -55,7 +55,7 @@ export default function Home() {
                 height={16}
                 className="brightness-100 dark:brightness-200"
               />
-              無料BGM素材
+              フリーBGM
             </Link>
           </div>
           <div className="flex brightness-100 dark:brightness-80">
