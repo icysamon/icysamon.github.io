@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Header from "@/app/components/header";
-import Repo from "@/app/components/repo";
 import Card from "@/app/components/card";
 
 const h2Style = "text-2xl font-bold";
@@ -14,58 +13,15 @@ export default function Home() {
       <Header />
       <main className="max-w-[1280px]">
         <div className="flex flex-col my-8 gap-4 items-center">
-          <h2 className={h2Style}>GitHub</h2>
-          <div className={divStyle}>
-            <Repo
-            title="chord"
-            href="https://github.com/icysamon/chord"
-            description="音楽配信機能に特化したシンプルな Hugo テーマです。"
-            />
-            <Repo
-            title="rp2040-dht20"
-            href="https://github.com/icysamon/rp2040-dht20"
-            description="Raspberry Pi Pico が使える温湿度センサー DHT20 の C/Python ライブラリです。"
-            />
-            <Repo
-            title="rp2040-sg-90"
-            href="https://github.com/icysamon/rp2040-sg-90"
-            description="Raspberry Pi Pico が使えるサーボモーター SG-90 の C/Python ライブラリです。"
-            />
-            <Repo
-            title="stm32-dht20"
-            href="https://github.com/icysamon/stm32-dht20"
-            description="STM32F103 シリーズが使える温湿度センサー DHT20 の C ライブラリです。"
-            />
-          </div>
-          <h2 className={h2Style}>作曲・編曲</h2>
-          <div className={divStyle}>
-            <Card
-              image="https://image.icysamon.com/index/2025/11/dreaming-fish.webp"
-              href="https://linkco.re/QaGRyDV3"
-              title="サカナノユメ"
-              date="2025年11月21日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/11/to-you-in-2020.webp"
-              href="https://linkco.re/ad8AsbYr"
-              title="2020年のあなたへ"
-              date="2025年11月15日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/04/light-year.webp"
-              href="https://linkco.re/tGbPetG4"
-              title="光年"
-              date="2025年4月2日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/03/beginning-of-the-journey.webp"
-              href="https://linkco.re/xyG6xA4X"
-              title="旅の始まり"
-              date="2025年3月25日"
-            />
-          </div>
           <h2 className={h2Style}>ゲーム制作</h2>
           <div className={divStyle}>
+            <Card
+              image="https://image.icysamon.com/index/2025/12/the-chart-magician.webp"
+              href="https://icysamon.itch.io/the-chart-magician"
+              title="譜面の魔法使い"
+              date="2025年12月14日"
+              description="Godotでゆるっとゲーム制作祭４参加作品。"
+            />
             <Card
               image="https://image.icysamon.com/index/2024/12/the-endless-journey.webp"
               href="https://unity.cn/gamejam2024"
@@ -100,6 +56,33 @@ export default function Home() {
               title="未完成のパズル"
               date="2023年3月29日"
               description="BOOOMJAM 参加作品。"
+            />
+          </div>
+          <h2 className={h2Style}>作曲・編曲</h2>
+          <div className={divStyle}>
+            <Card
+              image="https://image.icysamon.com/index/2025/11/dreaming-fish.webp"
+              href="https://linkco.re/QaGRyDV3"
+              title="サカナノユメ"
+              date="2025年11月21日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/11/to-you-in-2020.webp"
+              href="https://linkco.re/ad8AsbYr"
+              title="2020年のあなたへ"
+              date="2025年11月15日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/04/light-year.webp"
+              href="https://linkco.re/tGbPetG4"
+              title="光年"
+              date="2025年4月2日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/03/beginning-of-the-journey.webp"
+              href="https://linkco.re/xyG6xA4X"
+              title="旅の始まり"
+              date="2025年3月25日"
             />
           </div>
         </div>
