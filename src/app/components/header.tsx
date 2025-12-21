@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-    <header className="flex flex-col justify-center">
-      <div className="flex flex-wrap mt-12 gap-8">
-        <div className="mx-auto">
+    <header className="flex flex-col">
+      <div className="flex flex-wrap mt-12 gap-8 justify-center">
+        <div>
           <Image
             aria-hidden
             width={300}
@@ -17,7 +17,7 @@ export default function Home() {
             priority
           />
         </div>  
-        <div className="flex flex-col gap-4 my-4 mx-auto justify-center">
+        <div className="flex flex-col gap-4 justify-center">
           <h1 className="text-4xl font-semibold">icysamon</h1>
           <div className="flex flex-col gap-2">
             <p>大学院生（情報ネットワーク分野）</p>
