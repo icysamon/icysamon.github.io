@@ -61,6 +61,12 @@ export default function Home() {
           <h2 className={h2Style}>作曲・編曲</h2>
           <div className={divStyle}>
             <Card
+              image="https://image.icysamon.com/index/2025/12/bgm-vol-1.webp"
+              href="https://linkco.re/pe6C4txT"
+              title="BGM Vol. 1"
+              date="2025年12月25日"
+            />
+            <Card
               image="https://image.icysamon.com/index/2025/11/dreaming-fish.webp"
               href="https://linkco.re/QaGRyDV3"
               title="サカナノユメ"
