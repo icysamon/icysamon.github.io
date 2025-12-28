@@ -19,7 +19,7 @@ export default function Home() {
               image="https://image.icysamon.com/index/2025/12/another.webp"
               href="https://unityroom.com/games/another"
               title="もう"
-              date="2025年12月29日"
+              date="2025年12月28日"
               description="Unity 一週間ゲームジャム お題「もうひとつ」の投稿作品。"
             />
             <Card
