@@ -16,6 +16,13 @@ export default function Home() {
           <h2 className={h2Style}>ゲーム制作</h2>
           <div className={divStyle}>
             <Card
+              image="https://image.icysamon.com/index/2025/12/another.webp"
+              href="https://unityroom.com/games/another"
+              title="もう"
+              date="2025年12月29日"
+              description="Unity 一週間ゲームジャム お題「もうひとつ」の投稿作品。"
+            />
+            <Card
               image="https://image.icysamon.com/index/2025/12/the-chart-magician.webp"
               href="https://icysamon.itch.io/the-chart-magician"
               title="譜面の魔法使い"
