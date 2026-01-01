@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 justify-center">
           <h1 className="text-4xl font-semibold">icysamon</h1>
           <div className="flex flex-col gap-2">
-            <p>大学院生（情報ネットワーク分野）</p>
+            <p>理系大学院生（IoT分野）</p>
             <p>趣味でゲームと曲を作ってます。</p>
           </div>
           <div className="flex flex-wrap gap-4">

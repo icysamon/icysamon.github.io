@@ -13,7 +13,40 @@ export default function Home() {
       <Header />
       <main className="max-w-[1280px]">
         <div className="flex flex-col my-8 gap-4 items-center">
-          <h2 className={h2Style}>ゲーム制作</h2>
+          <h2 className={h2Style}>作曲・編曲</h2>
+          <div className={divStyle}>
+            <Card
+              image="https://image.icysamon.com/index/2025/12/bgm-vol-1.webp"
+              href="https://linkco.re/pe6C4txT"
+              title="BGM Vol. 1"
+              date="2025年12月25日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/11/dreaming-fish.webp"
+              href="https://linkco.re/QaGRyDV3"
+              title="サカナノユメ"
+              date="2025年11月21日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/11/to-you-in-2020.webp"
+              href="https://linkco.re/ad8AsbYr"
+              title="2020年のあなたへ"
+              date="2025年11月15日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/04/light-year.webp"
+              href="https://linkco.re/tGbPetG4"
+              title="光年"
+              date="2025年4月2日"
+            />
+            <Card
+              image="https://image.icysamon.com/index/2025/03/beginning-of-the-journey.webp"
+              href="https://linkco.re/xyG6xA4X"
+              title="旅の始まり"
+              date="2025年3月25日"
+            />
+          </div>
+          <h2 className={h2Style}>ゲームジャム</h2>
           <div className={divStyle}>
             <Card
               image="https://image.icysamon.com/index/2025/12/another.webp"
@@ -63,39 +96,6 @@ export default function Home() {
               title="未完成のパズル"
               date="2023年3月29日"
               description="BOOOMJAM 参加作品。"
-            />
-          </div>
-          <h2 className={h2Style}>作曲・編曲</h2>
-          <div className={divStyle}>
-            <Card
-              image="https://image.icysamon.com/index/2025/12/bgm-vol-1.webp"
-              href="https://linkco.re/pe6C4txT"
-              title="BGM Vol. 1"
-              date="2025年12月25日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/11/dreaming-fish.webp"
-              href="https://linkco.re/QaGRyDV3"
-              title="サカナノユメ"
-              date="2025年11月21日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/11/to-you-in-2020.webp"
-              href="https://linkco.re/ad8AsbYr"
-              title="2020年のあなたへ"
-              date="2025年11月15日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/04/light-year.webp"
-              href="https://linkco.re/tGbPetG4"
-              title="光年"
-              date="2025年4月2日"
-            />
-            <Card
-              image="https://image.icysamon.com/index/2025/03/beginning-of-the-journey.webp"
-              href="https://linkco.re/xyG6xA4X"
-              title="旅の始まり"
-              date="2025年3月25日"
             />
           </div>
         </div>
