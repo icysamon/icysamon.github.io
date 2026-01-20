@@ -71,7 +71,7 @@ export default function Home() {
               <button 
                 onClick={() => setMusicPage(p => Math.max(1, p - 1))} 
                 disabled={musicPage === 1}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition"
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
                 前へ
               </button>
@@ -79,7 +79,7 @@ export default function Home() {
               <button 
                 onClick={() => setMusicPage(p => Math.min(musicTotalPages, p + 1))} 
                 disabled={musicPage === musicTotalPages}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition"
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
                 次へ
               </button>
@@ -119,7 +119,7 @@ export default function Home() {
               <button 
                 onClick={() => setGamePage(p => Math.max(1, p - 1))} 
                 disabled={gamePage === 1}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition"
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
                 前へ
               </button>
@@ -127,7 +127,7 @@ export default function Home() {
               <button 
                 onClick={() => setGamePage(p => Math.min(gameTotalPages, p + 1))} 
                 disabled={gamePage === gameTotalPages}
-                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition"
+                className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
                 次へ
               </button>
