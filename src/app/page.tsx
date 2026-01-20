@@ -7,7 +7,8 @@ import MUSIC_DATA from '@/data/music.json';
 import GAME_DATA from '@/data/games.json';
 
 const h2Style = "text-2xl font-bold";
-const divStyle = "flex flex-wrap inline-flex justify-center w-full sm:w-auto gap-4"; 
+const divStyle = "flex flex-wrap justify-center w-full sm:w-auto gap-4";
+const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396px]";
 
 export default function Home() {
   const musicList = MUSIC_DATA;
@@ -24,11 +25,13 @@ export default function Home() {
   const musicTotalPages = Math.ceil(musicList.length / pageSize);
   const musicStartIndex = (musicPage - 1) * pageSize;
   const currentMusicItems = musicList.slice(musicStartIndex, musicStartIndex + pageSize);
+  const emptyMusicSlots = pageSize - currentMusicItems.length;
 
   // === 計算ロジック: ゲーム ===
   const gameTotalPages = Math.ceil(gameList.length / pageSize);
   const gameStartIndex = (gamePage - 1) * pageSize;
   const currentGameItems = gameList.slice(gameStartIndex, gameStartIndex + pageSize);
+    const emptyGameSlots = pageSize - currentGameItems.length;
 
   const date = new Date();
 
@@ -51,6 +54,13 @@ export default function Home() {
                 href={item.href}
                 title={item.title}
                 date={item.date}
+              />
+            ))}
+
+            {emptyMusicSlots > 0 && Array.from({ length: emptyMusicSlots }).map((_, index) => (
+              <div 
+                key={`empty-${index}`} 
+                className={placeholderClass}
               />
             ))}
           </div>
@@ -94,7 +104,13 @@ export default function Home() {
                  date={item.date}
                  description={item.description}
                />
-             ))}
+            ))}
+             {emptyGameSlots > 0 && Array.from({ length: emptyGameSlots }).map((_, index) => (
+              <div 
+                key={`empty-${index}`} 
+                className={placeholderClass}
+              />
+            ))}
           </div>
 
           {/* ゲーム用ページネーション */}
