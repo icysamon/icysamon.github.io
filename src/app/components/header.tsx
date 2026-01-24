@@ -24,7 +24,7 @@ export default function Home() {
             <p>趣味でゲームと曲を作ってます。</p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link href="https://blog.icysamon.com" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
+            <Link href="https://blog.icysamon.com" className="flex hover:underline hover:underline-offset-4 gap-2">
               <Image
                 aria-hidden
                 src="./file.svg"
@@ -35,7 +35,7 @@ export default function Home() {
               />
               Blog
             </Link>
-            <Link href="https://www.tunecore.co.jp/artists/icysamon" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
+            <Link href="https://www.tunecore.co.jp/artists/icysamon" className="flex hover:underline hover:underline-offset-4 gap-2">
               <Image
                 aria-hidden
                 src="./globe.svg"
@@ -46,7 +46,7 @@ export default function Home() {
               />
               音楽配信
             </Link>
-            <Link href="https://bgm.icysamon.com/" target="_blank" className="flex hover:underline hover:underline-offset-4 gap-2">
+            <Link href="https://bgm.icysamon.com/" className="flex hover:underline hover:underline-offset-4 gap-2">
               <Image
                 aria-hidden
                 src="./globe.svg"
@@ -98,7 +98,6 @@ function Icon({ href, src }: { href: string, src: string }) {
     <Link
       className="mr-4 hover:brightness-75 transition"
       href={href}
-      target="_blank"
       rel="noopener noreferrer"
     >
       <Image
