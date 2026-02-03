@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home({ lang }: { lang: 'ja' | 'en' }) {
+  const buttonStyle = "flex items-center px-4 py-2 bg-rose-400 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm dark:bg-slate-700 dark:hover:bg-rose-600 text-sm font-medium";
   return (
     <>
     <header className="flex flex-col">
@@ -24,37 +25,13 @@ export default function Home({ lang }: { lang: 'ja' | 'en' }) {
             <p>{lang === 'ja' ? "趣味でゲームと曲を作ってます 🫧" : "Game Dev & Music Creator 🫧"}</p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link href="https://blog.icysamon.com" className="flex hover:underline hover:underline-offset-4 gap-2">
-              <Image
-                aria-hidden
-                src="./file.svg"
-                alt=""
-                width={16}
-                height={16}
-                className="brightness-100 dark:brightness-200"
-              />
+            <Link href="https://blog.icysamon.com" className={buttonStyle}>
               {lang === 'ja' ? 'Blog' : 'Blog'}
             </Link>
-            <Link href="https://www.tunecore.co.jp/artists/icysamon" className="flex hover:underline hover:underline-offset-4 gap-2">
-              <Image
-                aria-hidden
-                src="./globe.svg"
-                alt=""
-                width={16}
-                height={16}
-                className="brightness-100 dark:brightness-200"
-              />
+            <Link href="https://www.tunecore.co.jp/artists/icysamon" className={buttonStyle}>
               {lang === 'ja' ? '音楽配信' : 'Music Streaming'}
             </Link>
-            <Link href="https://bgm.icysamon.com/" className="flex hover:underline hover:underline-offset-4 gap-2">
-              <Image
-                aria-hidden
-                src="./globe.svg"
-                alt=""
-                width={16}
-                height={16}
-                className="brightness-100 dark:brightness-200"
-              />
+            <Link href="https://bgm.icysamon.com/" className={buttonStyle}>
               {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
             </Link>
           </div>
