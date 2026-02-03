@@ -36,9 +36,9 @@ export default function Home() {
   const date = new Date();
 
   return (
-    <div className="font-sans justify-items-center min-h-screen">
+    <div className="font-sans flex flex-col items-center min-h-screen">
       <Header />
-      <main className="max-w-[1280px]">
+      <main className="max-w-[1280px] w-full">
         
         {/* =======================
             セクション1: 作曲・編曲
