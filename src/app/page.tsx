@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 import Header from "@/app/components/header";
 import Card from "@/app/components/card";
@@ -31,20 +31,43 @@ export default function Home() {
   const gameTotalPages = Math.ceil(gameList.length / pageSize);
   const gameStartIndex = (gamePage - 1) * pageSize;
   const currentGameItems = gameList.slice(gameStartIndex, gameStartIndex + pageSize);
-    const emptyGameSlots = pageSize - currentGameItems.length;
+  const emptyGameSlots = pageSize - currentGameItems.length;
 
   const date = new Date();
 
+  const [lang, setLang] = useState<'ja' | 'en'>('ja');
+  const TRANSLATIONS = {
+    ja: {
+      section_music: "作曲",
+      section_game: "ゲームジャム",
+      prev: "前へ",
+      next: "次へ",
+    },
+    en: {
+      section_music: "Composition",
+      section_game: "Game Jam",
+      prev: "Prev",
+      next: "Next",
+    }
+  };
+
+  useEffect(() => {
+    if (!navigator.language.startsWith('ja')) {
+      setLang('en');
+    }
+  }, []);
+  const t = TRANSLATIONS[lang];
+
   return (
     <div className="font-sans flex flex-col items-center min-h-screen">
-      <Header />
+      <Header lang={lang}/>
       <main className="max-w-[1280px] w-full">
         
         {/* =======================
             セクション1: 作曲・編曲
            ======================= */}
         <div className="flex flex-col my-8 gap-4 items-center">
-          <h2 className={h2Style}>作曲・編曲</h2>
+          <h2 className={h2Style}>{t.section_music}</h2>
           
           <div className={divStyle}>
             {currentMusicItems.map((item, index) => (
@@ -73,7 +96,7 @@ export default function Home() {
                 disabled={musicPage === 1}
                 className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
-                前へ
+                {t.prev}
               </button>
               <span className="font-medium">{musicPage} / {musicTotalPages}</span>
               <button 
@@ -81,7 +104,7 @@ export default function Home() {
                 disabled={musicPage === musicTotalPages}
                 className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
-                次へ
+                {t.next}
               </button>
             </div>
           )}
@@ -91,7 +114,7 @@ export default function Home() {
             セクション2: ゲームジャム
            ======================= */}
         <div className="flex flex-col my-8 gap-4 items-center">
-          <h2 className={h2Style}>ゲームジャム</h2>
+          <h2 className={h2Style}>{t.section_game}</h2>
           
           <div className={divStyle}>
              {/* マップ関数で表示 */}
@@ -121,7 +144,7 @@ export default function Home() {
                 disabled={gamePage === 1}
                 className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
-                前へ
+                {t.prev}
               </button>
               <span className="font-medium">{gamePage} / {gameTotalPages}</span>
               <button 
@@ -129,7 +152,7 @@ export default function Home() {
                 disabled={gamePage === gameTotalPages}
                 className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition dark:text-slate-800"
               >
-                次へ
+                {t.next}
               </button>
             </div>
           )}

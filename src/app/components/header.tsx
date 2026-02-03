@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Home({ lang }: { lang: 'ja' | 'en' }) {
   return (
     <>
     <header className="flex flex-col">
@@ -20,8 +20,8 @@ export default function Home() {
         <div className="flex flex-col gap-4 justify-center">
           <h1 className="text-4xl font-semibold">icysamon</h1>
           <div className="flex flex-col gap-2">
-            <p>理系大学院生（IoT分野）</p>
-            <p>趣味でゲームと曲を作ってます。</p>
+            <p>{lang === 'ja' ? "理系大学院生（IoT分野）" : "Master's Student (IoT)"}</p>
+            <p>{lang === 'ja' ? "趣味でゲームと曲を作ってます 🫧" : "Game Dev & Music Creator 🫧"}</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <Link href="https://blog.icysamon.com" className="flex hover:underline hover:underline-offset-4 gap-2">
@@ -33,7 +33,7 @@ export default function Home() {
                 height={16}
                 className="brightness-100 dark:brightness-200"
               />
-              Blog
+              {lang === 'ja' ? 'Blog' : 'Blog'}
             </Link>
             <Link href="https://www.tunecore.co.jp/artists/icysamon" className="flex hover:underline hover:underline-offset-4 gap-2">
               <Image
@@ -44,7 +44,7 @@ export default function Home() {
                 height={16}
                 className="brightness-100 dark:brightness-200"
               />
-              音楽配信
+              {lang === 'ja' ? '音楽配信' : 'Music Streaming'}
             </Link>
             <Link href="https://bgm.icysamon.com/" className="flex hover:underline hover:underline-offset-4 gap-2">
               <Image
@@ -55,7 +55,7 @@ export default function Home() {
                 height={16}
                 className="brightness-100 dark:brightness-200"
               />
-              フリーBGM
+              {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
             </Link>
           </div>
           <div className="flex brightness-100 dark:brightness-80">
