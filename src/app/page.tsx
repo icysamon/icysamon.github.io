@@ -52,7 +52,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (!navigator.language.startsWith('ja')) {
+    if (navigator.language.startsWith('ja')) {
       setLang('en');
     }
   }, []);
@@ -75,7 +75,11 @@ export default function Home() {
                 key={`music-${index}`}
                 image={item.image}
                 href={item.href}
-                title={item.title}
+                title={
+                  typeof item.title === 'string' 
+                  ? item.title 
+                  : (item.title[lang] || item.title.ja)
+                }
                 date={item.date}
               />
             ))}

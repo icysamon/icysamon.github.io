@@ -1,44 +1,74 @@
 [
   {
+    "image": "https://image.icysamon.com/index/2026/02/horse.webp",
+    "href": "https://linkco.re/fETeZQpE",
+    "title": {
+      "ja": "午",
+      "en": "Horse"
+    },
+    "date": "2026年2月17日"
+  },
+  {
     "image": "https://image.icysamon.com/index/2026/01/bgm-vol-2.webp",
     "href": "https://linkco.re/fETeZQpE",
-    "title": "BGM Vol. 2",
+    "title": {
+      "ja": "BGM Vol. 2",
+      "en": "BGM Vol. 2"
+    },
     "date": "2026年1月25日"
   },
   {
     "image": "https://image.icysamon.com/index/2025/12/bgm-vol-1.webp",
     "href": "https://linkco.re/pe6C4txT",
-    "title": "BGM Vol. 1",
+    "title": {
+      "ja": "BGM Vol. 1",
+      "en": "BGM Vol. 1"
+    },
     "date": "2025年12月25日"
   },
   {
     "image": "https://image.icysamon.com/index/2025/12/the-chart-magician-ost.webp",
     "href": "https://linkco.re/uYxfAYe8",
-    "title": "譜面の魔法使い（オリジナル・サウンドトラック）",
+    "title": {
+      "ja": "譜面の魔法使い（オリジナル・サウンドトラック）",
+      "en": "The Chart Magician (Original Soundtrack)"
+    },
     "date": "2025年12月14日"
   },
   {
     "image": "https://image.icysamon.com/index/2025/11/dreaming-fish.webp",
     "href": "https://linkco.re/QaGRyDV3",
-    "title": "サカナノユメ",
+    "title": {
+      "ja": "サカナノユメ",
+      "en": "Dreaming Fish"
+    },
     "date": "2025年11月21日"
   },
   {
     "image": "https://image.icysamon.com/index/2026/03/to-you-in-2020.webp",
     "href": "https://linkco.re/XAuGGdPc",
-    "title": "2020年のあなたへ",
+    "title": {
+      "ja": "2020年のあなたへ",
+      "en": "To You in 2020"
+    },
     "date": "2025年11月15日"
   },
   {
     "image": "https://image.icysamon.com/index/2025/04/light-year.webp",
     "href": "https://linkco.re/tGbPetG4",
-    "title": "光年",
+    "title": {
+      "ja": "光年",
+      "en": "Light Year"
+    },
     "date": "2025年4月2日"
   },
   {
     "image": "https://image.icysamon.com/index/2025/03/beginning-of-the-journey.webp",
     "href": "https://linkco.re/xyG6xA4X",
-    "title": "旅の始まり",
+    "title": {
+      "ja": "旅の始まり",
+      "en": "Beginning of the Journey"
+    },
     "date": "2025年3月25日"
   }
 ]

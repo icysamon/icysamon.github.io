@@ -17,7 +17,7 @@ export default function Game({ image, href, title, date, description }: { image?
         </Link>
       </div>
       <div className="flex flex-col gap-2 m-4">
-        <h3 className="text-xl font-bold"><Link href={href || "/"} target="_blank" className="hover:underline hover:underline-offset-4">{title}</Link></h3>
+        <h3 className="text-xl font-bold truncate"><Link href={href || "/"} target="_blank" className="hover:underline hover:underline-offset-4">{title}</Link></h3>
         <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{date}</p>
         <p>{description}</p>
       </div>
