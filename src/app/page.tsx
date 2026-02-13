@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import Link from "next/link";
-import Header from "@/app/components/header";
+import Image from "next/image";
 import Card from "@/app/components/card";
 import MUSIC_DATA from '@/data/music.json'; 
 import GAME_DATA from '@/data/games.json';
@@ -9,6 +9,7 @@ import GAME_DATA from '@/data/games.json';
 const h2Style = "text-2xl font-bold";
 const divStyle = "flex flex-wrap justify-center w-full sm:w-auto gap-4";
 const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396px]";
+const buttonStyle = "flex items-center px-4 py-2 bg-rose-400 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm dark:bg-slate-700 dark:hover:bg-rose-600 text-sm font-medium";
 
 export default function Home() {
   const musicList = MUSIC_DATA;
@@ -52,18 +53,80 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (navigator.language.startsWith('ja')) {
+    if (!navigator.language.startsWith('ja')) {
       setLang('en');
     }
   }, []);
   const t = TRANSLATIONS[lang];
 
   return (
+    
     <div className="font-sans flex flex-col items-center min-h-screen">
-      <Header lang={lang}/>
+      <div className="flex flex-wrap mt-12 gap-8 justify-center">
+        <div>
+          <Image
+            aria-hidden
+            width={300}
+            height={300}
+            src={"https://image.icysamon.com/avatar/artist.webp"}
+            alt={"no-image"}
+            className="object-cover rounded-full dark:brightness-80"
+            priority
+          />
+        </div>  
+        <div className="flex flex-col gap-4 justify-center">
+          <h1 className="text-4xl font-semibold">icysamon</h1>
+          <div className="flex flex-col gap-2">
+            <p>{lang === 'ja' ? "理系大学院生（IoT分野）" : "Master's Student (IoT)"}</p>
+            <p>{lang === 'ja' ? "趣味でゲームと曲を作ってます 🫧" : "Game Dev & Music Creator 🫧"}</p>
+          </div>
+          <button
+            onClick={() => setLang(lang === 'ja' ? 'en' : 'ja')}
+            className="px-4 py-2 text-sm font-medium bg-gray-200 dark:bg-gray-800 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+          >
+            {lang === 'ja' ? 'English' : '日本語'}
+          </button>
+          <div className="flex flex-wrap gap-4">
+            <Link href="https://blog.icysamon.com" className={buttonStyle}>
+              {lang === 'ja' ? 'Blog' : 'Blog'}
+            </Link>
+            <Link href="https://www.tunecore.co.jp/artists/icysamon" className={buttonStyle}>
+              {lang === 'ja' ? '音楽配信' : 'Music Streaming'}
+            </Link>
+            <Link href="https://bgm.icysamon.com/" className={buttonStyle}>
+              {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
+            </Link>
+          </div>
+          <div className="flex brightness-100 dark:brightness-80">
+            <Icon
+              href="http://twitter.com/icysamon"
+              src="/svgrepo-com/twitter.svg"
+            />
+            <Icon
+              href="https://www.youtube.com/@icysamon"
+              src="/svgrepo-com/youtube.svg"
+            />
+            <Icon
+              href="https://music.apple.com/jp/artist/icysamon/1808762015"
+              src="/svgrepo-com/apple-music.svg"
+            />
+            <Icon
+              href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx"
+              src="/svgrepo-com/spotify.svg"
+            />
+            <Icon
+              href="https://github.com/icysamon"
+              src="/svgrepo-com/github.svg"
+            />
+            <Icon
+              href="mailto:me@icysamon.com"
+              src="/svgrepo-com/email.svg"
+            />
+          </div>
+        </div>
+      </div>
+
       <main className="max-w-[1280px] w-full">
-        
-        
         {/* =======================
             セクション1: 作曲・編曲
            ======================= */}
@@ -177,5 +240,25 @@ export default function Home() {
         <p> All Rights Reserved.</p>
       </footer>
     </div>
+  );
+}
+
+function Icon({ href, src }: { href: string, src: string }) {
+  return (
+    <>
+    <Link
+      className="mr-4 hover:brightness-75 transition"
+      href={href}
+      rel="noopener noreferrer"
+    >
+      <Image
+        aria-hidden
+        src={src}
+        alt="none-icon"
+        width={32}
+        height={32}
+      />
+    </Link>
+    </>
   );
 }
