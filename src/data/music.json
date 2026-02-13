@@ -6,7 +6,7 @@
       "ja": "午",
       "en": "Horse"
     },
-    "date": "2026年2月17日"
+    "date": "2026-02-17"
   },
   {
     "image": "https://image.icysamon.com/index/2026/01/bgm-vol-2.webp",
@@ -15,7 +15,7 @@
       "ja": "BGM Vol. 2",
       "en": "BGM Vol. 2"
     },
-    "date": "2026年1月25日"
+    "date": "2026-01-25"
   },
   {
     "image": "https://image.icysamon.com/index/2025/12/bgm-vol-1.webp",
@@ -24,7 +24,7 @@
       "ja": "BGM Vol. 1",
       "en": "BGM Vol. 1"
     },
-    "date": "2025年12月25日"
+    "date": "2025-12-25"
   },
   {
     "image": "https://image.icysamon.com/index/2025/12/the-chart-magician-ost.webp",
@@ -33,7 +33,7 @@
       "ja": "譜面の魔法使い（オリジナル・サウンドトラック）",
       "en": "The Chart Magician (Original Soundtrack)"
     },
-    "date": "2025年12月14日"
+    "date": "2025-12-14"
   },
   {
     "image": "https://image.icysamon.com/index/2025/11/dreaming-fish.webp",
@@ -42,7 +42,7 @@
       "ja": "サカナノユメ",
       "en": "Dreaming Fish"
     },
-    "date": "2025年11月21日"
+    "date": "2025-11-21"
   },
   {
     "image": "https://image.icysamon.com/index/2026/03/to-you-in-2020.webp",
@@ -51,7 +51,7 @@
       "ja": "2020年のあなたへ",
       "en": "To You in 2020"
     },
-    "date": "2025年11月15日"
+    "date": "2025-11-15"
   },
   {
     "image": "https://image.icysamon.com/index/2025/04/light-year.webp",
@@ -60,7 +60,7 @@
       "ja": "光年",
       "en": "Light Year"
     },
-    "date": "2025年4月2日"
+    "date": "2025-04-02"
   },
   {
     "image": "https://image.icysamon.com/index/2025/03/beginning-of-the-journey.webp",
@@ -69,6 +69,6 @@
       "ja": "旅の始まり",
       "en": "Beginning of the Journey"
     },
-    "date": "2025年3月25日"
+    "date": "2025-03-25"
   }
 ]

@@ -63,6 +63,7 @@ export default function Home() {
       <Header lang={lang}/>
       <main className="max-w-[1280px] w-full">
         
+        
         {/* =======================
             セクション1: 作曲・編曲
            ======================= */}
@@ -80,7 +81,7 @@ export default function Home() {
                   ? item.title 
                   : (item.title[lang] || item.title.ja)
                 }
-                date={item.date}
+                date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               />
             ))}
 
@@ -127,9 +128,17 @@ export default function Home() {
                  key={`game-${index}`}
                  image={item.image}
                  href={item.href}
-                 title={item.title}
-                 date={item.date}
-                 description={item.description}
+                 title={
+                  typeof item.title === 'string' 
+                  ? item.title 
+                  : (item.title[lang] || item.title.ja)
+                }
+                date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                 description={
+                  typeof item.description === 'string' 
+                  ? item.description 
+                  : (item.description[lang] || item.description.ja)
+                }
                />
             ))}
              {emptyGameSlots > 0 && Array.from({ length: emptyGameSlots }).map((_, index) => (
