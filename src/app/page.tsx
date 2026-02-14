@@ -98,7 +98,7 @@ export default function Home() {
               src="/svgrepo-com/twitter.svg"
             />
             <Icon
-              href="https://www.youtube.com/@icysamon"
+              href="https://www.youtube.com/@icysamon/releases"
               src="/svgrepo-com/youtube.svg"
             />
             <Icon
