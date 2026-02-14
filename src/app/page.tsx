@@ -12,23 +12,20 @@ const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396
 const buttonStyle = "flex items-center px-4 py-2 bg-rose-400 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm dark:bg-slate-700 dark:hover:bg-rose-600 text-sm font-medium";
 
 export default function Home() {
-  const musicList = MUSIC_DATA;
-  const gameList = GAME_DATA; 
-
-  // === State (状態管理) ===
-  // それぞれ独立したページ番号を持ちます
+  // ページ
   const [musicPage, setMusicPage] = useState(1);
   const [gamePage, setGamePage] = useState(1);
-  
   const pageSize = 4; // 1ページあたりの表示数
 
-  // === 計算ロジック: 作曲 ===
+  // ミュージック
+  const musicList = MUSIC_DATA;
   const musicTotalPages = Math.ceil(musicList.length / pageSize);
   const musicStartIndex = (musicPage - 1) * pageSize;
   const currentMusicItems = musicList.slice(musicStartIndex, musicStartIndex + pageSize);
   const emptyMusicSlots = pageSize - currentMusicItems.length;
 
-  // === 計算ロジック: ゲーム ===
+  // ゲーム
+  const gameList = GAME_DATA;
   const gameTotalPages = Math.ceil(gameList.length / pageSize);
   const gameStartIndex = (gamePage - 1) * pageSize;
   const currentGameItems = gameList.slice(gameStartIndex, gameStartIndex + pageSize);
@@ -51,29 +48,27 @@ export default function Home() {
       next: "Next",
     }
   };
+  const t = TRANSLATIONS[lang];
 
   useEffect(() => {
     if (!navigator.language.startsWith('ja')) {
       setLang('en');
     }
   }, []);
-  const t = TRANSLATIONS[lang];
+  
 
   return (
-    
-    <div className="font-sans flex flex-col items-center min-h-screen">
+    <main className="font-sans flex flex-col items-center min-h-screen">
       <div className="flex flex-wrap mt-12 gap-8 justify-center">
-        <div>
-          <Image
-            aria-hidden
-            width={300}
-            height={300}
-            src={"https://image.icysamon.com/avatar/artist.webp"}
-            alt={"no-image"}
-            className="object-cover rounded-full dark:brightness-80"
-            priority
-          />
-        </div>  
+        <Image
+          aria-hidden
+          width={300}
+          height={300}
+          src={"https://image.icysamon.com/avatar/artist.webp"}
+          alt={"no-image"}
+          className="object-cover rounded-full dark:brightness-80"
+          priority
+        />
         <div className="flex flex-col gap-4 justify-center">
           <h1 className="text-4xl font-semibold">icysamon</h1>
           <div className="flex flex-col gap-2">
@@ -126,13 +121,10 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="max-w-[1280px] w-full">
-        {/* =======================
-            セクション1: 作曲・編曲
-           ======================= */}
+      <div className="max-w-[1280px] w-full">
+        {/* 作曲 */}
         <div className="flex flex-col my-8 gap-4 items-center">
           <h2 className={h2Style}>{t.section_music}</h2>
-          
           <div className={divStyle}>
             {currentMusicItems.map((item, index) => (
               <Card
@@ -147,7 +139,6 @@ export default function Home() {
                 date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               />
             ))}
-
             {emptyMusicSlots > 0 && Array.from({ length: emptyMusicSlots }).map((_, index) => (
               <div 
                 key={`empty-${index}`} 
@@ -155,7 +146,6 @@ export default function Home() {
               />
             ))}
           </div>
-
           {/* 作曲用ページネーション */}
           {musicTotalPages > 1 && (
             <div className="flex gap-4 items-center mt-4">
@@ -177,13 +167,9 @@ export default function Home() {
             </div>
           )}
         </div>
-
-        {/* =======================
-            セクション2: ゲームジャム
-           ======================= */}
+        {/* ゲーム */}
         <div className="flex flex-col my-8 gap-4 items-center">
           <h2 className={h2Style}>{t.section_game}</h2>
-          
           <div className={divStyle}>
              {/* マップ関数で表示 */}
              {currentGameItems.map((item, index) => (
@@ -233,15 +219,15 @@ export default function Home() {
             </div>
           )}
         </div>
-      </main>
-      
+      </div>
       <footer className="flex flex-col gap-2 items-center justify-center my-8 text-sm font-medium text-gray-500 dark:text-gray-400">
         <p>Copyright © 2023 - {date.getFullYear()} <Link href="/" className="font-bold hover:underline hover:underline-offset-4">icysamon</Link>.</p>
         <p> All Rights Reserved.</p>
       </footer>
-    </div>
+    </main>
   );
 }
+
 
 function Icon({ href, src }: { href: string, src: string }) {
   return (
