@@ -87,6 +87,7 @@ function HomeContent() {
           </div>
             <Link
             href={lang === 'ja' ? '/?lang=en' : '/?lang=ja'}
+            scroll={false}
             className="
               relative flex items-center 
               w-32 h-9
