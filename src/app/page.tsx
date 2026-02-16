@@ -139,7 +139,7 @@ function HomeContent() {
             <Link href="https://blog.icysamon.com" className={buttonStyle}>
               {lang === 'ja' ? 'Blog' : 'Blog'}
             </Link>
-            <Link href="https://www.tunecore.co.jp/artists/icysamon" className={buttonStyle}>
+            <Link href={getLinkWithLang("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
               {lang === 'ja' ? '音楽配信' : 'Music Streaming'}
             </Link>
             <Link href="https://bgm.icysamon.com/" className={buttonStyle}>
