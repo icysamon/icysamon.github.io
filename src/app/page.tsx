@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +12,7 @@ const divStyle = "flex flex-wrap justify-center w-full sm:w-auto gap-4";
 const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396px]";
 const buttonStyle = "flex items-center px-4 py-2 bg-rose-400 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm dark:bg-slate-700 dark:hover:bg-rose-600 text-sm font-medium";
 
-export default function Home() {
+function HomeContent() {
   // ページ
   const [musicPage, setMusicPage] = useState(1);
   const [gamePage, setGamePage] = useState(1);
@@ -273,6 +273,14 @@ export default function Home() {
         <p> All Rights Reserved.</p>
       </footer>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
 
