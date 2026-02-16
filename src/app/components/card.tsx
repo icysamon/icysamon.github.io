@@ -5,13 +5,14 @@ export default function Game({ image, href, title, date, description }: { image?
   return (
     <>
     <div className="bg-gray-50/90 dark:bg-zinc-900/90 sm:mx-4 mx-2 my-4 w-full lg:w-[400px] rounded-xl shadow-xl min-w-0">
-      <div className="relative h-[300px]">
-        <Link href={href || "/"} target="_blank">
+      <div className="h-[300px]">
+        <Link href={href || "/"} target="_blank" className="relative block w-full h-full">
           <Image
             aria-hidden
             fill
             src={image || ""}
             alt={title || "no-image"}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="rounded-t-xl object-cover dark:brightness-80"
           />
         </Link>

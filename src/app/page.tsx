@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
 import Card from "@/app/components/card";
@@ -33,7 +34,23 @@ export default function Home() {
 
   const date = new Date();
 
-  const [lang, setLang] = useState<'ja' | 'en'>('ja');
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const langParam = searchParams.get('lang');
+  const lang = langParam === 'en' ? 'en' : 'ja';
+
+  // 言語切り替え
+  useEffect(() => {
+    if (!langParam) {
+      const browserLang = navigator.language;
+      console.log("Browser language:", browserLang);
+
+      if (!browserLang.startsWith('ja')) {
+        router.replace('/?lang=en');
+      }
+    }
+  }, [langParam, router]);
+
   const TRANSLATIONS = {
     ja: {
       section_music: "作曲",
@@ -50,13 +67,6 @@ export default function Home() {
   };
   const t = TRANSLATIONS[lang];
 
-  useEffect(() => {
-    if (!navigator.language.startsWith('ja')) {
-      setLang('en');
-    }
-  }, []);
-  
-
   return (
     <main className="font-sans flex flex-col items-center min-h-screen">
       <div className="flex flex-wrap mt-12 gap-8 justify-center">
@@ -69,18 +79,56 @@ export default function Home() {
           className="object-cover rounded-full dark:brightness-80"
           priority
         />
-        <div className="flex flex-col gap-4 justify-center">
+        <div className="flex flex-col gap-4 justify-center w-full text-center items-center md:w-[340px] md:items-start md:text-left">
           <h1 className="text-4xl font-semibold">icysamon</h1>
           <div className="flex flex-col gap-2">
             <p>{lang === 'ja' ? "理系大学院生（IoT分野）" : "Master's Student (IoT)"}</p>
             <p>{lang === 'ja' ? "趣味でゲームと曲を作ってます 🫧" : "Game Dev & Music Creator 🫧"}</p>
           </div>
-          <button
-            onClick={() => setLang(lang === 'ja' ? 'en' : 'ja')}
-            className="px-4 py-2 text-sm font-medium bg-gray-200 dark:bg-gray-800 dark:text-gray-200 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+            <Link
+            href={lang === 'ja' ? '/?lang=en' : '/?lang=ja'}
+            className="
+              relative flex items-center 
+              w-32 h-9
+              bg-gray-200 dark:bg-gray-700 
+              rounded-full 
+              p-1
+              cursor-pointer select-none
+            "
+            aria-label="Language Toggle"
           >
-            {lang === 'ja' ? 'English' : '日本語'}
-          </button>
+            {/* Background */}
+            <span
+              className={`
+                absolute top-1 bottom-1 
+                w-[calc(50%-4px)] 
+                bg-white dark:bg-slate-600 
+                rounded-full shadow-sm
+                transition-transform duration-300 ease-in-out
+                ${lang === 'en' ? 'translate-x-full' : 'translate-x-0'}
+              `}
+            />
+
+            {/* JP */}
+            <span 
+              className={`
+                relative z-10 w-1/2 text-center text-sm font-bold transition-colors duration-300
+                ${lang === 'ja' ? 'text-rose-500 dark:text-rose-400' : 'text-gray-400 dark:text-gray-500'}
+              `}
+            >
+              JP
+            </span>
+
+            {/* EN */}
+            <span 
+              className={`
+                relative z-10 w-1/2 text-center text-sm font-bold transition-colors duration-300
+                ${lang === 'en' ? 'text-rose-500 dark:text-rose-400' : 'text-gray-400 dark:text-gray-500'}
+              `}
+            >
+              EN
+            </span>
+          </Link>
           <div className="flex flex-wrap gap-4">
             <Link href="https://blog.icysamon.com" className={buttonStyle}>
               {lang === 'ja' ? 'Blog' : 'Blog'}
