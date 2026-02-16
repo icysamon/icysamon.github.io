@@ -66,6 +66,11 @@ function HomeContent() {
     }
   };
   const t = TRANSLATIONS[lang];
+  const getLinkWithLang = (href: string) => {
+    if (!href) return '#';
+    const separator = href.includes('?') ? '&' : '?';
+    return `${href}${separator}lang=${lang}`;
+  };
 
   return (
     <main className="font-sans flex flex-col items-center min-h-screen">
@@ -179,7 +184,7 @@ function HomeContent() {
               <Card
                 key={`music-${index}`}
                 image={item.image}
-                href={item.href}
+                href={getLinkWithLang(item.href)}
                 title={
                   typeof item.title === 'string' 
                   ? item.title 
