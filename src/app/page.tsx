@@ -142,7 +142,7 @@ function HomeContent() {
             <Link href={getLinkWithLang("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
               {lang === 'ja' ? '音楽配信' : 'Music Streaming'}
             </Link>
-            <Link href="https://bgm.icysamon.com/" className={buttonStyle}>
+            <Link href={lang === 'en' ? "https://bgm.icysamon.com/en" : "https://bgm.icysamon.com/"} className={buttonStyle}>
               {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
             </Link>
           </div>
