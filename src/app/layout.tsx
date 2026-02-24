@@ -15,6 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "icysamon",
   description: "icysamon's homepage.",
+  metadataBase: new URL('https://icysamon.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'ja': '/', 
+      'en': '/?lang=en',
+      'x-default': '/?lang=en', 
+    },
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +33,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <head>
-        <link rel="alternate" hrefLang="ja" href="https://icysamon.com"/>
-        <link rel="alternate" hrefLang="en" href="https://icysamon.com/?lang=en"/>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
