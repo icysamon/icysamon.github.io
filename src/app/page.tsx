@@ -41,6 +41,8 @@ function HomeContent() {
 
   // 言語切り替え
   useEffect(() => {
+    document.documentElement.lang = lang;
+    
     if (!langParam) {
       const browserLang = navigator.language;
       console.log("Browser language:", browserLang);
