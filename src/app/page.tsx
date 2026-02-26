@@ -3,32 +3,38 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
+// 【追加】Google Fontsからフォントを読み込む
+import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Card from "@/app/components/card";
 import MUSIC_DATA from '@/data/music.json'; 
 import GAME_DATA from '@/data/games.json';
 import Background from "@/app/components/background";
 
-// スタイル定義
+// 【追加】フォントの設定（ウェイト800で太く可愛く）
+const mplus = M_PLUS_Rounded_1c({
+  weight: ['800'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+// ... (その他のスタイル定義、buttonStyleなどはそのまま) ...
 const h2Style = "text-2xl font-bold";
 const divStyle = "flex flex-wrap justify-center w-full sm:w-auto gap-4";
 const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396px]";
-// 共通ボタンスタイル定義（作品集も統一）
 const buttonStyle = "flex items-center px-4 py-2 bg-rose-400 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm dark:bg-slate-700 dark:hover:bg-rose-600 text-sm font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-rose-400 dark:disabled:hover:bg-slate-700";
 
 function HomeContent() {
-  // ページネーション状態
+  // ... (ロジックは全てそのまま維持) ...
   const [musicPage, setMusicPage] = useState(1);
   const [gamePage, setGamePage] = useState(1);
   const pageSize = 4;
 
-  // ミュージックデータ
   const musicList = MUSIC_DATA;
   const musicTotalPages = Math.ceil(musicList.length / pageSize);
   const musicStartIndex = (musicPage - 1) * pageSize;
   const currentMusicItems = musicList.slice(musicStartIndex, musicStartIndex + pageSize);
   const emptyMusicSlots = pageSize - currentMusicItems.length;
 
-  // ゲームデータ
   const gameList = GAME_DATA;
   const gameTotalPages = Math.ceil(gameList.length / pageSize);
   const gameStartIndex = (gamePage - 1) * pageSize;
@@ -41,7 +47,6 @@ function HomeContent() {
   const langParam = searchParams.get('lang');
   const lang = langParam === 'en' ? 'en' : 'ja';
 
-  // 言語切り替えロジック
   useEffect(() => {
     document.documentElement.lang = lang;
     if (!langParam) {
@@ -52,7 +57,6 @@ function HomeContent() {
     }
   }, [langParam, router, lang]);
 
-  // 多言語対応テキスト
   const TRANSLATIONS = {
     ja: {
       section_music: "作曲",
@@ -79,7 +83,6 @@ function HomeContent() {
     return `${href}${separator}lang=${lang}`;
   };
 
-  // 【追加】スムーズスクロール用の関数
   const handleScrollToPortfolio = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const portfolioSection = document.getElementById('portfolio');
@@ -90,18 +93,12 @@ function HomeContent() {
 
   return (
     <main className="font-sans antialiased flex flex-col items-center min-h-screen relative overflow-x-hidden scroll-smooth bg-white dark:bg-slate-900">
-      {/* 背景アニメーション */}
       <Background />
       
-      {/* ヒーローセクション（第一画面） */}
       <section className="relative z-10 w-full px-6 min-h-[95vh] flex flex-col items-center justify-center mx-auto pt-10 pb-24">
-        
-        {/* コンテンツラッパー：自然な中央揃え */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 w-full max-w-5xl">
-          
-          {/* 左側：画像エリア */}
+          {/* 左側：画像エリア (そのまま) */}
           <div className="flex justify-center shrink-0">
-            {/* 大きな画像サイズ */}
             <div className="w-[300px] sm:w-[360px] md:w-[400px]">
               <Image
                 aria-hidden
@@ -111,15 +108,14 @@ function HomeContent() {
                 alt={"artist-avatar"}
                 className="w-full h-auto aspect-square object-cover rounded-[2.5rem] shadow-2xl dark:brightness-90 transition-all duration-500 hover:rotate-2 transform-gpu select-none"
                 priority
-                unoptimized // 最高画質
-                // 画像保存禁止（防犯）機能
+                unoptimized
                 draggable={false} 
                 onDragStart={(e) => e.preventDefault()} 
                 onContextMenu={(e) => e.preventDefault()} 
                 style={{ 
                   WebkitUserDrag: 'none', 
                   WebkitTouchCallout: 'none', 
-                } as React.CSSProperties} // TSエラー修正
+                } as React.CSSProperties}
               />
             </div>
           </div>
@@ -127,10 +123,9 @@ function HomeContent() {
           {/* 右側：テキストエリア */}
           <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start max-w-lg">
             
-            {/* タイトルとプロフィール文 */}
             <div className="space-y-5">
-              {/* 純粋な単色テキストにしてシャープさを確保 */}
-              <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white">
+              {/* 【修正】フォントサイズを少し小さくし (5xl/6xl -> 4xl/5xl)、可愛いフォントクラスを適用 */}
+              <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
                 icysamon
               </h1>
               <div className="flex flex-col gap-1 text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium min-h-[3.5rem] md:min-h-0">
@@ -139,7 +134,7 @@ function HomeContent() {
               </div>
             </div>
             
-            {/* 言語トグルスイッチ */}
+            {/* ... (以下、トグルスイッチ、ボタン、ソーシャルアイコンなど全てそのまま) ... */}
             <Link
               href={lang === 'ja' ? '/?lang=en' : '/?lang=ja'}
               scroll={false}
@@ -151,7 +146,6 @@ function HomeContent() {
               <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'en' ? 'text-rose-500' : 'text-gray-400 dark:text-gray-400'}`}>EN</span>
             </Link>
             
-            {/* アクションボタン */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <Link href="https://blog.icysamon.com" className={buttonStyle}>Blog</Link>
               <Link href={getLinkWithLang("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
@@ -162,7 +156,6 @@ function HomeContent() {
               </Link>
             </div>
             
-            {/* ソーシャルリンク */}
             <div className="flex items-center gap-1 brightness-100 dark:brightness-90">
               <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
               <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
@@ -174,8 +167,6 @@ function HomeContent() {
           </div>
         </div>
 
-        {/* スクロールダウンインジケーター */}
-        {/* 【修正】Next.jsのLinkではなく標準のaタグ＋onClickを使用し、確実なスムーズスクロールを実現 */}
         <a 
           href="#portfolio" 
           onClick={handleScrollToPortfolio}
@@ -188,9 +179,8 @@ function HomeContent() {
         </a>
       </section>
 
-      {/* コンテンツセクション（作品集） */}
+      {/* ... (作品集セクションとフッターもそのまま) ... */}
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
-        {/* 作曲実績 */}
         <div className="flex flex-col mb-16 gap-6 items-center">
           <h2 className={h2Style}>{t.section_music}</h2>
           <div className={divStyle}>
@@ -207,7 +197,6 @@ function HomeContent() {
               <div key={`empty-music-${index}`} className={placeholderClass} />
             ))}
           </div>
-          {/* ページネーション */}
           {musicTotalPages > 1 && (
             <div className="flex gap-4 items-center mt-4">
               <button onClick={() => setMusicPage(p => Math.max(1, p - 1))} disabled={musicPage === 1} className={buttonStyle}>
@@ -221,7 +210,6 @@ function HomeContent() {
           )}
         </div>
 
-        {/* ゲーム実績 */}
         <div className="flex flex-col mb-16 gap-6 items-center">
           <h2 className={h2Style}>{t.section_game}</h2>
           <div className={divStyle}>
@@ -239,7 +227,6 @@ function HomeContent() {
               <div key={`empty-game-${index}`} className={placeholderClass} />
             ))}
           </div>
-          {/* ページネーション */}
           {gameTotalPages > 1 && (
             <div className="flex gap-4 items-center mt-4">
               <button onClick={() => setGamePage(p => Math.max(1, p - 1))} disabled={gamePage === 1} className={buttonStyle}>
@@ -254,7 +241,6 @@ function HomeContent() {
         </div>
       </section>
 
-      {/* フッター */}
       <footer className="relative z-10 flex flex-col gap-2 items-center justify-center py-8 text-sm font-medium text-gray-500 dark:text-gray-400 w-full">
         <p>Copyright © 2023 - {date.getFullYear()} <Link href="/" className="font-bold hover:underline hover:underline-offset-4">icysamon</Link>.</p>
         <p>All Rights Reserved.</p>
@@ -263,7 +249,7 @@ function HomeContent() {
   );
 }
 
-// Suspense境界でラップ
+// ... (Suspense, Iconコンポーネントもそのまま) ...
 export default function Home() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-900 text-slate-500">Loading...</div>}>
@@ -272,7 +258,6 @@ export default function Home() {
   );
 }
 
-// ソーシャルアイコンコンポーネント
 function Icon({ href, src }: { href: string, src: string }) {
   return (
     <Link
@@ -286,7 +271,7 @@ function Icon({ href, src }: { href: string, src: string }) {
         alt="icon"
         width={32}
         height={32}
-        className="dark:invert-[0.1]" // 暗色モードでの微調整
+        className="dark:invert-[0.1]"
       />
     </Link>
   );
