@@ -2,7 +2,8 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #fafafa;
+  /* ライトモード時の背景色（マカロンカラーの淡い水色に合わせて、引っ張った時の白浮きを防ぐ） */
+  --background: #e8f4fc;
   --foreground: #171717;
 }
 
@@ -15,7 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1b2029;
+    /* ダークモード時の背景色（深い灰藍色 slate-900 に合わせて白浮きを防ぐ） */
+    --background: #0f172a;
     --foreground: #ededed;
   }
 }

@@ -7,7 +7,6 @@ import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Card from "@/app/components/card";
 import MUSIC_DATA from '@/data/music.json'; 
 import GAME_DATA from '@/data/games.json';
-import Background from "@/app/components/background";
 
 // フォントの設定（可愛くて丸みのあるフォント）
 const mplus = M_PLUS_Rounded_1c({
@@ -92,13 +91,12 @@ function HomeContent() {
   };
 
   return (
-    <main className="font-sans antialiased flex flex-col items-center min-h-screen relative overflow-x-hidden scroll-smooth bg-white dark:bg-slate-900">
-      <Background />
+    <main className="font-sans antialiased flex flex-col items-center min-h-screen relative overflow-x-hidden scroll-smooth">
       
       <section className="relative z-10 w-full px-6 min-h-[95vh] flex flex-col items-center justify-center mx-auto pt-10 pb-24">
         
         {/* 【完全な中央揃え】左右のコンテナを同じ幅（md:w-[400px]）に設定することで、絶対的な中心軸を作り出します */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 w-full max-w-5xl">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 w-full max-w-5xl z-10">
           
           {/* 左側：画像エリア（幅を400pxに固定） */}
           <div className="flex justify-center md:justify-end shrink-0 w-full md:w-[400px]">
@@ -125,7 +123,7 @@ function HomeContent() {
 
           {/* 右側：テキストエリア（幅を400pxに固定） */}
           {/* 幅が固定されているため、言語を切り替えて文字長が変わってもレイアウトは1ミリも動きません */}
-          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start shrink-0 w-full md:w-[400px] pl-6">
+          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start shrink-0 w-full md:w-[400px] md:pl-6">
             
             <div className="space-y-5">
               <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
@@ -173,10 +171,10 @@ function HomeContent() {
         <a 
           href="#portfolio" 
           onClick={handleScrollToPortfolio}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500 animate-bounce hover:text-slate-600 dark:hover:text-slate-300 transition-colors cursor-pointer z-20"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-400 dark:text-gray-500 animate-bounce hover:text-slate-600 dark:hover:text-slate-300 transition-colors cursor-pointer z-20"
         >
-          <span className="text-xs font-medium uppercase tracking-widest">{lang === 'ja' ? 'Scroll' : 'Scroll'}</span>
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <span className="text-xs font-medium uppercase tracking-widest">{lang === 'ja' ? 'ここだよ' : 'Scroll'}</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
