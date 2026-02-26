@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Game({ image, href, title, date, description }: { image?: string, href?: string, title?: string, date?: string, description?: string }) {
+  // URLが "http" または "https" から始まるかどうかで、外部リンク（站外链接）かを判定する
+  const isExternal = href ? href.startsWith("http") : false;
+
   return (
     <>
     {/* カードコンテナ: 
@@ -12,7 +15,15 @@ export default function Game({ image, href, title, date, description }: { image?
     */}
     <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700/50 sm:mx-4 mx-2 my-4 w-full lg:w-[400px] rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-0">
       <div className="h-[300px]">
-        <Link href={href || "/"} target="_blank" className="relative block w-full h-full">
+        {/* 外部リンクの場合は別タブで開く (target="_blank")、サイト内リンクの場合は現在のタブで開く。
+          セキュリティ対策として外部リンクには rel="noopener noreferrer" を付与する。
+        */}
+        <Link 
+          href={href || "/"} 
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          className="relative block w-full h-full"
+        >
           <Image
             aria-hidden
             fill
@@ -26,7 +37,14 @@ export default function Game({ image, href, title, date, description }: { image?
       </div>
       <div className="flex flex-col gap-2 m-5 min-w-0">
         <h3 className="text-xl font-bold truncate">
-          <Link href={href || "/"} target="_blank" className="text-slate-800 dark:text-white hover:text-rose-400 dark:hover:text-rose-400 hover:underline hover:underline-offset-4 transition-colors">
+          {/* タイトル部分のリンクも同様に、外部リンクかサイト内リンクかでタブの挙動を動的に変える 
+          */}
+          <Link 
+            href={href || "/"} 
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            className="text-slate-800 dark:text-white hover:text-rose-400 dark:hover:text-rose-400 hover:underline hover:underline-offset-4 transition-colors"
+          >
             {title}
           </Link>
         </h3>

@@ -125,7 +125,7 @@ function HomeContent() {
 
           {/* 右側：テキストエリア（幅を400pxに固定） */}
           {/* 幅が固定されているため、言語を切り替えて文字長が変わってもレイアウトは1ミリも動きません */}
-          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start shrink-0 w-full md:w-[400px]">
+          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start shrink-0 w-full md:w-[400px] pl-6">
             
             <div className="space-y-5">
               <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
