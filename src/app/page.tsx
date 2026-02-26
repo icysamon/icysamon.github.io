@@ -3,28 +3,28 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from "next/link";
 import Image from "next/image";
-// 【追加】Google Fontsからフォントを読み込む
 import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Card from "@/app/components/card";
 import MUSIC_DATA from '@/data/music.json'; 
 import GAME_DATA from '@/data/games.json';
 import Background from "@/app/components/background";
 
-// 【追加】フォントの設定（ウェイト800で太く可愛く）
+// フォントの設定（可愛くて丸みのあるフォント）
 const mplus = M_PLUS_Rounded_1c({
   weight: ['800'],
   subsets: ['latin'],
   display: 'swap',
 });
 
-// ... (その他のスタイル定義、buttonStyleなどはそのまま) ...
+// スタイル定義
 const h2Style = "text-2xl font-bold";
 const divStyle = "flex flex-wrap justify-center w-full sm:w-auto gap-4";
 const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396px]";
-const buttonStyle = "flex items-center px-4 py-2 bg-rose-400 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm dark:bg-slate-700 dark:hover:bg-rose-600 text-sm font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-rose-400 dark:disabled:hover:bg-slate-700";
+
+// ボタンスタイル（灰藍色・スレートカラーで統一）
+const buttonStyle = "flex items-center px-4 py-2 bg-slate-400 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-500 dark:hover:bg-slate-600 transition-colors shadow-sm text-sm font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed";
 
 function HomeContent() {
-  // ... (ロジックは全てそのまま維持) ...
   const [musicPage, setMusicPage] = useState(1);
   const [gamePage, setGamePage] = useState(1);
   const pageSize = 4;
@@ -96,9 +96,12 @@ function HomeContent() {
       <Background />
       
       <section className="relative z-10 w-full px-6 min-h-[95vh] flex flex-col items-center justify-center mx-auto pt-10 pb-24">
+        
+        {/* 【完全な中央揃え】左右のコンテナを同じ幅（md:w-[400px]）に設定することで、絶対的な中心軸を作り出します */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 w-full max-w-5xl">
-          {/* 左側：画像エリア (そのまま) */}
-          <div className="flex justify-center shrink-0">
+          
+          {/* 左側：画像エリア（幅を400pxに固定） */}
+          <div className="flex justify-center md:justify-end shrink-0 w-full md:w-[400px]">
             <div className="w-[300px] sm:w-[360px] md:w-[400px]">
               <Image
                 aria-hidden
@@ -106,7 +109,7 @@ function HomeContent() {
                 height={800}
                 src={"https://image.icysamon.com/avatar/artist.webp"}
                 alt={"artist-avatar"}
-                className="w-full h-auto aspect-square object-cover rounded-[2.5rem] shadow-2xl dark:brightness-90 transition-all duration-500 hover:rotate-2 transform-gpu select-none"
+                className="w-full h-auto aspect-square object-cover rounded-[2.5rem] shadow-2xl transition-all duration-500 hover:rotate-2 transform-gpu select-none"
                 priority
                 unoptimized
                 draggable={false} 
@@ -120,11 +123,11 @@ function HomeContent() {
             </div>
           </div>
 
-          {/* 右側：テキストエリア */}
-          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start max-w-lg">
+          {/* 右側：テキストエリア（幅を400pxに固定） */}
+          {/* 幅が固定されているため、言語を切り替えて文字長が変わってもレイアウトは1ミリも動きません */}
+          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start shrink-0 w-full md:w-[400px]">
             
             <div className="space-y-5">
-              {/* 【修正】フォントサイズを少し小さくし (5xl/6xl -> 4xl/5xl)、可愛いフォントクラスを適用 */}
               <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
                 icysamon
               </h1>
@@ -134,7 +137,6 @@ function HomeContent() {
               </div>
             </div>
             
-            {/* ... (以下、トグルスイッチ、ボタン、ソーシャルアイコンなど全てそのまま) ... */}
             <Link
               href={lang === 'ja' ? '/?lang=en' : '/?lang=ja'}
               scroll={false}
@@ -142,11 +144,11 @@ function HomeContent() {
               aria-label="Language Toggle"
             >
               <span className={`absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white dark:bg-slate-500 rounded-full shadow-md transition-transform duration-300 ease-out ${lang === 'en' ? 'translate-x-full' : 'translate-x-0'}`} />
-              <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'ja' ? 'text-rose-500' : 'text-gray-400 dark:text-gray-400'}`}>JP</span>
-              <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'en' ? 'text-rose-500' : 'text-gray-400 dark:text-gray-400'}`}>EN</span>
+              <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'ja' ? 'text-slate-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'}`}>JP</span>
+              <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'en' ? 'text-slate-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'}`}>EN</span>
             </Link>
             
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start w-full">
               <Link href="https://blog.icysamon.com" className={buttonStyle}>Blog</Link>
               <Link href={getLinkWithLang("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
                 {lang === 'ja' ? '音楽配信' : 'Streaming'}
@@ -156,7 +158,8 @@ function HomeContent() {
               </Link>
             </div>
             
-            <div className="flex items-center gap-1 brightness-100 dark:brightness-90">
+            {/* ソーシャルリンク */}
+            <div className="flex items-center gap-1">
               <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
               <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
               <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
@@ -170,7 +173,7 @@ function HomeContent() {
         <a 
           href="#portfolio" 
           onClick={handleScrollToPortfolio}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500 animate-bounce hover:text-rose-400 transition-colors cursor-pointer z-20"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500 animate-bounce hover:text-slate-600 dark:hover:text-slate-300 transition-colors cursor-pointer z-20"
         >
           <span className="text-xs font-medium uppercase tracking-widest">{lang === 'ja' ? 'Scroll' : 'Scroll'}</span>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +182,6 @@ function HomeContent() {
         </a>
       </section>
 
-      {/* ... (作品集セクションとフッターもそのまま) ... */}
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
         <div className="flex flex-col mb-16 gap-6 items-center">
           <h2 className={h2Style}>{t.section_music}</h2>
@@ -249,7 +251,6 @@ function HomeContent() {
   );
 }
 
-// ... (Suspense, Iconコンポーネントもそのまま) ...
 export default function Home() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-900 text-slate-500">Loading...</div>}>
@@ -261,7 +262,7 @@ export default function Home() {
 function Icon({ href, src }: { href: string, src: string }) {
   return (
     <Link
-      className="mr-4 hover:brightness-75 transition-all hover:-translate-y-1 transform-gpu"
+      className="mr-4 transition-transform hover:-translate-y-1 transform-gpu"
       href={href}
       rel="noopener noreferrer"
     >
@@ -271,7 +272,9 @@ function Icon({ href, src }: { href: string, src: string }) {
         alt="icon"
         width={32}
         height={32}
-        className="dark:invert-[0.1]"
+        // 【修正】dark:invert でダークモード時にアイコンを完全な白に反転させます
+        // opacity-70 で普段は少し落ち着かせ、ホバー時（hover:opacity-100）に明るく光るようにします
+        className="dark:invert opacity-70 hover:opacity-100 transition-opacity"
       />
     </Link>
   );
