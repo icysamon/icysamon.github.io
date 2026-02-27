@@ -159,7 +159,7 @@ function HomeContent() {
             {/* ソーシャルリンク */}
             <div className="flex items-center gap-1">
               <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
-              <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
+              <Icon href="http://www.youtube.com/@icysamon" src="/svgrepo-com/youtube.svg" />
               <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
               <Icon href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx" src="/svgrepo-com/spotify.svg" />
               <Icon href="https://github.com/icysamon" src="/svgrepo-com/github.svg" />
