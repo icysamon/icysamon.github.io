@@ -3,12 +3,12 @@ import ArticleLayout from "@/app/components/articleLayout";
 
 // ここにMarkdown形式で記事の文章を書きます
 const content = `
-# 新曲準備中 🫧
+# New Song in Preparation 🫧
 
-待ってね！
+Please wait!
 `;
 
 // 記事ページ本体（レイアウトコンポーネントに内容を渡すだけ）
 export default function ArticlePage() {
-  return <ArticleLayout content={content} />;
+  return <ArticleLayout content={content} userLang="en" />;
 }
