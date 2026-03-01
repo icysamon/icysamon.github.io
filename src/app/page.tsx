@@ -95,12 +95,12 @@ function HomeContent() {
       
       <section className="relative z-10 w-full px-6 min-h-[95vh] flex flex-col items-center justify-center mx-auto pt-10 pb-24">
         
-        {/* 【完全な中央揃え】左右のコンテナを同じ幅（md:w-[400px]）に設定することで、絶対的な中心軸を作り出します */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 w-full max-w-5xl z-10">
+        {/* 【完全な中央揃え】左右のコンテナを同じ幅（md:w-[384px]）に設定することで、絶対的な中心軸を作り出します */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-[1280px] z-10">
           
-          {/* 左側：画像エリア（幅を400pxに固定） */}
-          <div className="flex justify-center md:justify-end shrink-0 w-full md:w-[400px]">
-            <div className="w-[300px] sm:w-[360px] md:w-[400px]">
+          {/* 左側：画像エリア（幅を384pxに固定） */}
+          <div className="flex justify-center md:justify-end w-[360px]">
+            <div className="w-[300px] md:w-[384px]">
               <Image
                 aria-hidden
                 width={800} 
@@ -121,9 +121,9 @@ function HomeContent() {
             </div>
           </div>
 
-          {/* 右側：テキストエリア（幅を400pxに固定） */}
+          {/* 右側：テキストエリア（幅を384pxに固定） */}
           {/* 幅が固定されているため、言語を切り替えて文字長が変わってもレイアウトは1ミリも動きません */}
-          <div className="flex flex-col gap-6 text-center md:text-left items-center md:items-start shrink-0 w-full md:w-[400px] md:pl-6">
+          <div className="flex flex-col gap-6 text-center md:text-left items-center md:justify-start md:items-start shrink-0 w-[360px] md:pl-6">
             
             <div className="space-y-5">
               <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
@@ -146,18 +146,23 @@ function HomeContent() {
               <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'en' ? 'text-slate-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'}`}>EN</span>
             </Link>
             
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start w-full">
-              <Link href="https://blog.icysamon.com" className={buttonStyle}>Blog</Link>
-              <Link href={getLinkWithLang("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
-                {lang === 'ja' ? '音楽配信' : 'Streaming'}
-              </Link>
-              <Link href={lang === 'en' ? "https://bgm.icysamon.com/en" : "https://bgm.icysamon.com/"} className={buttonStyle}>
-                {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
-              </Link>
+            <div>
+              <div className="flex flex-wrap gap-4 justify-between w-[300px]">
+                <Link href="https://blog.icysamon.com" className={buttonStyle}>Blog</Link>
+                <Link href={getLinkWithLang("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
+                  {lang === 'ja' ? '音楽配信' : 'Streaming'}
+                </Link>
+                <Link href={lang === 'en' ? "https://bgm.icysamon.com/en" : "https://bgm.icysamon.com/"} className={buttonStyle}>
+                  {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
+                </Link>
+                <Link href={lang === 'en' ? "/request" : "/request"} className={buttonStyle}>
+                  {lang === 'ja' ? 'テスト / Test' : 'Test'}
+                </Link>
+              </div>
             </div>
             
             {/* ソーシャルリンク */}
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-2 justify-between w-[300px]">
               <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
               <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
               <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
@@ -260,7 +265,7 @@ export default function Home() {
 function Icon({ href, src }: { href: string, src: string }) {
   return (
     <Link
-      className="mr-4 transition-transform hover:-translate-y-1 transform-gpu"
+      className="transition-transform hover:-translate-y-1 transform-gpu"
       href={href}
       rel="noopener noreferrer"
     >
