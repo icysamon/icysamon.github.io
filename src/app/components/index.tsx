@@ -80,9 +80,8 @@ export default function Home({ params }: { params: { lang: string } }) {
     }
   };
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-900 text-slate-500">Loading...</div>}>
       <main className="font-sans antialiased flex flex-col items-center min-h-screen relative overflow-x-hidden scroll-smooth">
-      
+
       <section className="relative z-10 w-full px-6 min-h-[95vh] flex flex-col items-center justify-center mx-auto pt-10 pb-24">
         
         {/* 【完全な中央揃え】左右のコンテナを同じ幅（md:w-[384px]）に設定することで、絶対的な中心軸を作り出します */}
@@ -241,7 +240,6 @@ export default function Home({ params }: { params: { lang: string } }) {
         <p>All Rights Reserved.</p>
       </footer>
     </main>
-    </Suspense>
   );
 }
 

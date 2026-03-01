@@ -1,9 +1,9 @@
 "use client"
 import Index from "@/app/components/index";
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
-export default function Home() {
+function HomeContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const langParam = searchParams.get('lang');
@@ -21,5 +21,13 @@ export default function Home() {
 
   return (
     <Index params={{ lang: 'ja' }} />
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-900 text-slate-500">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
