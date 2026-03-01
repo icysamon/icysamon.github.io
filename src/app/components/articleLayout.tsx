@@ -1,15 +1,9 @@
-'use client';
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 
 // 記事の共通レイアウトコンポーネント（他の記事ページでも使い回せます）
-export default function ArticleLayout({ contentJa, contentEn }: { contentJa: string, contentEn?: string }) {
-  const [lang, setLang] = useState('en');
-  useEffect(() => {
-    const htmlLang = document.documentElement.lang;
-    if (htmlLang) setLang(htmlLang);
-  }, []);
+export default function ArticleLayout({ content, userLang }: { content: string, userLang?: string }) {
+  const lang = userLang === 'ja' ? 'ja' : 'en';
 
   return (
     <main className="font-sans antialiased min-h-screen relative overflow-x-hidden flex justify-center pt-24 pb-12 px-4">
@@ -31,7 +25,7 @@ export default function ArticleLayout({ contentJa, contentEn }: { contentJa: str
         {/* Markdownレンダリングエリア */}
         <article className="prose prose-slate prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-rose-400 hover:prose-a:text-rose-500">
           <ReactMarkdown>
-            {lang === 'ja' ? contentJa : (contentEn || contentJa)}
+            {content}
           </ReactMarkdown>
         </article>
         

@@ -2,21 +2,13 @@
 import ArticleLayout from "@/app/components/articleLayout";
 
 // ここにMarkdown形式で記事の文章を書きます
-const markdownJa = `
-# テスト用ページ
-テスト。
+const content = `
+# 新曲準備中 🫧
 
-\`\`\`c
-#include <stdio.h>
-\`\`\`
-`;
-
-const markdownEn = `
-# Test Page
-test
+待ってね！
 `;
 
 // 記事ページ本体（レイアウトコンポーネントに内容を渡すだけ）
 export default function ArticlePage() {
-  return <ArticleLayout contentJa={markdownJa} contentEn={markdownEn} />;
+  return <ArticleLayout content={content} />;
 }

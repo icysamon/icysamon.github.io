@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     canonical: '/',
     languages: {
       'ja': '/', 
-      'en': '/?lang=en',
-      'x-default': '/?lang=en', 
+      'en': '/en',
+      'x-default': '/en', 
     },
   },
 };
