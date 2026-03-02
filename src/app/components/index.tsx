@@ -83,7 +83,7 @@ export default function Home({ params }: { params: { lang: string } }) {
   useEffect(() => {
     document.documentElement.lang = lang;
     if (lang === 'ja') {
-      window.history.replaceState(null, '', '/')
+      //window.history.replaceState(null, '', '/')
     };
   }, [lang]);
 
