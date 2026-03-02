@@ -1,27 +1,23 @@
 "use client"
 import Index from "@/app/components/index";
-import { useEffect, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 function HomeContent() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const langParam = searchParams.get('lang');
-  const lang = langParam === 'en' ? 'en' : 'ja';
+  const [lang, setLang] = useState('ja');
 
   useEffect(() => {
-    document.documentElement.lang = lang;
-    if (!langParam) {
-      const browserLang = navigator.language;
-      if (!browserLang.startsWith('ja')) {
-        router.replace('/en');
-      }
+    if (langParam) {
+      setLang(langParam === 'en' ? 'ja' : 'en');
+    } else {
+      const browserLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
+      setLang(browserLang);
     }
-  }, [langParam, router, lang]);
+  }, [langParam]);
 
-  return (
-    <Index params={{ lang: 'ja' }} />
-  );
+  return <Index params={{ lang }} />;
 }
 
 export default function Home() {

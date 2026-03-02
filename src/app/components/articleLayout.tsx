@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { useEffect } from 'react';
 import { usePathname } from "next/navigation"; // 現在のURLを取得するために追加
 
 // 記事の共通レイアウトコンポーネント
@@ -9,12 +10,17 @@ export default function ArticleLayout({ content, userLang }: { content: string, 
   const lang = userLang === 'ja' ? 'ja' : 'en';
   const pathname = usePathname() || '/';
 
-  // 現在のパスから切り替え先のURLを動的に生成
-  // 日本語(ルート) -> 英語(/en/...) に切り替え
-  // 英語(/en/...) -> 日本語(ルート) に切り替え
-  const toggleUrl = lang === 'ja' 
-    ? `/en${pathname === '/' ? '' : pathname}` 
-    : pathname.replace(/^\/en/, '') || '/';
+const toggleUrl = (() => {
+    if (lang === 'ja') {
+      if (/^\/ja(\/|$)/.test(pathname)) {
+        return pathname.replace(/^\/ja(\/|$)/, '/en$1');
+      }
+      return `/en${pathname === '/' ? '' : pathname}`;
+    } else {
+      const newPath = pathname.replace(/^\/en(\/|$)/, '/ja$1');
+      return newPath === '' ? '/' : newPath;
+    }
+  })();
 
   return (
     <main className="font-sans antialiased min-h-screen relative overflow-x-hidden flex justify-center pt-24 pb-12 px-4">
@@ -27,7 +33,7 @@ export default function ArticleLayout({ content, userLang }: { content: string, 
           
           {/* ホームへ戻るボタン */}
           <Link 
-            href={lang === 'ja' ? '/' : '/en'} // 英語の時は英語のホームに戻るように調整しました
+            href={lang === 'ja' ? '/ja' : '/en'} // 英語の時は英語のホームに戻るように調整しました
             className="inline-flex items-center text-sm font-bold text-slate-500 hover:text-rose-400 dark:text-slate-400 dark:hover:text-rose-400 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

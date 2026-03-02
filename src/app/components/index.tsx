@@ -1,5 +1,5 @@
 "use client"
-import { useState, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { M_PLUS_Rounded_1c } from 'next/font/google';
@@ -79,6 +79,14 @@ export default function Home({ params }: { params: { lang: string } }) {
       portfolioSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    if (lang === 'ja') {
+      window.history.replaceState(null, '', '/')
+    };
+  }, [lang]);
+
   return (
       <main className="font-sans antialiased flex flex-col items-center min-h-screen relative overflow-x-hidden scroll-smooth">
 
@@ -125,7 +133,7 @@ export default function Home({ params }: { params: { lang: string } }) {
             </div>
             
             <Link
-              href={lang === 'ja' ? '/en' : '/'}
+              href={lang === 'ja' ? '/en' : '/ja'}
               scroll={false}
               className="relative flex items-center w-32 h-9 bg-gray-200/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-full p-1 cursor-pointer select-none transition-transform active:scale-95"
               aria-label="Language Toggle"
@@ -144,7 +152,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                 <Link href={lang === 'en' ? "https://bgm.icysamon.com/en" : "https://bgm.icysamon.com/"} className={buttonStyle}>
                   {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
                 </Link>
-                <Link href={lang === 'en' ? "/request" : "/request"} className={buttonStyle}>
+                <Link href={lang === 'ja' ? "/ja/request" : "/en/request"} className={buttonStyle}>
                   {lang === 'ja' ? 'テスト' : 'Test'}
                 </Link>
               </div>
