@@ -169,17 +169,6 @@ export default function Home({ params }: { params: { lang: string } }) {
             </div>
           </div>
         </div>
-
-        <a 
-          href="#portfolio" 
-          onClick={handleScrollToPortfolio}
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-400 dark:text-gray-500 animate-bounce hover:text-slate-600 dark:hover:text-slate-300 transition-colors cursor-pointer z-20"
-        >
-          <span className="text-xs font-medium uppercase tracking-widest">{lang === 'ja' ? 'ここだよ' : 'Scroll'}</span>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </a>
       </section>
 
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
