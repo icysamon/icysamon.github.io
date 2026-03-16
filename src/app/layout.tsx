@@ -24,6 +24,22 @@ export const metadata: Metadata = {
       'x-default': '/', 
     },
   },
+  openGraph: {
+    title: 'icysamon',
+    description: 'Game Dev & Music Creator 🫧',
+    url: 'https://icysamon.com',
+    siteName: 'icysamon',
+    images: [
+      {
+        url: 'https://image.icysamon.com/avatar/artist.webp',
+        width: 800,
+        height: 800,
+        alt: 'icysamon avatar',
+      },
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
