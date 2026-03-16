@@ -17,7 +17,7 @@ const mplus = M_PLUS_Rounded_1c({
 // スタイル定義
 const h2Style = "text-2xl font-bold";
 // 【変更】マウスホバー時に「掴める」カーソルになるように `cursor-grab` を追加。ドラッグ中のテキスト選択を防ぐため `select-none` も追加しました。
-const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-4 w-full px-2 pt-4 pb-6 snap-x snap-mandatory cursor-grab select-none bg-transparent [&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-slate-200/50 dark:[&::-webkit-scrollbar-track]:bg-slate-700/30 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-thumb]:rounded-full after:content-[''] after:block after:w-[1px] after:shrink-0";
+const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-4 w-full px-2 pt-4 pb-6 snap-x snap-mandatory cursor-grab select-none bg-transparent [scrollbar-width:thin] [scrollbar-color:theme(colors.slate.400)_transparent] [&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-slate-200/50 dark:[&::-webkit-scrollbar-track]:bg-slate-700/30 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-400 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-none [&::-webkit-scrollbar]:appearance-none after:content-[''] after:block after:w-[1px] after:shrink-0";
 // 【修正】カードが重ならないように、ラッパーの幅を元のカードサイズに合わせて sm:w-[400px] に拡大しました。
 const cardWrapperStyle = "shrink-0 snap-start w-max-[400px] w-full sm:w-[400px]";
 
