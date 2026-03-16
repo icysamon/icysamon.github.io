@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from 'react'; // 【変更】useStateは不要になったため削除
+import { useEffect, useRef } from 'react'; // 【変更】マウスのドラッグ状態を管理するために useRef を追加
 import Link from "next/link";
 import Image from "next/image";
 import { M_PLUS_Rounded_1c } from 'next/font/google';
@@ -16,16 +16,90 @@ const mplus = M_PLUS_Rounded_1c({
 
 // スタイル定義
 const h2Style = "text-2xl font-bold";
-// 【変更】横スクロール用のコンテナスタイル。gap-6 sm:gap-8 でカード間に適切な余白を作成します。
-const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-4 w-full px-2 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 \\[&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-slate-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full after:content-[''] after:block after:w-[1px] after:shrink-0";
+// 【変更】マウスホバー時に「掴める」カーソルになるように `cursor-grab` を追加。ドラッグ中のテキスト選択を防ぐため `select-none` も追加しました。
+const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-4 w-full px-2 pt-4 pb-6 snap-x snap-mandatory cursor-grab select-none bg-transparent [&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-slate-200/50 dark:[&::-webkit-scrollbar-track]:bg-slate-700/30 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-thumb]:rounded-full after:content-[''] after:block after:w-[1px] after:shrink-0";
 // 【修正】カードが重ならないように、ラッパーの幅を元のカードサイズに合わせて sm:w-[400px] に拡大しました。
 const cardWrapperStyle = "shrink-0 snap-start w-max-[400px] w-full sm:w-[400px]";
 
 // ボタンスタイル（灰藍色・スレートカラーで統一）
 const buttonStyle = "flex items-center px-4 py-2 bg-slate-400 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-500 dark:hover:bg-slate-600 transition-colors shadow-sm text-sm font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed";
 
+// 【追加】マウスでドラッグしてスクロールできるようにするための専用ラッパーコンポーネント
+function DraggableScrollContainer({ children, className }: { children: React.ReactNode, className?: string }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const isDown = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const isDragging = useRef(false);
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    isDown.current = true;
+    isDragging.current = false;
+    if (scrollRef.current) {
+      scrollRef.current.style.scrollSnapType = 'none'; 
+      // 【重要】ドラッグ中はスムーズスクロールをオフ（マウスにぴったり追従させるため）
+      scrollRef.current.style.scrollBehavior = 'auto';
+      scrollRef.current.style.cursor = 'grabbing';
+      startX.current = e.pageX - scrollRef.current.offsetLeft;
+      scrollLeft.current = scrollRef.current.scrollLeft;
+    }
+  };
+
+  // 【追加】マウスを離した時の処理をまとめる
+  const stopDragging = () => {
+    isDown.current = false;
+    if (scrollRef.current) {
+      // 【重要】離した瞬間にスムーズスクロールをオンにする。これでスナップ時の「瞬間移動」が「滑らかなアニメーション」に変わります
+      scrollRef.current.style.scrollBehavior = 'smooth';
+      scrollRef.current.style.scrollSnapType = ''; // スナップを復元
+      scrollRef.current.style.cursor = 'grab';
+    }
+  };
+
+  const onMouseLeave = () => stopDragging();
+  const onMouseUp = () => stopDragging();
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDown.current || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5; 
+    
+    if (Math.abs(walk) > 5) {
+      isDragging.current = true; 
+    }
+    
+    scrollRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const onDragStart = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  const onClickCapture = (e: React.MouseEvent) => {
+    if (isDragging.current) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  };
+
+  return (
+    <div
+      ref={scrollRef}
+      className={className}
+      onMouseDown={onMouseDown}
+      onMouseLeave={onMouseLeave}
+      onMouseUp={onMouseUp}
+      onMouseMove={onMouseMove}
+      onDragStart={onDragStart}
+      onClickCapture={onClickCapture}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function Home({ params }: { params: { lang: string } }) {
-  // 【変更】ページネーション用の状態（useState）と計算ロジックをすべて削除しました
   const musicList = MUSIC_DATA;
   const gameList = GAME_DATA;
 
@@ -162,12 +236,10 @@ export default function Home({ params }: { params: { lang: string } }) {
       </section>
 
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
-        {/* 【変更】w-fullを追加して画面幅いっぱいまで要素が広がるようにしました */}
         <div className="flex flex-col mb-16 gap-6 items-center w-full">
           <h2 className={h2Style}>{t.section_music}</h2>
-          {/* 【変更】スクロールコンテナを適用 */}
-          <div className={scrollContainerStyle}>
-            {/* 【変更】musicList全体をマップ */}
+          {/* 【変更】作成したドラッグ用コンポーネントを使用 */}
+          <DraggableScrollContainer className={scrollContainerStyle}>
             {musicList.map((item, index) => (
               <div key={`music-${index}`} className={cardWrapperStyle}>
                 <Card
@@ -178,16 +250,13 @@ export default function Home({ params }: { params: { lang: string } }) {
                 />
               </div>
             ))}
-          </div>
-          {/* 【変更】ページネーションボタンを削除しました */}
+          </DraggableScrollContainer>
         </div>
 
-        {/* 【変更】w-fullを追加 */}
         <div className="flex flex-col mb-16 gap-6 items-center w-full">
           <h2 className={h2Style}>{t.section_game}</h2>
-          {/* 【変更】スクロールコンテナを適用 */}
-          <div className={scrollContainerStyle}>
-             {/* 【変更】gameList全体をマップ */}
+          {/* 【変更】作成したドラッグ用コンポーネントを使用 */}
+          <DraggableScrollContainer className={scrollContainerStyle}>
              {gameList.map((item, index) => (
                <div key={`game-${index}`} className={cardWrapperStyle}>
                  <Card
@@ -199,8 +268,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                  />
                </div>
             ))}
-          </div>
-          {/* 【変更】ページネーションボタンを削除しました */}
+          </DraggableScrollContainer>
         </div>
       </section>
 
@@ -225,8 +293,6 @@ function Icon({ href, src }: { href: string, src: string }) {
         alt="icon"
         width={32}
         height={32}
-        // 【修正】dark:invert でダークモード時にアイコンを完全な白に反転させます
-        // opacity-70 で普段は少し落ち着かせ、ホバー時（hover:opacity-100）に明るく光るようにします
         className="dark:invert opacity-70 hover:opacity-100 transition-opacity"
       />
     </Link>
