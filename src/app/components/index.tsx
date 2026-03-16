@@ -17,7 +17,7 @@ const mplus = M_PLUS_Rounded_1c({
 // スタイル定義
 const h2Style = "text-2xl font-bold";
 // 【変更】横スクロール用のコンテナスタイル。gap-6 sm:gap-8 でカード間に適切な余白を作成します。
-const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-4 w-full px-4 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-slate-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full after:content-[''] after:block after:w-[1px] after:shrink-0";
+const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-4 w-full px-2 pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 \\[&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-slate-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full after:content-[''] after:block after:w-[1px] after:shrink-0";
 // 【修正】カードが重ならないように、ラッパーの幅を元のカードサイズに合わせて sm:w-[400px] に拡大しました。
 const cardWrapperStyle = "shrink-0 snap-start w-max-[400px] w-full sm:w-[400px]";
 
