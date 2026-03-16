@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react'; // 【変更】useStateは不要になったため削除
 import Link from "next/link";
 import Image from "next/image";
 import { M_PLUS_Rounded_1c } from 'next/font/google';
@@ -16,28 +16,18 @@ const mplus = M_PLUS_Rounded_1c({
 
 // スタイル定義
 const h2Style = "text-2xl font-bold";
-const divStyle = "flex flex-wrap justify-center w-full sm:w-auto gap-4";
-const placeholderClass = "invisible w-full mx-2 sm:w-[400px] sm:mx-4 my-4 h-[396px]";
+// 【変更】横スクロール用のコンテナスタイル。gap-6 sm:gap-8 でカード間に適切な余白を作成します。
+const scrollContainerStyle = "flex flex-row flex-nowrap overflow-x-auto gap-6 sm:gap-8 w-full px-4 pb-8 snap-x snap-mandatory [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-slate-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full";
+// 【修正】カードが重ならないように、ラッパーの幅を元のカードサイズに合わせて sm:w-[400px] に拡大しました。
+const cardWrapperStyle = "shrink-0 snap-start w-[85vw] sm:w-[384px]";
 
 // ボタンスタイル（灰藍色・スレートカラーで統一）
 const buttonStyle = "flex items-center px-4 py-2 bg-slate-400 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-500 dark:hover:bg-slate-600 transition-colors shadow-sm text-sm font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed";
 
 export default function Home({ params }: { params: { lang: string } }) {
-    const [musicPage, setMusicPage] = useState(1);
-  const [gamePage, setGamePage] = useState(1);
-  const pageSize = 4;
-
+  // 【変更】ページネーション用の状態（useState）と計算ロジックをすべて削除しました
   const musicList = MUSIC_DATA;
-  const musicTotalPages = Math.ceil(musicList.length / pageSize);
-  const musicStartIndex = (musicPage - 1) * pageSize;
-  const currentMusicItems = musicList.slice(musicStartIndex, musicStartIndex + pageSize);
-  const emptyMusicSlots = pageSize - currentMusicItems.length;
-
   const gameList = GAME_DATA;
-  const gameTotalPages = Math.ceil(gameList.length / pageSize);
-  const gameStartIndex = (gamePage - 1) * pageSize;
-  const currentGameItems = gameList.slice(gameStartIndex, gameStartIndex + pageSize);
-  const emptyGameSlots = pageSize - currentGameItems.length;
 
   const date = new Date();
 
@@ -172,63 +162,45 @@ export default function Home({ params }: { params: { lang: string } }) {
       </section>
 
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
-        <div className="flex flex-col mb-16 gap-6 items-center">
+        {/* 【変更】w-fullを追加して画面幅いっぱいまで要素が広がるようにしました */}
+        <div className="flex flex-col mb-16 gap-6 items-center w-full">
           <h2 className={h2Style}>{t.section_music}</h2>
-          <div className={divStyle}>
-            {currentMusicItems.map((item, index) => (
-              <Card
-                key={`music-${index}`}
-                image={item.image}
-                href={langLink(item.href)}
-                title={typeof item.title === 'string' ? item.title : (item.title[lang] || item.title.ja)}
-                date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-              />
-            ))}
-            {emptyMusicSlots > 0 && Array.from({ length: emptyMusicSlots }).map((_, index) => (
-              <div key={`empty-music-${index}`} className={placeholderClass} />
+          {/* 【変更】スクロールコンテナを適用 */}
+          <div className={scrollContainerStyle}>
+            {/* 【変更】musicList全体をマップ */}
+            {musicList.map((item, index) => (
+              <div key={`music-${index}`} className={cardWrapperStyle}>
+                <Card
+                  image={item.image}
+                  href={langLink(item.href)}
+                  title={typeof item.title === 'string' ? item.title : (item.title[lang] || item.title.ja)}
+                  date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                />
+              </div>
             ))}
           </div>
-          {musicTotalPages > 1 && (
-            <div className="flex gap-4 items-center mt-4">
-              <button onClick={() => setMusicPage(p => Math.max(1, p - 1))} disabled={musicPage === 1} className={buttonStyle}>
-                {t.prev}
-              </button>
-              <span className="font-medium text-slate-600 dark:text-slate-400">{musicPage} / {musicTotalPages}</span>
-              <button onClick={() => setMusicPage(p => Math.min(musicTotalPages, p + 1))} disabled={musicPage === musicTotalPages} className={buttonStyle}>
-                {t.next}
-              </button>
-            </div>
-          )}
+          {/* 【変更】ページネーションボタンを削除しました */}
         </div>
 
-        <div className="flex flex-col mb-16 gap-6 items-center">
+        {/* 【変更】w-fullを追加 */}
+        <div className="flex flex-col mb-16 gap-6 items-center w-full">
           <h2 className={h2Style}>{t.section_game}</h2>
-          <div className={divStyle}>
-             {currentGameItems.map((item, index) => (
-               <Card
-                 key={`game-${index}`}
-                 image={item.image}
-                 href={item.href}
-                 title={typeof item.title === 'string' ? item.title : (item.title[lang] || item.title.ja)}
-                 date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                 description={typeof item.description === 'string' ? item.description : (item.description[lang] || item.description.ja)}
-               />
-            ))}
-             {emptyGameSlots > 0 && Array.from({ length: emptyGameSlots }).map((_, index) => (
-              <div key={`empty-game-${index}`} className={placeholderClass} />
+          {/* 【変更】スクロールコンテナを適用 */}
+          <div className={scrollContainerStyle}>
+             {/* 【変更】gameList全体をマップ */}
+             {gameList.map((item, index) => (
+               <div key={`game-${index}`} className={cardWrapperStyle}>
+                 <Card
+                   image={item.image}
+                   href={item.href}
+                   title={typeof item.title === 'string' ? item.title : (item.title[lang] || item.title.ja)}
+                   date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                   description={typeof item.description === 'string' ? item.description : (item.description[lang] || item.description.ja)}
+                 />
+               </div>
             ))}
           </div>
-          {gameTotalPages > 1 && (
-            <div className="flex gap-4 items-center mt-4">
-              <button onClick={() => setGamePage(p => Math.max(1, p - 1))} disabled={gamePage === 1} className={buttonStyle}>
-                {t.prev}
-              </button>
-              <span className="font-medium text-slate-600 dark:text-slate-400">{gamePage} / {gameTotalPages}</span>
-              <button onClick={() => setGamePage(p => Math.min(gameTotalPages, p + 1))} disabled={gamePage === gameTotalPages} className={buttonStyle}>
-                {t.next}
-              </button>
-            </div>
-          )}
+          {/* 【変更】ページネーションボタンを削除しました */}
         </div>
       </section>
 
