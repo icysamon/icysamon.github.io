@@ -207,6 +207,16 @@ export default function Home({ params }: { params: { lang: string } }) {
               <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'en' ? 'text-slate-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'}`}>EN</span>
             </Link>
             
+            {/* ソーシャルリンク */}
+            <div className="flex items-center gap-2 justify-between w-[300px]">
+              <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
+              <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
+              <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
+              <Icon href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx" src="/svgrepo-com/spotify.svg" />
+              <Icon href="https://github.com/icysamon" src="/svgrepo-com/github.svg" />
+              <Icon href="mailto:me@icysamon.com" src="/svgrepo-com/email.svg" />
+            </div>
+
             <div>
               <div className="flex flex-wrap gap-4 justify-between w-[300px]">
                 <Link href="https://blog.icysamon.com" className={buttonStyle}>Blog</Link>
@@ -220,16 +230,6 @@ export default function Home({ params }: { params: { lang: string } }) {
                   {lang === 'ja' ? 'テスト' : 'Test'}
                 </Link>
               </div>
-            </div>
-            
-            {/* ソーシャルリンク */}
-            <div className="flex items-center gap-2 justify-between w-[300px]">
-              <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
-              <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
-              <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
-              <Icon href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx" src="/svgrepo-com/spotify.svg" />
-              <Icon href="https://github.com/icysamon" src="/svgrepo-com/github.svg" />
-              <Icon href="mailto:me@icysamon.com" src="/svgrepo-com/email.svg" />
             </div>
           </div>
         </div>
