@@ -11,12 +11,14 @@ export default function Card({ image, href, title, date, description }: { image?
     <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700/50 w-full sm:w-[360px] h-[120px] rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex overflow-hidden min-w-0">
       
       {/* 【変更】画像エリア: 左側に配置し、親の高さと同じ 120px の正方形に固定 */}
-      <div className="relative w-[120px] h-[120px] shrink-0 bg-slate-100 dark:bg-slate-800">
+      {/* 念のため、こちらの div の relative は外しても大丈夫です */}
+      <div className="w-[120px] h-[120px] shrink-0 bg-slate-100 dark:bg-slate-800">
         <Link 
           href={href || "/"} 
           target={isExternal ? "_blank" : undefined}
           rel={isExternal ? "noopener noreferrer" : undefined}
-          className="block w-full h-full"
+          // ↓【重要】ここに `relative` を追加します！
+          className="relative block w-full h-full"
         >
           <Image
             aria-hidden
@@ -24,7 +26,7 @@ export default function Card({ image, href, title, date, description }: { image?
             src={image || ""}
             alt={title || "no-image"}
             sizes="(max-width: 640px) 120px, 120px"
-            className="object-cover" // 親要素にoverflow-hiddenがあるため、ここでのrounded指定は不要です
+            className="object-cover" 
           />
         </Link>
       </div>
