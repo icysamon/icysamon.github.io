@@ -1,57 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Game({ image, href, title, date, description }: { image?: string, href?: string, title?: string, date?: string, description?: string }) {
-  // URLが "http" または "https" から始まるかどうかで、外部リンク（站外链接）かを判定する
+export default function Card({ image, href, title, date, description }: { image?: string, href?: string, title?: string, date?: string, description?: string }) {
+  // URLが "http" または "https" から始まるかどうかで、外部リンクかを判定する
   const isExternal = href ? href.startsWith("http") : false;
 
   return (
-    <>
-    {/* カードコンテナ: 
-      - bg-white/50: 背景色を半透明の白に
-      - backdrop-blur-md: 背後の海底背景をぼかして透かす「磨りガラス」効果
-      - border-white/40: 縁に細いハイライトを入れてクリスタルのような質感に
-      - hover:-translate-y-1: ホバー時にふんわりと浮き上がる演出
-    */}
-    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700/50 sm:mx-4 mx-2 my-4 w-full lg:w-[400px] rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-0">
-      <div className="h-[300px]">
-        {/* 外部リンクの場合は別タブで開く (target="_blank")、サイト内リンクの場合は現在のタブで開く。
-          セキュリティ対策として外部リンクには rel="noopener noreferrer" を付与する。
-        */}
+    // 【変更】縦長から横長のコンパクトな長方形レイアウトに変更。
+    // 高さを 120px に固定し、画像が角丸からはみ出ないように overflow-hidden を追加しました。
+    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-md border border-white/40 dark:border-slate-700/50 w-full sm:w-[360px] h-[120px] rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex overflow-hidden min-w-0">
+      
+      {/* 【変更】画像エリア: 左側に配置し、親の高さと同じ 120px の正方形に固定 */}
+      <div className="relative w-[120px] h-[120px] shrink-0 bg-slate-100 dark:bg-slate-800">
         <Link 
           href={href || "/"} 
           target={isExternal ? "_blank" : undefined}
           rel={isExternal ? "noopener noreferrer" : undefined}
-          className="relative block w-full h-full"
+          className="block w-full h-full"
         >
           <Image
             aria-hidden
             fill
             src={image || ""}
             alt={title || "no-image"}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            // 【修正】dark:brightness-90 を削除し、ダークモードでも画像の明るさを維持
-            className="rounded-t-2xl object-cover"
+            sizes="(max-width: 640px) 120px, 120px"
+            className="object-cover" // 親要素にoverflow-hiddenがあるため、ここでのrounded指定は不要です
           />
         </Link>
       </div>
-      <div className="flex flex-col gap-2 m-5 min-w-0">
-        <h3 className="text-xl font-bold truncate">
-          {/* タイトル部分のリンクも同様に、外部リンクかサイト内リンクかでタブの挙動を動的に変える 
-          */}
+
+      {/* 【変更】テキストエリア: 右側に配置し、縦方向に並べる。flex-1 で残りの横幅をすべて使う */}
+      <div className="flex flex-col justify-center gap-1.5 p-3 min-w-0 flex-1">
+        <h3 className="text-base sm:text-lg font-bold">
+          {/* 【変更】タイトルが長い場合は「line-clamp-2」で最大2行で折り返し、はみ出た部分は「...」にします */}
           <Link 
             href={href || "/"} 
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noopener noreferrer" : undefined}
-            className="text-slate-800 dark:text-white hover:text-rose-400 dark:hover:text-rose-400 hover:underline hover:underline-offset-4 transition-colors"
+            className="text-slate-800 dark:text-white hover:text-rose-400 dark:hover:text-rose-400 hover:underline hover:underline-offset-4 transition-colors line-clamp-2 leading-tight"
+            title={title} // ホバー時に全文が見えるようにtitle属性を追加しておくのがおすすめです
           >
             {title}
           </Link>
         </h3>
-        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{date}</p>
-        <p className="truncate text-slate-600 dark:text-slate-300">{description}</p>
+        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium shrink-0">{date}</p>
+        
+        {/* 説明文がある場合は1行で省略（truncate）して表示 */}
+        {description && (
+          <p className="truncate text-xs text-slate-600 dark:text-slate-300">{description}</p>
+        )}
       </div>
     </div>
-    </>
   );
 }
