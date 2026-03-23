@@ -15,11 +15,11 @@ const mplus = M_PLUS_Rounded_1c({
 });
 
 // スタイル定義
-const h2Style = "text-2xl font-bold";
+const h2Style = `text-2xl font-bold tracking-wider text-slate-700 dark:text-slate-200 ${mplus.className}`;
 // 【変更】マウスホバー時に「掴める」カーソルになるように `cursor-grab` を追加。ドラッグ中のテキスト選択を防ぐため `select-none` も追加しました。
 const scrollContainerStyle = "grid grid-rows-2 grid-flow-col auto-cols-max gap-4 overflow-x-auto w-full px-4 pt-4 pb-6 snap-x snap-mandatory cursor-grab select-none bg-transparent [&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-slate-200/50 dark:[&::-webkit-scrollbar-track]:bg-slate-700/30 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-thumb]:rounded-full";
 // 【修正】カードが重ならないように、ラッパーの幅を元のカードサイズに合わせて sm:w-[400px] に拡大しました。
-const cardWrapperStyle = "shrink-0 snap-start w-[85vw] sm:w-[360px]";
+const cardWrapperStyle = "shrink-0 snap-start snap-always w-[85vw] sm:w-[360px]";
 
 // ボタンスタイル（灰藍色・スレートカラーで統一）
 const buttonStyle = "flex items-center px-4 py-2 bg-slate-400 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-500 dark:hover:bg-slate-600 transition-colors shadow-sm text-sm font-medium whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed";
@@ -109,16 +109,16 @@ export default function Home({ params }: { params: { lang: string } }) {
 
   const TRANSLATIONS = {
     ja: {
-      section_music: "«　作曲　»",
-      section_game: "«　ゲームジャム　»",
+      section_music: "作曲",
+      section_game: "ゲーム",
       prev: "前へ",
       next: "次へ",
       role: "理系大学院生（IoT分野）",
       hobby: "趣味でゲームと曲を作ってます 🫧",
     },
     en: {
-      section_music: "«　Composition　»",
-      section_game: "«　Game Jam　»",
+      section_music: "Composition",
+      section_game: "Game",
       prev: "Prev",
       next: "Next",
       role: "Master's Student (IoT)",
