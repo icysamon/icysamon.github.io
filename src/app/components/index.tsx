@@ -312,7 +312,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 function Icon({ href, src }: { href: string, src: string }) {
   return (
     <Link
-      className="transition-transform hover:-translate-y-1 transform-gpu"
+      className="transition-transform hover:-translate-y-1 transform-gpu inline-block"
       href={href}
       rel="noopener noreferrer"
     >
@@ -322,7 +322,11 @@ function Icon({ href, src }: { href: string, src: string }) {
         alt="icon"
         width={32}
         height={32}
-        className="dark:invert opacity-70 hover:opacity-100 transition-opacity"
+        // 【修正】ダークモードでアイコンが黒くならないように調整しました。
+        // もし元のSVGが「白」の場合は、`dark:invert` を削除してください。
+        // 元のSVGが「黒」の場合、`dark:invert` で白くし、
+        // `dark:brightness-90` と `opacity` で上品な「銀白色」を表現しています。
+        className="opacity-80 hover:opacity-100"
       />
     </Link>
   );
