@@ -18,11 +18,11 @@ const mplus = M_PLUS_Rounded_1c({
 });
 
 // スタイル定義
-const h2Style = `text-2xl font-bold tracking-wider text-slate-700 dark:text-slate-200 ${mplus.className}`;
+const h2Style = `text-2xl font-bold tracking-wider text-slate-700 dark:text-slate-200 text-center w-full ${mplus.className}`;
 
 // 【修正】Mac Safariで右側に不要な縦（高さ）スクロールバーが表示されるのを防ぐため、`overflow-y-hidden` を追加しました。
 // 【変更】マウスホバー時に「掴める」カーソルになるように `cursor-grab` を追加。ドラッグ中のテキスト選択を防ぐため `select-none` も追加しました。
-const scrollContainerStyle = "grid grid-rows-2 grid-flow-col auto-cols-max gap-4 overflow-x-auto overflow-y-hidden w-full px-4 pt-4 pb-6 snap-x snap-mandatory cursor-grab select-none bg-transparent [&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-slate-200/50 dark:[&::-webkit-scrollbar-track]:bg-slate-700/30 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-thumb]:rounded-full";
+const scrollContainerStyle = "grid grid-rows-2 grid-flow-col auto-cols-max gap-4 overflow-x-auto overflow-y-hidden w-full pt-4 pb-4 snap-x snap-mandatory cursor-grab select-none bg-transparent [&::-webkit-scrollbar]:block [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-slate-200/50 dark:[&::-webkit-scrollbar-track]:bg-slate-700/30 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-thumb]:rounded-full";
 
 // 【修正】カードが重ならないように、ラッパーの幅を元のカードサイズに合わせて sm:w-[400px] に拡大しました。
 const cardWrapperStyle = "shrink-0 snap-start snap-always w-[85vw] sm:w-[360px]";
@@ -247,7 +247,7 @@ export default function Home({ params }: { params: { lang: string } }) {
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
         
         {/* 1. 作曲セクション */}
-        <div className="flex flex-col mb-16 gap-6 items-center w-full">
+        <div className="flex flex-col mb-16 gap-6 w-full">
           <h2 className={h2Style}>{t.section_music}</h2>
           <DraggableScrollContainer className={scrollContainerStyle}>
             {musicList.map((item, index) => (
@@ -264,7 +264,7 @@ export default function Home({ params }: { params: { lang: string } }) {
         </div>
 
         {/* 2. 【追加】GitHub（リポジトリ）セクション */}
-        <div className="flex flex-col mb-16 gap-6 items-center w-full">
+        <div className="flex flex-col mb-16 gap-6 w-full">
           <h2 className={h2Style}>{t.section_repo}</h2>
           <DraggableScrollContainer className={scrollContainerStyle}>
              {repoList.map((item, index) => (
@@ -283,7 +283,7 @@ export default function Home({ params }: { params: { lang: string } }) {
         </div>
 
         {/* 3. ゲームセクション */}
-        <div className="flex flex-col mb-16 gap-6 items-center w-full">
+        <div className="flex flex-col mb-16 gap-6 w-full">
           <h2 className={h2Style}>{t.section_game}</h2>
           <DraggableScrollContainer className={scrollContainerStyle}>
              {gameList.map((item, index) => (
