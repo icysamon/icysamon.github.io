@@ -58,7 +58,7 @@
       "ja": "rpi-pico-dht20",
       "en": "rpi-pico-dht20"
     },
-    "date": "2024-06-07 ",
+    "date": "2024-06-07",
     "description": {
       "ja": "Raspberry Pi Pico用 DHT20 温湿度センサードライバー。",
       "en": "A temperature and humidity sensor DHT20 driver for Raspberry Pi Pico."
