@@ -1,0 +1,15 @@
+[
+  {
+    "image": "https://image.icysamon.com/index/2025/12/another.webp",
+    "href": "https://github.com/icysamon/almam-player",
+    "title": {
+      "ja": "almam-player",
+      "en": "almam-player"
+    },
+    "date": "2026-03-19",
+    "description": {
+      "ja": "ALMAMPlayer をベースに開発した MIDI ビジュアライザです。",
+      "en": "A midi visualizer made with Godot."
+    }
+  }
+]
