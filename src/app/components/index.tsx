@@ -121,7 +121,7 @@ export default function Home({ params }: { params: { lang: string } }) {
       section_game: "ゲーム",
       prev: "前へ",
       next: "次へ",
-      role: "理系大学院生（IoT分野）",
+      role: "大学院生（IoT分野）",
       hobby: "趣味でゲームと曲を作ってます 🫧",
     },
     en: {
