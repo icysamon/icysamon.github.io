@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'icysamon',
-    description: 'Game Dev & Music Creator 🫧',
+    description: 'icysamon\'s homepage.',
     url: 'https://icysamon.com',
     siteName: 'icysamon',
     images: [
