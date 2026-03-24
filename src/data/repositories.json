@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://image.icysamon.com/index/2025/12/another.webp",
+    "image": "https://raw.githubusercontent.com/icysamon/almam-player/refs/heads/main/doc/cover.png",
     "href": "https://github.com/icysamon/almam-player",
     "title": {
       "ja": "almam-player",
@@ -10,6 +10,58 @@
     "description": {
       "ja": "ALMAMPlayer をベースに開発した MIDI ビジュアライザです。",
       "en": "A midi visualizer made with Godot."
+    }
+  },
+  {
+    "image": "https://image.icysamon.com/index/icon/raspberry-pi-svgrepo-com.svg",
+    "href": "https://github.com/icysamon/rpi-pico-tm1637",
+    "title": {
+      "ja": "rpi-pico-tm1637",
+      "en": "rpi-pico-tm1637"
+    },
+    "date": "2026-01-15",
+    "description": {
+      "ja": "Raspberry Pi Pico用 TM1637 7セグメントディスプレイライブラリ。",
+      "en": "A TM1637 7-segment display library for the Raspberry Pi Pico using the C/C++ SDK."
+    }
+  },
+  {
+    "image": "https://image.icysamon.com/index/icon/hugo-svgrepo-com.svg",
+    "href": "https://github.com/icysamon/chord",
+    "title": {
+      "ja": "chord",
+      "en": "chord"
+    },
+    "date": "2025-07-15",
+    "description": {
+      "ja": "シンプルなHugoミュージックテーマ。",
+      "en": "A simple Music Hugo Theme."
+    }
+  },
+  {
+    "image": "https://raw.githubusercontent.com/icysamon/rpi-pico-sg-90/main/picture.png",
+    "href": "https://github.com/icysamon/rpi-pico-sg-90",
+    "title": {
+      "ja": "rpi-pico-sg-90",
+      "en": "rpi-pico-sg-90"
+    },
+    "date": "2024-09-21",
+    "description": {
+      "ja": "Raspberry Pi Pico用 SG-90 サーボモーター C/Python ライブラリ。",
+      "en": "A servo motor SG-90 C/Python Library of Raspberry Pi Pico."
+    }
+  },
+  {
+    "image": "https://raw.githubusercontent.com/icysamon/rpi-pico-dht20/main/picture.png",
+    "href": "https://github.com/icysamon/rpi-pico-dht20",
+    "title": {
+      "ja": "rpi-pico-dht20",
+      "en": "rpi-pico-dht20"
+    },
+    "date": "2024-06-07 ",
+    "description": {
+      "ja": "Raspberry Pi Pico用 DHT20 温湿度センサードライバー。",
+      "en": "A temperature and humidity sensor DHT20 driver for Raspberry Pi Pico."
     }
   }
 ]
