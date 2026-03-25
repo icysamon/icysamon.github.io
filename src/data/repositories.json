@@ -26,6 +26,19 @@
     }
   },
   {
+    "image": "/svgrepo-com/nextjs-fill-svgrepo-com.svg",
+    "href": "https://github.com/icysamon/icysamon.github.io",
+    "title": {
+      "ja": "icysamon.github.io",
+      "en": "icysamon.github.io"
+    },
+    "date": "2025-10-14",
+    "description": {
+      "ja": "本サイトのソースコード",
+      "en": "The source code of this website."
+    }
+  },
+  {
     "image": "https://image.icysamon.com/index/icon/hugo-svgrepo-com.svg",
     "href": "https://github.com/icysamon/chord",
     "title": {

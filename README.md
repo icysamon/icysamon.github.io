@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# icysamon.github.io
+
+This is icysamon's homepage, built with [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The source code of this website is licensed under the GPLv3. Certain non-free components are subject to their own respective licenses; please refer to the list below for details. Original assets, including music and imagery, are not open-source. All rights reserved. Unauthorized use is strictly prohibited.
 
-## Learn More
+|Libraries|License|
+|---|---|
+|[Next.js](https://github.com/vercel/next.js)|MIT license|
+|[React](https://github.com/facebook/react)|MIT license|
+|[react-markdown](https://github.com/remarkjs/react-markdown)|MIT license|
 
-To learn more about Next.js, take a look at the following resources:
+|Fonts|License|
+|---|---|
+|[Geist Font](https://github.com/vercel/geist-font)|OFL-1.1|
+|[M PLUS Rounded 1c](https://fonts.google.com/specimen/M+PLUS+Rounded+1c)|OFL-1.1|
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+|SVG|License|
+|---|---|
+|[Nextjs Fill SVG Vector](https://www.svgrepo.com/svg/378440/nextjs-fill)|MIT license|
+|[Apple Music SVG Vector](https://www.svgrepo.com/svg/349299/apple-music)|MIT license|
+|[Spotify SVG Vector](https://www.svgrepo.com/svg/349511/spotify)|MIT license|
+|[Youtube SVG Vector](https://www.svgrepo.com/svg/349577/youtube)|MIT license|
+|[Github SVG Vector](https://www.svgrepo.com/svg/349375/github)|MIT license|
+|[Hugo SVG Vector](https://www.svgrepo.com/svg/376327/hugo)|Logo license|
+|[Raspberry Pi SVG Vector](https://www.svgrepo.com/svg/354258/raspberry-pi)|Logo license|
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> License list update on 2026-03-25.
