@@ -8,8 +8,8 @@
     },
     "date": "2026-03-19",
     "description": {
-      "ja": "ALMAMPlayer をベースに開発した MIDI ビジュアライザです。",
-      "en": "A midi visualizer made with Godot."
+      "ja": "MIDI ビジュアライザー",
+      "en": "A midi visualizer."
     }
   },
   {
@@ -21,8 +21,8 @@
     },
     "date": "2026-01-15",
     "description": {
-      "ja": "Raspberry Pi Pico用 TM1637 7セグメントディスプレイライブラリ。",
-      "en": "A TM1637 7-segment display library for the Raspberry Pi Pico using the C/C++ SDK."
+      "ja": "TM1637 C/C++ ライブラリ",
+      "en": "A TM1637 C/C++ library."
     }
   },
   {
@@ -47,8 +47,8 @@
     },
     "date": "2025-07-15",
     "description": {
-      "ja": "シンプルなHugoミュージックテーマ。",
-      "en": "A simple Music Hugo Theme."
+      "ja": "シンプルなHugoテーマ",
+      "en": "A simple Hugo Theme."
     }
   },
   {
@@ -60,8 +60,8 @@
     },
     "date": "2024-09-21",
     "description": {
-      "ja": "Raspberry Pi Pico用 SG-90 サーボモーター C/Python ライブラリ。",
-      "en": "A servo motor SG-90 C/Python Library of Raspberry Pi Pico."
+      "ja": "SG-90 C/Python ライブラリ",
+      "en": "A SG-90 C/Python Library."
     }
   },
   {
@@ -73,8 +73,8 @@
     },
     "date": "2024-06-07",
     "description": {
-      "ja": "Raspberry Pi Pico用 DHT20 温湿度センサードライバー。",
-      "en": "A temperature and humidity sensor DHT20 driver for Raspberry Pi Pico."
+      "ja": "DHT20 Python ライブラリ",
+      "en": "A DHT20 Python Library."
     }
   }
 ]
