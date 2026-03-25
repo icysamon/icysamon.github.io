@@ -49,7 +49,9 @@ export default function Card({ image, href, title, date, description }: { image?
         
         {/* 説明文がある場合は1行で省略（truncate）して表示 */}
         {description && (
-          <p className="truncate text-xs text-slate-600 dark:text-slate-300">{description}</p>
+          <div>
+            <p className="truncate text-xs text-slate-600 dark:text-slate-300">{description}</p>
+          </div>
         )}
       </div>
     </div>
