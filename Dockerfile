@@ -4,7 +4,7 @@ ENV PORT=3030
 
 WORKDIR /app
 
-COPY package.json package-lock.json .
+COPY package.json package-lock.json ./
 
 RUN npm install
 

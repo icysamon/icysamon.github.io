@@ -1,6 +1,7 @@
 services:
   web:
-    image: hp:dev
+    image: node:22.16-alpine
+    container_name: hp-dev
     build: .
     ports:
       - "3030:3030"
