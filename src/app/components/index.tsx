@@ -236,7 +236,10 @@ export default function Home({ params }: { params: { lang: string } }) {
                   {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
                 </Link>
                 <Link href={lang === 'ja' ? "/ja/request" : "/en/request"} className={buttonStyle}>
-                  {lang === 'ja' ? 'テスト' : 'Test'}
+                  {lang === 'ja' ? '曲依頼' : 'Request'}
+                </Link>
+                <Link href={lang === 'ja' ? "https://music.apple.com/jp/playlist/%E3%82%A6%E3%83%8B-%E3%83%A9%E3%82%B8%E3%82%AA/pl.u-76oNlPytvrA7JkM" : "https://music.apple.com/us/playlist/%E3%82%A6%E3%83%8B-%E3%83%A9%E3%82%B8%E3%82%AA/pl.u-76oNlPytvrA7JkM"} className={buttonStyle}>
+                  {lang === 'ja' ? '好きな曲' : 'Favorite Song'}
                 </Link>
               </div>
             </div>
