@@ -3,8 +3,8 @@ import ArticleLayout from "@/app/components/articleLayout";
 
 // ここにMarkdown形式で記事の文章を書きます
 const pageContent = `
-# テスト用ページ
-テスト。
+# 曲依頼
+準備中...
 
 \`\`\`c
 #include <stdio.h>
