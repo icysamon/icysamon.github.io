@@ -1,16 +1,14 @@
-"use client"; // 【追加】Next.jsでHooks（useRef, useEffect）を使用するため、クライアントコンポーネントとして宣言
-
-import { useEffect, useRef } from 'react'; // 【変更】マウスのドラッグ状態を管理するために useRef を追加
+"use client";
+import { useEffect, useRef } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Card from "@/app/components/card";
 import MUSIC_DATA from '@/data/music.json'; 
-// 【追加】GitHub（リポジトリ）のデータをインポート
 import REPO_DATA from '@/data/repositories.json'; 
 import GAME_DATA from '@/data/games.json';
 
-// フォントの設定（可愛くて丸みのあるフォント）
+// フォントの設定
 const mplus = M_PLUS_Rounded_1c({
   weight: ['800'],
   subsets: ['latin'],
@@ -121,8 +119,7 @@ export default function Home({ params }: { params: { lang: string } }) {
       section_game: "ゲーム",
       prev: "前へ",
       next: "次へ",
-      role: "大学院生（IoT分野）",
-      hobby: "趣味でゲームと曲を作ってます 🫧",
+      role: "電子工作・クリエイター",
     },
     en: {
       section_music: "Composition",
@@ -130,8 +127,7 @@ export default function Home({ params }: { params: { lang: string } }) {
       section_game: "Game",
       prev: "Prev",
       next: "Next",
-      role: "Master's Student (IoT)",
-      hobby: "Game Dev & Music Creator 🫧",
+      role: "Electronics & Creator",
     }
   };
   const t = TRANSLATIONS[lang];
@@ -145,13 +141,6 @@ export default function Home({ params }: { params: { lang: string } }) {
     return `${url}${separator}lang=en`;
   };
 
-  const handleScrollToPortfolio = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const portfolioSection = document.getElementById('portfolio');
-    if (portfolioSection) {
-      portfolioSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -201,7 +190,6 @@ export default function Home({ params }: { params: { lang: string } }) {
               </h1>
               <div className="flex flex-col gap-1 text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium min-h-[3.5rem] md:min-h-0">
                 <p className="whitespace-nowrap">{t.role}</p>
-                <p className="whitespace-nowrap">{t.hobby}</p>
               </div>
             </div>
             
