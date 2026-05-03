@@ -1,12 +1,19 @@
 "use client";
+import { Metadata } from 'next';
+import { M_PLUS_Rounded_1c } from 'next/font/google';
 import { useEffect, useRef } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Card from "@/app/components/card";
 import MUSIC_DATA from '@/data/music.json'; 
 import REPO_DATA from '@/data/repositories.json'; 
 import GAME_DATA from '@/data/games.json';
+
+
+// タイトル定義
+export const metadata: Metadata = {
+  title: "icysamon",
+};
 
 // フォントの設定
 const mplus = M_PLUS_Rounded_1c({
@@ -207,28 +214,19 @@ export default function Home({ params }: { params: { lang: string } }) {
             {/* ソーシャルリンク */}
             <div className="flex items-center gap-2 justify-between w-[300px]">
               <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
-              <Icon href="https://www.youtube.com/@icysamon/releases" src="/svgrepo-com/youtube.svg" />
+              <Icon href="https://www.youtube.com/@icysamon" src="/svgrepo-com/youtube.svg" />
               <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
               <Icon href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx" src="/svgrepo-com/spotify.svg" />
               <Icon href="https://github.com/icysamon" src="/svgrepo-com/github.svg" />
               <Icon href="mailto:me@icysamon.com" src="/svgrepo-com/email.svg" />
             </div>
-
+            
+            {/* ボタンリンク */}
             <div>
               <div className="flex flex-wrap gap-4 justify-between w-[300px]">
-                <Link href="https://blog.icysamon.com" className={buttonStyle}>Blog</Link>
-                <Link href={langLink("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>
-                  {lang === 'ja' ? '音楽配信' : 'Streaming'}
-                </Link>
-                <Link href={lang === 'en' ? "https://bgm.icysamon.com/en" : "https://bgm.icysamon.com/"} className={buttonStyle}>
-                  {lang === 'ja' ? 'フリーBGM' : 'Free BGM'}
-                </Link>
-                <Link href={lang === 'ja' ? "/ja/request" : "/en/request"} className={buttonStyle}>
-                  {lang === 'ja' ? '曲依頼' : 'Request'}
-                </Link>
-                <Link href={lang === 'ja' ? "https://music.apple.com/jp/playlist/%E3%82%A6%E3%83%8B-%E3%83%A9%E3%82%B8%E3%82%AA/pl.u-76oNlPytvrA7JkM" : "https://music.apple.com/us/playlist/%E3%82%A6%E3%83%8B-%E3%83%A9%E3%82%B8%E3%82%AA/pl.u-76oNlPytvrA7JkM"} className={buttonStyle}>
-                  {lang === 'ja' ? '好きな曲（プレイリスト）' : 'Favorite Song (Playlist)'}
-                </Link>
+                <Link href="https://blog.icysamon.com" className={buttonStyle}>{lang === 'ja' ? 'ブログ' : 'Blog'}</Link>
+                <Link href={langLink("https://www.tunecore.co.jp/artists/icysamon")} className={buttonStyle}>{lang === 'ja' ? '音楽配信' : 'Streaming'}</Link>
+                <Link href={lang === 'ja' ? "/ja/request" : "/en/request"} className={buttonStyle}>{lang === 'ja' ? '曲依頼' : 'Request'}</Link>
               </div>
             </div>
           </div>
@@ -300,6 +298,7 @@ export default function Home({ params }: { params: { lang: string } }) {
   );
 }
 
+
 function Icon({ href, src }: { href: string, src: string }) {
   return (
     <Link
@@ -313,10 +312,6 @@ function Icon({ href, src }: { href: string, src: string }) {
         alt="icon"
         width={32}
         height={32}
-        // 【修正】ダークモードでアイコンが黒くならないように調整しました。
-        // もし元のSVGが「白」の場合は、`dark:invert` を削除してください。
-        // 元のSVGが「黒」の場合、`dark:invert` で白くし、
-        // `dark:brightness-90` と `opacity` で上品な「銀白色」を表現しています。
         className="opacity-80 hover:opacity-100"
       />
     </Link>

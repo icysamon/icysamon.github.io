@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "icysamon",
-  description: "icysamon's homepage.",
+  description: "icysamon\'s homepage.",
   metadataBase: new URL('https://icysamon.com'),
   alternates: {
     canonical: '/',

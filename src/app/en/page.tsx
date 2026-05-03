@@ -1,7 +1,7 @@
-import Index from "@/app/components/index";
+import Main from "@/app/components/main";
 
 export default function Home() {
   return (
-    <Index params={{ lang: 'en' }} />
+    <Main params={{ lang: 'en' }} />
   );
 } 

@@ -1,5 +1,5 @@
 "use client"
-import Index from "@/app/components/index";
+import Index from "@/app/components/main";
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
