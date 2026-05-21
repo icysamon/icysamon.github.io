@@ -194,7 +194,7 @@ export default function Home({ params }: { params: { lang: string } }) {
               <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
                 icysamon
               </h1>
-              <div className="flex flex-col gap-1 text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium min-h-[3.5rem] md:min-h-0">
+              <div className="flex flex-col gap-1 text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium md:min-h-0">
                 <p className="whitespace-nowrap">{t.role}</p>
               </div>
             </div>
@@ -286,25 +286,8 @@ export default function Home({ params }: { params: { lang: string } }) {
       </section>
 
       <section id="portfolio" className="relative z-10 max-w-[1280px] w-full px-4 pt-12 min-h-screen flex flex-col justify-center">
-        
-        {/* 1. 作曲セクション */}
-        <div className="flex flex-col mb-16 gap-6 w-full">
-          <h2 className={h2Style}>{t.section_music}</h2>
-          <DraggableScrollContainer className={scrollContainerStyle}>
-            {musicList.map((item, index) => (
-              <div key={`music-${index}`} className={cardWrapperStyle}>
-                <Card
-                  image={item.image}
-                  href={langLink(item.href)}
-                  title={typeof item.title === 'string' ? item.title : (item.title[lang] || item.title.ja)}
-                  date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                />
-              </div>
-            ))}
-          </DraggableScrollContainer>
-        </div>
 
-        {/* 2. 【追加】GitHub（リポジトリ）セクション */}
+        {/* GitHub（リポジトリ）セクション */}
         <div className="flex flex-col mb-16 gap-6 w-full">
           <h2 className={h2Style}>{t.section_repo}</h2>
           <DraggableScrollContainer className={scrollContainerStyle}>
@@ -323,7 +306,24 @@ export default function Home({ params }: { params: { lang: string } }) {
           </DraggableScrollContainer>
         </div>
 
-        {/* 3. ゲームセクション */}
+        {/* 作曲セクション */}
+        <div className="flex flex-col mb-16 gap-6 w-full">
+          <h2 className={h2Style}>{t.section_music}</h2>
+          <DraggableScrollContainer className={scrollContainerStyle}>
+            {musicList.map((item, index) => (
+              <div key={`music-${index}`} className={cardWrapperStyle}>
+                <Card
+                  image={item.image}
+                  href={langLink(item.href)}
+                  title={typeof item.title === 'string' ? item.title : (item.title[lang] || item.title.ja)}
+                  date={new Date(item.date).toLocaleDateString(lang === 'ja' ? 'ja-JP' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                />
+              </div>
+            ))}
+          </DraggableScrollContainer>
+        </div>
+
+        {/* ゲームセクション */}
         <div className="flex flex-col mb-16 gap-6 w-full">
           <h2 className={h2Style}>{t.section_game}</h2>
           <DraggableScrollContainer className={scrollContainerStyle}>
