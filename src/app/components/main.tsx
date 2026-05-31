@@ -239,7 +239,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                     {lang === 'ja' ? 'ブログ' : 'Blog'}
                   </span>
                   <span className="text-[11px] md:text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                    {lang === 'ja' ? '技術録・趣味' : 'Tech & Hobbies'}
+                    {lang === 'ja' ? '技術・趣味' : 'Tech & Hobbies'}
                   </span>
                 </div>
               </Link>
@@ -261,7 +261,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                     {lang === 'ja' ? '音楽配信' : 'Streaming'}
                   </span>
                   <span className="text-[11px] md:text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-                    {lang === 'ja' ? '最新のリリースを聴く' : 'Listen to latest releases'}
+                    {lang === 'ja' ? '曲づくり' : 'Original Songs'}
                   </span>
                 </div>
               </Link>
