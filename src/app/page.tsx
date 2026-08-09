@@ -1,15 +1,22 @@
-import { redirect } from 'next/navigation';
-import { headers } from 'next/headers';
+"use client";
 
-export default async function RootPage() {
-  // ブラウザから送信された Accept-Language リクエストヘッダーを取得
-  const headerList = await headers();
-  const acceptLanguage = headerList.get('accept-language') || '';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-  // 日本語が優先されているかを判定（日本語の場合は /ja、それ以外はデフォルトで /en へ）
-  const isJapanese = acceptLanguage.includes('ja');
-  const targetLang = isJapanese ? 'ja' : 'en';
+export default function RootPage() {
+  const router = useRouter();
 
-  // リダイレクトを実行（/ja または /en へ自動遷移）
-  redirect(`/${targetLang}`);
+  useEffect(() => {
+    // クライアントの言語設定を取得
+    const browserLang = navigator.language.toLowerCase();
+    
+    // 日本語の場合は ja、それ以外はデフォルトで en
+    const targetLang = browserLang.includes('ja') ? 'ja' : 'en';
+
+    // 判定した言語のページへリダイレクト
+    router.replace(`/${targetLang}`);
+  }, [router]);
+
+  // 画面のチラつきを防ぐため、リダイレクト中は何もレンダリングしない（またはLoading表示）
+  return null;
 }
