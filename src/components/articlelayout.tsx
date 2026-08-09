@@ -1,16 +1,21 @@
-"use client"; // usePathnameを使用するために追加
+"use client";
 
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { useEffect } from 'react';
-import { usePathname } from "next/navigation"; // 現在のURLを取得するために追加
+import { usePathname } from "next/navigation";
+
+interface Props {
+  content: string;
+  lang?: string;
+}
 
 // 記事の共通レイアウトコンポーネント
-export default function ArticleLayout({ content, userLang }: { content: string, userLang?: string }) {
-  const lang = userLang === 'ja' ? 'ja' : 'en';
+export default function ArticleLayout({ content, lang: inputLang }: Props) {
+  const lang = inputLang === 'en' ? 'en' : 'ja'; 
   const pathname = usePathname() || '/';
 
-const toggleUrl = (() => {
+  const toggleUrl = (() => {
     if (lang === 'ja') {
       if (/^\/ja(\/|$)/.test(pathname)) {
         return pathname.replace(/^\/ja(\/|$)/, '/en$1');
@@ -21,6 +26,10 @@ const toggleUrl = (() => {
       return newPath === '' ? '/' : newPath;
     }
   })();
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   return (
     <main className="font-sans antialiased min-h-screen relative overflow-x-hidden flex justify-center pt-24 pb-12 px-4">
@@ -33,7 +42,7 @@ const toggleUrl = (() => {
           
           {/* ホームへ戻るボタン */}
           <Link 
-            href={lang === 'ja' ? '/ja' : '/en'} // 英語の時は英語のホームに戻るように調整しました
+            href={lang === 'ja' ? '/ja' : '/en'}
             className="inline-flex items-center text-sm font-bold text-slate-500 hover:text-rose-400 dark:text-slate-400 dark:hover:text-rose-400 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

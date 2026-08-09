@@ -1,29 +1,15 @@
-"use client"
-import Index from "@/app/components/main";
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { redirect } from 'next/navigation';
+import { headers } from 'next/headers';
 
-function HomeContent() {
-  const searchParams = useSearchParams();
-  const langParam = searchParams.get('lang');
-  const [lang, setLang] = useState('ja');
+export default async function RootPage() {
+  // ブラウザから送信された Accept-Language リクエストヘッダーを取得
+  const headerList = await headers();
+  const acceptLanguage = headerList.get('accept-language') || '';
 
-  useEffect(() => {
-    if (langParam) {
-      setLang(langParam === 'en' ? 'ja' : 'en');
-    } else {
-      const browserLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
-      setLang(browserLang);
-    }
-  }, [langParam]);
+  // 日本語が優先されているかを判定（日本語の場合は /ja、それ以外はデフォルトで /en へ）
+  const isJapanese = acceptLanguage.includes('ja');
+  const targetLang = isJapanese ? 'ja' : 'en';
 
-  return <Index params={{ lang }} />;
-}
-
-export default function Home() {
-  return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-white dark:bg-slate-900 text-slate-500">Loading...</div>}>
-      <HomeContent />
-    </Suspense>
-  );
+  // リダイレクトを実行（/ja または /en へ自動遷移）
+  redirect(`/${targetLang}`);
 }

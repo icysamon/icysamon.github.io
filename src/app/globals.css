@@ -1,9 +1,10 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 
 /* ライトモード時の背景色 */
 :root {
-  --background: #e8f4fc;
+  --background: #ffffff;
   --foreground: #171717;
 }
 

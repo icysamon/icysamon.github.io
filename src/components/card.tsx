@@ -13,7 +13,7 @@ export default function Card({ image, href, title, date, description }: { image?
       href={href || "/"} 
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
-      className="group flex w-full sm:w-[360px] h-[120px] bg-white/50 hover:bg-white/70 dark:bg-white/10 dark:hover:bg-white/20 backdrop-blur-md border border-white/60 dark:border-white/20 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden min-w-0"
+      className="group flex w-full sm:w-[360px] h-[120px] bg-slate-50 hover:bg-white/70 dark:bg-white/10 dark:hover:bg-white/20 backdrop-blur-md border border-white/60 dark:border-white/20 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden min-w-0"
     >
       
       {/* 画像エリア: 左側に配置し、親の高さと同じ 120px の正方形に固定 */}
