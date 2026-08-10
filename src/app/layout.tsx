@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'icysamon',
     images: [
       {
-        url: 'https://image.icysamon.com/avatar/artist.webp',
+        url: '/image/avatar.webp',
         width: 800,
         height: 800,
         alt: 'icysamon avatar',

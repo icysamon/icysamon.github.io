@@ -26,7 +26,7 @@ export default function Hero({ lang }: Props) {
               aria-hidden
               width={800}
               height={800}
-              src={"https://image.icysamon.com/avatar/artist.webp"}
+              src={"/image/avatar.webp"}
               alt={"artist-avatar"}
               className="w-full h-auto aspect-square object-cover rounded-[2.5rem] shadow-2xl transition-all duration-500 hover:rotate-2 transform-gpu select-none"
               priority
@@ -77,12 +77,12 @@ export default function Hero({ lang }: Props) {
       </div>
       <div className="flex justify-center items-center w-full mt-16 md:mt-24 z-10 px-4">
         <div className="flex items-center flex-wrap justify-center gap-6 md:gap-10 scale-110 md:scale-125 transition-transform">
-          <Icon href="http://twitter.com/icysamon" src="/svgrepo-com/twitter.svg" />
-          <Icon href="https://www.youtube.com/@icysamon" src="/svgrepo-com/youtube.svg" />
-          <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/svgrepo-com/apple-music.svg" />
-          <Icon href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx" src="/svgrepo-com/spotify.svg" />
-          <Icon href="https://github.com/icysamon" src="/svgrepo-com/github.svg" />
-          <Icon href="mailto:me@icysamon.com" src="/svgrepo-com/email.svg" />
+          <Icon href="http://twitter.com/icysamon" src="/icon/svgrepo-com/twitter.svg" />
+          <Icon href="https://www.youtube.com/@icysamon" src="/icon/svgrepo-com/youtube.svg" />
+          <Icon href="https://music.apple.com/jp/artist/icysamon/1808762015" src="/icon/svgrepo-com/apple-music.svg" />
+          <Icon href="https://open.spotify.com/intl-ja/artist/7tk5ryKLzZdGvABO1H0LCx" src="/icon/svgrepo-com/spotify.svg" />
+          <Icon href="https://github.com/icysamon" src="/icon/svgrepo-com/github.svg" />
+          <Icon href="mailto:me@icysamon.com" src="/icon/svgrepo-com/email.svg" />
         </div>
       </div>
     </section>
