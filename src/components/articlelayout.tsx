@@ -32,10 +32,10 @@ export default function ArticleLayout({ content, lang: inputLang }: Props) {
   }, [lang]);
 
   return (
-    <main className="font-sans antialiased min-h-screen relative overflow-x-hidden flex justify-center pt-24 pb-12 px-4">
+    <main className="font-sans antialiased min-h-screen relative overflow-x-hidden flex justify-center pt-8 pb-12 px-4">
 
       {/* 記事を囲むCard型コンテナ（磨りガラス効果） */}
-      <div className="relative z-10 w-full max-w-3xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-slate-700/50 rounded-[2.5rem] shadow-2xl p-8 sm:p-12 mb-10 h-fit">
+      <div className="relative z-10 w-full max-w-3xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-slate-700/50 rounded-[2.5rem] shadow-sm p-8 sm:p-12 mb-10 h-fit">
         
         {/* ヘッダーエリア（戻るボタンと言語切り替えボタンを平行・中央揃え） */}
         <div className="flex justify-between items-center mb-8">
@@ -58,7 +58,7 @@ export default function ArticleLayout({ content, lang: inputLang }: Props) {
             className="relative flex items-center w-32 h-9 bg-gray-200/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-full p-1 cursor-pointer select-none transition-transform active:scale-95"
             aria-label="Language Toggle"
           >
-            <span className={`absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white dark:bg-slate-500 rounded-full shadow-md transition-transform duration-300 ease-out ${lang === 'en' ? 'translate-x-full' : 'translate-x-0'}`} />
+            <span className={`absolute top-1 bottom-1 w-[calc(50%-4px)] bg-white dark:bg-slate-500 rounded-full shadow-sm transition-transform duration-300 ease-out ${lang === 'en' ? 'translate-x-full' : 'translate-x-0'}`} />
             <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'ja' ? 'text-slate-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'}`}>JP</span>
             <span className={`relative z-10 w-1/2 text-center text-[10px] font-black transition-colors ${lang === 'en' ? 'text-slate-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'}`}>EN</span>
           </Link>

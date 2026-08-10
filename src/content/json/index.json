@@ -1,0 +1,18 @@
+{
+    "ja": {
+        "section_music": "作曲",
+        "section_repo": "GitHub",
+        "section_game": "ゲーム",
+        "prev": "前へ",
+        "next": "次へ",
+        "role": ""
+    },
+    "en": {
+        "section_music": "Composition",
+        "section_repo": "GitHub",
+        "section_game": "Game",
+        "prev": "Prev",
+        "next": "Next",
+        "role": ""
+    }
+}

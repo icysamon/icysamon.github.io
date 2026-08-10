@@ -25,7 +25,7 @@ export default async function Page({ params }: PageProps) {
   // マークダウンファイル（例: src/data/pages/ja/request.md）を読み込む
   const filePath = path.join(
     process.cwd(),
-    `src/data/pages/${currentLang}/${id}.md`
+    `src/content/pages/${currentLang}/${id}.md`
   );
 
   let content = '';
