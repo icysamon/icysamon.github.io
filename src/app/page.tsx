@@ -17,6 +17,13 @@ export default function RootPage() {
     router.replace(`/${targetLang}`);
   }, [router]);
 
-  // 画面のチラつきを防ぐため、リダイレクト中は何もレンダリングしない（またはLoading表示）
-  return null;
+  // 初回アクセス時、リダイレクトが完了するまでの間だけローディングを表示
+  return (
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-white dark:bg-black">
+      <div className="w-10 h-10 border-4 border-slate-200 dark:border-zinc-800 border-t-blue-500 rounded-full animate-spin" />
+      <p className="mt-4 text-xs font-semibold text-slate-400 tracking-widest uppercase">
+        Loading
+      </p>
+    </div>
+  );
 }
