@@ -1,14 +1,8 @@
+// src/components/hero.tsx
 import Image from "next/image";
-import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Icon from "@/components/icon";
 import LanguageSwitcher from "@/components/languageswitcher";
 import LinkCapsule from "@/components/linkcapsule";
-
-const mplus = M_PLUS_Rounded_1c({
-  weight: ['800'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 interface Props {
   lang: 'ja' | 'en';
@@ -43,7 +37,7 @@ export default function Hero({ lang }: Props) {
         </div>
         <div className="flex flex-col gap-6 text-center md:text-left items-center md:justify-start md:items-start shrink-0 w-[360px] md:pl-6">
           <div className="space-y-5">
-            <h1 className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white ${mplus.className}`}>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
               icysamon
             </h1>
             <div className="flex flex-col gap-1 text-lg md:text-xl text-gray-600 dark:text-gray-300 font-medium md:min-h-0">
