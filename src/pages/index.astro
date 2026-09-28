@@ -1,0 +1,45 @@
+---
+import ProfileCard from "../components/ProfileCard.astro";
+import Album from "../components/Album.astro";
+import AudioCard from "../components/AudioCard.astro";
+import IconBar from "../components/IconBar.astro";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import kawaiiSqueeze from "../assets/album-cover/kawaii-squeeze.webp";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <div id="container">
+    <ProfileCard />
+
+    <div class="flex gap-6">
+      <Button text="ブログ" href="https://blog.icysamon.com" />
+      <Button
+        text="音楽配信"
+        href="https://www.tunecore.co.jp/artists/icysamon"
+      />
+    </div>
+    <IconBar />
+    <h2 class="text-2xl font-bold mt-8 mb-4">新曲です↓</h2>
+    <Album
+      title=""
+      image={kawaiiSqueeze.src}
+      href="https://linkco.re/CC6eP5GY"
+    />
+  </div>
+</Layout>
+
+<style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    width: 100%;
+    gap: 2rem;
+  }
+</style>
