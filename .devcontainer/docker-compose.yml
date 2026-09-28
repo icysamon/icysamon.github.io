@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  icysamon.github.io:
-    image: mcr.microsoft.com/vscode/devcontainers/base:debian-13
-    shm_size: '2gb'
-    volumes:
-      - ..:/workspaces/icysamon.github.io:cached
-    command: sleep infinity
