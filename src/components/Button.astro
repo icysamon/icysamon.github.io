@@ -7,18 +7,19 @@ interface Props {
 const { text = "Hover me", href } = Astro.props;
 ---
 
-<button class="cta">
-  <a href={href}>
+<a href={href}>
+  <button class="cta items-center">
     <span>{text}</span>
     <svg width="15px" height="10px" viewBox="0 0 13 10">
       <path d="M1,5 L11,5"></path>
       <polyline points="8 1 12 5 8 9"></polyline>
     </svg>
-  </a>
-</button>
+  </button>
+</a>
 
 <style>
   .cta {
+    display: flex;
     position: relative;
     margin: auto;
     padding: 12px 18px;
