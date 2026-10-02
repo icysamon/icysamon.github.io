@@ -1,0 +1,39 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <!-- ... -->
+    <meta charset="utf-8" />
+  </head>
+  <!-- ... -->
+  <div class="max-w-300">
+    <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.description}</p>
+    <slot />
+    <!-- ここにMarkdownコンテンツが挿入される -->
+    <!-- ... -->
+  </div>
+
+  <style>
+    .max-w-300 {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    html,
+    body {
+      background-color: #f8f8f8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html,
+      body {
+        background-color: #242327;
+      }
+    }
+  </style>
+
+
+</html>

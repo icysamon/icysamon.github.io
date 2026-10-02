@@ -1,16 +1,16 @@
 ---
-import kawaiiSqueeze from "../assets/album-cover/kawaii-squeeze.webp";
-import Album from "../components/Album.astro";
-import Button from "../components/Button.astro";
-import Footer from "../components/Footer.astro";
-import ProfileCard from "../components/ProfileCard.astro";
-import IconBar from "../components/IconBar.astro";
-import Layout from "../layouts/Layout.astro";
+import kawaiiSqueeze from "../../assets/album-cover/kawaii-squeeze.webp";
+import Album from "../../components/Album.astro";
+import Button from "../../components/Button.astro";
+import Footer from "../../components/Footer.astro";
+import ProfileCard from "../../components/ProfileCard.astro";
+import IconBar from "../../components/IconBar.astro";
+import Layout from "../../layouts/Layout.astro";
 import {
   getLangFromUrl,
   useTranslations,
   useTranslatedPath,
-} from "../i18n/utils";
+} from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

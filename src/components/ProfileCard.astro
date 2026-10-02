@@ -1,18 +1,24 @@
 ---
 import avatar from "../assets/avatar.webp";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div class="flex items-center gap-4 mt-8 mx-4 max-w-3xl">
   <img alt="" src={avatar.src} class="size-30 rounded-full object-cover" />
   <div>
     <h3 class="font-medium text-gray-900 dark:text-gray-50 sm:text-lg">
-      icysamon
+      {t("profile.name")}
     </h3>
-    <p class="mt-0.5 text-gray-700 dark:text-gray-300">
-      本サイトは再構築中です。
-    </p>
-    <p class="mt-0.5 text-gray-700 dark:text-gray-300">
-      現在英語表示は対応していません。
+    <p class="mt-0.5 text-gray-700 dark:text-gray-300 max-w-64">
+      {t("profile.description")}
     </p>
   </div>
 </div>
