@@ -23,30 +23,34 @@ const {
 const Tag = href ? "a" : "div";
 ---
 
-<Tag
-  class="card"
-  href={href}
-  style={`--card-width: ${width}; --card-height: ${height}; --card-color: ${color};`}
->
-  <div
-    class="card-img"
-    style={image ? `background-image: url(${image});` : undefined}
+<div>
+  <Tag
+    class="card"
+    href={href}
+    style={`--card-width: ${width}; --card-height: ${height}; --card-color: ${color};`}
   >
-  </div>
-  <div class="card-info">
+    <div
+      class="card-img"
+      style={image ? `background-image: url(${image});` : undefined}
+    >
+    </div>
+    <div class="card-info">
+      <div class="card-icon">
+        <svg viewBox="0 0 28 25" class="icon">
+          <path
+            d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </Tag>
+  <div class="div-text">
+    <p class="text-title">{title}</p>
     <div class="card-text">
-      <p class="text-title">{title}</p>
       {subtitle && <p class="text-subtitle">{subtitle}</p>}
     </div>
-    <div class="card-icon">
-      <svg viewBox="0 0 28 25" class="icon">
-        <path
-          d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"
-        ></path>
-      </svg>
-    </div>
   </div>
-</Tag>
+</div>
 
 <style>
   .card {
@@ -54,7 +58,7 @@ const Tag = href ? "a" : "div";
     width: var(--card-width);
     height: var(--card-height);
     position: relative;
-    border-radius: 16px;
+    border-radius: 8px;
     background: #f5f5f5;
     transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
@@ -97,6 +101,10 @@ const Tag = href ? "a" : "div";
   }
 
   /* Text */
+  .div-text {
+    margin-top: 0.5rem;
+  }
+
   .card-text p {
     margin: 0;
     line-height: 140%;
@@ -105,15 +113,15 @@ const Tag = href ? "a" : "div";
   }
 
   .text-title {
-    font-weight: 900;
-    font-size: 1.2rem;
-    color: #222;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333233;
   }
 
   .text-subtitle {
-    color: #333;
+    color: #333333a9;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   /* Hover */
@@ -124,5 +132,23 @@ const Tag = href ? "a" : "div";
   .card:hover .card-icon {
     opacity: 1;
     transform: translateX(20%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .card {
+      background: #1e293b;
+    }
+
+    .text-title {
+      color: #f5f5f5;
+    }
+
+    .text-subtitle {
+      color: #f5f5f5a9;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 20px 4px rgba(255, 255, 255, 0.1);
+    }
   }
 </style>

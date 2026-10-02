@@ -76,4 +76,19 @@ const { text = "Hover me", href } = Astro.props;
   .cta:active {
     transform: scale(0.95);
   }
+
+  @media (prefers-color-scheme: dark) {
+    .cta:before {
+      background: #374247;
+    }
+    .cta span {
+      color: #e4e5e6;
+    }
+    .cta svg {
+      stroke: #d8e3f7;
+    }
+    .cta:hover:before {
+      background: #13171e;
+    }
+  }
 </style>
