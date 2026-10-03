@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 import {
   getLangFromUrl,
@@ -24,6 +25,7 @@ const { frontmatter } = Astro.props;
   </head>
 
   <body class="bg-white dark:bg-[#242327]">
+    <Header />
     <div class="mx-auto max-w-200 px-4 py-8 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="border-b border-gray-200 pb-6 dark:border-gray-700">

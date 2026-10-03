@@ -2,6 +2,7 @@
 import kawaiiSqueeze from "../assets/album-cover/kawaii-squeeze.webp";
 import Album from "../components/Album.astro";
 import Button from "../components/Button.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import IconBar from "../components/IconBar.astro";
@@ -16,15 +17,26 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<div class="flex flex-col items-center min-h-9/10 gap-6">
+<Header />
+<div
+  class="flex flex-wrap justify-center mx-auto my-8 max-w-7xl gap-8 min-h-9/10"
+>
   <ProfileCard />
-  <div class="flex gap-6">
-    <Button text={t("nav.blog")} href={t("link.blog")} />
-    <Button text={t("nav.musicdistribution")} href={t("link.tunecore")} />
+  <div class="flex flex-col gap-2">
+    <div class="flex gap-6">
+      <Button text={t("nav.blog")} href={t("link.blog")} />
+      <Button
+        text={t("dictionary.musicdistribution")}
+        href={t("link.tunecore")}
+      />
+    </div>
+    <IconBar />
   </div>
-  <IconBar />
+</div>
+
+<div class="flex flex-col gap-6 items-center mx-auto my-4 max-w-7xl">
   <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-300">
-    {t("nav.song")}
+    {t("dictionary.song")}
   </h2>
   <Album
     title={t("release.kawaiiSqueeze.title")}
@@ -33,4 +45,5 @@ const translatePath = useTranslatedPath(lang);
     href="https://linkco.re/CC6eP5GY"
   />
 </div>
+
 <Footer />
