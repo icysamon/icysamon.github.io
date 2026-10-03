@@ -2,6 +2,7 @@
 @plugin "@tailwindcss/typography";
 html, body {
   background-color: #ffffff;
+  scrollbar-gutter: stable;
 }
 
 @media (prefers-color-scheme: dark) {

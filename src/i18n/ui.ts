@@ -11,6 +11,7 @@ export const ui = {
   ja: {
     'nav.home': 'ホーム',
     'nav.about': 'プロフィール',
+    'nav.game': 'ゲーム',
     'sns.twitter': 'Twitter',
     'nav.blog': 'ブログ',
     'dictionary.musicdistribution': '音楽配信',
@@ -27,6 +28,7 @@ export const ui = {
   en: {
     'nav.home': 'Home',
     'nav.about': 'About',
+    'nav.game': 'Game',
     'sns.twitter': 'Twitter',
     'nav.blog': 'Blog',
     'dictionary.musicdistribution': 'Music Distribution',

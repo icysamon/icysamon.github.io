@@ -9,6 +9,9 @@ import { languages } from "../i18n/ui";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const pathname = Astro.url.pathname;
+const pathWithoutLang =
+  pathname.replace(new RegExp(`^/${lang}(?=/|$)`), "") || "/";
 ---
 
 <div
@@ -18,7 +21,7 @@ const translatePath = useTranslatedPath(lang);
     {
       Object.entries(languages).map(([lang, label]) => (
         <li class="hover:underline">
-          <a href={translatePath("/", lang)}>{label}</a>
+          <a href={translatePath(pathWithoutLang, lang)}>{label}</a>
         </li>
       ))
     }
