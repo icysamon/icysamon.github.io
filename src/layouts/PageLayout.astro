@@ -1,40 +1,57 @@
 ---
+import "../styles/global.css";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const isProd = import.meta.env.PROD;
 const { frontmatter } = Astro.props;
 ---
 
-<html>
+<html lang="ja">
   <head>
-    <!-- ... -->
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{frontmatter.title}</title>
+    {isProd && <GoogleAnalytics />}
   </head>
-  <!-- ... -->
-  <div class="max-w-300">
-    <h1>{frontmatter.title}</h1>
-    <p>{frontmatter.description}</p>
-    <slot />
-    <!-- ここにMarkdownコンテンツが挿入される -->
-    <!-- ... -->
-    <a href="/">back</a>
-  </div>
 
-  <style>
-    .max-w-300 {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+  <body class="bg-white dark:bg-[#242327]">
+    <div class="mx-auto max-w-200 px-4 py-8 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <header class="border-b border-gray-200 pb-6 dark:border-gray-700">
+        <h1
+          class="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white"
+        >
+          {frontmatter.title}
+        </h1>
 
-    html,
-    body {
-      background-color: #ffffff;
-    }
+        <p class="mt-1.5 text-sm text-gray-500 dark:text-gray-400">
+          {frontmatter.description}
+        </p>
+      </header>
 
-    @media (prefers-color-scheme: dark) {
-      html,
-      body {
-        background-color: #242327;
-      }
-    }
-  </style>
+      <!-- Markdownコンテンツが挿入される -->
+      <main class="prose dark:prose-invert mt-8 max-w-none">
+        <slot />
+      </main>
 
-
+      <!-- Back link (HyperUI: Text Button) -->
+      <footer class="mt-12">
+        <a
+          href={translatePath("/")}
+          class="inline-block rounded-sm border border-indigo-600 px-8 py-3 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-600 hover:text-white focus:ring-3 focus:outline-hidden dark:border-indigo-400 dark:text-indigo-400 dark:hover:bg-indigo-400 dark:hover:text-gray-900"
+        >
+          {t("back")}
+        </a>
+      </footer>
+    </div>
+  </body>
 </html>

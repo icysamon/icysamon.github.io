@@ -1,11 +1,22 @@
 ---
 import LanguagePicker from "../components/LanguagePicker.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div class="pb-4">
   <LanguagePicker />
   <div class="text-center text-sm text-gray-500 dark:text-gray-400">
-    <a href="/privacy-policy" class="hover:underline"> プライバシーポリシー </a>
+    <a href={translatePath("/privacy-policy")} class="hover:underline">
+      {t("dictionary.privacyPolicy")}
+    </a>
     <p>
       &copy; {new Date().getFullYear()} icysamon. All rights reserved.
     </p>

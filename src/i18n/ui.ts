@@ -21,6 +21,8 @@ export const ui = {
     'release.kawaiiSqueeze.subtitle': '2026年10月4日',
     'link.blog': 'https://blog.icysamon.com',
     'link.tunecore': 'https://www.tunecore.co.jp/artists/icysamon',
+    'back': '戻る',
+    'dictionary.privacyPolicy': 'プライバシーポリシー',
   },
   en: {
     'nav.home': 'Home',
@@ -35,5 +37,7 @@ export const ui = {
     'release.kawaiiSqueeze.subtitle': 'October 4, 2026',
     'link.blog': 'https://blog.icysamon.com/en',
     'link.tunecore': 'https://www.tunecore.co.jp/artists/icysamon?artistPagePath=icysamon&lang=en',
+    'back': 'Back',
+    'dictionary.privacyPolicy': 'Privacy Policy',
   },
 } as const;
