@@ -19,6 +19,8 @@ export const ui = {
     'profile.description': '本サイトは再構築しているため、一部の機能が正常に動作しない可能性があります。',
     'release.kawaiiSqueeze.title': 'かわいいぎゅっと！',
     'release.kawaiiSqueeze.subtitle': '2026年10月4日',
+    'link.blog': 'https://blog.icysamon.com',
+    'link.tunecore': 'https://www.tunecore.co.jp/artists/icysamon',
   },
   en: {
     'nav.home': 'Home',
@@ -31,5 +33,7 @@ export const ui = {
     'profile.description': 'This site is currently under reconstruction, so some features may not work properly.',
     'release.kawaiiSqueeze.title': 'KAWAII Squeeze!',
     'release.kawaiiSqueeze.subtitle': 'October 4, 2026',
+    'link.blog': 'https://blog.icysamon.com/en',
+    'link.tunecore': 'https://www.tunecore.co.jp/artists/icysamon?artistPagePath=icysamon&lang=en',
   },
 } as const;

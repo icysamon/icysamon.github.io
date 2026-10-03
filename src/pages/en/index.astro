@@ -1,42 +1,8 @@
 ---
-import kawaiiSqueeze from "../../assets/album-cover/kawaii-squeeze.webp";
-import Album from "../../components/Album.astro";
-import Button from "../../components/Button.astro";
-import Footer from "../../components/Footer.astro";
-import ProfileCard from "../../components/ProfileCard.astro";
-import IconBar from "../../components/IconBar.astro";
+import HomePage from "../../components/HomePage.astro";
 import Layout from "../../layouts/Layout.astro";
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../../i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
 ---
 
 <Layout>
-  <div class="flex flex-col items-center min-h-9/10 gap-8">
-    <ProfileCard />
-    <div class="flex gap-6">
-      <Button text={t("nav.blog")} href="https://blog.icysamon.com" />
-      <Button
-        text={t("nav.musicdistribution")}
-        href="https://www.tunecore.co.jp/artists/icysamon"
-      />
-    </div>
-    <IconBar />
-    <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-gray-300">
-      {t("nav.song")}
-    </h2>
-    <Album
-      title={t("release.kawaiiSqueeze.title")}
-      subtitle={t("release.kawaiiSqueeze.subtitle")}
-      image={kawaiiSqueeze.src}
-      href="https://linkco.re/CC6eP5GY"
-    />
-  </div>
-  <Footer />
+  <HomePage />
 </Layout>
