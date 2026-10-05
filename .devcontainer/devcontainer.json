@@ -23,7 +23,8 @@
         "astro-build.astro-vscode",
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "unifiedjs.vscode-mdx"
       ],
       "settings": {
         "editor.formatOnSave": true,

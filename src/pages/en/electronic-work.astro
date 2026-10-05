@@ -1,0 +1,71 @@
+---
+import Card2 from "../../components/Card2.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import tm1637Image from "../../assets/electronic-work/raspberry-pi-pico-tm1637.jpg";
+import dht20Image from "../../assets/electronic-work/raspberry-pi-pico-dht20.jpg";
+import sg90Image from "../../assets/electronic-work/raspberry-pi-pico-sg90.jpg";
+import stm32Image from "../../assets/electronic-work/stm32-dht20.jpg";
+import pixelFontsDesignerImage from "../../assets/electronic-work/pixel-fonts-designer.jpg";
+import Layout from "../../layouts/Layout.astro";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<Layout>
+  <Header />
+  <main class="mx-auto w-full max-w-7xl px-6 py-10">
+    <div
+      class="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 [&>article]:w-full [&>article>div]:flex [&>article>div]:h-full [&>article>div]:flex-col [&>article>div]:justify-end"
+    >
+      <Card2
+        title={t("card2.tm1637.title")}
+        description={t("card2.tm1637.description")}
+        url="https://github.com/icysamon/rpi-pico-tm1637"
+        date="2026-01-15"
+        image={tm1637Image.src}
+        imageAlt="TM1637"
+      />
+      <Card2
+        title={t("card2.dht20.title")}
+        description={t("card2.dht20.description")}
+        url="https://github.com/icysamon/rpi-pico-dht20"
+        date="2025-10-29"
+        image={dht20Image.src}
+        imageAlt="DHT20"
+      />
+      <Card2
+        title={t("card2.sg90.title")}
+        description={t("card2.sg90.description")}
+        url="https://github.com/icysamon/rpi-pico-sg-90"
+        date="2024-09-21"
+        image={sg90Image.src}
+        imageAlt="SG-90"
+      />
+      <Card2
+        title={t("card2.stm32DHT20.title")}
+        description={t("card2.stm32DHT20.description")}
+        url="https://github.com/icysamon/stm32-dht20"
+        date="2026-06-07"
+        image={stm32Image.src}
+        imageAlt="STM32"
+      />
+      <Card2
+        title={t("card2.pixelFontsDesigner.title")}
+        description={t("card2.pixelFontsDesigner.description")}
+        url="https://github.com/icysamon/pixel-fonts-designer"
+        image={pixelFontsDesignerImage.src}
+        imageAlt="Pixel Fonts Designer"
+      />
+    </div>
+  </main>
+  <Footer />
+</Layout>
