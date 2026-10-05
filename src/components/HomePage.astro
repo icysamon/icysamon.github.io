@@ -2,10 +2,13 @@
 import kawaiiSqueeze from "../assets/album-cover/kawaii-squeeze.webp";
 import Album from "../components/Album.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import IconBar from "../components/IconBar.astro";
+import electronicWorkImage from "../assets/electronic-work/car.jpg";
+import gameImage from "../assets/game/2023/happy-happy-happy.webp";
 import {
   getLangFromUrl,
   useTranslations,
@@ -34,7 +37,20 @@ const translatePath = useTranslatedPath(lang);
   </div>
 </div>
 
-<div class="flex flex-col gap-6 items-center mx-auto my-4 max-w-7xl">
+<div class="flex flex-col gap-8 items-center mx-auto my-4 max-w-7xl">
+  <Card
+    title={t("card.electronicWork.title")}
+    description={t("card.electronicWork.description")}
+    imageUrl={electronicWorkImage.src}
+    linkUrl={translatePath("/electronic-work")}
+  />
+  <Card
+    title={t("card.game.title")}
+    description={t("card.game.description")}
+    imageUrl={gameImage.src}
+    linkUrl={translatePath("/game")}
+  />
+
   <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-300">
     {t("dictionary.song")}
   </h2>

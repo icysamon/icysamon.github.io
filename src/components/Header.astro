@@ -38,6 +38,15 @@ const translatePath = useTranslatedPath(lang);
           <li>
             <a
               class="text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75"
+              href={translatePath("/electronic-work")}
+            >
+              {t("nav.electronicWork")}
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75"
               href={translatePath("/game")}
             >
               {t("nav.game")}
@@ -115,6 +124,15 @@ const translatePath = useTranslatedPath(lang);
           class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-700 dark:hover:text-gray-300"
         >
           {t("nav.about")}
+        </a>
+      </li>
+
+      <li>
+        <a
+          href={translatePath("/electronic-work")}
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-700 dark:hover:text-gray-300"
+        >
+          {t("nav.electronicWork")}
         </a>
       </li>
 
