@@ -9,11 +9,14 @@ interface Props {
 const { title, description, imageUrl, linkUrl } = Astro.props;
 ---
 
-<a href={linkUrl} class="group relative block bg-black w-[90%] sm:w-2xl">
+<a
+  href={linkUrl}
+  class="group relative block bg-black w-[90%] sm:w-2xl rounded-md"
+>
   <img
     alt=""
     src={imageUrl}
-    class="absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-50"
+    class="absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-50 rounded-md"
   />
 
   <div class="relative p-4 sm:p-6 lg:p-8">

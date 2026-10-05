@@ -1,5 +1,7 @@
 ---
-import kawaiiSqueeze from "../assets/album-cover/kawaii-squeeze.webp";
+import electronicWorkImage from "../assets/electronic-work/car.jpg";
+import gameImage from "../assets/game/2023/happy-happy-happy.webp";
+import newSongImage from "../assets/album-cover/kawaii-squeeze.webp";
 import Album from "../components/Album.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
@@ -7,8 +9,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import IconBar from "../components/IconBar.astro";
-import electronicWorkImage from "../assets/electronic-work/car.jpg";
-import gameImage from "../assets/game/2023/happy-happy-happy.webp";
 import {
   getLangFromUrl,
   useTranslations,
@@ -50,15 +50,11 @@ const translatePath = useTranslatedPath(lang);
     imageUrl={gameImage.src}
     linkUrl={translatePath("/game")}
   />
-
-  <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-300">
-    {t("dictionary.song")}
-  </h2>
-  <Album
-    title={t("release.kawaiiSqueeze.title")}
-    subtitle={t("release.kawaiiSqueeze.subtitle")}
-    image={kawaiiSqueeze.src}
-    href="https://linkco.re/CC6eP5GY"
+  <Card
+    title={t("card.music.title")}
+    description={t("release.kawaiiSqueeze.title")}
+    imageUrl={newSongImage.src}
+    linkUrl={t("release.kawaii-squeeze.url")}
   />
 </div>
 
