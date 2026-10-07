@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/PageLayout.astro
-title: "ゲーム"
+title: "自作ゲーム"
 description: "ゲーム作品集です。"
 ---
 
@@ -12,6 +12,8 @@ description: "ゲーム作品集です。"
 
 Unity 一週間ゲームジャム お題「もうひとつ」の参加作です。
 
+---
+
 ## 譜面の魔法使い
 
 [![](../assets/game/2025/the-chart-magician.webp)](https://icysamon.itch.io/the-chart-magician)
@@ -19,6 +21,8 @@ Unity 一週間ゲームジャム お題「もうひとつ」の参加作です�
 リリース日：2025年12月14日
 
 「 Godotでゆるっとゲーム制作祭４」の参加作です。
+
+---
 
 ## 終わりなき旅
 
@@ -28,6 +32,8 @@ Unity 一週間ゲームジャム お題「もうひとつ」の参加作です�
 
 「Unity（中国）開発者コミュニティゲームジャム」の参加作です。
 
+---
+
 ## 光年の旅人
 
 [![](../assets/game/2024/light-years-traveler.webp)](https://icysamon.itch.io/light-years-traveler)
@@ -35,6 +41,8 @@ Unity 一週間ゲームジャム お題「もうひとつ」の参加作です�
 リリース日：2024年7月21日
 
 「 Godot Wild Jam #71 」の参加作です。
+
+---
 
 ## 痕跡
 
@@ -44,6 +52,8 @@ Unity 一週間ゲームジャム お題「もうひとつ」の参加作です�
 
 「BOOOMJAM（中国）」の参加作です。
 
+---
+
 ## HappyHappyHappy
 
 [![](../assets/game/2023/happy-happy-happy.webp)](https://www.gcores.com/games/110286)
@@ -51,6 +61,8 @@ Unity 一週間ゲームジャム お題「もうひとつ」の参加作です�
 リリース日：2023年08月25日
 
 「BOOOMJAM（中国）」の参加作です。
+
+---
 
 ## 未完成のパズル
 

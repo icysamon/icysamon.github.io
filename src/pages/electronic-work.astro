@@ -27,14 +27,6 @@ const translatePath = useTranslatedPath(lang);
       class="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 [&>article]:w-full [&>article>div]:flex [&>article>div]:h-full [&>article>div]:flex-col [&>article>div]:justify-end"
     >
       <Card2
-        title={t("card2.stm32DHT20.title")}
-        description={t("card2.stm32DHT20.description")}
-        url="https://github.com/icysamon/stm32-dht20"
-        date="2026-06-07"
-        image={stm32Image.src}
-        imageAlt="STM32"
-      />
-      <Card2
         title={t("card2.tm1637.title")}
         description={t("card2.tm1637.description")}
         url="https://github.com/icysamon/rpi-pico-tm1637"
@@ -65,6 +57,14 @@ const translatePath = useTranslatedPath(lang);
         date="2024-09-21"
         image={sg90Image.src}
         imageAlt="SG-90"
+      />
+      <Card2
+        title={t("card2.stm32DHT20.title")}
+        description={t("card2.stm32DHT20.description")}
+        url="https://github.com/icysamon/stm32-dht20"
+        date="2024-02-07"
+        image={stm32Image.src}
+        imageAlt="STM32"
       />
     </div>
   </main>
