@@ -3,13 +3,13 @@ interface Props {
   title: string;
   description: string;
   date: string;
-  url: string;
+  href: string;
   image: any;
   imageAlt: string;
 }
 import { getLangFromUrl } from "../i18n/utils";
 
-const { title, description, date, url, image, imageAlt } = Astro.props;
+const { title, description, date, href, image, imageAlt } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const localeMap = { en: "en-US", ja: "ja-JP" } as const;
 const formattedDate = new Date(date).toLocaleDateString(localeMap[lang], {
@@ -36,7 +36,7 @@ const formattedDate = new Date(date).toLocaleDateString(localeMap[lang], {
         {formattedDate}
       </time>
 
-      <a href={url}>
+      <a href={href}>
         <h3 class="mt-0.5 text-lg text-white">
           {title}
         </h3>

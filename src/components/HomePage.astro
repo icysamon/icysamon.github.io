@@ -3,12 +3,12 @@ import electronicWorkImage from "../assets/electronic-work/car.jpg";
 import gameImage from "../assets/game/2023/happy-happy-happy.webp";
 import newSongImage from "../assets/album-cover/kawaii-squeeze.webp";
 import Album from "../components/Album.astro";
-import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
+import ArrowLink from "../components/ArrowLink.astro";
+import FeatureCard from "../components/FeatureCard.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProfileCard from "../components/ProfileCard.astro";
-import IconBar from "../components/IconBar.astro";
+import SocialLinks from "../components/SocialLinks.astro";
 import {
   getLangFromUrl,
   useTranslations,
@@ -27,34 +27,34 @@ const translatePath = useTranslatedPath(lang);
   <ProfileCard />
   <div class="flex flex-col gap-2 items-center">
     <div class="flex gap-6">
-      <Button text={t("nav.blog")} href={t("link.blog")} />
-      <Button
+      <ArrowLink text={t("nav.blog")} href={t("link.blog")} />
+      <ArrowLink
         text={t("dictionary.musicdistribution")}
         href={t("link.tunecore")}
       />
     </div>
-    <IconBar />
+    <SocialLinks />
   </div>
 </div>
 
 <div class="flex flex-col gap-8 items-center mx-auto my-4 max-w-7xl">
-  <Card
-    title={t("card.electronicWork.title")}
-    description={t("card.electronicWork.description")}
-    imageUrl={electronicWorkImage.src}
-    linkUrl={translatePath("/electronic-work")}
+  <FeatureCard
+    title={t("home.electronicWork.title")}
+    description={t("home.electronicWork.description")}
+    image={electronicWorkImage.src}
+    href={translatePath("/electronic-work")}
   />
-  <Card
-    title={t("card.music.title")}
+  <FeatureCard
+    title={t("home.music.title")}
     description={t("release.kawaiiSqueeze.title")}
-    imageUrl={newSongImage.src}
-    linkUrl={t("release.kawaii-squeeze.url")}
+    image={newSongImage.src}
+    href={t("release.kawaiiSqueeze.url")}
   />
-  <Card
-    title={t("card.game.title")}
-    description={t("card.game.description")}
-    imageUrl={gameImage.src}
-    linkUrl={translatePath("/game")}
+  <FeatureCard
+    title={t("home.game.title")}
+    description={t("home.game.description")}
+    image={gameImage.src}
+    href={translatePath("/game")}
   />
 </div>
 

@@ -4,17 +4,15 @@ interface Props {
   href?: string;
 }
 
-const { text = "Hover me", href } = Astro.props;
+const { text = null, href } = Astro.props;
 ---
 
-<a href={href}>
-  <button class="cta items-center">
-    <span>{text}</span>
-    <svg width="15px" height="10px" viewBox="0 0 13 10">
-      <path d="M1,5 L11,5"></path>
-      <polyline points="8 1 12 5 8 9"></polyline>
-    </svg>
-  </button>
+<a href={href} class="cta items-center">
+  <span>{text}</span>
+  <svg width="15px" height="10px" viewBox="0 0 13 10">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
 </a>
 
 <style>

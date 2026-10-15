@@ -2,20 +2,20 @@
 interface Props {
   title: string;
   description: string;
-  imageUrl: string;
-  linkUrl: string;
+  image: string;
+  href: string;
 }
 
-const { title, description, imageUrl, linkUrl } = Astro.props;
+const { title, description, image, href } = Astro.props;
 ---
 
 <a
-  href={linkUrl}
+  href={href}
   class="group relative block bg-black w-[90%] sm:w-2xl rounded-md"
 >
   <img
     alt=""
-    src={imageUrl}
+    src={image}
     class="absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-50 rounded-md"
   />
 
