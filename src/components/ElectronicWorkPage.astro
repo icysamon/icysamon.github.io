@@ -1,0 +1,69 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import tm1637Image from "../assets/electronic-work/raspberry-pi-pico-tm1637.jpg";
+import dht20Image from "../assets/electronic-work/raspberry-pi-pico-dht20.jpg";
+import sg90Image from "../assets/electronic-work/raspberry-pi-pico-sg90.jpg";
+import stm32Image from "../assets/electronic-work/stm32-dht20.jpg";
+import pixelFontsDesignerImage from "../assets/electronic-work/pixel-fonts-designer.jpg";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<Header />
+<main class="mx-auto w-full max-w-7xl px-6 py-10">
+  <div
+    class="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 [&>article]:w-full [&>article>div]:flex [&>article>div]:h-full [&>article>div]:flex-col [&>article>div]:justify-end"
+  >
+    <ProjectCard
+      title={t("project.tm1637.title")}
+      description={t("project.tm1637.description")}
+      href="https://github.com/icysamon/rpi-pico-tm1637"
+      date="2026-01-15"
+      image={tm1637Image.src}
+      imageAlt="TM1637"
+    />
+    <ProjectCard
+      title={t("project.dht20.title")}
+      description={t("project.dht20.description")}
+      href="https://github.com/icysamon/rpi-pico-dht20"
+      date="2025-10-29"
+      image={dht20Image.src}
+      imageAlt="DHT20"
+    />
+    <ProjectCard
+      title={t("project.pixelFontsDesigner.title")}
+      description={t("project.pixelFontsDesigner.description")}
+      href="https://github.com/icysamon/pixel-fonts-designer"
+      date="2025-07-11"
+      image={pixelFontsDesignerImage.src}
+      imageAlt="Pixel Fonts Designer"
+    />
+    <ProjectCard
+      title={t("project.sg90.title")}
+      description={t("project.sg90.description")}
+      href="https://github.com/icysamon/rpi-pico-sg-90"
+      date="2024-09-21"
+      image={sg90Image.src}
+      imageAlt="SG-90"
+    />
+    <ProjectCard
+      title={t("project.stm32DHT20.title")}
+      description={t("project.stm32DHT20.description")}
+      href="https://github.com/icysamon/stm32-dht20"
+      date="2024-02-07"
+      image={stm32Image.src}
+      imageAlt="STM32"
+    />
+  </div>
+</main>
+<Footer />
