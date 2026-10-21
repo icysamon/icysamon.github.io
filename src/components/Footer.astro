@@ -4,28 +4,15 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "../i18n/utils";
-import { languages } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
-const pathname = Astro.url.pathname;
-const pathWithoutLang =
-  pathname.replace(new RegExp(`^/${lang}(?=/|$)`), "") || "/";
 ---
 
 <div
-  class="flex flex-col mx-auto mt-8 py-4 text-sm max-w-7xl text-gray-500 dark:text-gray-400 text-center gap-2 border-t border-gray-200 dark:border-gray-700"
+  class="flex flex-col mx-auto mt-8 py-4 text-xs max-w-7xl text-gray-500 dark:text-gray-400 text-center gap-1.5 border-t border-gray-200 dark:border-gray-700"
 >
-  <ul class="flex justify-center gap-6">
-    {
-      Object.entries(languages).map(([lang, label]) => (
-        <li class="hover:underline">
-          <a href={translatePath(pathWithoutLang, lang)}>{label}</a>
-        </li>
-      ))
-    }
-  </ul>
   <a href={translatePath("/privacy-policy")} class="hover:underline">
     {t("dictionary.privacyPolicy")}
   </a>

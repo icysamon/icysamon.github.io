@@ -4,10 +4,13 @@ import {
   useTranslations,
   useTranslatedPath,
 } from "../i18n/utils";
+import { languages } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+const pathWithoutLang =
+  Astro.url.pathname.replace(new RegExp(`^/${lang}(?=/|$)`), "") || "/";
 ---
 
 <header class="bg-white dark:bg-[#242327]">
@@ -17,15 +20,15 @@ const translatePath = useTranslatedPath(lang);
     <div class="flex flex-1 items-center justify-between">
       <a
         href={translatePath("/")}
-        class="text-base font-bold text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75 md:hidden"
+        class="text-base font-bold text-gray-700 transition hover:text-gray-900 dark:text-gray-200 dark:hover:text-white md:hidden"
       >
         icysamon
       </a>
       <nav aria-label="Global" class="hidden md:block">
-        <ul class="flex items-center gap-6 text-sm">
+        <ul class="flex items-center gap-7 text-[0.9375rem] tracking-wide">
           <li>
             <a
-              class="text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75"
+              class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               href={translatePath("/")}
             >
               {t("nav.home")}
@@ -34,7 +37,7 @@ const translatePath = useTranslatedPath(lang);
 
           <li>
             <a
-              class="text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75"
+              class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               href={translatePath("/about")}
             >
               {t("nav.about")}
@@ -43,7 +46,7 @@ const translatePath = useTranslatedPath(lang);
 
           <li>
             <a
-              class="text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75"
+              class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               href={translatePath("/electronic-work")}
             >
               {t("nav.electronicWork")}
@@ -52,7 +55,7 @@ const translatePath = useTranslatedPath(lang);
 
           <li>
             <a
-              class="text-gray-500 transition dark:text-gray-100 dark:hover:text-gray-300 hover:text-gray-500/75"
+              class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               href={translatePath("/game")}
             >
               {t("nav.game")}
@@ -61,8 +64,86 @@ const translatePath = useTranslatedPath(lang);
         </ul>
       </nav>
 
-      <button
-        id="menu-button"
+      <div class="flex items-center gap-3">
+        <details id="lang-menu" class="group relative">
+          <summary
+            class="flex cursor-pointer list-none items-center gap-1.5 rounded-md border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-600 shadow-xs transition hover:bg-gray-50 hover:text-gray-900 dark:border-gray-700 dark:bg-[#1a191c] dark:text-gray-300 dark:hover:bg-[#2c2b30] dark:hover:text-white [&::-webkit-details-marker]:hidden"
+          >
+            <span class="sr-only">Language</span>
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21a9 9 0 1 0 0-18m0 18a9 9 0 1 1 0-18m0 18c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m-8.716 6h17.432M3.284 15h17.432"
+              ></path>
+            </svg>
+            <span>{languages[lang]}</span>
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4 transition group-open:rotate-180"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"
+              ></path>
+            </svg>
+          </summary>
+
+          <div
+            role="menu"
+            class="absolute end-0 z-20 mt-2 w-36 overflow-hidden rounded-md border border-gray-200 bg-white p-1 shadow-lg dark:border-gray-700 dark:bg-[#1a191c]"
+          >
+            {
+              Object.entries(languages).map(([code, label]) => (
+                <a
+                  role="menuitem"
+                  href={translatePath(pathWithoutLang, code)}
+                  hreflang={code}
+                  aria-current={code === lang ? "true" : undefined}
+                  class:list={[
+                    "flex items-center justify-between rounded-sm px-3 py-2 text-sm transition hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-[#2c2b30] dark:hover:text-white",
+                    code === lang
+                      ? "font-medium text-gray-900 dark:text-white"
+                      : "text-gray-600 dark:text-gray-300",
+                  ]}
+                >
+                  {label}
+                  {code === lang && (
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="size-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  )}
+                </a>
+              ))
+            }
+          </div>
+        </details>
+
+        <button
+          id="menu-button"
         class="block rounded-sm bg-gray-100 dark:bg-[#1a191c] p-2.5 text-gray-600 dark:text-gray-300 transition hover:text-gray-600/75 md:hidden"
       >
         <span class="sr-only">Toggle menu</span>
@@ -79,8 +160,9 @@ const translatePath = useTranslatedPath(lang);
             stroke-linecap="round"
             stroke-linejoin="round"
             d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -118,7 +200,7 @@ const translatePath = useTranslatedPath(lang);
       <li>
         <a
           href={translatePath("/")}
-          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-700 dark:hover:text-gray-300"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
         >
           {t("nav.home")}
         </a>
@@ -127,7 +209,7 @@ const translatePath = useTranslatedPath(lang);
       <li>
         <a
           href={translatePath("/about")}
-          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-700 dark:hover:text-gray-300"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
         >
           {t("nav.about")}
         </a>
@@ -136,7 +218,7 @@ const translatePath = useTranslatedPath(lang);
       <li>
         <a
           href={translatePath("/electronic-work")}
-          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-700 dark:hover:text-gray-300"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
         >
           {t("nav.electronicWork")}
         </a>
@@ -145,7 +227,7 @@ const translatePath = useTranslatedPath(lang);
       <li>
         <a
           href={translatePath("/game")}
-          class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-700 dark:hover:text-gray-300"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
         >
           {t("nav.game")}
         </a>
@@ -163,6 +245,11 @@ const translatePath = useTranslatedPath(lang);
       menu?.classList.remove("hidden");
     } else if (target.closest("#menu-close")) {
       menu?.classList.add("hidden");
+    }
+
+    const langMenu = document.getElementById("lang-menu") as HTMLDetailsElement | null;
+    if (langMenu?.open && !target.closest("#lang-menu")) {
+      langMenu.open = false;
     }
   });
 </script>
