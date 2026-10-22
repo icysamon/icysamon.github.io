@@ -3,10 +3,10 @@ import electronicWorkImage from "../assets/electronic-work/car.jpg";
 import gameImage from "../assets/game/2023/happy-happy-happy.webp";
 import newSongImage from "../assets/album-cover/kawaii-squeeze.webp";
 import Album from "../components/Album.astro";
-import ArrowLink from "../components/ArrowLink.astro";
 import FeatureCard from "../components/FeatureCard.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import LinkCard from "../components/LinkCard.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 import {
@@ -25,19 +25,15 @@ const translatePath = useTranslatedPath(lang);
   class="flex flex-col items-center gap-8 mx-auto my-4 w-[90%] max-w-2xl md:flex-row md:items-start md:max-w-6xl"
 >
   <div
-    class="flex flex-col items-center gap-4 w-full pb-8 rounded-md bg-slate-500/5 dark:bg-white/5 md:sticky md:top-8 md:w-80 md:shrink-0"
+    class="flex flex-col gap-4 w-full md:sticky md:top-8 md:w-80 md:shrink-0"
   >
-    <ProfileCard />
-    <div class="flex flex-col gap-2 items-center">
-      <div class="flex gap-6">
-        <ArrowLink text={t("nav.blog")} href={t("link.blog")} />
-        <ArrowLink
-          text={t("dictionary.musicdistribution")}
-          href={t("link.tunecore")}
-        />
-      </div>
+    <div
+      class="flex flex-col items-center gap-4 w-full pb-8 rounded-md bg-slate-500/5 dark:bg-white/5"
+    >
+      <ProfileCard />
       <SocialLinks />
     </div>
+    <LinkCard />
   </div>
 
   <div class="flex flex-col gap-8 items-center w-full min-w-0">

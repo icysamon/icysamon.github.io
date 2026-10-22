@@ -1,0 +1,37 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const links = [
+  { text: t("nav.blog"), href: t("link.blog") },
+  { text: t("dictionary.musicdistribution"), href: t("link.tunecore") },
+  // The request page only exists in Japanese for now.
+  { text: t("nav.request"), href: "/request" },
+];
+---
+
+<ul
+  class="w-full p-2 rounded-md bg-slate-500/5 dark:bg-white/5 divide-y divide-gray-200 dark:divide-gray-700"
+>
+  {
+    links.map(({ text, href }) => (
+      <li>
+        <a
+          href={href}
+          class="group flex items-center justify-between px-4 py-3 rounded-md text-gray-900 dark:text-gray-50 transition-colors hover:bg-slate-500/10 dark:hover:bg-white/10"
+        >
+          <span class="font-medium">{text}</span>
+          <svg
+            viewBox="0 0 13 10"
+            class="w-3.5 h-2.5 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round] text-gray-500 dark:text-gray-400 transition-transform group-hover:translate-x-1"
+          >
+            <path d="M1,5 L11,5" />
+            <polyline points="8 1 12 5 8 9" />
+          </svg>
+        </a>
+      </li>
+    ))
+  }
+</ul>
