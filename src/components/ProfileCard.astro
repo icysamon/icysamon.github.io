@@ -16,7 +16,7 @@ const translatePath = useTranslatedPath(lang);
     <img
       alt=""
       src={avatar.src}
-      class="avatar size-full object-cover transition-[scale] duration-500 ease-[cubic-bezier(0.2,0,0,1)] hover:scale-105 motion-reduce:animate-none motion-reduce:transition-none"
+      class="avatar size-full object-cover transition-[scale] duration-500 ease-[cubic-bezier(0.2,0,0,1)] data-ready:hover:scale-105 motion-reduce:animate-none motion-reduce:transition-none"
     />
   </div>
   <div class="mt-4 px-6 text-center">
@@ -28,6 +28,15 @@ const translatePath = useTranslatedPath(lang);
     </p>
   </div>
 </div>
+
+<script>
+  // Enable the hover zoom only after the entrance animation, so an early hover can't cut it short
+  document.querySelectorAll<HTMLElement>(".avatar").forEach((avatar) => {
+    const ready = () => (avatar.dataset.ready = "");
+    if (avatar.getAnimations().length === 0) ready();
+    else avatar.addEventListener("animationend", ready, { once: true });
+  });
+</script>
 
 <style>
   .avatar {
