@@ -1,14 +1,18 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 const links = [
   { text: t("nav.blog"), href: t("link.blog") },
   { text: t("dictionary.musicdistribution"), href: t("link.tunecore") },
-  // The request page only exists in Japanese for now.
-  { text: t("nav.request"), href: "/request" },
+  { text: t("nav.request"), href: translatePath("/request") },
 ];
 ---
 
