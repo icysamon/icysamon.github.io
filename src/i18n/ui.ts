@@ -53,6 +53,27 @@ export const ui = {
 
     'project.pixelFontsDesigner.title': 'フォントデザイナー',
     'project.pixelFontsDesigner.description': 'ディスプレイ SSD1306 向けのフォントデザイナーアプリです。',
+
+    'game.another.title': 'もう',
+    'game.another.description': 'Unity 一週間ゲームジャム お題「もうひとつ」の参加作です。',
+
+    'game.chartMagician.title': '譜面の魔法使い',
+    'game.chartMagician.description': '「 Godotでゆるっとゲーム制作祭４」の参加作です。',
+
+    'game.endlessJourney.title': '終わりなき旅',
+    'game.endlessJourney.description': '「Unity（中国）開発者コミュニティゲームジャム」の参加作です。',
+
+    'game.lightYearsTraveler.title': '光年の旅人',
+    'game.lightYearsTraveler.description': '「 Godot Wild Jam #71 」の参加作です。',
+
+    'game.find.title': '痕跡',
+    'game.find.description': '「BOOOMJAM（中国）」の参加作です。',
+
+    'game.happyHappyHappy.title': 'HappyHappyHappy',
+    'game.happyHappyHappy.description': '「BOOOMJAM（中国）」の参加作です。',
+
+    'game.unfinishedPuzzle.title': '未完成のパズル',
+    'game.unfinishedPuzzle.description': '「BOOOMJAM（中国）」の参加作です。',
   },
   en: {
     'nav.home': 'Home',
@@ -97,5 +118,26 @@ export const ui = {
 
     'project.pixelFontsDesigner.title': 'Pixel Fonts Designer',
     'project.pixelFontsDesigner.description': 'A font designer app for the SSD1306 display.',
+
+    'game.another.title': 'Another',
+    'game.another.description': 'An entry for the unity1week game jam (Theme: "Another").',
+
+    'game.chartMagician.title': 'The Chart Magician',
+    'game.chartMagician.description': 'An entry for the "Godot Casual Game Creation Festival 4".',
+
+    'game.endlessJourney.title': 'The Endless Journey',
+    'game.endlessJourney.description': 'An entry for the "Unity (China) Developer Community Game Jam".',
+
+    'game.lightYearsTraveler.title': 'Light Years Traveler',
+    'game.lightYearsTraveler.description': 'An entry for the "Godot Wild Jam #71".',
+
+    'game.find.title': 'Find',
+    'game.find.description': 'An entry for "BOOOMJAM (China)".',
+
+    'game.happyHappyHappy.title': 'HappyHappyHappy',
+    'game.happyHappyHappy.description': 'An entry for "BOOOMJAM (China)".',
+
+    'game.unfinishedPuzzle.title': 'Unfinished Puzzle',
+    'game.unfinishedPuzzle.description': 'An entry for "BOOOMJAM (China)".',
   },
 } as const;

@@ -1,0 +1,89 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import anotherImage from "../assets/game/2025/unity1weeks.webp";
+import chartMagicianImage from "../assets/game/2025/the-chart-magician.webp";
+import endlessJourneyImage from "../assets/game/2024/the-endless-journey.webp";
+import lightYearsTravelerImage from "../assets/game/2024/light-years-traveler.webp";
+import findImage from "../assets/game/2023/find.webp";
+import happyHappyHappyImage from "../assets/game/2023/happy-happy-happy.webp";
+import unfinishedPuzzleImage from "../assets/game/2023/unfinished-puzzle.webp";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<Header />
+<main class="mx-auto w-full max-w-7xl px-6 py-10">
+  <div
+    class="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3 [&>article]:w-full"
+  >
+    <ProjectCard
+      title={t("game.another.title")}
+      description={t("game.another.description")}
+      href="https://unityroom.com/games/another"
+      date="2025-12-28"
+      image={anotherImage.src}
+      imageAlt={t("game.another.title")}
+    />
+    <ProjectCard
+      title={t("game.chartMagician.title")}
+      description={t("game.chartMagician.description")}
+      href="https://icysamon.itch.io/the-chart-magician"
+      date="2025-12-14"
+      image={chartMagicianImage.src}
+      imageAlt={t("game.chartMagician.title")}
+    />
+    <ProjectCard
+      title={t("game.endlessJourney.title")}
+      description={t("game.endlessJourney.description")}
+      href="https://unity.cn/gamejam2024"
+      date="2024-12-27"
+      image={endlessJourneyImage.src}
+      imageAlt={t("game.endlessJourney.title")}
+    />
+    <ProjectCard
+      title={t("game.lightYearsTraveler.title")}
+      description={t("game.lightYearsTraveler.description")}
+      href="https://icysamon.itch.io/light-years-traveler"
+      date="2024-07-21"
+      image={lightYearsTravelerImage.src}
+      imageAlt={t("game.lightYearsTraveler.title")}
+    />
+    <ProjectCard
+      title={t("game.find.title")}
+      description={t("game.find.description")}
+      href="https://www.gcores.com/games/113216"
+      date="2023-10-11"
+      image={findImage.src}
+      imageAlt={t("game.find.title")}
+    />
+    <ProjectCard
+      title={t("game.happyHappyHappy.title")}
+      description={t("game.happyHappyHappy.description")}
+      href="https://www.gcores.com/games/110286"
+      date="2023-08-25"
+      image={happyHappyHappyImage.src}
+      imageAlt={t("game.happyHappyHappy.title")}
+    />
+    <ProjectCard
+      title={t("game.unfinishedPuzzle.title")}
+      description={t("game.unfinishedPuzzle.description")}
+      href="https://www.gcores.com/games/105393"
+      date="2023-03-29"
+      image={unfinishedPuzzleImage.src}
+      imageAlt={t("game.unfinishedPuzzle.title")}
+    />
+  </div>
+</main>
+<div class="mx-auto mt-auto w-full max-w-200 px-4 sm:px-6 lg:px-8">
+  <Footer />
+</div>
