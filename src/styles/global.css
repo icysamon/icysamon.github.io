@@ -5,6 +5,11 @@ html, body {
   scrollbar-gutter: stable;
 }
 
+/* Disable double-tap zoom on touch devices; pinch zoom still works. */
+html {
+  touch-action: manipulation;
+}
+
 @media (prefers-color-scheme: dark) {
   html, body {
     background-color: #242327;
