@@ -14,6 +14,14 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 const isProd = import.meta.env.PROD;
 const { frontmatter } = Astro.props;
+
+const date = frontmatter.date ? new Date(frontmatter.date) : null;
+const formattedDate = date?.toLocaleDateString(lang, {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "Asia/Tokyo",
+});
 ---
 
 <html lang="ja">
@@ -39,6 +47,17 @@ const { frontmatter } = Astro.props;
         <p class="mt-1.5 text-sm text-gray-500 dark:text-gray-400">
           {frontmatter.description}
         </p>
+
+        {
+          date && (
+            <time
+              datetime={date.toISOString()}
+              class="mt-1.5 block text-sm text-gray-500 dark:text-gray-400"
+            >
+              {formattedDate}
+            </time>
+          )
+        }
       </header>
 
       <!-- Markdownコンテンツが挿入される -->
