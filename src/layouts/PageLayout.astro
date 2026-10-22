@@ -25,9 +25,9 @@ const { frontmatter } = Astro.props;
     {isProd && <GoogleAnalytics />}
   </head>
 
-  <body class="bg-white dark:bg-[#242327]">
+  <body class="flex min-h-dvh flex-col bg-white dark:bg-[#242327]">
     <Header />
-    <div class="mx-auto max-w-200 px-4 py-8 sm:px-6 lg:px-8">
+    <div class="mx-auto flex w-full max-w-200 flex-1 flex-col px-4 py-8 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="border-b border-gray-200 pb-6 dark:border-gray-700">
         <h1
@@ -56,7 +56,9 @@ const { frontmatter } = Astro.props;
         </a>
       </footer>
 
-      <Footer />
+      <div class="mt-auto">
+        <Footer />
+      </div>
     </div>
   </body>
 </html>

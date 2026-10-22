@@ -17,7 +17,7 @@ const isProd = import.meta.env.PROD;
     <title>icysamon</title>
     {isProd && <GoogleAnalytics />}
   </head>
-  <body>
+  <body class="flex min-h-dvh flex-col">
     <slot />
   </body>
 </html>
