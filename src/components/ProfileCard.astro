@@ -11,18 +11,32 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<div class="flex items-center gap-4 mx-4 mr-8 max-w-3xl">
-  <img
-    alt=""
-    src={avatar.src}
-    class="size-28 rounded-[50%] transition-[border-radius,scale,rotate] duration-500 ease-[cubic-bezier(0.2,0,0,1)] hover:rounded-[30%] hover:scale-105 hover:-rotate-6 motion-reduce:transition-none"
-  />
-  <div>
+<div class="flex flex-col items-center w-full">
+  <div class="w-full aspect-square overflow-hidden rounded-t-md">
+    <img
+      alt=""
+      src={avatar.src}
+      class="avatar size-full object-cover transition-[scale] duration-500 ease-[cubic-bezier(0.2,0,0,1)] hover:scale-105 motion-reduce:animate-none motion-reduce:transition-none"
+    />
+  </div>
+  <div class="mt-4 px-6 text-center">
     <h3 class="text-gray-900 dark:text-gray-50 sm:text-xl">
       {t("profile.name")}
     </h3>
-    <p class="mt-0.5 text-gray-700 dark:text-gray-300 max-w-64">
+    <p class="mt-0.5 text-gray-700 dark:text-gray-300">
       {t("profile.description")}
     </p>
   </div>
 </div>
+
+<style>
+  .avatar {
+    animation: avatar-settle 1.2s cubic-bezier(0.2, 0, 0, 1) backwards;
+  }
+
+  @keyframes avatar-settle {
+    from {
+      scale: 1.6;
+    }
+  }
+</style>

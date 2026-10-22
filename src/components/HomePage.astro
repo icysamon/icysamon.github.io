@@ -22,40 +22,44 @@ const translatePath = useTranslatedPath(lang);
 
 <Header />
 <div
-  class="flex flex-wrap justify-center items-center mx-auto mb-8 w-[90%] max-w-2xl gap-x-8 gap-y-4 px-6 py-12 rounded-md bg-slate-500/5 dark:bg-white/5"
+  class="flex flex-col items-center gap-8 mx-auto my-4 w-[90%] max-w-2xl min-[56rem]:flex-row min-[56rem]:items-start min-[56rem]:max-w-6xl"
 >
-  <ProfileCard />
-  <div class="flex flex-col gap-2 items-center">
-    <div class="flex gap-6">
-      <ArrowLink text={t("nav.blog")} href={t("link.blog")} />
-      <ArrowLink
-        text={t("dictionary.musicdistribution")}
-        href={t("link.tunecore")}
-      />
+  <div
+    class="flex flex-col items-center gap-4 w-full max-w-sm pb-8 rounded-md bg-slate-500/5 dark:bg-white/5 min-[56rem]:sticky min-[56rem]:top-8 min-[56rem]:w-80 min-[56rem]:shrink-0"
+  >
+    <ProfileCard />
+    <div class="flex flex-col gap-2 items-center">
+      <div class="flex gap-6">
+        <ArrowLink text={t("nav.blog")} href={t("link.blog")} />
+        <ArrowLink
+          text={t("dictionary.musicdistribution")}
+          href={t("link.tunecore")}
+        />
+      </div>
+      <SocialLinks />
     </div>
-    <SocialLinks />
   </div>
-</div>
 
-<div class="flex flex-col gap-8 items-center mx-auto my-4 max-w-7xl">
-  <FeatureCard
-    title={t("home.electronicWork.title")}
-    description={t("home.electronicWork.description")}
-    image={electronicWorkImage.src}
-    href={translatePath("/electronic-work")}
-  />
-  <FeatureCard
-    title={t("home.music.title")}
-    description={t("release.kawaiiSqueeze.title")}
-    image={newSongImage.src}
-    href={t("release.kawaiiSqueeze.url")}
-  />
-  <FeatureCard
-    title={t("home.game.title")}
-    description={t("home.game.description")}
-    image={gameImage.src}
-    href={translatePath("/game")}
-  />
+  <div class="flex flex-col gap-8 items-center w-full min-w-0">
+    <FeatureCard
+      title={t("home.electronicWork.title")}
+      description={t("home.electronicWork.description")}
+      image={electronicWorkImage.src}
+      href={translatePath("/electronic-work")}
+    />
+    <FeatureCard
+      title={t("home.music.title")}
+      description={t("release.kawaiiSqueeze.title")}
+      image={newSongImage.src}
+      href={t("release.kawaiiSqueeze.url")}
+    />
+    <FeatureCard
+      title={t("home.game.title")}
+      description={t("home.game.description")}
+      image={gameImage.src}
+      href={translatePath("/game")}
+    />
+  </div>
 </div>
 
 <div class="mx-auto max-w-200 px-4 sm:px-6 lg:px-8">
