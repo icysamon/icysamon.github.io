@@ -5,9 +5,9 @@ date: 2026-10-22T00:00:00+09:00
 author: "icysamon"
 ---
 
-## Pricing
+## Price
 
-| Platform                          | Price         |
+| Platform                          | Amount        |
 | --------------------------------- | ------------- |
 | [Skeb](https://skeb.jp/@icysamon) | ¥1,000 / song |
 
