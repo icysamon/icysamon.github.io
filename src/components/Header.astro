@@ -20,7 +20,7 @@ const pathWithoutLang =
     <div class="flex flex-1 items-center justify-between">
       <a
         href={translatePath("/")}
-        class="text-base font-bold text-gray-700 transition hover:text-gray-900 dark:text-gray-200 dark:hover:text-white md:hidden"
+        class="text-base font-bold text-gray-700 transition hover:text-gray-900 md:hidden dark:text-gray-200 dark:hover:text-white"
       >
         icysamon
       </a>
@@ -144,7 +144,7 @@ const pathWithoutLang =
 
         <button
           id="menu-button"
-        class="block rounded-sm bg-gray-100 dark:bg-[#1a191c] p-2.5 text-gray-600 dark:text-gray-300 transition hover:text-gray-600/75 md:hidden"
+        class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden dark:bg-[#1a191c] dark:text-gray-300"
       >
         <span class="sr-only">Toggle menu</span>
         <svg
@@ -170,13 +170,13 @@ const pathWithoutLang =
   <nav
     id="mobile-menu"
     aria-label="Mobile"
-    class="hidden fixed inset-0 z-50 bg-white/90 dark:bg-[#242327]/90 backdrop-blur-sm md:hidden"
+    class="fixed inset-0 z-50 hidden bg-white/90 backdrop-blur-sm md:hidden dark:bg-[#242327]/90"
   >
     <div class="flex h-16 items-center justify-end px-4 sm:px-6">
       <button
         id="menu-close"
         type="button"
-        class="rounded-sm bg-gray-100 dark:bg-[#1a191c] p-2.5 text-gray-600 dark:text-gray-300"
+        class="rounded-sm bg-gray-100 p-2.5 text-gray-600 dark:bg-[#1a191c] dark:text-gray-300"
       >
         <span class="sr-only">Close menu</span>
         <svg
@@ -200,7 +200,7 @@ const pathWithoutLang =
       <li>
         <a
           href={translatePath("/")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
         >
           {t("nav.home")}
         </a>
@@ -209,7 +209,7 @@ const pathWithoutLang =
       <li>
         <a
           href={translatePath("/about")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
         >
           {t("nav.about")}
         </a>
@@ -218,7 +218,7 @@ const pathWithoutLang =
       <li>
         <a
           href={translatePath("/electronic-work")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
         >
           {t("nav.electronicWork")}
         </a>
@@ -227,7 +227,7 @@ const pathWithoutLang =
       <li>
         <a
           href={translatePath("/game")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1a191c] hover:text-gray-900 dark:hover:text-white"
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
         >
           {t("nav.game")}
         </a>

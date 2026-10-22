@@ -11,15 +11,15 @@ const { title, description, image, href } = Astro.props;
 
 <a
   href={href}
-  class="group relative block bg-black w-full max-w-2xl h-72 overflow-hidden rounded-md"
+  class="group relative block h-72 w-full max-w-2xl overflow-hidden rounded-md bg-black"
 >
   <img
     alt=""
     src={image}
-    class="absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity group-hover:opacity-50 rounded-md"
+    class="absolute inset-0 h-full w-full rounded-md object-cover opacity-90 transition-opacity group-hover:opacity-50"
   />
 
-  <div class="relative flex flex-col h-full p-4 sm:p-6 lg:p-8">
+  <div class="relative flex h-full flex-col p-4 sm:p-6 lg:p-8">
     <p class="text-sm font-medium tracking-widest text-pink-600 uppercase">
       Work
     </p>

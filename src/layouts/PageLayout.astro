@@ -62,7 +62,7 @@ const formattedDate = date?.toLocaleDateString(lang, {
 
       <!-- Markdownコンテンツが挿入される -->
       <main
-        class="prose dark:prose-invert mt-8 max-w-none prose-table:border-separate prose-table:border-spacing-0 prose-table:overflow-hidden prose-table:rounded-md prose-table:bg-slate-500/5 dark:prose-table:bg-white/5 prose-thead:border-0 prose-thead:bg-slate-500/10 dark:prose-thead:bg-white/10 prose-tr:border-0 prose-th:px-4 prose-th:py-2.5 prose-td:px-4 prose-td:py-2.5 [&_tbody_tr+tr_td]:border-t-2 [&_tbody_tr+tr_td]:border-white dark:[&_tbody_tr+tr_td]:border-[#242327] [&_thead:not(:has(th:not(:empty)))]:hidden"
+        class="prose mt-8 max-w-none dark:prose-invert prose-table:border-separate prose-table:border-spacing-0 prose-table:overflow-hidden prose-table:rounded-md prose-table:bg-slate-500/5 dark:prose-table:bg-white/5 prose-thead:border-0 prose-thead:bg-slate-500/10 dark:prose-thead:bg-white/10 prose-tr:border-0 prose-th:px-4 prose-th:py-2.5 prose-td:px-4 prose-td:py-2.5 [&_tbody_tr+tr_td]:border-t-2 [&_tbody_tr+tr_td]:border-white dark:[&_tbody_tr+tr_td]:border-[#242327] [&_thead:not(:has(th:not(:empty)))]:hidden"
       >
         <slot />
       </main>
@@ -78,7 +78,7 @@ const formattedDate = date?.toLocaleDateString(lang, {
       </footer>
     </div>
 
-    <div class="mt-auto mx-auto w-full max-w-200 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto mt-auto w-full max-w-200 px-4 sm:px-6 lg:px-8">
       <Footer />
     </div>
   </body>
