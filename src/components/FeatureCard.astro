@@ -11,12 +11,13 @@ const { title, description, image, href } = Astro.props;
 
 <a
   href={href}
-  class="group relative block h-72 w-full max-w-2xl overflow-hidden rounded-md bg-black"
+  class="group relative block h-72 w-full max-w-2xl overflow-hidden rounded-md"
 >
+  <!-- Inset 1px so the panel alone reaches the rounded edge; otherwise the image bleeds through the panel's anti-aliased corners -->
   <img
     alt=""
     src={image}
-    class="absolute inset-0 h-full w-full rounded-md object-cover"
+    class="absolute inset-px size-[calc(100%-2px)] rounded-[calc(var(--radius-md)-1px)] object-cover"
   />
 
   <!-- 1/5 of the card, but never narrower than "Work" plus the card padding on both sides (centered on phones). Profile card panel color (page bg + slate-500/5, white/5 in dark); expands over the whole card on hover -->

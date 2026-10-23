@@ -11,13 +11,14 @@ const { title, description, image, href } = Astro.props;
 
 <a
   href={href}
-  class="group relative block aspect-square w-full overflow-hidden rounded-md bg-black"
+  class="group relative block aspect-square w-full overflow-hidden rounded-md"
 >
+  <!-- Inset 1px so the panel alone reaches the rounded edge; otherwise the image bleeds through the panel's anti-aliased corners -->
   <img
     alt={title}
     src={image}
     loading="lazy"
-    class="absolute inset-0 h-full w-full object-cover"
+    class="absolute inset-px size-[calc(100%-2px)] rounded-[calc(var(--radius-md)-1px)] object-cover"
   />
 
   <!-- Same panel as FeatureCard: hidden at rest, expands from the left over the whole jacket on hover -->
