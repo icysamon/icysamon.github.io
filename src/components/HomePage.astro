@@ -2,6 +2,7 @@
 import electronicWorkImage from "../assets/electronic-work/car.jpg";
 import gameImage from "../assets/game/2023/happy-happy-happy.webp";
 import newSongImage from "../assets/album-cover/kawaii-squeeze.webp";
+import musicImage from "../assets/album-cover/black-cat-and-apprentice-girls.webp";
 import Album from "../components/Album.astro";
 import FeatureCard from "../components/FeatureCard.astro";
 import Header from "../components/Header.astro";
@@ -48,6 +49,12 @@ const translatePath = useTranslatedPath(lang);
       description={t("release.kawaiiSqueeze.title")}
       image={newSongImage.src}
       href={t("release.kawaiiSqueeze.url")}
+    />
+    <FeatureCard
+      title={t("home.musicWorks.title")}
+      description={t("home.musicWorks.description")}
+      image={musicImage.src}
+      href={translatePath("/music")}
     />
     <FeatureCard
       title={t("home.game.title")}

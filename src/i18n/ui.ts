@@ -13,6 +13,7 @@ export const ui = {
     'nav.about': 'プロフィール',
     'nav.electronicWork': '電子工作',
     'nav.game': '自作ゲーム',
+    'nav.music': '音楽',
     'sns.twitter': 'Twitter',
     'nav.blog': 'ブログ',
     'nav.request': 'リクエスト（停止中）',
@@ -36,6 +37,8 @@ export const ui = {
     'home.game.title': '自作ゲーム',
     'home.game.description': '自作ゲームです。Unity や Godot などを使った作品を公開しています。',
     'home.music.title': '新曲',
+    'home.musicWorks.title': '音楽',
+    'home.musicWorks.description': 'これまでリリースした楽曲です。',
     //'home.music.description': '音楽作品です。オリジナル曲やカバー曲を公開しています。',
 
     // Projects
@@ -80,6 +83,7 @@ export const ui = {
     'nav.about': 'About',
     'nav.electronicWork': 'Electronic Work',
     'nav.game': 'Game Dev',
+    'nav.music': 'Music',
     'sns.twitter': 'Twitter',
     'nav.blog': 'Blog',
     'nav.request': 'Request (Closed)',
@@ -101,6 +105,8 @@ export const ui = {
     'home.game.title': 'Game Dev',
     'home.game.description': 'This is a self-made game. Works using Unity, Godot, etc. are published.',
     'home.music.title': 'New Song',
+    'home.musicWorks.title': 'Music',
+    'home.musicWorks.description': 'Songs released.',
     //'home.music.description': 'This is a music work. Original songs and cover songs are published.',
 
     // Projects

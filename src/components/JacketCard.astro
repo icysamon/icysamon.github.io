@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+}
+
+const { title, description, image, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group relative block aspect-square w-full overflow-hidden rounded-md bg-black"
+>
+  <img
+    alt={title}
+    src={image}
+    loading="lazy"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+
+  <!-- Same panel as FeatureCard: hidden at rest, expands from the left over the whole jacket on hover -->
+  <div
+    class="absolute inset-y-0 left-0 w-0 bg-[#fafafb]/95 transition-[width] duration-500 ease-[cubic-bezier(0.2,0,0,1)] group-hover:w-full group-focus-visible:w-full motion-reduce:transition-none dark:bg-[#2f2e32]/95"
+  >
+  </div>
+
+  <div
+    class="relative flex h-full translate-y-4 flex-col justify-end p-4 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.2,0,0,1)] group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transition-none sm:p-6"
+  >
+    <p class="text-sm font-medium tracking-widest text-pink-600 uppercase">
+      Music
+    </p>
+    <p
+      class="mt-2 text-lg font-bold text-gray-900 sm:text-xl dark:text-gray-50"
+    >
+      {title}
+    </p>
+    <p class="mt-1 text-sm text-gray-700 dark:text-gray-300">
+      {description}
+    </p>
+  </div>
+</a>

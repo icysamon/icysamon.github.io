@@ -1,0 +1,35 @@
+---
+import JacketCard from "../components/JacketCard.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { releases } from "../data/music";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const localeMap = { en: "en-US", ja: "ja-JP" } as const;
+const formatDate = (date: string) =>
+  new Date(date).toLocaleDateString(localeMap[lang], {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+---
+
+<Header />
+<main class="mx-auto w-full max-w-7xl px-6 py-10">
+  <div class="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-3">
+    {
+      releases.map(({ image, href, title, date }) => (
+        <JacketCard
+          title={title[lang]}
+          description={formatDate(date)}
+          image={image.src}
+          href={lang === "en" ? `${href}?lang=en` : href}
+        />
+      ))
+    }
+  </div>
+</main>
+<div class="mx-auto mt-auto w-full max-w-200 px-4 sm:px-6 lg:px-8">
+  <Footer />
+</div>
