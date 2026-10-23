@@ -10,6 +10,7 @@ import Footer from "../components/Footer.astro";
 import LinkCard from "../components/LinkCard.astro";
 import ProfileCard from "../components/ProfileCard.astro";
 import SocialLinks from "../components/SocialLinks.astro";
+import StreamingLinkCard from "../components/StreamingLinkCard.astro";
 import {
   getLangFromUrl,
   useTranslations,
@@ -35,6 +36,7 @@ const translatePath = useTranslatedPath(lang);
       <SocialLinks />
     </div>
     <LinkCard />
+    <StreamingLinkCard />
   </div>
 
   <div class="flex w-full min-w-0 flex-col items-center gap-4 md:items-start">
