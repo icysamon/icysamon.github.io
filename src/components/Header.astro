@@ -47,6 +47,15 @@ const pathWithoutLang =
           <li>
             <a
               class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+              href={translatePath("/music")}
+            >
+              {t("nav.music")}
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
               href={translatePath("/electronic-work")}
             >
               {t("nav.electronicWork")}
@@ -59,15 +68,6 @@ const pathWithoutLang =
               href={translatePath("/game")}
             >
               {t("nav.game")}
-            </a>
-          </li>
-
-          <li>
-            <a
-              class="font-medium text-gray-600 transition hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-              href={translatePath("/music")}
-            >
-              {t("nav.music")}
             </a>
           </li>
         </ul>
@@ -226,6 +226,15 @@ const pathWithoutLang =
 
       <li>
         <a
+          href={translatePath("/music")}
+          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
+        >
+          {t("nav.music")}
+        </a>
+      </li>
+
+      <li>
+        <a
           href={translatePath("/electronic-work")}
           class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
         >
@@ -239,15 +248,6 @@ const pathWithoutLang =
           class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
         >
           {t("nav.game")}
-        </a>
-      </li>
-
-      <li>
-        <a
-          href={translatePath("/music")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
-        >
-          {t("nav.music")}
         </a>
       </li>
     </ul>
