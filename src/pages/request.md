@@ -1,7 +1,6 @@
 ---
 layout: ../layouts/PageLayout.astro
-title: "曲依頼"
-date: 2026-10-22T00:00:00+09:00
+title: "リクエスト"
 author: "icysamon"
 ---
 

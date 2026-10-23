@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "Song Requests"
-date: 2026-10-22T00:00:00+09:00
+title: "Requests"
 author: "icysamon"
 ---
 
@@ -13,23 +12,23 @@ author: "icysamon"
 
 ## Specifications
 
-|               |                 |
-| ------------- | --------------- |
-| Length        | Up to 3:00      |
-| Delivery      | Within 30 days  |
-| File format   | 24bit/48kHz WAV |
+|             |                 |
+| ----------- | --------------- |
+| Length      | Up to 3:00      |
+| Delivery    | Within 30 days  |
+| File format | 24bit/48kHz WAV |
 
 Instrumental tracks only.
 
 ## Permitted Use
 
-| Use                            | Permission  |
-| ------------------------------ | ----------- |
-| Commercial use                 | OK          |
-| R-18                           | OK          |
-| Redistribution                 | Conditional |
-| Political or religious use     | Prohibited  |
-| AI use or training             | Prohibited  |
+| Use                        | Permission  |
+| -------------------------- | ----------- |
+| Commercial use             | OK          |
+| R-18                       | OK          |
+| Redistribution             | Conditional |
+| Political or religious use | Prohibited  |
+| AI use or training         | Prohibited  |
 
 Redistribution is allowed when:
 
