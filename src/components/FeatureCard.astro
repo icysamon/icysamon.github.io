@@ -21,7 +21,7 @@ const { title, description, image, href } = Astro.props;
 
   <!-- 1/5 of the card, but never narrower than "Work" plus the card padding on both sides (centered on phones). Profile card panel color (page bg + slate-500/5, white/5 in dark); expands over the whole card on hover -->
   <div
-    class="absolute inset-y-0 left-0 w-20 bg-[#fafafb] sm:w-[max(20%,6rem)] lg:w-[max(20%,7rem)] transition-[width] duration-500 ease-[cubic-bezier(0.2,0,0,1)] group-hover:w-full motion-reduce:transition-none dark:bg-[#2f2e32]"
+    class="absolute inset-y-0 left-0 w-20 bg-[#fafafb]/95 sm:w-[max(20%,6rem)] lg:w-[max(20%,7rem)] transition-[width] duration-500 ease-[cubic-bezier(0.2,0,0,1)] group-hover:w-full motion-reduce:transition-none dark:bg-[#2f2e32]/95"
   >
   </div>
 
