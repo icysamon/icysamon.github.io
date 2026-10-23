@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 // Variant of LinkCard: rows look the same at rest and take their streaming service's brand color on hover
 const links = [
   {
@@ -12,9 +17,10 @@ const links = [
     class: "hover:bg-[#1ed760] hover:text-black dark:hover:bg-[#1ed760] dark:hover:text-black",
   },
   {
-    text: "Amazon Music",
-    href: "https://music.amazon.co.jp/artists/B0F47XHZG4/icysamon",
-    class: "hover:bg-[#25d1da] hover:text-black dark:hover:bg-[#25d1da] dark:hover:text-black",
+    // TuneCore Japan artist page, which lists every other platform
+    text: t("dictionary.otherPlatforms"),
+    href: t("link.tunecore"),
+    class: "hover:bg-[#111111] hover:text-white dark:hover:bg-[#111111] dark:hover:text-white",
   },
 ];
 ---
