@@ -36,10 +36,10 @@ export const ui = {
 
     // Home
     'home.electronicWork.title': '電子工作',
-    'home.electronicWork.description': '電子工作の作品です。温湿度センサー DHT20 やディスプレイチップ TM1637 など部品のドライバーを GitHub で公開しています。',
+    'home.electronicWork.description': '電子工作の作品です。',
     'home.game.title': '自作ゲーム',
-    'home.game.description': '自作ゲームです。Unity や Godot などを使った作品を公開しています。',
-    'home.music.title': '新曲',
+    'home.game.description': 'Unity や Godot で作ったゲームです。',
+    'home.music.title': '最新リリース',
     'home.musicWorks.title': '音楽',
     'home.musicWorks.description': 'これまでリリースした楽曲です。',
     //'home.music.description': '音楽作品です。オリジナル曲やカバー曲を公開しています。',
@@ -107,10 +107,10 @@ export const ui = {
 
     // Home
     'home.electronicWork.title': 'Electronic Work',
-    'home.electronicWork.description': 'This is an electronic work. Drivers for components such as the temperature and humidity sensor DHT20 and the display chip TM1637 are published on GitHub.',
+    'home.electronicWork.description': 'Electronics projects.',
     'home.game.title': 'Game Dev',
-    'home.game.description': 'This is a self-made game. Works using Unity, Godot, etc. are published.',
-    'home.music.title': 'New Song',
+    'home.game.description': 'Games made with Unity and Godot.',
+    'home.music.title': 'Latest Release',
     'home.musicWorks.title': 'Music',
     'home.musicWorks.description': 'Songs released.',
     //'home.music.description': 'This is a music work. Original songs and cover songs are published.',
