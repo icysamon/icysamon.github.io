@@ -5,12 +5,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<!-- Header button style; appears on the first scroll up and stays until the page is back at the top -->
+<!-- Header button style; appears while scrolling up and hides on scroll down or back at the top -->
 <button
   id="back-to-top"
   type="button"
   aria-label={t("backToTop")}
-  class="pointer-events-none fixed right-4 bottom-4 z-40 translate-y-4 rounded-sm bg-gray-100 p-2.5 text-gray-600 opacity-0 shadow-sm transition-[translate,opacity,color] duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:text-gray-600/75 data-visible:pointer-events-auto data-visible:translate-y-0 data-visible:opacity-100 motion-reduce:transition-none sm:right-6 sm:bottom-6 dark:bg-[#1a191c] dark:text-gray-300 dark:hover:text-gray-300/75"
+  class="pointer-events-none fixed right-4 bottom-3 z-40 translate-y-4 rounded-sm bg-gray-100 p-2.5 text-gray-600 opacity-0 shadow-sm transition-[translate,opacity,color] duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:text-gray-600/75 data-visible:pointer-events-auto data-visible:translate-y-0 data-visible:opacity-100 motion-reduce:transition-none sm:right-6 sm:bottom-4 dark:bg-[#1a191c] dark:text-gray-300 dark:hover:text-gray-300/75"
 >
   <svg
     aria-hidden="true"
@@ -51,8 +51,9 @@ const t = useTranslations(lang);
         // Back at the top: nothing left to return to
         setVisible(false);
       } else if (Math.abs(y - lastY) >= threshold) {
-        // Once shown it stays, whichever way the page scrolls afterwards
-        if (y < lastY && lastY >= minScroll) setVisible(true);
+        // Show while heading back up, get out of the way while reading on
+        if (y > lastY) setVisible(false);
+        else if (lastY >= minScroll) setVisible(true);
       } else {
         return;
       }
