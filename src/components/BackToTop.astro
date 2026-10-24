@@ -1,0 +1,70 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- Header button style; appears on the first scroll up and stays until the page is back at the top -->
+<button
+  id="back-to-top"
+  type="button"
+  aria-label={t("backToTop")}
+  class="pointer-events-none fixed right-4 bottom-4 z-40 translate-y-4 rounded-sm bg-gray-100 p-2.5 text-gray-600 opacity-0 shadow-sm transition-[translate,opacity,color] duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:text-gray-600/75 data-visible:pointer-events-auto data-visible:translate-y-0 data-visible:opacity-100 motion-reduce:transition-none sm:right-6 sm:bottom-6 dark:bg-[#1a191c] dark:text-gray-300 dark:hover:text-gray-300/75"
+>
+  <svg
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    class="size-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7 7-7 7 7"
+    ></path>
+  </svg>
+</button>
+
+<script>
+  const button = document.getElementById("back-to-top")!;
+  // Only show after scrolling up from far enough down for a way back to be useful
+  const minScroll = 400;
+  // Ignore tiny scroll jitter (e.g. trackpad bounce) before flipping direction
+  const threshold = 8;
+  let lastY = window.scrollY;
+
+  const setVisible = (visible: boolean) => {
+    if (visible) button.dataset.visible = "";
+    else delete button.dataset.visible;
+    // Keep the hidden button out of the tab order and the accessibility tree
+    button.tabIndex = visible ? 0 : -1;
+    button.ariaHidden = visible ? null : "true";
+  };
+  setVisible(false);
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const y = window.scrollY;
+      if (y <= 0) {
+        // Back at the top: nothing left to return to
+        setVisible(false);
+      } else if (Math.abs(y - lastY) >= threshold) {
+        // Once shown it stays, whichever way the page scrolls afterwards
+        if (y < lastY && lastY >= minScroll) setVisible(true);
+      } else {
+        return;
+      }
+      lastY = y;
+    },
+    { passive: true },
+  );
+
+  button.addEventListener("click", () => {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+</script>

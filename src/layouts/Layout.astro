@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { getLangFromUrl } from "../i18n/utils";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import BackToTop from "../components/BackToTop.astro";
 import avatar from "../assets/avatar.webp";
 
 const lang = getLangFromUrl(Astro.url);
@@ -43,5 +44,6 @@ const structuredData = {
   </head>
   <body class="flex min-h-dvh flex-col">
     <slot />
+    <BackToTop />
   </body>
 </html>
