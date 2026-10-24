@@ -30,6 +30,7 @@ export const ui = {
     'link.tunecore': 'https://www.tunecore.co.jp/artists/icysamon',
     'back': '戻る',
     'backToTop': 'トップに戻る',
+    'social.email': 'メール',
     'dictionary.privacyPolicy': 'プライバシーポリシー',
 
     // Home
@@ -99,6 +100,7 @@ export const ui = {
     'link.tunecore': 'https://www.tunecore.co.jp/artists/icysamon?artistPagePath=icysamon&lang=en',
     'back': 'Back',
     'backToTop': 'Back to top',
+    'social.email': 'Email',
     'dictionary.privacyPolicy': 'Privacy Policy',
 
     // Home
