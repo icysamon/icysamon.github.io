@@ -1,46 +1,20 @@
-# Astro Starter Kit: Basics
+# icysamon.github.io
 
-```sh
-npm create astro@latest -- --template basics
-```
+icysamon's homepage.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## License
 
-## 🚀 Project Structure
+> [!IMPORTANT]
+> **Images, illustrations, audio, and other media are NOT covered by the open-source license.**
+>
+> Only the source code is licensed under the [GNU General Public License v3.0](LICENSE).
+> All media files — including those in `src/assets/` and `public/` (album covers, illustrations, avatar, photos, audio, and so on) — are **all rights reserved**.
+> Some of them are the work of other artists, and their rights belong to their respective creators.
+> Do not use, copy, modify, or redistribute them without permission.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> [!IMPORTANT]
+> **画像・イラスト・音声などの素材は、オープンソースライセンスの対象外です。**
+>
+> [GNU General Public License v3.0](LICENSE) が適用されるのはソースコードのみです。
+> `src/assets/` や `public/` にあるファイルを含む、すべての素材（ジャケット画像、イラスト、アイコン画像、写真、音声など）は **無断での使用・複製・改変・再配布を禁止** します。
+> 一部の素材は他のクリエイターによる作品であり、その権利は各権利者に帰属します。
