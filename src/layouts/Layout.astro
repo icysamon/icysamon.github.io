@@ -2,9 +2,21 @@
 import "../styles/global.css";
 import { getLangFromUrl } from "../i18n/utils";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import avatar from "../assets/avatar.webp";
 
 const lang = getLangFromUrl(Astro.url);
 const isProd = import.meta.env.PROD;
+// Point search engines and link previews at the avatar instead of whichever page image they find first
+const imageUrl = new URL(avatar.src, Astro.site).href;
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "icysamon",
+  url: new URL("/", Astro.site).href,
+  image: imageUrl,
+  author: { "@type": "Person", name: "icysamon", image: imageUrl },
+};
 ---
 
 <!doctype html>
@@ -15,6 +27,18 @@ const isProd = import.meta.env.PROD;
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>icysamon</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="icysamon" />
+    <meta property="og:title" content="icysamon" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:width" content={String(avatar.width)} />
+    <meta property="og:image:height" content={String(avatar.height)} />
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(structuredData)}
+    />
     {isProd && <GoogleAnalytics />}
   </head>
   <body class="flex min-h-dvh flex-col">

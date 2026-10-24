@@ -14,7 +14,7 @@ const translatePath = useTranslatedPath(lang);
 <div class="flex w-full flex-col items-center">
   <div class="aspect-square w-full overflow-hidden rounded-t-md">
     <img
-      alt=""
+      alt={t("profile.name")}
       src={avatar.src}
       class="avatar size-full object-cover transition-[scale] duration-500 ease-[cubic-bezier(0.2,0,0,1)] data-ready:hover:scale-105 motion-reduce:animate-none motion-reduce:transition-none"
     />
