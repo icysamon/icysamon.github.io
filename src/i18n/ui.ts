@@ -31,6 +31,7 @@ export const ui = {
     'back': '戻る',
     'backToTop': 'トップに戻る',
     'social.email': 'メール',
+    'meta.description': 'icysamon のホームページです。',
     'dictionary.privacyPolicy': 'プライバシーポリシー',
 
     // Home
@@ -101,6 +102,7 @@ export const ui = {
     'back': 'Back',
     'backToTop': 'Back to top',
     'social.email': 'Email',
+    'meta.description': "icysamon's homepage.",
     'dictionary.privacyPolicy': 'Privacy Policy',
 
     // Home

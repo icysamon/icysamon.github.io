@@ -17,6 +17,7 @@ const translatePath = useTranslatedPath(lang);
 const isProd = import.meta.env.PROD;
 const { frontmatter } = Astro.props;
 const imageUrl = new URL(avatar.src, Astro.site).href;
+const description = frontmatter.description ?? t("meta.description");
 
 const date = frontmatter.date ? new Date(frontmatter.date) : null;
 const formattedDate = date?.toLocaleDateString(lang, {
@@ -33,9 +34,11 @@ const formattedDate = date?.toLocaleDateString(lang, {
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.ico" />
     <title>{frontmatter.title}</title>
+    <meta name="description" content={description} />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="icysamon" />
     <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content={imageUrl} />
     {isProd && <GoogleAnalytics />}
   </head>
