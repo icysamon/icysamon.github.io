@@ -23,7 +23,7 @@ const formatDate = (date: string) =>
         <JacketCard
           title={title[lang]}
           description={formatDate(date)}
-          image={image.src}
+          image={image}
           href={lang === "en" ? `${href}?lang=en` : href}
         />
       ))

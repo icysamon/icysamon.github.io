@@ -1,8 +1,11 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
   href: string;
 }
 
@@ -14,9 +17,14 @@ const { title, description, image, href } = Astro.props;
   class="group relative block h-72 w-full max-w-2xl overflow-hidden rounded-md"
 >
   <!-- Inset 1px so the panel alone reaches the rounded edge; otherwise the image bleeds through the panel's anti-aliased corners -->
-  <img
+  <!-- Card is at most max-w-2xl (42rem) wide; on phones it fills the 90%-wide main -->
+  <Image
     alt=""
     src={image}
+    width={672}
+    widths={[480, 672, 960, 1344]}
+    sizes="min(90vw, 42rem)"
+    loading="eager"
     class="absolute inset-px size-[calc(100%-2px)] rounded-[calc(var(--radius-md)-1px)] object-cover"
   />
 
