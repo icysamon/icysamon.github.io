@@ -19,7 +19,7 @@ These may be odd criteria, but I hope you'll understand.
 - You make music by leaving everything to AI
 - Your posts are all announcements with no sense of everyday life
 - Your account is new, has been active only briefly, or has few posts
-- You aren't involved in music, game development, drawing (girls), electronics, or 3D modeling
+- You aren't involved in DTM (computer music production), game development, drawing (girls), electronics, or 3D modeling
 - You frequently post political opinions
 - You post discriminatory or prejudiced remarks
 
