@@ -4,6 +4,4 @@ title: "About"
 author: "icysamon"
 ---
 
-This is icysamon.
-
-This site is currently under reconstruction, so some features may not work properly.
+I make music in the electronic sea. 𓆝𓂃 𓈒𓏸
