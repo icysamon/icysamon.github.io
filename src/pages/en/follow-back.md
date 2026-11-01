@@ -27,7 +27,7 @@ Even if none of the above apply, I may still not follow you back.
 
 ---
 
-I will **definitely** follow you back if you post:
+I will definitely follow you back if you post:
 
 - Bishoujo illustrations
 - Bishoujo music
