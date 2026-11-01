@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "Follow-Back Policy"
+title: "If You'd Like a Follow-Back"
 date: 2026-11-01T00:00:00+09:00
 author: "icysamon"
 ---
@@ -10,7 +10,7 @@ Thank you for listening!
 [@icysamon](https://x.com/icysamon) is both my creative account and my personal, everyday account.  
 I often use X's (formerly Twitter) "Following (Recent)" feed.
 
-Since I use it every day, I have my own criteria for following back.
+Because of that, I have my own criteria for following back.
 
 If any of the following apply to you, it's **quite likely** that I won't follow you back.  
 These may be odd criteria, but I hope you'll understand.
