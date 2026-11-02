@@ -6,15 +6,15 @@ author: "icysamon"
 
 ## Price
 
-| Platform                          | Amount        |
-| --------------------------------- | ------------- |
-| [Skeb](https://skeb.jp/@icysamon) | ¥1,000 / song |
+| Platform | Amount        |
+| -------- | ------------- |
+| Paused   | ¥1,000 / song |
 
 ## Specifications
 
 |             |                 |
 | ----------- | --------------- |
-| Length      | Up to 3:00      |
+| Length      | About 2:30      |
 | Delivery    | Within 30 days  |
 | File format | 24bit/48kHz WAV |
 
@@ -32,8 +32,7 @@ Instrumental tracks only.
 
 Redistribution is allowed when:
 
-- Used as BGM in games or other entertainment content.
-- Sold together with a game's original soundtrack.
+- Included in a game's original soundtrack.
 
 ## Notes
 
