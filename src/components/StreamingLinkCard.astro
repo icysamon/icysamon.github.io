@@ -4,7 +4,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Variant of LinkCard: rows look the same at rest and take their streaming service's brand color on hover
+// Grid of buttons, one per streaming service: they look the same at rest and take the service's brand color on hover
 const links = [
   {
     text: "Apple Music",
@@ -17,9 +17,9 @@ const links = [
     class: "hover:bg-[#1ed760] hover:text-black dark:hover:bg-[#1ed760] dark:hover:text-black",
   },
   {
-    text: t("dictionary.niconico"),
-    href: "https://www.nicovideo.jp/user/122139625",
-    class: "hover:bg-[#0080ff] hover:text-white dark:hover:bg-[#0080ff] dark:hover:text-white",
+    text: "Amazon Music",
+    href: "https://www.amazon.co.jp/music/player/artists/B0F47XHZG4",
+    class: "hover:bg-[#25d1da] hover:text-black dark:hover:bg-[#25d1da] dark:hover:text-black",
   },
   {
     // TuneCore Japan artist page, which lists every other platform
@@ -30,27 +30,18 @@ const links = [
 ];
 ---
 
-<ul
-  class="w-full divide-y divide-gray-200 rounded-md bg-slate-500/5 p-2 dark:divide-white/20 dark:bg-white/5"
->
+<ul class="grid w-full grid-cols-2 gap-2">
   {
     links.map(({ text, href, class: color }) => (
       <li>
         <a
           href={href}
           class:list={[
-            "group flex items-center justify-between rounded-md px-4 py-3 text-gray-900 transition-colors dark:text-gray-50",
+            "flex items-center justify-center rounded-md bg-slate-500/5 px-3 py-3 font-medium whitespace-nowrap text-gray-900 transition-colors dark:bg-white/5 dark:text-gray-50",
             color,
           ]}
         >
-          <span class="font-medium">{text}</span>
-          <svg
-            viewBox="0 0 13 10"
-            class="h-2.5 w-3.5 fill-none stroke-current stroke-2 text-gray-500 transition-transform [stroke-linecap:round] [stroke-linejoin:round] group-hover:translate-x-1 group-hover:text-inherit dark:text-gray-400 dark:group-hover:text-inherit"
-          >
-            <path d="M1,5 L11,5" />
-            <polyline points="8 1 12 5 8 9" />
-          </svg>
+          {text}
         </a>
       </li>
     ))
