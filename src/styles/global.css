@@ -5,6 +5,28 @@ html, body {
   scrollbar-gutter: stable;
 }
 
+/* 8px scrollbar like the blog (blog.icysamon.com), so both sites keep the same content width */
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+body::-webkit-scrollbar-track {
+  background-color: oklch(92.2% 0 0);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: oklch(70.8% 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  body::-webkit-scrollbar-track {
+    background-color: oklch(26.9% 0 0);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: oklch(43.9% 0 0);
+  }
+}
+
 /* Disable double-tap zoom on touch devices; pinch zoom still works. */
 html {
   touch-action: manipulation;
