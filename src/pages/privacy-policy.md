@@ -3,7 +3,6 @@ layout: ../layouts/PageLayout.astro
 title: "プライバシーポリシー"
 date: 2026-07-31T00:00:00+09:00
 author: "icysamon"
-backLink: false
 ---
 
 ## 個人情報の利用目的

@@ -2,7 +2,6 @@
 layout: ../../layouts/PageLayout.astro
 title: "About"
 author: "icysamon"
-blogStyle: true
 ---
 
 I make music in the electronic sea. 𓆝𓂃 𓈒𓏸
