@@ -19,6 +19,8 @@ const { frontmatter } = Astro.props;
 // `blogStyle: true` in the frontmatter renders the page like the blog
 // (blog.icysamon.com): no rule under the title, pink links, no back button
 const blogStyle = frontmatter.blogStyle === true;
+// `backLink: false` drops the back button under the content
+const showBackLink = !blogStyle && frontmatter.backLink !== false;
 const imageUrl = new URL(avatar.src, Astro.site).href;
 const description = frontmatter.description ?? t("meta.description");
 
@@ -91,7 +93,7 @@ const formattedDate = date?.toLocaleDateString(lang, {
 
       <!-- Back link (HyperUI: Text Button) -->
       {
-        !blogStyle && (
+        showBackLink && (
           <footer class="mt-12">
             <a
               href={translatePath("/")}
