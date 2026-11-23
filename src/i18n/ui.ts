@@ -32,6 +32,8 @@ export const ui = {
     'backToTop': 'トップに戻る',
     'meta.description': 'icysamon のホームページです。',
     'dictionary.privacyPolicy': 'プライバシーポリシー',
+    'dictionary.license': 'ライセンス',
+    'nav.footerMenu': 'フッターメニュー',
 
     // Home
     'home.electronicWork.title': '電子工作',
@@ -102,6 +104,8 @@ export const ui = {
     'backToTop': 'Back to top',
     'meta.description': "icysamon's homepage.",
     'dictionary.privacyPolicy': 'Privacy Policy',
+    'dictionary.license': 'License',
+    'nav.footerMenu': 'Footer menu',
 
     // Home
     'home.electronicWork.title': 'Electronic Work',

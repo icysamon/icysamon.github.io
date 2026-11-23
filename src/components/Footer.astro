@@ -8,15 +8,28 @@ import {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+
+const links = [
+  { href: translatePath("/privacy-policy"), label: t("dictionary.privacyPolicy") },
+  { href: translatePath("/license"), label: t("dictionary.license") },
+];
 ---
 
-<div
-  class="mx-auto mt-8 mb-4 flex max-w-7xl flex-col gap-1.5 border-t border-gray-200 py-4 text-center text-xs text-gray-500 dark:border-white/20 dark:text-gray-400"
->
-  <a href={translatePath("/privacy-policy")} class="self-center hover:underline">
-    {t("dictionary.privacyPolicy")}
-  </a>
-  <p>
-    &copy; {new Date().getFullYear()} icysamon. All rights reserved.
-  </p>
-</div>
+<!-- Same layout as the blog's footer (blog.icysamon.com): menu on top, copyright below; credits live on the license page, in the header's container -->
+<footer class="mt-auto w-full print:hidden">
+  <div
+    class="mx-auto mt-8 mb-4 flex w-[90%] max-w-5xl flex-col gap-2 border-t border-gray-200 py-4 text-left text-xs text-gray-500 dark:border-white/20 dark:text-gray-400"
+  >
+    <nav aria-label={t("nav.footerMenu")} class="flex flex-wrap items-center gap-x-4">
+      {
+        links.map(({ href, label }) => (
+          <a href={href} class="transition-colors hover:text-gray-900 dark:hover:text-white">
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <p>&copy; {new Date().getFullYear()} icysamon. All rights reserved.</p>
+  </div>
+</footer>
