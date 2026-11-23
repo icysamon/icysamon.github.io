@@ -1,5 +1,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* Same font stack as the blog (blog.icysamon.com) */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", Meiryo, sans-serif;
+}
 html, body {
   background-color: #ffffff;
   scrollbar-gutter: stable;

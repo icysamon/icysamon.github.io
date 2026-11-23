@@ -167,72 +167,52 @@ const pathWithoutLang =
     </div>
   </div>
 
-  <!-- スマホ用メニュー -->
+  <!-- スマホ用メニュー: same as the blog's fullscreen mobile menu (blog.icysamon.com) -->
   <nav
     id="mobile-menu"
     aria-label="Mobile"
-    class="fixed inset-0 z-50 hidden bg-white/90 backdrop-blur-sm md:hidden dark:bg-[#242327]/90"
+    class="fixed inset-0 z-50 hidden overflow-y-auto bg-gray-50/97 px-6 py-20 md:hidden dark:bg-[#1a191c]/99"
   >
-    <div class="flex h-16 items-center justify-end px-4 sm:px-6">
-      <button
-        id="menu-close"
-        type="button"
-        class="rounded-sm bg-gray-100 p-2.5 text-gray-600 dark:bg-[#1a191c] dark:text-gray-300"
+    <button
+      id="menu-close"
+      type="button"
+      class="fixed end-8 top-5 z-50 flex size-12 items-center justify-center rounded-full border border-gray-300 bg-gray-50 text-gray-700 transition hover:border-pink-600 hover:text-pink-600 dark:border-[#2f2e32] dark:bg-[#1a191c] dark:text-gray-200 dark:hover:border-pink-400 dark:hover:text-pink-400"
+    >
+      <span class="sr-only">Close menu</span>
+      <svg
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
       >
-        <span class="sr-only">Close menu</span>
-        <svg
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          class="size-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 6l12 12M18 6L6 18"></path>
-        </svg>
-      </button>
-    </div>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 6l12 12M18 6L6 18"></path>
+      </svg>
+    </button>
 
-    <ul class="space-y-1 px-4 sm:px-6">
-      <li>
-        <a
-          href={translatePath("/about")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
-        >
-          {t("nav.about")}
-        </a>
-      </li>
-
-      <li>
-        <a
-          href={translatePath("/music")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
-        >
-          {t("nav.music")}
-        </a>
-      </li>
-
-      <li>
-        <a
-          href={translatePath("/electronic-work")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
-        >
-          {t("nav.electronicWork")}
-        </a>
-      </li>
-
-      <li>
-        <a
-          href={translatePath("/game")}
-          class="block rounded-lg px-4 py-2 text-[0.9375rem] font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-[#1a191c] dark:hover:text-white"
-        >
-          {t("nav.game")}
-        </a>
-      </li>
+    <ul class="mx-auto max-w-md space-y-6">
+      {
+        [
+          { href: "/about", label: t("nav.about") },
+          { href: "/music", label: t("nav.music") },
+          { href: "/electronic-work", label: t("nav.electronicWork") },
+          { href: "/game", label: t("nav.game") },
+        ].map(({ href, label }) => (
+          <li class="px-2">
+            <a
+              href={translatePath(href)}
+              class="block text-2xl font-bold tracking-tight text-gray-700 transition hover:text-pink-600 dark:text-gray-200 dark:hover:text-pink-400"
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>
