@@ -30,9 +30,15 @@ Instrumental tracks only.
 | Political or religious use | Prohibited  |
 | AI use or training         | Prohibited  |
 
-Redistribution is allowed when:
+Redistribution is allowed only in the following cases:
 
-- Included in a game's original soundtrack.
+- Bundled with the game itself.
+- Distributed as a soundtrack (OST) or bonus content, paid or free.
+- Included on a soundtrack CD or in merchandise.
+- Used as background music in videos or streams.
+- Used in gameplay videos or streams of the commissioned game, including by third parties.
+
+Redistributing, transferring, or reselling the audio on its own is prohibited.
 
 ## Notes
 
