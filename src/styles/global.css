@@ -38,13 +38,23 @@ html {
   }
 }
 /* Alerts ("> [!WARNING]" via src/plugins/alerts.mjs), matching the blog's
-   admonitions: a rounded tinted panel with an icon + label on top */
+   admonitions (Blowfish colors): a rounded tinted panel with an icon + label */
 .prose .alert {
   margin: 1.5rem 0;
   padding: 1rem 1.25rem;
   border-radius: 0.375rem;
-  background-color: var(--color-slate-100);
-  color: var(--color-slate-800);
+}
+.prose .alert-note {
+  background-color: var(--color-sky-50);
+  color: var(--color-sky-900);
+}
+.prose .alert-tip {
+  background-color: var(--color-emerald-50);
+  color: var(--color-emerald-900);
+}
+.prose .alert-important {
+  background-color: var(--color-purple-50);
+  color: var(--color-purple-900);
 }
 .prose .alert-warning {
   background-color: var(--color-orange-50);
@@ -80,9 +90,17 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-  .prose .alert {
-    background-color: color-mix(in srgb, var(--color-slate-700), #0f0f0f 45%);
-    color: var(--color-slate-100);
+  .prose .alert-note {
+    background-color: color-mix(in srgb, var(--color-sky-800), #0f0f0f 50%);
+    color: var(--color-sky-100);
+  }
+  .prose .alert-tip {
+    background-color: color-mix(in srgb, var(--color-emerald-800), #0f0f0f 50%);
+    color: var(--color-emerald-100);
+  }
+  .prose .alert-important {
+    background-color: color-mix(in srgb, var(--color-purple-800), #0f0f0f 50%);
+    color: var(--color-purple-100);
   }
   .prose .alert-warning {
     background-color: color-mix(in srgb, var(--color-orange-800), #0f0f0f 45%);
